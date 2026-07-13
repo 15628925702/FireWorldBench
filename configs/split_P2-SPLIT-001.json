@@ -1,0 +1,30 @@
+{
+  "schema_version": "P2-SPLIT-001",
+  "status": "research_plan_blocked_by_p1_license_and_sample_size_gates",
+  "seed": 20260714,
+  "hash": {"algorithm": "sha256", "input": "split_id + seed + group_id + config_version"},
+  "group_first": true,
+  "windowing_after_group_assignment": true,
+  "statistical_unit": "case_or_pair_not_window",
+  "group_keys": ["source_case", "simulation_family", "physical_scenario", "video_sequence", "near_duplicate_group", "question_template_family"],
+  "assignments": {
+    "train_id": ["grp_D01_70U", "grp_D01_100U"],
+    "dev_id": ["grp_D01_70M"],
+    "test_ood_source_location": ["grp_D01_130M", "grp_D01_130U"],
+    "test_external_experiment": ["grp_D03_Aalto_Woods", "grp_D03_ATF_Corridors"]
+  },
+  "axes": {
+    "source_location": {"status": "PROVISIONAL", "train_values": ["70", "100"], "test_values": ["130"], "confounding": "lane and configuration are not fully balanced"},
+    "ventilation": {"status": "BLOCKED", "reason": "configuration number lacks verified physical parameter mapping"},
+    "hrr": {"status": "BLOCKED", "reason": "D01/D03 units and controlled HRR families are incomplete"},
+    "geometry_or_layout": {"status": "BLOCKED", "reason": "no sufficient independent geometry groups"},
+    "external_experiment": {"status": "PROVISIONAL", "test_only": true, "reason": "D03 remains P1 license-blocked"}
+  },
+  "gates": {
+    "group_intersection_zero": true,
+    "near_duplicate_scan_required_before_formal_freeze": true,
+    "test_labels_private": true,
+    "eligible_for_formal_benchmark": false,
+    "ratio_8_1_1_forbidden": true
+  }
+}

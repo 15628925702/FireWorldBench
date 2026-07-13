@@ -1,0 +1,17 @@
+{
+  "schema_version": "P2-SPLIT-001",
+  "manifest_source": "项目治理/data_manifest_P1-DATA-001.json",
+  "groups": [
+    {"group_id": "grp_D01_70U", "source_id": "D01", "case_keys": ["70U01", "70U08", "70U16"], "family_key": "location=70;lane=U", "sequence_keys": ["70U01", "70U08", "70U16"], "assigned_split": "train_id", "axes": {"location": "70", "lane": "U", "configuration": ["01", "08", "16"]}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"},
+    {"group_id": "grp_D01_100U", "source_id": "D01", "case_keys": ["100U16"], "family_key": "location=100;lane=U", "sequence_keys": ["100U16"], "assigned_split": "train_id", "axes": {"location": "100", "lane": "U", "configuration": ["16"]}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"},
+    {"group_id": "grp_D01_70M", "source_id": "D01", "case_keys": ["70M01"], "family_key": "location=70;lane=M", "sequence_keys": ["70M01"], "assigned_split": "dev_id", "axes": {"location": "70", "lane": "M", "configuration": ["01"]}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"},
+    {"group_id": "grp_D01_130M", "source_id": "D01", "case_keys": ["130M01", "130M08"], "family_key": "location=130;lane=M", "sequence_keys": ["130M01", "130M08"], "assigned_split": "test_ood_source_location", "axes": {"location": "130", "lane": "M", "configuration": ["01", "08"]}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"},
+    {"group_id": "grp_D01_130U", "source_id": "D01", "case_keys": ["130U16"], "family_key": "location=130;lane=U", "sequence_keys": ["130U16"], "assigned_split": "test_ood_source_location", "axes": {"location": "130", "lane": "U", "configuration": ["16"]}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"},
+    {"group_id": "grp_D03_Aalto_Woods", "source_id": "D03", "case_keys": ["Aalto_Woods/pine_flaming_25kW", "Aalto_Woods/pine_smolder_20kW", "Aalto_Woods/spruce_flaming_25kW"], "family_key": "Aalto_Woods", "sequence_keys": ["pine_flaming_25kW", "pine_smolder_20kW", "spruce_flaming_25kW"], "assigned_split": "test_external_experiment", "axes": {"domain": "external_woods", "hrr": "filename_only_not_gold"}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"},
+    {"group_id": "grp_D03_ATF_Corridors", "source_id": "D03", "case_keys": ["ATF_Corridors/ATF_Corridors_048kW_avg", "ATF_Corridors/ATF_Corridors_485kW_avg"], "family_key": "ATF_Corridors", "sequence_keys": ["048kW", "485kW"], "assigned_split": "test_external_experiment", "axes": {"domain": "external_corridor", "hrr": "filename_only_not_gold"}, "status": "PROVISIONAL_BLOCKED_BY_LICENSE"}
+  ],
+  "excluded_inventory": [
+    {"source_id": "D04", "reason": "generator/templates only; no generated FDS result cases in current manifest", "formal_split": false},
+    {"source_id": "D05-D11", "reason": "P1 placeholder/auxiliary/license gates", "formal_split": false}
+  ]
+}

@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S011-001
+handoff_id: H-20260714-S012-001
 handoff_state: READY
-source_session: 2026-07-14_S011_P2-SCHEMA-001样本预测Schema与语义validator.md
-current_task: P2-SPLIT-001
+source_session: 2026-07-14_S012_P2-SPLIT-001groupfirst与OOD划分.md
+current_task: P2-LEAK-001
 ---
 
 # Current Status
@@ -10,14 +10,14 @@ current_task: P2-SPLIT-001
 更新时间：`2026-07-14 Asia/Shanghai`  
 项目版本：`0.1.0`  
 当前阶段：`P1 数据与论文可行性`  
-总体状态：`READY_FOR_NEXT_TASK`（P2-SCHEMA-001 已完成；Schema/validator 可机检，专家和 P1 数据门禁继续有效）
+总体状态：`READY_FOR_NEXT_TASK`（P2-SPLIT-001 已完成；group-first 可机检，正式 split 仍受 P1/近重复门禁）
 
 ## 窗口与 Git 快照
 
-- 最近完成会话：`2026-07-14_S011_P2-SCHEMA-001样本预测Schema与语义validator.md`
+- 最近完成会话：`2026-07-14_S012_P2-SPLIT-001groupfirst与OOD划分.md`
 - 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `8a92376`（P2-SCHEMA-001 已提交并推送）
+- branch / HEAD：`main` / `6757950`（P2-SPLIT-001 待提交）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
@@ -41,6 +41,7 @@ current_task: P2-SPLIT-001
 - [x] 完成 P1-FREEZE-001：P1 出口审计、决策提交状态、冻结 manifest、遗留风险和 P2 输入边界。
 - [x] 完成 P2-ONTOLOGY-001：9 个子任务 ontology、可观测性、gold origin、拒答语义和 12 类 physical violation taxonomy。
 - [x] 完成 P2-SCHEMA-001：v2 sample/prediction Schema、语义 validator、正负边界 fixtures 和测试。
+- [x] 完成 P2-SPLIT-001：group-first 配置、group 清单、ID/OOD/external 候选分区、混杂报告和稳定校验。
 
 ## 进行中
 
@@ -48,10 +49,10 @@ current_task: P2-SPLIT-001
 
 ## 当前唯一下一任务
 
-- 任务 ID：`P2-SPLIT-001`
-- 目标：先按 case/family/sequence/重复组划分，再切窗/派生，构造 ID/OOD 与 external partitions。
+- 任务 ID：`P2-LEAK-001`
+- 目标：实现 opaque ID/私有映射并审计精确/感知重复、邻帧、family、模板、文件名和元数据泄漏。
 - 入口：`NEXT_SESSION_PROMPT.md`
-- 完成标准：group 交集为零，OOD 轴可解释且样本量足够，测试标签隔离；下一任务只能是 `P2-LEAK-001`。
+- 完成标准：已知泄漏为零，公开输入不能从名称直接推答案；下一任务只能是 `P2-EVAL-001`。
 
 ## 已知阻塞/待决策
 
