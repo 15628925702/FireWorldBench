@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S032-001
+handoff_id: H-20260714-S033-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S032_P5-PREREG-001正式评测预注册与测试封存.md
-current_task: P5-MAIN-001
+source_session: 2026-07-14_S033_P5-MAIN-001主矩阵执行门.md
+current_task: P5-ABLATION-001
 ---
 
 # 下一任务增量
+
+## P5-MAIN-001 completed
+
+The preregistered main matrix is formally `BLOCKED`: preregistration, approved model matrix, calibration, paper-ready inputs, and runtime gates are not closed. No harness run or model output exists; run index, raw responses, failures, and costs remain empty, and the runner does not read gold.
+
+## Next window: one task only
+
+`P5-ABLATION-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and audit the preregistered one-factor-at-a-time ablation plan. Without an executable main run, record a formal no-input/no-run decision and do not invent paired results. Run checks, commit, and retry pending pushes.
 
 ## P5-PREREG-001 completed
 

@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S032-001
+handoff_id: H-20260714-S033-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S032_P5-PREREG-001正式评测预注册与测试封存.md
-current_task: P5-MAIN-001
+source_session: 2026-07-14_S033_P5-MAIN-001主矩阵执行门.md
+current_task: P5-ABLATION-001
 ---
 
 # Current Status
+
+## P5-MAIN-001 completion
+
+- 已建立冻结主矩阵执行 readiness gate；因 preregistration、模型矩阵、calibration、paper-ready input manifest 和 runtime 均未闭合，正式状态为 `BLOCKED`。
+- 没有启动 batch harness，没有生成模型输出、成本、时延或失败率；run index、raw response、failure report 和 cost report 均为空/未设置。
+- runner 明确不读取 gold，test access ledger 仍为 `NO_ACCESS_CONFIRMED`；未读取或修改 `../../3.数据集`。
+- 验证：`pytest` 82 passed；`mypy` 通过；CLI 5 blockers；project check 通过。
+- 下一唯一任务：`P5-ABLATION-001`。
 
 ## P5-PREREG-001 completion
 

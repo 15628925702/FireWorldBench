@@ -1,0 +1,21 @@
+{
+  "main_version": "P5-MAIN-001",
+  "status": "BLOCKED",
+  "blockers": [
+    "preregistration_not_ready",
+    "approved_model_matrix_missing",
+    "calibration_gate_missing",
+    "paper_ready_input_manifest_missing",
+    "approved_main_runtime_missing"
+  ],
+  "input_count": 0,
+  "run_index": [],
+  "run_directories": [],
+  "raw_response_manifests": [],
+  "failure_report": [],
+  "cost_report": null,
+  "overwrite_existing_runs": false,
+  "runner_reads_gold": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}
