@@ -1,0 +1,1880 @@
+﻿{
+    "schema_version":  1,
+    "task_id":  "P1-DATA-001",
+    "generated_at":  "2026-07-14T00:00:00+08:00",
+    "root":  "../../3.数据集",
+    "source_files":  [
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/100U16_devc.csv",
+                             "bytes":  8875476,
+                             "sha256":  "5c3001d5d88692e72483a3558881d548c452868b046c6713e8cd0a4b2f1abe4d"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/130M01_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "8612355f7c44388e57e902bb2f8b3670b6b3daf5a8741869d18b61ad16c10fde"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/130M08_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "9275d81cf32c58ddbfcd6c3b320216253e9407827b4c5edebbd83b7758ba45c4"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/130U16_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "4182e6a2a9fa78a6ced21144cad45c364fec15cabcd9051e0727eca7644a015e"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/70M01_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "308acb91bd3bd4cca7cb32162ce0aa9e448fb6e9289086272b42ecdd25ac343f"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/70U01_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "62cd14d5b258341f644d64af6f73bc8bf0a10ac8e3d83e01d1a551e87814d331"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/70U08_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "ec8e13c2781333771f14231ade39a4e2cb1fdd3bf5b27bba9bd2b5e9e8a696e0"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/CFD-Data/70U16_devc.csv",
+                             "bytes":  8874873,
+                             "sha256":  "c2013f6cdffe70d1b38022e043564abfcba60f07559fbe712fa3af612da900ed"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/example_preview.png",
+                             "bytes":  154524,
+                             "sha256":  "9900facf520c268c87b92d0f05dc96a04127ac93e7978524a9c21ebbc9d62479"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/ReadDataSet.py",
+                             "bytes":  2779,
+                             "sha256":  "0aa38e8ffe03d544eeb16f483cf5d05999a26102aeda0a9b5c38e35086360fc0"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/README.md",
+                             "bytes":  1197,
+                             "sha256":  "8dc853b0d51a16d7b93f1e85c08256c53b88a0d63cd22af2cff3a304725996c3"
+                         },
+                         {
+                             "dataset_id":  "D01",
+                             "relative_path":  "01_Immersed-Tunnel-CFD/sample_card.md",
+                             "bytes":  403,
+                             "sha256":  "e77be5bfdce1044253db394e088ec982896b66acf84b3839c48bdcbd16199f96"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/example_preview.png",
+                             "bytes":  122440,
+                             "sha256":  "af0a8be9126e9bedb7fe2c41dc0cb346655e90d53dbcca59d622494c60db2fb4"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/sample_card.md",
+                             "bytes":  370,
+                             "sha256":  "437ac86bbfca278f0940846609f7dcc27d6b287bded4afdbe25f0a734c99ddd3"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.1. Heat release rate.xlsx",
+                             "bytes":  11850,
+                             "sha256":  "7625bb4d87da8dfadd0ce7bf94923448d93d5cc3507c0b67bbd63d3270552013"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.2. Flame length.xlsx",
+                             "bytes":  522858,
+                             "sha256":  "056d63ced23d8e46449acbc2a589da7cf2e2220f81f02a99cc3f9ba556a2135d"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.3. Maximum ceiling gas temperature.xlsx",
+                             "bytes":  1835602,
+                             "sha256":  "d0ddc22112828059390f575fa70b568844ae54eabd3f5f2d00170a385869cbfd"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.4. Critical velocity.xlsx",
+                             "bytes":  6270747,
+                             "sha256":  "d125b6eb730995db9a47754a0cfb73e9deb09c56360e9427308929b819fa17b4"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.5. Back-layering length.xlsx",
+                             "bytes":  3998308,
+                             "sha256":  "6fd071386a3521cfaa0d7189205abf49b851b5944c25648327137504edc9c676"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.6. Smoke layer thickness.xlsx",
+                             "bytes":  1046420,
+                             "sha256":  "db6e9f76f216e80e0e9256a4cd1ab280f244549472d4beffb98b4e5718d32017"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/3.7. Plug-holing.xlsx",
+                             "bytes":  1986142,
+                             "sha256":  "24478fff3c74ed41fed993df6f46c77eea09f203d120c0555464d96e091b51cf"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Accident_list/Tunnel_Fire_Accidents_List.CSV",
+                             "bytes":  13849,
+                             "sha256":  "26bbc41c040ef39f828b10449a900f49306b5473ffbac3a6f07815b51c61ea6e"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/ANN.py",
+                             "bytes":  2820,
+                             "sha256":  "ced660559c97dccb299f2334860f3b8809c59e327a3d050b9180b4b80e760038"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database.xlsx",
+                             "bytes":  164915,
+                             "sha256":  "f173a9159b650a7e3193ea9509d47846e6cf03e3c415e909719d61136c75ffe2"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Li_2010.csv",
+                             "bytes":  32095,
+                             "sha256":  "6b803b30adcaf6af9acc14df30526e23ab1d83bfce3bc23fb76e3959f585e06e"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Tang_2018.csv",
+                             "bytes":  24349,
+                             "sha256":  "4cbb5c5f30049a3ddfa1766187ef8b0de275b59bac736007eb4dfa9262d704ad"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Weng_2015.csv",
+                             "bytes":  9992,
+                             "sha256":  "af209d7556730a51a6effac22a997b181b624fa3b3344978f8f2504d068b81be"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Wu_2000.csv",
+                             "bytes":  97322,
+                             "sha256":  "ef7d4344eeac40ba747dfb9209dcd2f9888e9d758bd95b433595a934265ca9bc"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/README.md",
+                             "bytes":  126,
+                             "sha256":  "16d75dd3222fc85eafdd5eac3e92eb648d61f2c2e50d512f31b75df8f0f2f1b6"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/new file",
+                             "bytes":  1,
+                             "sha256":  "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/2020_TUST_paper/README.md",
+                             "bytes":  781,
+                             "sha256":  "27a327c1c7249257bac61e0a6e0950190a2d8534ffaf98c6c071e5a15a70e5a5"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/README.md",
+                             "bytes":  825,
+                             "sha256":  "842ef4820119b63287fefdcc2209cde8b626d8b0ce506f4ee96568e49bb195f4"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/New file",
+                             "bytes":  11,
+                             "sha256":  "286f93b7f4db9d7e2ef0825d6099f89b5e7f7aa4b6e2fd904855df4ff3761209"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Read me.txt",
+                             "bytes":  717,
+                             "sha256":  "543f89357c57985dc59d14d5db5bb6d5c5be4e42eaff28e388659a55ceecc3f7"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/read me.txt",
+                             "bytes":  104,
+                             "sha256":  "660c29e7cd432b2751891729ce5dec4597e4de113528c7653d18c5c958fbc304"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T1.xls",
+                             "bytes":  1081856,
+                             "sha256":  "903e39555a6a79885fc9c27cb58d7ffcd9f9999cc4e1fc901cdb32f4b7c2d061"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T2.xls",
+                             "bytes":  1080320,
+                             "sha256":  "55e6a4eae49fe318af25a144bd3f1de9f28b5777f6d7d1e774b58247b4848998"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T3.xls",
+                             "bytes":  1080320,
+                             "sha256":  "748f0e4ef9189d17e11e9332632640973e2fd0a34ba5f3b57cfb99de5a94991e"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T4.xls",
+                             "bytes":  1078784,
+                             "sha256":  "e375650e0486c4cedb17118ba4f891d79a3da86a1f609a1db499597b9c6d85cc"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T5.xls",
+                             "bytes":  1240576,
+                             "sha256":  "d41c978a3fbc6f8250dbc9d95c15fc8d66cbc29368262167e2320d5860127b52"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T6.xls",
+                             "bytes":  1094144,
+                             "sha256":  "3eca0d7abe9670d084f24ecb72126c485ecf0abb5edec2a3fce01eb1f4db7e4a"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T7.xls",
+                             "bytes":  1238016,
+                             "sha256":  "ef850fb204588cb47db7f777a1f87a654b2af4fc6fb18d4a68b04397c7619524"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T8.xls",
+                             "bytes":  1076224,
+                             "sha256":  "2378049a008c1b7fafc20cc58f84342bda95311db57b0bb16ce2c80a4bd85d70"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T9.xls",
+                             "bytes":  1083904,
+                             "sha256":  "ca53c8dd84eb71ee22e06292881516fd01cc94c0c069f086889da97687827f08"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/Vent temperature profile.xls",
+                             "bytes":  645120,
+                             "sha256":  "46100ab5e2b1f9f86441c581604ad3fbe2e0814e1327d5408767323a79e1d060"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/read me.txt",
+                             "bytes":  99,
+                             "sha256":  "c94fce7200a2a9325d60ce5c35210a08eb9f8748043c41d1c6fff34ab6b45115"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T1.xls",
+                             "bytes":  809984,
+                             "sha256":  "9cbf2eb173b36466b3ad8cd56e1ea669de6a42dc45045e7e3e810a0b35350307"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T2.xls",
+                             "bytes":  812032,
+                             "sha256":  "4fa83b5d34e4ed3fd0753fe39435fb588f998e41e350411eb0bccd8cb24eb58f"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T3.xls",
+                             "bytes":  814080,
+                             "sha256":  "4083fe8c58952b4d36aa7298a4813b89886a956dcade90504d4d07bb169c475c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T4.xls",
+                             "bytes":  813568,
+                             "sha256":  "946976bd341b94e39fa247fd782b14cb5dc7240d80618102f8b47e9541dd52c0"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T5.xls",
+                             "bytes":  934912,
+                             "sha256":  "4004b7107babcd45639f7bd9dd8adda1735b32a6aa5db93f65aded1c6fd4aa6c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T6.xls",
+                             "bytes":  825856,
+                             "sha256":  "07ffa30c7937db4d6206d0f79d863658d5b7011cef0abad009843c76a846a340"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T7.xls",
+                             "bytes":  934400,
+                             "sha256":  "62c6fb1fe463aca23f050e2a686e6dd14af8fc59bd84710136511db890e2fa29"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T8.xls",
+                             "bytes":  811008,
+                             "sha256":  "b0837fa648ceecd04d33b4b9aec1b2087fabb7858a8d2dc2594e0ede881913f8"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T9.xls",
+                             "bytes":  815616,
+                             "sha256":  "c5307ba64119a956bb9617eecb12055059148276d9acad45f4687bb4c483d702"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/Vent temperature profile.xls",
+                             "bytes":  488960,
+                             "sha256":  "254fe8c704aec9e61e35f02a31a98aad80647d992de533a573b12ac0451fe218"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/read me.txt",
+                             "bytes":  122,
+                             "sha256":  "bc30e3f21b48ba58166575384f0112fc941554fc16439d46cbc63dd572403d71"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T1.xls",
+                             "bytes":  504832,
+                             "sha256":  "29e8a2908c14ab1ca4cabb82932564b1f7de1590d2fea0899fc80e81c34cd40c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T2.xls",
+                             "bytes":  505344,
+                             "sha256":  "96a11b3fb1c0b8a549466f0ade987717a2742f27c6081242f8ff95f98672cd43"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T3.xls",
+                             "bytes":  507904,
+                             "sha256":  "bfb73bb302aa821db148508d225e580774df924ca303b2c049917b6425cc955c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T4.xls",
+                             "bytes":  506880,
+                             "sha256":  "b1af39422fb7ecec6b315cb9aa8c0d4c16eaefb2bd1ef433adafd477ee89cf43"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T5.xls",
+                             "bytes":  580608,
+                             "sha256":  "f8126c3bdf8a2ea26d246ecab0ce0378872ade90db9d037babeba40cc0fbb83d"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T6.xls",
+                             "bytes":  513536,
+                             "sha256":  "d758626ed55a9315a22afb9c8b9860cd923b6f4f2cf75e7050e534dbc03ec043"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T7.xls",
+                             "bytes":  580096,
+                             "sha256":  "86d1550bbda8b50b4e70e0ba3f982fdf4a6d869eed018408e3f882bbf80ead75"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T8.xls",
+                             "bytes":  504832,
+                             "sha256":  "5de570dbdfd78147862621170aa8c53071ae7722558d001be58b2e66c38c40f8"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T9.xls",
+                             "bytes":  508928,
+                             "sha256":  "9d90ce2e5e3ab98fa23741c5e3472f7799d4933d1cf6f39e036d233da67c5c97"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/Vent temperature profile.xls",
+                             "bytes":  307712,
+                             "sha256":  "80b93a0ec10ec7a4b3fc692351c691916fb9a1ec7d1a30db79555a944c747017"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/read me.txt",
+                             "bytes":  141,
+                             "sha256":  "254db527a1364f9f9d895e807f7735ff3edea55934a0fc5830f836e33700b072"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T1.xls",
+                             "bytes":  739840,
+                             "sha256":  "099f07f9b754ca6c51c66a41f3d72ffc798f2662ff4ac75c4f95283186586aa3"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T2.xls",
+                             "bytes":  738816,
+                             "sha256":  "4e45c04906fc00c196672361b193a40d654ffbd1d5042bcfed69b3ba0146bc92"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T3.xls",
+                             "bytes":  741888,
+                             "sha256":  "b9bd01790447d5af37fc8ed3209b2c58f39469f03a8dc281cccf80433bc618b4"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T4.xls",
+                             "bytes":  741376,
+                             "sha256":  "6ddca8fe1ea049b9e36a106e6b587967d2ce760268a032cd115e3fff001cb687"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T5.xls",
+                             "bytes":  850432,
+                             "sha256":  "385507eeb36db0d3acd713bc8803251e88f066994551735c13460453f834deca"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T6.xls",
+                             "bytes":  750080,
+                             "sha256":  "38e68f3255912add5f1913385aa93df18eaf3f10d551392bf04d0d239b4e23ce"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T7.xls",
+                             "bytes":  849920,
+                             "sha256":  "fbdf4f1cf735f76632af5ca76c969427eb6e5b75a08a656f38e061de4463aeee"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T8.xls",
+                             "bytes":  736768,
+                             "sha256":  "a828979ffcb65a677f3e0d66cff8c0de6c018bb4263214bc7ced89887a4b3887"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T9.xls",
+                             "bytes":  743936,
+                             "sha256":  "dc315907f4a097e21eea11d1fde26a6674b0479ca08dc643efedbc6af66926dc"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/Vent temperature profile.xls",
+                             "bytes":  444928,
+                             "sha256":  "0d11db7ed749192c8af2a6bd85b2f7b3aadbdc8eb21f23ebd113af3128b90208"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/read me.txt",
+                             "bytes":  112,
+                             "sha256":  "7302b1959a2abae90bf727bf10fc2df13838817a082c70a22db60293eab72f5e"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T1.xls",
+                             "bytes":  425472,
+                             "sha256":  "a4c12e1569a1345470a0dd4cc54cbf6d2c79350addf2ee2f35efd2a3fbdf6c1d"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T2.xls",
+                             "bytes":  424448,
+                             "sha256":  "0a47f537f99cdf2bcfc4590a281640f91743a57ca3cbfa5660d941571225ef9e"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T3.xls",
+                             "bytes":  424960,
+                             "sha256":  "f9a7490f7ef16187f23e55ac3fce314ebbf53954be56379c6986aafbaef148dd"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T4.xls",
+                             "bytes":  424960,
+                             "sha256":  "cd56125a27a28ac9f9d16b5c08203453a95851d7ca583cdd8df37db24feca140"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T5.xls",
+                             "bytes":  485888,
+                             "sha256":  "3a3faae390d97fdefee2ff1528a3b06fb4792ba3794f4c7e80521b7c6069cd42"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T6.xls",
+                             "bytes":  427008,
+                             "sha256":  "6cd5ba2e7e7e28fe0d5dd0fe66dfbde45282144059cc681dda42872b63beda8e"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T7.xls",
+                             "bytes":  482304,
+                             "sha256":  "67e3bedb29c95f8e8a5df0950936cbbc6bd7979ff84be1117faa0911746cc363"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T8.xls",
+                             "bytes":  419840,
+                             "sha256":  "faf646daf36a569542583f60618864fecb67282a9f0e0ba0a9e6d59985f010c0"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T9.xls",
+                             "bytes":  424448,
+                             "sha256":  "e198198ed7adccbe648bb738e3ed5a3fc1a668e030ba6af97777600704f5c9ea"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/Vent temperature profile.xls",
+                             "bytes":  258048,
+                             "sha256":  "87cc23b9121b29d6c43835199e0d485e4486f4b8cb63b8034b8033fa130cee1d"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/read me.txt",
+                             "bytes":  154,
+                             "sha256":  "6edeb7306752d8e435edbdfec253343d7e2847783cf50f5ba7036943065f4368"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T1.xls",
+                             "bytes":  668160,
+                             "sha256":  "1b47f516de8b7e17e3e93191fa7868cd24190258e56e6ee7a3a7f30cf6056ffb"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T2.xls",
+                             "bytes":  666624,
+                             "sha256":  "25a9dbca5c8b8d90107a63ed32a2d0ce4dafede2f4a1a588246078c46a27adf7"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T3.xls",
+                             "bytes":  669184,
+                             "sha256":  "ff28c6141ea33b5fa2e4480f56b2b1d1741a8947b42b1ff466f7f062af5c3ce5"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T4.xls",
+                             "bytes":  668672,
+                             "sha256":  "8cb0f99832c525dcbcf81a7c61f15862614fb11ec410e909fd3fcf5c14705e3f"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T5.xls",
+                             "bytes":  765440,
+                             "sha256":  "7b8785949153c8730822430906c6e4fe4768fcf6ba7ff0afc6b436bacf59ffbe"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T6.xls",
+                             "bytes":  676864,
+                             "sha256":  "f9f1cf20e2f96e85129951aef7f1e1856ad6b26d2a91b682d5bd8befc80d2e2c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T7.xls",
+                             "bytes":  765440,
+                             "sha256":  "196fe570678cec8f4bc8f4a2032e6eba7e2fbbca59dfdde8c7a91975a52fc204"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T8.xls",
+                             "bytes":  665088,
+                             "sha256":  "8007f927765911fd41d22b24f841017fe5d7e44816ddcbad5797fd737632be17"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T9.xls",
+                             "bytes":  671744,
+                             "sha256":  "881e4896921f230bc0932833aed78f6944f51b59e672b584dffb52d1727f556d"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/Vent temperature profile.xls",
+                             "bytes":  403456,
+                             "sha256":  "736f8ccadc97114cd81d6532695a0320c18e7b52f99eae76b842e48500af0a37"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/read me.txt",
+                             "bytes":  121,
+                             "sha256":  "9c735093d24ce7e48e6582437f7888d58dfa557203c0856e3dc735da8be7e115"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T1.xls",
+                             "bytes":  779776,
+                             "sha256":  "acfeb905f10097c741b7e85462c527f4518bfce59254f5a9a14b4e641598fe7a"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T2.xls",
+                             "bytes":  776192,
+                             "sha256":  "75ea256684869388bba57f8b4aeaa3ea58d4978e4e582b97a3d28eb104806e5b"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T3.xls",
+                             "bytes":  778752,
+                             "sha256":  "b4043daadb17c810368ae74799a1c69dee5afe985eaf4fd9eb2f4929c0138aed"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T4.xls",
+                             "bytes":  778240,
+                             "sha256":  "68417823f0cd5416136c423f5989991cac62ca720ae57b71f6b21135e6a6deb8"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T5.xls",
+                             "bytes":  893952,
+                             "sha256":  "c9834fcb134115580beb7c5d316c6104b14e95220a7a6d94cbf6faf5fc30065c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T6.xls",
+                             "bytes":  791040,
+                             "sha256":  "431afba4594094ee35f0d057ba56f0f71c79073d27c36836f767ebe304fd1a04"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T7.xls",
+                             "bytes":  894464,
+                             "sha256":  "e4e4753d88bea0730a218ddc8698cfa3a02cb564cf2a3bf90adb66eb76bfd98f"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T8.xls",
+                             "bytes":  776192,
+                             "sha256":  "3c670f8940305550dcfcbfaa6a8bdf700b2c699de9f2f51317831ce935d824e1"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T9.xls",
+                             "bytes":  784384,
+                             "sha256":  "fc7e4a8de565c8a64f2c40f5bc2b08e9b963bb6e913d79dca298702463b56734"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/Vent temperature profile.xls",
+                             "bytes":  468992,
+                             "sha256":  "1c55e78496fa34f3a4552c65943f49d89636b247455c59b9cd049e98d7849cca"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/read me.txt",
+                             "bytes":  115,
+                             "sha256":  "c08bcce8ee070c63aa31a65e9c78454292d42c4dc12a5643e8b5cb6ca52716e2"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T1.xls",
+                             "bytes":  507904,
+                             "sha256":  "ad4333a57742e8bb8a51db6b51c098725db891377d242ccbb0d32841aff6dfb9"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T2.xls",
+                             "bytes":  506368,
+                             "sha256":  "55dd9951e6f746030b0271353d1245088d556afa6de12e297c694346ba2f83c7"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T3.xls",
+                             "bytes":  508928,
+                             "sha256":  "49d9825f5d5d01a6a88c9dccba7e25df7437bdd7e87759b469b2e206f8869f7d"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T4.xls",
+                             "bytes":  508416,
+                             "sha256":  "a3673a3b70c46cb13bea098c8a9d8e7d63b5bcfa1528db3b5835ebb7ce688429"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T5.xls",
+                             "bytes":  581632,
+                             "sha256":  "698775a3e38bc5e501bbd98a21ed296614faee3f86f3e409f5555c5b9e4a1a4b"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T6.xls",
+                             "bytes":  513024,
+                             "sha256":  "ab4c3c23743ca2669206d9115d0379030bc4e8747986ad6557598c47c04efb83"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T7.xls",
+                             "bytes":  581120,
+                             "sha256":  "ab57dcaf1af581c9c66c687fcca590760555df960c463a0d916d07399491579c"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T8.xls",
+                             "bytes":  504832,
+                             "sha256":  "1ca41171cc0d2a94a3efcce8908996259cd0abf1a4d2da79706b0d6459e42a6f"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T9.xls",
+                             "bytes":  510464,
+                             "sha256":  "078d634887319107364775770718f11aa206c104eb7b592b3939777c4f9ff4bb"
+                         },
+                         {
+                             "dataset_id":  "D02",
+                             "relative_path":  "02_PolyUFire/Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/Vent temperature profile.xls",
+                             "bytes":  308736,
+                             "sha256":  "25df7f9f2e6572811934ec418348f1719a2b5966403941f7255f03fe0e39be1a"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/Aalto_Woods/pine_flaming_25kW.csv",
+                             "bytes":  2167,
+                             "sha256":  "4721a9741e7feb66ad332701d8249317854e10c12c0b315c4db09d9c31fa06f7"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/Aalto_Woods/pine_smolder_20kW.csv",
+                             "bytes":  4937,
+                             "sha256":  "d9bddc3795c965b3ce0f2938f50b9862b831b57a2ec40e4434e6d4c5f2d122a2"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/Aalto_Woods/spruce_flaming_25kW.csv",
+                             "bytes":  2105,
+                             "sha256":  "cc1855c68b872e1f1948c7c109c13bd4c67932b2ba5561c81b6f331f4a3bfcf8"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/ATF_Corridors/ATF_Corridors_048kW_avg.csv",
+                             "bytes":  52043,
+                             "sha256":  "fc50158d230cd9706db4d6963bdf542e682718655e0a47cfde151d9a50a0f5f3"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/ATF_Corridors/ATF_Corridors_485kW_avg.csv",
+                             "bytes":  44411,
+                             "sha256":  "b9562d21361091684252c4b7e33949150463a0dd2a5d02f3356619a1f6518b45"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/example_preview.png",
+                             "bytes":  75285,
+                             "sha256":  "cf2b2a0e54be3edf1822463af21e12c1583952c40c59a9f5076c8861dce112af"
+                         },
+                         {
+                             "dataset_id":  "D03",
+                             "relative_path":  "03_FDS-exp/sample_card.md",
+                             "bytes":  339,
+                             "sha256":  "859a67a296d0ce42474206e9824a080028a442e7753dbb53aab7c65f8e2ab077"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/example_preview.png",
+                             "bytes":  38764,
+                             "sha256":  "4ed8a2103ba3ec33bd00b1e7a36c9723a3bb1c61cf813f4d7eeb370550980236"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/CODEMETA.yaml",
+                             "bytes":  1192,
+                             "sha256":  "c34983d13b5481df98b67f2f983423492614d4d6841f0c17aebf5d4a6f8b555c"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/CODEOWNERS",
+                             "bytes":  323,
+                             "sha256":  "d2dcc1701e3f90585438cceefa69fd7f888a9a78bca323abc087ffef7a984915"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/example/example_commercial.fds",
+                             "bytes":  58509,
+                             "sha256":  "b66d3b6954991bb53814462193b5718e41e388f13ecbb2b80d10975bbd422c67"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/example/example_CSTB_Tunnel_Test_2.fds",
+                             "bytes":  49288,
+                             "sha256":  "c2b2b0697c4f0e4801f0fc573e14c3ba348bba4ccaf98142762085fc7ce759cd"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/example/example_NIST_Smoke_Alarms_SDC02.fds",
+                             "bytes":  16604,
+                             "sha256":  "e4c4eab226d5d2fd008f1611afcbb7a02c458a89f955cae97d1b8661c2fc9e69"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/example/example_Single_Story_Gas_1.fds",
+                             "bytes":  12984,
+                             "sha256":  "e17f1c31b6228b992c848d7c79af28d12bddfcf223148110f20528426d10e25c"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/example/example_wind_test2.fds",
+                             "bytes":  8155,
+                             "sha256":  "5a38b0c1b83f54310773498ce1c7ff00931a23bdbea2514f0d14cf57a0e7ad0e"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/FD-Gen.exe",
+                             "bytes":  84995454,
+                             "sha256":  "f80651cd2fea4e86c9b4bca3d4bc91a01d8a28ee3f0fe4f08fc3ab8434e03a62"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/images/Picture1.png",
+                             "bytes":  38764,
+                             "sha256":  "4ed8a2103ba3ec33bd00b1e7a36c9723a3bb1c61cf813f4d7eeb370550980236"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/images/Picture2.png",
+                             "bytes":  25159,
+                             "sha256":  "5f914af479c6c4f822e111c3b08e6df3ddb11aa687ab789c530e300e3f8db1f5"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/images/Picture3.png",
+                             "bytes":  12418,
+                             "sha256":  "d788aebef3bf3bda4e0ec9301a2a7919d3f470ac0ba18f026e41806aa2f26bf4"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/images/Picture4.png",
+                             "bytes":  6526,
+                             "sha256":  "a17ee70c33bf9d5887fa9970eac2d676e518b8aa0cc2583f2d844cd2d82cec8c"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/images/Picture5.png",
+                             "bytes":  2503,
+                             "sha256":  "01d9d6ad6916a3ea7e5f9c5cc4afe63859c6b09cd43fe882e579b9c8b2f56b30"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/LICENSE.md",
+                             "bytes":  1866,
+                             "sha256":  "777060f35baa90ababb6d4336f7e96c6a9d78f8c23fd136cb7b0bf1cd7e8cf9f"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/global_parm.cpython-311.pyc",
+                             "bytes":  746,
+                             "sha256":  "75e5c8ac3d27dc9561fb5b7383819c15ff585e7acfdbcf9a2d7fe0b347b0770c"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/MFIR.cpython-311.pyc",
+                             "bytes":  44112,
+                             "sha256":  "65d69ee25fd46e42a0ecc961341ae0680c5f21e306ebb19bca135f7083e01f16"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/MFLD.cpython-311.pyc",
+                             "bytes":  51068,
+                             "sha256":  "d2e9171b9a1b27e3ec5cca13d4ab280b45501d681140b687c6cb0cfb8959f012"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/MHDR.cpython-311.pyc",
+                             "bytes":  7308,
+                             "sha256":  "c8d9597d367cfdfa4f5a4c6955d2134ac5cc0a38ecaf6cb747e761b9d8e655dc"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/MRND.cpython-311.pyc",
+                             "bytes":  20393,
+                             "sha256":  "bab44e2eb83126640fbcf5c6b4976a84f91142dc2408aee5dbc1716e87b80a3c"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/MSTT.cpython-311.pyc",
+                             "bytes":  16445,
+                             "sha256":  "fb24c97927fcdb1e2dd6e30e40313fe1a9135486a11bc6785fc5754730fe97e1"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/parse_syntax.cpython-311.pyc",
+                             "bytes":  8588,
+                             "sha256":  "79f9ddeed3faec40ae47f12ca19b62ecd0b4201e340f0ed701dfa512abd9820c"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/QUTP.cpython-311.pyc",
+                             "bytes":  20360,
+                             "sha256":  "57986de03dc487cf19ab5aa2c9659888244df8b753b47de17ff7d1f836cb23a6"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/script_engine_checking.cpython-311.pyc",
+                             "bytes":  13427,
+                             "sha256":  "338cdaba99041c56bb7cbf73d99db97b52b0fbbc8c0e1a0d1786bb9cc267a752"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/script_engine_main.cpython-311.pyc",
+                             "bytes":  4304,
+                             "sha256":  "60209f4854b6cc6eb43405cee86f20f5db97d966674b0b0857ee7a7b6228bee0"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/script_engine_sampling.cpython-311.pyc",
+                             "bytes":  20023,
+                             "sha256":  "996ef9a6aeefbcaf0e12aee6f9af8988dcbd782cf475206205168012aecba91b"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/__pycache__/script_engine_wrapper.cpython-311.pyc",
+                             "bytes":  28776,
+                             "sha256":  "f4a23162a99bd4613a9ddf58e044ebf7ad76118bf64eef9b33d0edc97577129b"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/FDSdata.py",
+                             "bytes":  2317,
+                             "sha256":  "626115e2e7c5a72d26927ad4863df5cfc86a6bce34bd84bfd2536963a9fef852"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/global_parm.py",
+                             "bytes":  273,
+                             "sha256":  "c7e763b1061ec0da1474b4413c151e7ef8ed724556c1c56268fcfd5f78a810b3"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/MFIR.py",
+                             "bytes":  40186,
+                             "sha256":  "b58d805c3a7addfc39d3bf11573b958c4793813ad2dd941748e8d2baddf9209f"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/MFLD.py",
+                             "bytes":  47706,
+                             "sha256":  "91f5ed931e69c38f57a0d9e22f0cf8c17658257fb8d57ddbe12be73509e622ee"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/MHDR.py",
+                             "bytes":  5181,
+                             "sha256":  "7d69da377bc148eae84e345e4720c16743b2e1a80677872eaaba58d480bfaae6"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/MRND.py",
+                             "bytes":  19991,
+                             "sha256":  "cfe04596b6f46ca19e44dc59f8df42ba84b26a431370406d8d9034910ec7a3ac"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/MSTT.py",
+                             "bytes":  12143,
+                             "sha256":  "46fa5dcbf2ef7c7ade9cef466a5f07c35de0f2f4fdf258ba0c39a9682ac7b8af"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/parse_syntax.py",
+                             "bytes":  6090,
+                             "sha256":  "3c0fd438041d76ee0ae7fbdf849fdc629ad1c1cb313fe327a2ea66cf7a4e693d"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/QUTP.py",
+                             "bytes":  16406,
+                             "sha256":  "0d5b0b5c3cd28e49b61bf7134eddf19b98c6b4fcb07ccbeb5888a8b68d54f84e"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/script_engine_checking.py",
+                             "bytes":  14824,
+                             "sha256":  "811854209dcfdbe183787639f744862709c44e719bd75d9affdf70a953861024"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/script_engine_main.py",
+                             "bytes":  2973,
+                             "sha256":  "d1f59e83517172c0f58bf66c2ea73b6d04a0f1dde66280136534a4d6dcb4ea01"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/script_engine_sampling.py",
+                             "bytes":  19074,
+                             "sha256":  "ff0baa35ac6879f82689208a7d23f2ff50f7e3943a89872e84e3119f56168c9a"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/main_code/script_engine_wrapper.py",
+                             "bytes":  27036,
+                             "sha256":  "6086238190a91336ef6001f3163470f799dde625e0fcf9287f8ba4a7c987e8d6"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/README.md",
+                             "bytes":  9329,
+                             "sha256":  "2865d93241fdba76ff403ee13cdf490a91c5a3b9802dc9b7808a4aceea1736c2"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/requirements.txt",
+                             "bytes":  75,
+                             "sha256":  "c364e8ab26077cc5a334379382f6c0e9a74fd28105c3bc20143ff6141b0092c8"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_DWT.txt",
+                             "bytes":  1332,
+                             "sha256":  "3f745c0317236670dd1d3cb7f60308b32b301619c0712607aa8e5ddde3b17545"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_FSL.txt",
+                             "bytes":  970,
+                             "sha256":  "356f84030c4d9d3c9ece3bf3b2ab43793dfcace6d9e651fd606c249eaf4d2983"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_HRC.txt",
+                             "bytes":  1585,
+                             "sha256":  "d2842cc09220600d73f56476a41c01cd49c0b32cb1966b23bce931ae849a25d6"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_MAIN_MRND.txt",
+                             "bytes":  2084,
+                             "sha256":  "37bf689909eee90669a280ca9e02221ba586a49bb8f6163fd1de2f74d14544db"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_OTH.txt",
+                             "bytes":  725,
+                             "sha256":  "eca2934f507a14fa3dbaea01ef6e49f101eebf8ba12c54b09cfdf323f5bbed0e"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_RXB.txt",
+                             "bytes":  1114,
+                             "sha256":  "3a61d2470f3b664c9b1c5b1967cf995ddf61774fc71c8e6a7918c08fc6cf9e88"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/FD-Gen-main/test_cases/test_script_VTP.txt",
+                             "bytes":  911,
+                             "sha256":  "2ed09d561430e04817f47e4cb5c518251abb21c9d76e6e117eaaec5dedf2ee7e"
+                         },
+                         {
+                             "dataset_id":  "D04",
+                             "relative_path":  "04_FD-Gen/sample_card.md",
+                             "bytes":  397,
+                             "sha256":  "97eca3674280a3b85ae6165c5b7083532db7cd2d1538a6fb3a6c3b520e9f9741"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/data.yaml",
+                             "bytes":  399,
+                             "sha256":  "cf0ef58ab837152ed4482a05327da76e5d2006f316d1f19e317f1568f7c9ee7f"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/example_preview.png",
+                             "bytes":  285437,
+                             "sha256":  "12a014d8c05ff6af08cb57ad3dde5a484a525a2191650101158f3b92b40ca0f9"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/sample/test/images/AoF06723.jpg",
+                             "bytes":  227556,
+                             "sha256":  "3eb16b635a007bdd6353e7219cae149a7da2f05153b2bbae4dbaae2ac360fa46"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/sample/train/images/AoF00001.jpg",
+                             "bytes":  43550,
+                             "sha256":  "06a9d6b8354dd23e9a19f123454208719be71ca8205e831df89fdcb7199b6379"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/sample/train/images/AoF00002.jpg",
+                             "bytes":  85421,
+                             "sha256":  "eb4ade628978f83194cfb1fec4416ff1b162dc1446bec3612444fdc1a955f5f2"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/sample/train/labels/AoF00001.txt",
+                             "bytes":  81,
+                             "sha256":  "805a1eaaa582a225bb695f702a3d0d5b753fb92f19668b216524442d2c057779"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/sample/train/labels/AoF00002.txt",
+                             "bytes":  82,
+                             "sha256":  "9342ba004d97304aee4f08c72a190411b6ba15964f1b63b181960f0dd9b6535d"
+                         },
+                         {
+                             "dataset_id":  "D05",
+                             "relative_path":  "05_D-Fire/sample_card.md",
+                             "bytes":  486,
+                             "sha256":  "7cd821b07ca94603bf64cdc4770a27f7812a0a11177daa09895fa58564ab380d"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/example_preview.png",
+                             "bytes":  123731,
+                             "sha256":  "a6366c3a99a323ac73d5a61b6cd7ae03e605334bcb89be8560a3332b28e5a7de"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/metadata_fire_prompts.json",
+                             "bytes":  2387662,
+                             "sha256":  "1fce35f997fa64c2b3c1fd7cac1dfe068d774b61a41ab59f1375d0daa8b58f80"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/preference_dataset/preference_dataset/preference.json",
+                             "bytes":  10547104,
+                             "sha256":  "8530ec27df2d0d20b58ad2a10a6529983a0e3dd799edabc33b11d83daf307fd5"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/040f06a52a73701c_original_jpg.rf.825694b840aa4a484a4fddd0c80a5db4.jpg",
+                             "bytes":  14847,
+                             "sha256":  "d5c15552a9f727f08cbbc49fdafcebcdbf4579852da6763faadf3d7b4deb4aa2"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/08540673d21b406a_original_jpg.rf.2d651b84a37f48104736c478ed057ec6.jpg",
+                             "bytes":  8445,
+                             "sha256":  "2dd6560170d52eca35c4861812519bd6c4fef1e3151f68385df181751f9eca5c"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/14950f466e87a413_original_jpg.rf.c254998ed410f12c069be6804e0e403a.jpg",
+                             "bytes":  16112,
+                             "sha256":  "dc3fe7477e49ff0f4899a82445f7c1732f3d88d5f13e4ec2c469ddc201f9e2ca"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/19f8e1fd2e27a48d_original_jpg.rf.cec303b57efe9df258a2beed0d226929.jpg",
+                             "bytes":  50134,
+                             "sha256":  "e82d3e6c59314e75bc7e2eb13ccff1218dfc1b5f1768394916b66159076f09e9"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/1ba5fa63de5e0099_original_jpg.rf.3e3fb4b7f8c4ac19b8a20c526e69f796.jpg",
+                             "bytes":  25606,
+                             "sha256":  "73736e2b65710f5c307efbab2a97dea5636109b3cb1444a3998d881120cf2798"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/1c676029afd0847d_original_jpg.rf.055fd2259433decf55716241e827885d.jpg",
+                             "bytes":  7703,
+                             "sha256":  "cd86fbcf19085eeed90a29b956a8fd63cb0f1996611a7654a4bb5bebe3cc5865"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_100350179_zGx3sDcZ89AebyAjCdnvF2aWrrgplvtb_jpg.rf.464d77ab471eaf1f3a4c21cca21bda6c.jpg",
+                             "bytes":  15787,
+                             "sha256":  "0760aacc77b3a26856544135342fd9bdd76d930ec847d03b65dab411edbbb01f"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_100484813_cWRLjh7OSmz6LoCvFGVZJFG2xTLx7qGZ_jpg.rf.1867c1601b50ee9fcfa521731cc26b33.jpg",
+                             "bytes":  10767,
+                             "sha256":  "b49f33b59ae606216b11f5d1100e1a50530bc9aa26c04e62f80b8ac75614c7da"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_101342428_3arGmXjzDmdFEyUqj0vWWreT181XrLfk_jpg.rf.def50ca8657569738056749c8932add0.jpg",
+                             "bytes":  7700,
+                             "sha256":  "a694c0d5b6f9cd9d475bfa6c0625390387d0bf4e3d0a656db818f109bf27a583"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_101468847_GZ7WTNYO1HAqW3PPtpoPzG4Gw05gykg4_jpg.rf.5ec2b56e0cfaf2716ddb67f9a4cfd3b1.jpg",
+                             "bytes":  19311,
+                             "sha256":  "469167e3574dd1101365dae57af365a00e7efbe74a10f2249126680f2fbd6f5a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_102068356_9I3vqcDcsGnnEcQBWnrwoTS4TLbFmNCm_jpg.rf.cd513ca26357f0e9cd43b826eaf012c7.jpg",
+                             "bytes":  18854,
+                             "sha256":  "01e2b6c97fd78a7720c40f267de363340fc06590e9dc96b17766cac004221b3d"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_102432593_XxuH78e115ks56FLLeesRnkAeXpsQFao_jpg.rf.6d409cea7d2bd95d29472835fdb8de61.jpg",
+                             "bytes":  7464,
+                             "sha256":  "e075fb4f64908e4c646e914a815ce6462a16c37ce72c920d847155e483b4cc3d"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_102473762_6dU9JO2dQpWa1TpLRidP1p78peAOW7iT_jpg.rf.436affb9c350efdb5f762925490ec0ac.jpg",
+                             "bytes":  11462,
+                             "sha256":  "b2623cc2163f3b0f487d36dc0b50ab54f5aad20ff7a0f30c0a64f06006c4d0a4"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_102696077_LuJhx99BdpZ0wcGmskZ3pWaVn5cbPCGa_jpg.rf.98c7dd47c3221d2a3885a3e3300249fd.jpg",
+                             "bytes":  13958,
+                             "sha256":  "560ec741ba7409901c56b3d0e5339bdffdaac88b4c87591341466a4f4e77abc7"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_102696977_ktyCClC29hcmwxjE1ClKnY4pJesdmmiM_jpg.rf.a8e4c6b6c393e73892950e0691731d2e.jpg",
+                             "bytes":  14472,
+                             "sha256":  "1df47b85ff00102243728c8f945b3f6910ef8f5d17aceaca428a049b967a7d46"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_102969840_sViEn7cn8sfCciBKoyBWkHGhZIDHI6e1_jpg.rf.ee26551a6b04d9f5389af9133a0d599a.jpg",
+                             "bytes":  10196,
+                             "sha256":  "51380026c9d9689ad303d51d666cc6afd41793cf88f51386aa689a872d3d20d6"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_103696781_gmfDN6Vr7Y6l2mgLKsyBfAj8XzqV0EUW_jpg.rf.567bf4ed48f096880795d455ce0e1963.jpg",
+                             "bytes":  16630,
+                             "sha256":  "b744c36ce3df32a85c1fae2f40c4e0c2e944bc3332203a3e3f1731ef6c9afb2a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_104823973_ONsFZ5cnJoTQm6kreVJgbMjl0GZT3XHH_jpg.rf.2eebbfc1be4d1957bda1e7b9be1c76b4.jpg",
+                             "bytes":  13863,
+                             "sha256":  "a01bd68d5cb622b327c6e000838e9af4542c31af35ae930d8104a508dfdba738"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_105891024_ZvDfftSgMemmELsSl90pcnROfR1Fxb4N_jpg.rf.b750ba32197ef217fc7b83a6248692cf.jpg",
+                             "bytes":  11176,
+                             "sha256":  "0d7bd0a40b74ebf3eb69135ad1def4a255ffaf65c3f414b9a2fea6ed4ee0a6ee"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_109987766_ndiUgobfI4W4ajtNOZ5kcmfabyDaTkx7_jpg.rf.6c0d9af8594d911fa7143cde7ef48fba.jpg",
+                             "bytes":  4730,
+                             "sha256":  "0cffac5749918a682cb7b34b983cf6475bfbfda33a4d3fa32b943c624692402f"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_114331624_WdKlqbOwcURAasvbyDeZVftRXE0RwRqI_jpg.rf.57d59373ea2df1fc281cea1963039c01.jpg",
+                             "bytes":  13065,
+                             "sha256":  "60e2ec852e74e0e57a4dd45a07237516213b14763c7dcbb249cc26a0fc5a52b6"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_114520888_l19Iqt33pwMpauYFAG1p6bkerdaJQIn2_jpg.rf.1ea30934e05ee1ea065dbf69f63b4965.jpg",
+                             "bytes":  13174,
+                             "sha256":  "ee9cbedcda7aa9307860dceafbc850ec31a0f1dc7a6610d3720a2718073ea67a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_119280792_vy1mphVvJi5ViKgsJveisHblXODkI2c4_jpg.rf.5b1297cb78f644b932e338e8c8424017.jpg",
+                             "bytes":  14582,
+                             "sha256":  "85e60c4097e50e32f41307f74b0854cddcb378aae7def5f6272acf879ac2cfc9"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_12220399_VbZ6441ByRZ9YSzBInTjKrYvvKMksDbE_jpg.rf.84c1fcf1f009d9c32461afd1ab6e5ad1.jpg",
+                             "bytes":  4721,
+                             "sha256":  "88b0d7723493bc23fd518afc2713f14d47c2d840cbbdc0f5c4f96ea04af4e1af"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_123758398_xv5gIsTU9RwyvWVjmWkLec3DYWNxTMwH_jpg.rf.519c5787e8674b413d00bea51e5db5ad.jpg",
+                             "bytes":  19489,
+                             "sha256":  "f7dd154ff5793dc150cf1cffbdc382833ad182094dfdd8035d48f1dc71ff6eb3"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_127876960_sGDJag30kzDPWa5bue2Q79evYXlZ0Pyj_jpg.rf.9add5b15c3a4243f4e0cae5c278b2669.jpg",
+                             "bytes":  18412,
+                             "sha256":  "41ae635d1056466345deba829da23f529539193e567c86f40966b53ab19299b5"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_1285370_WMkcm5bOhrsOBzeSkuZNgKmw5cu4EW_jpg.rf.a158e80eb6468ee5ea16f93e82f6f8ad.jpg",
+                             "bytes":  19787,
+                             "sha256":  "0755e2772d1ff17a50f8423530b040bbba01fe58a6202cc4af6941e47a233f5f"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_135095704_HTo9O89oDPVNKMgWWEqNO2iKDfIrddil_jpg.rf.d8eb17bf4d509c21c0650b08e36bcec9.jpg",
+                             "bytes":  21043,
+                             "sha256":  "de1292a2f7ff70033fd6f52eafe57f8af408e997ad08ab02756aa5c36b5112d2"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_141944337_tUy9CWmUgdYSAgFq1h6IC9mQqEtKgDKP_jpg.rf.32f6ca42d349aa3d241416281247ed2d.jpg",
+                             "bytes":  15548,
+                             "sha256":  "a3a9749e490403ef7e3ac4a3430545d365be01ff0605b09773009bee1566dbad"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_144307411_xhZRQYK67AqR44yy7DNmSLiFlc2IiL1V_jpg.rf.b460d2bada8df7d4a0bda110fe480155.jpg",
+                             "bytes":  23223,
+                             "sha256":  "0b40d1bb552e5851c26026bbaa954582411f49afc610ec1e93966e030cf8e11f"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_159470383_pyNB8OrAsnxHJWZFeUU1m6OnUfJ9x5Kd_jpg.rf.93f1bf3a4c68313e5c52c8900b356a1a.jpg",
+                             "bytes":  15418,
+                             "sha256":  "7359c53159069bcfa5d69f264fe09689525c4842d8cd5d39709a24aa7cfbf12a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_179050527_hi7Lju3bHveJ2z8xTVp3lqODoFl2zKZW_jpg.rf.a2029817e18c51ee8007d51b92142b7c.jpg",
+                             "bytes":  17383,
+                             "sha256":  "3479bd32b95a76f048e5840a1219c882224fb083318d175d5b73a231aafb00f8"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_18117996_g70Sn67PuFTtzQn6t5llvrjYHm9OiNyF_jpg.rf.cb98871191322fd456f46fca50eb71c5.jpg",
+                             "bytes":  15635,
+                             "sha256":  "d45952130704e66050455ae5ee9a3eecc7d2eee659079196644980be69bcc2f2"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_20986339_hcUGaXOG4Q6O99Ukeqsk1mOvAKztMnPu_jpg.rf.f5715912204c6b46e6d2507f061131ab.jpg",
+                             "bytes":  15004,
+                             "sha256":  "3545221c79c24124e63013bdc637e56b9eac5fa96232d11c89c481e08c0093fd"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_211676341_JUQVsmRqSKcGL9iANtCFo6YKT3Ab5pjE_jpg.rf.f379dd1b32db31fb310e7561241cd58b.jpg",
+                             "bytes":  25409,
+                             "sha256":  "a6a4126e1d798e055f6822ea8151996ae4584cbaf4e7f694b83db462cd76b350"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_230517775_aG70kSp0Y6OajyJinTr7wmSQr1kOUmIv_jpg.rf.e62644c03ada3768d60f9a0e356bd6e7.jpg",
+                             "bytes":  17465,
+                             "sha256":  "55081f9d75e5295b4d66f203a768e0c143371406543885acdc257c61293a3fea"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_237890107_njisDpBvxf22nukW58CtqBnl5uINvD1Y_jpg.rf.48bcf938a457fea0e815f406cb3d59d7.jpg",
+                             "bytes":  15652,
+                             "sha256":  "b03876700b71cdff74f89a5fd33d7058ac23ec337f37a3763ef0d2647e8086a2"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_248492736_7JjGpNHVoNluztevGsXHnJ0iI9yjde5b_jpg.rf.da861972ae393fa494db655bdc20f719.jpg",
+                             "bytes":  10980,
+                             "sha256":  "cf6f2e5e9101a2328b5db59b786cbc0020b2c354a6e7ff71db8673dc87f2e50d"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_251628118_zzwxM4s79l93JVOYk2vFSghwjPXP6pkw_jpg.rf.5c9da1a653828a3c75a5c8e464db1ab9.jpg",
+                             "bytes":  21722,
+                             "sha256":  "831f2aa81f9a6ab57e1746ae3714d095125692dcc83c30b36f1e65900f816217"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_322957401_niQ9N8dh6A1KrDHIaIjWU6WLmvKXZPxC_jpg.rf.8f59b9f01d7edf87ab3e193d7a706bcc.jpg",
+                             "bytes":  13928,
+                             "sha256":  "253d4fe24b5c3636b98e70e692237f6b61e199742cfe276e57df3c5570eec248"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/240_F_446293252_aBkyTpflZXTIxa3EwQFBZyePWntmzgSY_jpg.rf.98e5b731ef14cc71c970c332d0da0e90.jpg",
+                             "bytes":  21709,
+                             "sha256":  "69eca2e25108ec80f23ba951b5388db840917c10058e89ce245f3e2b462b1470"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-26-165715_png_jpg.rf.5d3ecbe1abd78b3782e7287ee6577a2c.jpg",
+                             "bytes":  61437,
+                             "sha256":  "d1964ce2bcff1f6b33b71f6a93f7a0ab624897a8b75fa8895ab4e972176f7912"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-26-165725_png_jpg.rf.2f54469d703c5a765f102e9a27c88747.jpg",
+                             "bytes":  60988,
+                             "sha256":  "fb2a80a9ee24e9ef6e13dbf86388306b5a7574f437da99ff7f28a01ca2d00c9f"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-26-165740_png_jpg.rf.f89dc9c17d291bdd23171c22cc4d30a0.jpg",
+                             "bytes":  102540,
+                             "sha256":  "58d8c219e206729730645188f1067e48421b764998437a581d519417d66ed8af"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-27-190844_png_jpg.rf.767bb19d8271f0a6150d72e86b30976c.jpg",
+                             "bytes":  66210,
+                             "sha256":  "db2089dc1c11ddef3250b2f9b726d780b724ce9edfae47bd3fad2bd5ed4ea985"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-27-190935_png_jpg.rf.25fe7de56e9ed8decde10511a1b7ff04.jpg",
+                             "bytes":  62373,
+                             "sha256":  "4a5e20628c8f6430c9c53df46a949c15bbe03f09c2984f09c1480ec40ef0cf35"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-27-231929_png_jpg.rf.c96bcce6879855dc77b60144f15de8d7.jpg",
+                             "bytes":  76066,
+                             "sha256":  "bd715b595f05cee474fd04f87c91f64d5f0a8a373509d5630e2bc80af5c9305e"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-04-28-144136_png_jpg.rf.7211e1c6c0690a95a2c24e85a73ffeb1.jpg",
+                             "bytes":  41981,
+                             "sha256":  "9299f36558c30d25e1051129a701f7272a4e50900308ce96c1a1867619b8dd46"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/Screenshot-2023-05-03-220147_png_jpg.rf.76c8a8407ba6b541511b7de7ae2e4e18.jpg",
+                             "bytes":  43476,
+                             "sha256":  "6ce5671e9f2970f695b6c031f20aca70e5ce097ab31ba22f44e8063ec9332043"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/images/WeChat-Image_20230503170648_jpg.rf.e9d54335552523eec108279dc9b347db.jpg",
+                             "bytes":  83809,
+                             "sha256":  "62ce2cf2c1e20b0c748725b2b13837b73287a8ef3a77ed877ebf45ed366276f8"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/040f06a52a73701c_original_jpg.rf.825694b840aa4a484a4fddd0c80a5db4.txt",
+                             "bytes":  55,
+                             "sha256":  "269cd6e2e26158e0d78b5656d3b0f4146e185be41a5dd0ecfecc07229778a4b6"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/08540673d21b406a_original_jpg.rf.2d651b84a37f48104736c478ed057ec6.txt",
+                             "bytes":  79,
+                             "sha256":  "5c5818602be30277a82c3aedd97c172f050b5ec8d15fa93a1c26d18dba3aeb74"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/14950f466e87a413_original_jpg.rf.c254998ed410f12c069be6804e0e403a.txt",
+                             "bytes":  73,
+                             "sha256":  "dbb45fb69f5a13be50738008569ee310ed26e6e7155662f1d764fc9294877ea1"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/19f8e1fd2e27a48d_original_jpg.rf.cec303b57efe9df258a2beed0d226929.txt",
+                             "bytes":  66,
+                             "sha256":  "a4bb079286d8e47e9767df5bf14353d77ae1f2c3de78f446021267f13f015961"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/1ba5fa63de5e0099_original_jpg.rf.3e3fb4b7f8c4ac19b8a20c526e69f796.txt",
+                             "bytes":  71,
+                             "sha256":  "06cf05dad0d13ca1aacbd9c9838734611c3c9cf664e06c2abd48bf5fe62a5d5a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/1c676029afd0847d_original_jpg.rf.055fd2259433decf55716241e827885d.txt",
+                             "bytes":  62,
+                             "sha256":  "f969873bfe28d2b3e09b825eec8cf3b18faabccd1d3785133e504723c352035a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_100350179_zGx3sDcZ89AebyAjCdnvF2aWrrgplvtb_jpg.rf.464d77ab471eaf1f3a4c21cca21bda6c.txt",
+                             "bytes":  211,
+                             "sha256":  "cd12946017eaf4abff6d4a8f977b109181693f2d7d93ba9da292a53a4903ff2d"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_100484813_cWRLjh7OSmz6LoCvFGVZJFG2xTLx7qGZ_jpg.rf.1867c1601b50ee9fcfa521731cc26b33.txt",
+                             "bytes":  67,
+                             "sha256":  "14524ab06f9fff8618d7c66d344581e05337de4c342550e0195f7fc78b8f2b7c"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_101342428_3arGmXjzDmdFEyUqj0vWWreT181XrLfk_jpg.rf.def50ca8657569738056749c8932add0.txt",
+                             "bytes":  80,
+                             "sha256":  "98b0827fafdf33ee185e33c59f804aa4376ab3d704b62f2878977842db213f78"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_101468847_GZ7WTNYO1HAqW3PPtpoPzG4Gw05gykg4_jpg.rf.5ec2b56e0cfaf2716ddb67f9a4cfd3b1.txt",
+                             "bytes":  40,
+                             "sha256":  "c37b981cc6e4a89e12775bcc0513f1a2c93e281e105861bb0e6b78f96d95a2b9"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_102068356_9I3vqcDcsGnnEcQBWnrwoTS4TLbFmNCm_jpg.rf.cd513ca26357f0e9cd43b826eaf012c7.txt",
+                             "bytes":  78,
+                             "sha256":  "0baa65b2094b529efd8ef5674223f412524df193c10f193e2b377da0059a8019"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_102432593_XxuH78e115ks56FLLeesRnkAeXpsQFao_jpg.rf.6d409cea7d2bd95d29472835fdb8de61.txt",
+                             "bytes":  54,
+                             "sha256":  "b6053ffb835774e9332b12f1c2b5db5940274704f3ba81934dd9454e0c096e70"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_102473762_6dU9JO2dQpWa1TpLRidP1p78peAOW7iT_jpg.rf.436affb9c350efdb5f762925490ec0ac.txt",
+                             "bytes":  79,
+                             "sha256":  "7be9c83f8c93d4970511980c60dc20adc23e9b9d604fe43d893d7dc3ebff7036"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_102696077_LuJhx99BdpZ0wcGmskZ3pWaVn5cbPCGa_jpg.rf.98c7dd47c3221d2a3885a3e3300249fd.txt",
+                             "bytes":  66,
+                             "sha256":  "8dc8d5416f67a1da509f7885e098e5cf87c010e3c3fce2f50484e4a59ede59a1"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_102696977_ktyCClC29hcmwxjE1ClKnY4pJesdmmiM_jpg.rf.a8e4c6b6c393e73892950e0691731d2e.txt",
+                             "bytes":  148,
+                             "sha256":  "b01aa399282c48ccd524f4b9836d6d1eec20786d4d0a725ff8001193340d0efe"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_102969840_sViEn7cn8sfCciBKoyBWkHGhZIDHI6e1_jpg.rf.ee26551a6b04d9f5389af9133a0d599a.txt",
+                             "bytes":  53,
+                             "sha256":  "869462fb3ffab38fd90c5c5a917739c47e0e13e3c180aeced266f5d7df41a311"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_103696781_gmfDN6Vr7Y6l2mgLKsyBfAj8XzqV0EUW_jpg.rf.567bf4ed48f096880795d455ce0e1963.txt",
+                             "bytes":  130,
+                             "sha256":  "f161ac84c5e59edbbeba53ad46ee6f0fbe7c6e003125d852c6b05bd30fcd94cb"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_105891024_ZvDfftSgMemmELsSl90pcnROfR1Fxb4N_jpg.rf.b750ba32197ef217fc7b83a6248692cf.txt",
+                             "bytes":  349,
+                             "sha256":  "6ac948e227382d2f19524186887d259cae200edc58ba12cb0961659619f3ed39"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_109987766_ndiUgobfI4W4ajtNOZ5kcmfabyDaTkx7_jpg.rf.6c0d9af8594d911fa7143cde7ef48fba.txt",
+                             "bytes":  80,
+                             "sha256":  "de95052d2a64e2ea9344b3ee172bbe75e083b8d6f46d50705a4de7b51ec9674c"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_114331624_WdKlqbOwcURAasvbyDeZVftRXE0RwRqI_jpg.rf.57d59373ea2df1fc281cea1963039c01.txt",
+                             "bytes":  142,
+                             "sha256":  "54b17860ad8ea6e8b14dd88bcc9c912e34af1e6209b5fe6a7c1a76e9da8570f9"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_114520888_l19Iqt33pwMpauYFAG1p6bkerdaJQIn2_jpg.rf.1ea30934e05ee1ea065dbf69f63b4965.txt",
+                             "bytes":  158,
+                             "sha256":  "a99617078d3f391d8dbbc9b0f6a44e79f931e69ca450406972b76cd41bf2e809"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_119280792_vy1mphVvJi5ViKgsJveisHblXODkI2c4_jpg.rf.5b1297cb78f644b932e338e8c8424017.txt",
+                             "bytes":  53,
+                             "sha256":  "e1c620821890e36afd0e387d9ebba76f528e2e9bdfa1892c5e3df6c2e1b6b948"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_12220399_VbZ6441ByRZ9YSzBInTjKrYvvKMksDbE_jpg.rf.84c1fcf1f009d9c32461afd1ab6e5ad1.txt",
+                             "bytes":  68,
+                             "sha256":  "14c203e339b6be44e069d1bfeafda74ac6ff6cde73ae15ef0d232b4958abd3a1"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_123758398_xv5gIsTU9RwyvWVjmWkLec3DYWNxTMwH_jpg.rf.519c5787e8674b413d00bea51e5db5ad.txt",
+                             "bytes":  210,
+                             "sha256":  "64ba4386c18720746e4434da23d9ee68019f0b1cb7ba657e072a348d1ade1b0c"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_127876960_sGDJag30kzDPWa5bue2Q79evYXlZ0Pyj_jpg.rf.9add5b15c3a4243f4e0cae5c278b2669.txt",
+                             "bytes":  295,
+                             "sha256":  "e04bf12cccfb6c2389c50a953b84fe87a105b7891d850dd65656c61e76b6cab1"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_1285370_WMkcm5bOhrsOBzeSkuZNgKmw5cu4EW_jpg.rf.a158e80eb6468ee5ea16f93e82f6f8ad.txt",
+                             "bytes":  206,
+                             "sha256":  "a2dcf48f2dc7d7073b3f9d73206651549a779c48b2d03b43cc4234bd2ef21f32"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_135095704_HTo9O89oDPVNKMgWWEqNO2iKDfIrddil_jpg.rf.d8eb17bf4d509c21c0650b08e36bcec9.txt",
+                             "bytes":  446,
+                             "sha256":  "843fdeb5e27424f98366270ef14bcd60c4c116bffa4031ce242e430de4976850"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_141944337_tUy9CWmUgdYSAgFq1h6IC9mQqEtKgDKP_jpg.rf.32f6ca42d349aa3d241416281247ed2d.txt",
+                             "bytes":  184,
+                             "sha256":  "732302adf4cc99de1acaff34d2ce763cba0b9641f2a02d1f51ba827f53165846"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_144307411_xhZRQYK67AqR44yy7DNmSLiFlc2IiL1V_jpg.rf.b460d2bada8df7d4a0bda110fe480155.txt",
+                             "bytes":  63,
+                             "sha256":  "2d9a2b11f6ef279aa30c3053a56a9b62b41c5116f876ed9123e0ce122049367c"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_159470383_pyNB8OrAsnxHJWZFeUU1m6OnUfJ9x5Kd_jpg.rf.93f1bf3a4c68313e5c52c8900b356a1a.txt",
+                             "bytes":  348,
+                             "sha256":  "ea90645dfd08b1f94e75d11680a5e2f83c3b143097948b9ccbff013647cc0b71"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_179050527_hi7Lju3bHveJ2z8xTVp3lqODoFl2zKZW_jpg.rf.a2029817e18c51ee8007d51b92142b7c.txt",
+                             "bytes":  216,
+                             "sha256":  "4f0c5d2a09cafc4e4d0927c410b3b2ccb2795417a7b668816573bec4702407f4"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_18117996_g70Sn67PuFTtzQn6t5llvrjYHm9OiNyF_jpg.rf.cb98871191322fd456f46fca50eb71c5.txt",
+                             "bytes":  389,
+                             "sha256":  "76e0ff5c919b02a77431ef2d20231416d1a632a90b200a0f7798b6cb5e8ebf2a"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_20986339_hcUGaXOG4Q6O99Ukeqsk1mOvAKztMnPu_jpg.rf.f5715912204c6b46e6d2507f061131ab.txt",
+                             "bytes":  26,
+                             "sha256":  "8554242a13b0c2a8a0537b4d9ffce4d985b587efbe1ab4533b57dd513ec77663"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_211676341_JUQVsmRqSKcGL9iANtCFo6YKT3Ab5pjE_jpg.rf.f379dd1b32db31fb310e7561241cd58b.txt",
+                             "bytes":  79,
+                             "sha256":  "add0b1e9c41caf92ba203a0f1bf62ff89fdf514c29b2a565298a5b647a538e33"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_230517775_aG70kSp0Y6OajyJinTr7wmSQr1kOUmIv_jpg.rf.e62644c03ada3768d60f9a0e356bd6e7.txt",
+                             "bytes":  105,
+                             "sha256":  "b043c04c6d4cb68576b039f95e9a2cb4cc1ba00899cc3c08a6cb1752ad5cd092"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_237890107_njisDpBvxf22nukW58CtqBnl5uINvD1Y_jpg.rf.48bcf938a457fea0e815f406cb3d59d7.txt",
+                             "bytes":  55,
+                             "sha256":  "59078279c448dc3b56ea142d78d1211d267e132d789a26c657adde87277981b5"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_248492736_7JjGpNHVoNluztevGsXHnJ0iI9yjde5b_jpg.rf.da861972ae393fa494db655bdc20f719.txt",
+                             "bytes":  284,
+                             "sha256":  "775ddc5ea441d138ae6ebea927e35c2989bbb1892d0fd18124c1dc5fd0076963"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_251628118_zzwxM4s79l93JVOYk2vFSghwjPXP6pkw_jpg.rf.5c9da1a653828a3c75a5c8e464db1ab9.txt",
+                             "bytes":  68,
+                             "sha256":  "8bc854767bf7caa44823ab99bbf88d6fecb8b25672dca495f96aca273a5b9127"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_322957401_niQ9N8dh6A1KrDHIaIjWU6WLmvKXZPxC_jpg.rf.8f59b9f01d7edf87ab3e193d7a706bcc.txt",
+                             "bytes":  55,
+                             "sha256":  "290c0a2f83e3e53adcc193b042835dd6838db16aed4fadf6a5f3adc82953a36f"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/240_F_446293252_aBkyTpflZXTIxa3EwQFBZyePWntmzgSY_jpg.rf.98e5b731ef14cc71c970c332d0da0e90.txt",
+                             "bytes":  67,
+                             "sha256":  "14aad00c073b4324c2bfb862b8ae1201387085f6367440c16e8ee18603b0e24e"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-26-165715_png_jpg.rf.5d3ecbe1abd78b3782e7287ee6577a2c.txt",
+                             "bytes":  76,
+                             "sha256":  "5408b572694ac68c297cecfb56286ab81b56684dd2dc07f17ffde57e95ec4cbc"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-26-165725_png_jpg.rf.2f54469d703c5a765f102e9a27c88747.txt",
+                             "bytes":  77,
+                             "sha256":  "fedf555b395c536dbe51b3774e2b2bde2e7e71cb79a4548b633dbee015dd71b2"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-26-165740_png_jpg.rf.f89dc9c17d291bdd23171c22cc4d30a0.txt",
+                             "bytes":  79,
+                             "sha256":  "6a8b7897002933fd2034049563394827f5927caa16ea8aa489cf4b536a7b02d3"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-27-190844_png_jpg.rf.767bb19d8271f0a6150d72e86b30976c.txt",
+                             "bytes":  80,
+                             "sha256":  "b3e2a22d80a57d779a362a3c5057eed234fb7caa861add83e18e38bb2c4a54d2"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-27-190935_png_jpg.rf.25fe7de56e9ed8decde10511a1b7ff04.txt",
+                             "bytes":  80,
+                             "sha256":  "98637191d470590de1673d91691db3a7f27fb14fd80fad7521b73a005c5747b4"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-27-231929_png_jpg.rf.c96bcce6879855dc77b60144f15de8d7.txt",
+                             "bytes":  78,
+                             "sha256":  "18ae09b49d1fa4a77e3440039cccce52bcf31547ec03ec14591148d138c55ae5"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-04-28-144136_png_jpg.rf.7211e1c6c0690a95a2c24e85a73ffeb1.txt",
+                             "bytes":  79,
+                             "sha256":  "71c220c1a9bd91120998997a3b870eb881ef222ea2673d47d6b4ec29a38e4397"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/Screenshot-2023-05-03-220147_png_jpg.rf.76c8a8407ba6b541511b7de7ae2e4e18.txt",
+                             "bytes":  80,
+                             "sha256":  "ccbed802e963ebb0973f993ee7989cd9a3ad5397d8045d052b3048152f63f749"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/real_images/real_images/real_fire/labels/WeChat-Image_20230503170648_jpg.rf.e9d54335552523eec108279dc9b347db.txt",
+                             "bytes":  238,
+                             "sha256":  "bbdb2ae70626feff37efb07d1c86c195bcb1c3f8c06182b0b80669d684d72412"
+                         },
+                         {
+                             "dataset_id":  "D06",
+                             "relative_path":  "06_DetectiumFire-sample/sample_card.md",
+                             "bytes":  609,
+                             "sha256":  "0ee941a314c2bafff6dcd78f65c2252d174f4daf3c835446f57f58b14986accf"
+                         },
+                         {
+                             "dataset_id":  "D07",
+                             "relative_path":  "07_Fire360-sample/official_demo/fire360_poster.pdf",
+                             "bytes":  5190398,
+                             "sha256":  "0592946594f6a40594ce6451f7379d5a3ac6e6109625d5a0ffd8b643f11959e0"
+                         },
+                         {
+                             "dataset_id":  "D07",
+                             "relative_path":  "07_Fire360-sample/official_demo/fire360_poster.png",
+                             "bytes":  3868944,
+                             "sha256":  "6c7f38d0880cd913c9d9f269eabf0cce1ea4e55ac7b940c755a70d37c426bcf3"
+                         },
+                         {
+                             "dataset_id":  "D07",
+                             "relative_path":  "07_Fire360-sample/sample_card.md",
+                             "bytes":  486,
+                             "sha256":  "b986244aa92a27d27294ed6e678a0b4bae515bff1a31f469b3307d32cc72f33d"
+                         },
+                         {
+                             "dataset_id":  "D08",
+                             "relative_path":  "08_MS-FSDB-sample/official_demo/msfsdb_stats.png",
+                             "bytes":  359212,
+                             "sha256":  "309473e0c3cf77fc17c35e4bcd00fb2eb506211ccdbd9814eb024528f9b0b388"
+                         },
+                         {
+                             "dataset_id":  "D08",
+                             "relative_path":  "08_MS-FSDB-sample/sample_card.md",
+                             "bytes":  495,
+                             "sha256":  "f176f33136f0c52e421dfe26ce73d3f0ce2b27d7e102e0b90166f734530c9212"
+                         },
+                         {
+                             "dataset_id":  "D09",
+                             "relative_path":  "09_DFS-sample/official_demo/dfs_fire.png",
+                             "bytes":  675587,
+                             "sha256":  "907b148352e25ea47075fb2f8d0a6c70b1c337736442481bd39d2bfe62a6d9fe"
+                         },
+                         {
+                             "dataset_id":  "D09",
+                             "relative_path":  "09_DFS-sample/official_demo/dfs_smoke.png",
+                             "bytes":  656541,
+                             "sha256":  "916a8a7c0bd62393509c5c2c156828be590f4d35643781bf8f27c4986226dc38"
+                         },
+                         {
+                             "dataset_id":  "D09",
+                             "relative_path":  "09_DFS-sample/official_share_inventory.json",
+                             "bytes":  507,
+                             "sha256":  "5d98d7ae32d7f67d3fd3cd34ca6f964280bab25ea2f6849c2b8422b590567eaf"
+                         },
+                         {
+                             "dataset_id":  "D09",
+                             "relative_path":  "09_DFS-sample/sample_card.md",
+                             "bytes":  485,
+                             "sha256":  "9c098240608a5df4880d6a0057d8f2a86823b13223c7e6e5bfef4e9c96b20146"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/example_preview.png",
+                             "bytes":  3987289,
+                             "sha256":  "d1388323a1b97cc08d5514562a5ee46f2c0cd0dc128e25ec93d05570209dce61"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/labels_csv/20160604_FIRE_rm-n-mobo-c.csv",
+                             "bytes":  3432,
+                             "sha256":  "daa384b5ce7c013fa40e0962324bff8ba8abd4d7e3973418bf45e5fe708352d0"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sample_card.md",
+                             "bytes":  357,
+                             "sha256":  "bb00a2dc59da6ce32fe3b5b0e5fc8a6565fe9c90a2210679002ad4a2a3b69b4b"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sequences/20160604_FIRE_rm-n-mobo-c/1465063200_-02400.jpg",
+                             "bytes":  715720,
+                             "sha256":  "fd26d648025fe00ea3a307c4cbae79b086749588b353ef3bc8acc4ca09d8f67c"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sequences/20160604_FIRE_rm-n-mobo-c/1465065000_-00600.jpg",
+                             "bytes":  727663,
+                             "sha256":  "d35953494ef44584b8f1aea0d46a9670e9f9dfba8813426ffcba1b625dd35775"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sequences/20160604_FIRE_rm-n-mobo-c/1465065600_+00000.jpg",
+                             "bytes":  722987,
+                             "sha256":  "de03d160c20218036ea1962ebdee240fcad97695fbbe1c9f72adccbe2c595697"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sequences/20160604_FIRE_rm-n-mobo-c/1465066200_+00600.jpg",
+                             "bytes":  726723,
+                             "sha256":  "5f9ea882497fb4c7422dd9e1639ffaf37ed975c165067ad9234da4282f52626f"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sequences/20160604_FIRE_rm-n-mobo-c/1465066800_+01200.jpg",
+                             "bytes":  734806,
+                             "sha256":  "9cd6ecd0d1b836e0b3b138726e82986aad9f1d7de366e53924371ff96806b67a"
+                         },
+                         {
+                             "dataset_id":  "D10",
+                             "relative_path":  "10_FIgLib-SmokeyNet-sample/sequences/20160604_FIRE_rm-n-mobo-c/1465068000_+02400.jpg",
+                             "bytes":  708079,
+                             "sha256":  "5721a15be7dea58d97f1568449a04133262a72f8a2d80a7c394598149f8fd530"
+                         },
+                         {
+                             "dataset_id":  "D11",
+                             "relative_path":  "11_Boreal-Forest-Fire-sample/official_demo/boreal_4.png",
+                             "bytes":  616389,
+                             "sha256":  "2d296f79537897cb6e8dc47c45495094f7554096ae79ea5016cdf6a141ec7d00"
+                         },
+                         {
+                             "dataset_id":  "D11",
+                             "relative_path":  "11_Boreal-Forest-Fire-sample/official_demo/boreal_5.png",
+                             "bytes":  521106,
+                             "sha256":  "0511da0867e1a141859585b407d456c336c79a7a40cf73fcc20692b4604c5874"
+                         },
+                         {
+                             "dataset_id":  "D11",
+                             "relative_path":  "11_Boreal-Forest-Fire-sample/official_demo/boreal_6.png",
+                             "bytes":  137248,
+                             "sha256":  "fe9aca6ef432da07e227ca1e79f42d4aaa077ef9a8f5587042bf6a7aa17f0e4b"
+                         },
+                         {
+                             "dataset_id":  "D11",
+                             "relative_path":  "11_Boreal-Forest-Fire-sample/sample_card.md",
+                             "bytes":  474,
+                             "sha256":  "13434b2aed47c0cd15e85c3317f4c7f34c90ac9cf5f9ae15f4d16503f5f0507e"
+                         }
+                     ]
+}

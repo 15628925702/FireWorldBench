@@ -1,4 +1,6 @@
 schema_version = 1
+# P1-DATA-001 audit: all source eligibility remains fail-closed until version,
+# acquisition date, and authoritative license evidence are independently verified.
 
 [[sources]]
 id = "D01"
@@ -7,8 +9,8 @@ local_dirs = ["01_Immersed-Tunnel-CFD"]
 state = "candidate"
 eligible = false
 roles = ["t1_primary", "t2_primary", "t3_pair_prototype"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D02"
@@ -17,8 +19,8 @@ local_dirs = ["02_PolyUFire"]
 state = "candidate"
 eligible = false
 roles = ["external_experiment", "mechanism_knowledge"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D03"
@@ -27,8 +29,8 @@ local_dirs = ["03_FDS-exp"]
 state = "candidate"
 eligible = false
 roles = ["external_experiment", "physics_sanity"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D04"
@@ -37,8 +39,8 @@ local_dirs = ["04_FD-Gen"]
 state = "generator_candidate"
 eligible = false
 roles = ["t3_generator", "ood_generator"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_license_scope_incomplete"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D05"
@@ -47,8 +49,8 @@ local_dirs = ["05_D-Fire", "05_D-Fire-sample"]
 state = "candidate_aux_only"
 eligible = false
 roles = ["t1_visual_aux", "t2_visual_aux"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_provenance_chain_incomplete"
+version_status = "blocked_missing_local_acquisition_date"
 
 [[sources]]
 id = "D06"
@@ -57,8 +59,8 @@ local_dirs = ["06_DetectiumFire-sample"]
 state = "blocked_incomplete"
 eligible = false
 roles = ["t1_visual_aux", "t2_visual_aux", "grounding_aux"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_nc_nd_and_provenance_scope"
+version_status = "blocked_missing_local_acquisition_date"
 
 [[sources]]
 id = "D07"
@@ -67,8 +69,8 @@ local_dirs = ["07_Fire360-sample"]
 state = "ineligible_placeholder"
 eligible = false
 roles = ["research_placeholder"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D08"
@@ -77,8 +79,8 @@ local_dirs = ["08_MS-FSDB-sample"]
 state = "ineligible_placeholder"
 eligible = false
 roles = ["research_placeholder"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D09"
@@ -87,8 +89,8 @@ local_dirs = ["09_DFS-sample"]
 state = "ineligible_placeholder"
 eligible = false
 roles = ["research_placeholder"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D10"
@@ -97,8 +99,8 @@ local_dirs = ["10_FIgLib-SmokeyNet-sample"]
 state = "candidate_aux_only"
 eligible = false
 roles = ["t1_visual_aux", "wildfire_ood_aux"]
-license_status = "unverified"
-version_status = "unverified"
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"
 
 [[sources]]
 id = "D11"
@@ -107,6 +109,5 @@ local_dirs = ["11_Boreal-Forest-Fire-sample"]
 state = "ineligible_placeholder"
 eligible = false
 roles = ["research_placeholder"]
-license_status = "unverified"
-version_status = "unverified"
-
+license_status = "blocked_missing_authoritative_evidence"
+version_status = "blocked_missing_version_and_acquisition_date"

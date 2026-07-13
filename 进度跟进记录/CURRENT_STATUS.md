@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S004-001
+handoff_id: H-20260714-S005-001
 handoff_state: READY
-source_session: 2026-07-14_S004_P0源码基线审计与初始提交.md
-current_task: P1-DATA-001
+source_session: 2026-07-14_S005_P1-DATA-001数据清单许可审计.md
+current_task: P1-DATA-002
 ---
 
 # Current Status
@@ -10,16 +10,16 @@ current_task: P1-DATA-001
 更新时间：`2026-07-14 Asia/Shanghai`  
 项目版本：`0.1.0`  
 当前阶段：`P1 数据与论文可行性`  
-总体状态：`READY_FOR_NEXT_TASK`（源码基线审计已完成，当前源码将由本地 Git commit 重建）
+总体状态：`READY_FOR_NEXT_TASK`（P1-DATA-001 已完成；所有数据用途资格按证据不足 fail-closed 为 BLOCKED）
 
 ## 窗口与 Git 快照
 
-- 最近完成会话：`2026-07-14_S004_P0源码基线审计与初始提交.md`
-- 当前 `IN_PROGRESS` 草稿：无
-- 快照时间：`2026-07-14T02:54:54.1128512+08:00`
-- branch / HEAD：`main` / `local initial commit`
+- 最近完成会话：`2026-07-14_S005_P1-DATA-001数据清单许可审计.md`
+- 当前 `IN_PROGRESS` 草稿：已收敛为 READY
+- 快照时间：`2026-07-14 Asia/Shanghai，本轮结束验证`
+- branch / HEAD：`main` / `1c47f1c686f19a27918cac6492bbcce66811e219`
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
-- staged / unstaged / untracked：`0 / 0 / 0`（local initial commit 完成后）
+- staged / unstaged / untracked：`0 / 3 / 4`（本轮 3 个既有文件修改，4 个新增交付文件）
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
 - 最近预检：Anaconda base，project check / pytest / mypy / CLI / UTF-8 通过；Ruff `NOT_RUN`
 - 当前限制：未经新授权，不安装/下载，不 push/pull/merge/rebase/tag/修改 remote，不读取仓库外 `../../4.升级拓展`
@@ -32,6 +32,9 @@ current_task: P1-DATA-001
 - [x] 生成机器可读源码基线 manifest：`项目治理/source_baseline_manifest.json`（不包含 manifest 自身）。
 - [x] 使用既有 Anaconda base 完成可执行检查：project check、pytest、mypy、CLI、UTF-8 全部通过；Ruff 因未安装而未运行。
 - [x] 创建本地 initial commit，且未 push、未修改 remote。
+- [x] 完成 P1-DATA-001：D01-D11 共 312 个文件的逐文件 manifest 与自身 SHA-256。
+- [x] 完成许可证据与用途资格审计；训练、开发、测试、派生发布、再分发全部按证据不足标记 `BLOCKED`。
+- [x] 更新 `configs/data_sources.toml`、数据许可证审计报告和本轮会话记录。
 
 ## 进行中
 
@@ -39,10 +42,10 @@ current_task: P1-DATA-001
 
 ## 当前唯一下一任务
 
-- 任务 ID：`P1-DATA-001`
-- 目标：为 D01-D11 生成逐文件相对路径/大小/SHA-256 manifest，核验来源版本、获取日期和官方许可，分别判断训练、开发、测试、派生发布和再分发资格；未知项必须 `BLOCKED`。
+- 任务 ID：`P1-DATA-002`
+- 目标：仅针对允许研究的来源建立字段、单位与标准化契约；未知物理量不得猜测。
 - 入口：`NEXT_SESSION_PROMPT.md`
-- 完成标准：所有本地文件可追踪；用途结论有原文证据；未把演示素材转为数据；下一任务只能是 `P1-DATA-002`。
+- 完成标准：D01-D04 关键字段有原文证据，原单位保留，转换可重算；下一任务只能是 `P1-DATA-003`。
 
 ## 已知阻塞/待决策
 
