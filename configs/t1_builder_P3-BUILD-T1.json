@@ -1,0 +1,12 @@
+{
+  "builder_version": "P3-BUILD-T1-001",
+  "tasks": ["T1-A", "T1-B", "T1-C"],
+  "allowed_splits": ["train_id", "dev_id"],
+  "forbidden_splits": ["test_id", "test_ood_source_location", "test_ood_ventilation", "test_ood_hrr", "test_ood_geometry_or_layout", "test_external_experiment"],
+  "threshold_source": ["train", "calibration"],
+  "unknown_signal_label": "insufficient_information",
+  "future_horizon_policy": "T1 observations may not use future targets; future information is never inferred",
+  "gold_origins": ["deterministic_rule"],
+  "query_policy": "choose a deterministic observation ID from the frozen supplied set; never use filename/query-name semantics",
+  "test_asset_policy": "never read test input, test gold, or private mapping"
+}

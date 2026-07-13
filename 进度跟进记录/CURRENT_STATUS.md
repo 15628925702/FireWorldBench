@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S016-001
+handoff_id: H-20260714-S017-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
-current_task: P3-PIPELINE-001
+task_status: READY
+source_session: 2026-07-14_S017_P3-BUILD-T1火灾预警样本.md
+current_task: P3-BUILD-T2
 ---
 
 # Current Status
@@ -88,3 +88,8 @@ current_task: P3-PIPELINE-001
 - 下一唯一任务：`P3-BUILD-T1`。
 - P3-PIPELINE-001 本地实现提交为 `4801792`，但 GitHub 推送连续三次因无法连接 `github.com:443` 失败；任务保持 `BLOCKED_PUSH`。
 - 下一窗口第一动作：重试 `git push origin main`，远端确认与本地 HEAD 一致后，才能将任务置为 READY 并进入 `P3-BUILD-T1`。
+## P3-BUILD-T1 收尾
+
+- 已实现 T1-A/B/C builder、train/dev 边界、gold 派生、observation evidence、future horizon 限制和阈值来源校验。
+- 未读取 test input/gold/private mapping，未修改 `../../3.数据集`。
+- 下一唯一任务：`P3-BUILD-T2`。

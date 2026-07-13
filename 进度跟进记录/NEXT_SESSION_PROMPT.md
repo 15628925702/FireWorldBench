@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S016-001
+handoff_id: H-20260714-S017-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
-current_task: P3-PIPELINE-001
+task_status: READY
+source_session: 2026-07-14_S017_P3-BUILD-T1火灾预警样本.md
+current_task: P3-BUILD-T2
 ---
 
 # 下一任务增量
@@ -36,3 +36,6 @@ P2 出口、ACTIVE test embargo、无访问确认、FD-Gen 冻结计划、P2 man
 ## 当前阻塞
 
 P3-PIPELINE-001 本地 commit `4801792` 已完成，三次 `git push origin main` 均因无法连接 `github.com:443` 失败。下一窗口只先重试推送并核验远端 SHA；推送成功前不要标记 DONE，不要进入 `P3-BUILD-T1`。
+## P3-BUILD-T1 已完成
+
+已实现 T1-A/B/C 火灾预警样本 builder，限定 train/dev，拒绝 test/OOD 和未批准阈值；Schema、正常/边界/拒绝路径验证通过。下一唯一任务：`P3-BUILD-T2`。
