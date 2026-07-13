@@ -16,6 +16,7 @@ from fireworldbench.t3_builder import build_t3
 from fireworldbench.scorer import score_files
 from fireworldbench.expert import consistency_file
 from fireworldbench.release import build_mvp_rc1
+from fireworldbench.harness import run_harness
 
 
 def doctor(root: Path) -> int:
@@ -67,6 +68,11 @@ def build_parser() -> argparse.ArgumentParser:
     release_parser = subparsers.add_parser("mvp-build", help="build reproducible MVP RC1 public/private packages")
     release_parser.add_argument("--input", type=Path, required=True)
     release_parser.add_argument("--output", type=Path, required=True)
+    harness_parser = subparsers.add_parser("harness-run", help="run a train/dev-only adapter harness")
+    harness_parser.add_argument("--samples", type=Path, required=True)
+    harness_parser.add_argument("--output", type=Path, required=True)
+    harness_parser.add_argument("--max-retries", type=int, default=0)
+    harness_parser.add_argument("--timeout-s", type=float, default=30.0)
     return parser
 
 
@@ -150,6 +156,16 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps(result, ensure_ascii=False))
+        return 0
+    if args.command == "harness-run":
+        try:
+            payload = json.loads(args.samples.read_text(encoding="utf-8"))
+            samples = payload.get("samples", payload) if isinstance(payload, dict) else payload
+            result = run_harness(samples, args.output, max_retries=args.max_retries, timeout_s=args.timeout_s)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"run_id": result["run_id"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S022-001
+handoff_id: H-20260714-S023-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S022_P3-MVP-RC1-001可重建双包.md
-current_task: P4-HARNESS-001
+source_session: 2026-07-14_S023_P4-HARNESS-001统一运行器.md
+current_task: P4-BASELINE-NUM
 ---
 
 # 下一任务增量
@@ -60,3 +60,6 @@ P3-BUILD-T2 实现提交 `48683d3` 及阻塞记录 `264aff5` 尚未推送，GitH
 ## P3-MVP-RC1-001 已完成
 
 已完成可重建 MVP RC1 双包，公开包排除私有评分字段和测试 gold，双构建逐文件一致。下一唯一任务：`P4-HARNESS-001`。
+## P4-HARNESS-001 已完成
+
+已完成统一运行器和 public/private run 隔离，失败样本保留且禁止覆盖已有 run。下一唯一任务：`P4-BASELINE-NUM`。

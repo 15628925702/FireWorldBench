@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S022-001
+handoff_id: H-20260714-S023-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S022_P3-MVP-RC1-001可重建双包.md
-current_task: P4-HARNESS-001
+source_session: 2026-07-14_S023_P4-HARNESS-001统一运行器.md
+current_task: P4-BASELINE-NUM
 ---
 
 # Current Status
@@ -127,3 +127,8 @@ current_task: P4-HARNESS-001
 - 已实现从冻结 samples 两次重建 public/private 包、benchmark card、manifest 和 checksums；public 不含 scoring metadata。
 - 未读取 test input/gold/private mapping，未修改 `../../3.数据集`，未做模型排名。
 - 下一唯一任务：`P4-HARNESS-001`。
+## P4-HARNESS-001 收尾
+
+- 已实现统一运行器、hash、重试、超时、失败保留、raw response 隔离和 train/dev 边界。
+- 未读取 test input/gold/private mapping，未挂载 private root，未修改 `../../3.数据集`。
+- 下一唯一任务：`P4-BASELINE-NUM`。

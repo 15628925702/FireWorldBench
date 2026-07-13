@@ -1,0 +1,14 @@
+{
+  "harness_version": "P4-HARNESS-001",
+  "allowed_splits": ["train_id", "dev_id"],
+  "forbidden_splits": ["test_id", "test_ood_source_location", "test_ood_ventilation", "test_ood_hrr", "test_ood_geometry_or_layout", "test_external_experiment"],
+  "default_max_retries": 0,
+  "default_timeout_s": 30.0,
+  "retryable_statuses": ["invalid_json", "timeout", "tool_error"],
+  "failure_policy": "retain every run record and raw response; never delete failures",
+  "overwrite_policy": "reject existing run output directory",
+  "public_fields": ["sample_id", "task", "split", "status", "attempts", "latency_ms", "prompt_hash", "config_hash", "raw_response_ref"],
+  "private_fields": ["raw_response", "tool_trace"],
+  "private_root_mount": "forbidden_for_ordinary_harness",
+  "test_asset_policy": "never read test input, test gold, or private mapping"
+}
