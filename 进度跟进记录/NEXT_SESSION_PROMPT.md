@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S039-001
+handoff_id: H-20260714-S040-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S039_P6-PAPER-TABLES-001无冻结结果导表决策.md
-current_task: P6-PAPER-FIGURES-001
+source_session: 2026-07-14_S040_P6-PAPER-FIGURES-001无冻结结果图决策.md
+current_task: P6-PAPER-TEXT-001
 ---
 
 # 下一任务增量
+
+## P6-PAPER-FIGURES-001 completed
+
+Figure export is formally `BLOCKED_NO_FIGURE_SOURCE`. No figure data, plot spec, script, PDF, PNG, or caption fact was generated; future figures must use the same frozen result source as tables and retain provenance.
+
+## Next window: one task only
+
+`P6-PAPER-TEXT-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and build the manuscript number registry only from frozen statistics. With no frozen results, record a no-input decision and do not add paper-result numbers. Run checks, commit, and push.
 
 ## P6-PAPER-TABLES-001 completed
 

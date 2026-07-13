@@ -1,0 +1,15 @@
+{
+  "figures_version": "P6-PAPER-FIGURES-001",
+  "status": "BLOCKED_NO_FIGURE_SOURCE",
+  "blockers": ["frozen_figure_source_missing", "figure_source_has_no_run_ids"],
+  "figure_data": [],
+  "plot_specs": [],
+  "scripts": [],
+  "styles": {"vector_required": true, "minimum_raster_dpi": 300, "manual_points": false},
+  "rendered_pdf": [],
+  "rendered_png": [],
+  "caption_facts": [],
+  "table_source_alignment_required": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}

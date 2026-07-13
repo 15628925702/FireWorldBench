@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S039-001
+handoff_id: H-20260714-S040-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S039_P6-PAPER-TABLES-001无冻结结果导表决策.md
-current_task: P6-PAPER-FIGURES-001
+source_session: 2026-07-14_S040_P6-PAPER-FIGURES-001无冻结结果图决策.md
+current_task: P6-PAPER-TEXT-001
 ---
 
 # Current Status
+
+## P6-PAPER-FIGURES-001 completion
+
+- 已建立图数据/plot spec/script/style/render/caption provenance 门；当前没有冻结结果 source data，正式状态为 `BLOCKED_NO_FIGURE_SOURCE`。
+- 没有生成 PDF/PNG、figure data 或 caption facts，没有手工改点/改数；图表未来必须与表格使用同一结果源。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试资产或修改 `../../3.数据集`。
+- 验证：`pytest` 103 passed；`mypy` 通过；CLI 返回 no-figure-source；project check 通过。
+- 下一唯一任务：`P6-PAPER-TEXT-001`。
 
 ## P6-PAPER-TABLES-001 completion
 
