@@ -1,0 +1,18 @@
+{
+  "samples": [
+    {
+      "schema_version": "2.0",
+      "sample_id": "FWB-v1-T1-A-case_1-x",
+      "benchmark_version": "v1",
+      "task": "T1-A",
+      "split": "dev_id",
+      "scenario": {"case_uid": "case_1", "domain": "fire_physics", "family_uid": "family_1", "intervention": null},
+      "observations": [{"observation_id": "obs_1", "modality": "sensor_table", "time_range_s": [0, 10], "content_ref": "fixture.csv", "units": {"time": "s"}, "quality": "valid"}],
+      "question": {"format": "structured_json", "prompt": "Assess the case."},
+      "answer": {"label": "fire_forming"},
+      "physical_trace": {"initial_state": {}, "mechanism_chain": [], "transitions": [], "outcome": {}, "evidence_links": ["obs_1"], "origin": ["deterministic_rule"]},
+      "scoring_metadata": {"visibility": "private", "gold_ref": "gold_1", "metric_profile": "T1-A"},
+      "provenance": {"source_id": "D01", "source_version": "fixture", "parent_manifest_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "builder_version": "fixture", "config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "annotation_status": "automatic"}
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S021-001
+handoff_id: H-20260714-S022-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S021_P3-EXPERT-001专家校准与双人标注.md
-current_task: P3-MVP-RC1-001
+source_session: 2026-07-14_S022_P3-MVP-RC1-001可重建双包.md
+current_task: P4-HARNESS-001
 ---
 
 # Current Status
@@ -122,3 +122,8 @@ current_task: P3-MVP-RC1-001
 - 已建立九任务 rubric、脱敏校准模板、双人一致性和裁决队列；没有伪造专家标签。
 - 专家资源不足，专家门保持 `BLOCKED_UNTIL_TWO_DOMAIN_RATERS`。
 - 下一唯一任务：`P3-MVP-RC1-001`。
+## P3-MVP-RC1-001 收尾
+
+- 已实现从冻结 samples 两次重建 public/private 包、benchmark card、manifest 和 checksums；public 不含 scoring metadata。
+- 未读取 test input/gold/private mapping，未修改 `../../3.数据集`，未做模型排名。
+- 下一唯一任务：`P4-HARNESS-001`。

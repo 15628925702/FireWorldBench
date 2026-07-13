@@ -1,0 +1,12 @@
+{
+  "release_version": "P3-MVP-RC1-001",
+  "release_id": "mvp-rc1",
+  "rebuild_count": 2,
+  "public_package_excludes": ["scoring_metadata", "test_gold", "private_id_mapping", "private_scoring_metadata", "model_rankings"],
+  "private_package_scope": "explicit scoring metadata only; no hidden test gold",
+  "smoke_only": true,
+  "model_ranking": false,
+  "manifest_excludes_self": true,
+  "checksums_cover_manifest": true,
+  "test_asset_policy": "never read hidden test input, gold, or private mapping"
+}

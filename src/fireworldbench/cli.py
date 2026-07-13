@@ -15,6 +15,7 @@ from fireworldbench.t2_builder import build_t2
 from fireworldbench.t3_builder import build_t3
 from fireworldbench.scorer import score_files
 from fireworldbench.expert import consistency_file
+from fireworldbench.release import build_mvp_rc1
 
 
 def doctor(root: Path) -> int:
@@ -63,6 +64,9 @@ def build_parser() -> argparse.ArgumentParser:
     expert_parser = subparsers.add_parser("expert-consistency", help="compute two-rater calibration agreement")
     expert_parser.add_argument("--input", type=Path, required=True)
     expert_parser.add_argument("--output", type=Path, required=True)
+    release_parser = subparsers.add_parser("mvp-build", help="build reproducible MVP RC1 public/private packages")
+    release_parser.add_argument("--input", type=Path, required=True)
+    release_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -138,6 +142,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"paired_sample_count": result["paired_sample_count"], "adjudication_required": len(result["adjudication_required"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "mvp-build":
+        try:
+            result = build_mvp_rc1(args.input, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps(result, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S021-001
+handoff_id: H-20260714-S022-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S021_P3-EXPERT-001专家校准与双人标注.md
-current_task: P3-MVP-RC1-001
+source_session: 2026-07-14_S022_P3-MVP-RC1-001可重建双包.md
+current_task: P4-HARNESS-001
 ---
 
 # 下一任务增量
@@ -57,3 +57,6 @@ P3-BUILD-T2 实现提交 `48683d3` 及阻塞记录 `264aff5` 尚未推送，GitH
 ## P3-EXPERT-001 已完成
 
 已完成 rubric、校准模板、双人标注一致性计算和分歧裁决流程；实际标注仍为 0，专家门明确阻塞。下一唯一任务：`P3-MVP-RC1-001`。
+## P3-MVP-RC1-001 已完成
+
+已完成可重建 MVP RC1 双包，公开包排除私有评分字段和测试 gold，双构建逐文件一致。下一唯一任务：`P4-HARNESS-001`。
