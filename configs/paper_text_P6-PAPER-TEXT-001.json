@@ -1,0 +1,14 @@
+{
+  "task_id": "P6-PAPER-TEXT-001",
+  "text_version": "P6-PAPER-TEXT-001",
+  "results_source": "P5 frozen statistics only",
+  "manuscript_source": "explicit --manuscript path only",
+  "number_map": {
+    "format": "CSV",
+    "columns": ["number_id", "value", "unit", "run_id", "metric", "rounding", "provenance"],
+    "manual_text_copy": false
+  },
+  "non_result_number_allowlist": ["year", "version", "page_count", "seed", "threshold", "citation_index"],
+  "unmapped_result_numbers_block": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}
