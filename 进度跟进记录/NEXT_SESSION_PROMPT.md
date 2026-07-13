@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S028-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S028_P4-PILOT-FREEZE-001主实验矩阵与预算冻结.md
 current_task: P5-FDGEN-001
 ---
@@ -15,6 +15,10 @@ The train/dev pilot matrix is frozen. Main tracks are `text_only_table` and `ret
 ## Next window: one task only
 
 `P5-FDGEN-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and inspect only the already frozen FDS/FD-Gen plan plus safe runtime metadata. Do not read test/private assets or modify `../../3.数据集`. If the runtime or approvals are unavailable, record a formal blocked generation decision and do not fabricate scenes. Run checks, commit, and push.
+
+## Push block carried forward
+
+P4-PILOT-FREEZE-001 is locally complete at `4cece19b1b251e83cf77a77c50fb0664d7d2ce0b`, but GitHub push and remote SHA verification failed. Keep `BLOCKED_PUSH`, retry during the next delivery, and continue P5-FDGEN-001 locally.
 
 ## P4-TOOL-001 completed
 

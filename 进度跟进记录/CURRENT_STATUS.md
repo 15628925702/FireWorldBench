@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S028-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S028_P4-PILOT-FREEZE-001主实验矩阵与预算冻结.md
 current_task: P5-FDGEN-001
 ---
@@ -15,6 +15,7 @@ current_task: P5-FDGEN-001
 - 由于模型 ID、运行预算和 train/dev manifest 尚未批准，状态为 `BLOCKED_PENDING_APPROVAL`；sample count 与费用上限保持 `null`，没有生成伪造 pilot 数字。
 - 验证：`pytest` 64 passed；`mypy` 通过；CLI 通过；project check 通过；未读取测试资产或修改 `../../3.数据集`。
 - 下一唯一任务：`P5-FDGEN-001`。
+- P4-PILOT-FREEZE-001 本地提交为 `4cece19b1b251e83cf77a77c50fb0664d7d2ce0b`；GitHub push 因连接重置/443 不可达失败，当前标记 `BLOCKED_PUSH`，本地继续进入 P5-FDGEN-001。
 
 ## P4-TOOL-001 completion
 
