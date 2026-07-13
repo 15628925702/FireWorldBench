@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S027-001
+handoff_id: H-20260714-S028-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S027_P4-TOOL-001工具轨道与轨迹冻结.md
-current_task: P4-PILOT-FREEZE-001
+source_session: 2026-07-14_S028_P4-PILOT-FREEZE-001主实验矩阵与预算冻结.md
+current_task: P5-FDGEN-001
 ---
 
 # 下一任务增量
+
+## P4-PILOT-FREEZE-001 completed
+
+The train/dev pilot matrix is frozen. Main tracks are `text_only_table` and `retrieval`; exploratory tracks are `multimodal`, `plot`, `formula_fds_proxy`, and `tool_use`. Repetitions, budgets, failure rules, and no-test-selection policy are explicit. The plan remains `BLOCKED_PENDING_APPROVAL` because model IDs, runtime/pricing, and train/dev sample manifest are unavailable; sample counts and cost cap are `null`.
+
+## Next window: one task only
+
+`P5-FDGEN-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and inspect only the already frozen FDS/FD-Gen plan plus safe runtime metadata. Do not read test/private assets or modify `../../3.数据集`. If the runtime or approvals are unavailable, record a formal blocked generation decision and do not fabricate scenes. Run checks, commit, and push.
 
 ## P4-TOOL-001 completed
 

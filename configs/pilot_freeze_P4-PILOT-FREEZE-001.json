@@ -1,0 +1,22 @@
+{
+  "pilot_version": "P4-PILOT-FREEZE-001",
+  "status": "BLOCKED_PENDING_APPROVAL",
+  "blockers": ["approved_model_ids", "api_or_local_runtime_budget", "frozen_train_dev_sample_manifest"],
+  "allowed_splits": ["train_id", "dev_id"],
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_tuning": false,
+  "test_asset_read": false,
+  "main_matrix": ["text_only_table", "retrieval"],
+  "exploratory_matrix": ["multimodal", "plot", "formula_fds_proxy", "tool_use"],
+  "repetitions": {"primary": 1, "exploratory": 1},
+  "sample_counts": {"train_id": null, "dev_id": null},
+  "budgets": {
+    "max_input_tokens_per_sample": 4096,
+    "max_output_tokens_per_sample": 512,
+    "max_retries": 0,
+    "max_wall_time_s": 1800,
+    "max_cost_usd": null,
+    "cost_status": "BLOCKED_UNTIL_PRICING_APPROVAL"
+  },
+  "selection_rule": "freeze_without_test_performance; no post-freeze model_or_prompt_selection"
+}
