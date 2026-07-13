@@ -1,0 +1,48 @@
+{
+  "schema_version": "P2-FREEZE-001",
+  "status": "FROZEN_PLAN_NOT_EXECUTED",
+  "generator": "FD-Gen",
+  "generator_version": "TBD_BEFORE_PILOT",
+  "fds_version": "TBD_BEFORE_PILOT",
+  "pilot_not_started": true,
+  "model_results_generated": false,
+  "seed_policy": {
+    "master_seed": 20260714,
+    "case_seed_formula": "sha256(master_seed|case_id|generator_version)",
+    "adaptive_seed_changes_after_observation": false
+  },
+  "case_families": ["FSL", "VTP", "DWT", "RXB", "OTH", "FTD", "MHR", "HRC"],
+  "parameter_axes": {
+    "FSL": ["source_location"],
+    "VTP": ["ventilation_position_and_state"],
+    "DWT": ["door_window_timing"],
+    "RXB": ["obstruction_or_layout"],
+    "OTH": ["device_or_other_setpoint"],
+    "FTD": ["fire_time_duration"],
+    "MHR": ["maximum_hrr"],
+    "HRC": ["hrr_curve_shape"]
+  },
+  "intervention_rule": "one_primary_axis_per_case_family; no post-pilot axis expansion without a versioned amendment",
+  "preallocated_splits": {
+    "train": "configs/split_P2-SPLIT-001.json",
+    "dev": "configs/split_P2-SPLIT-001.json",
+    "test": "BLOCKED_UNTIL_PRIVATE_ASSET_AUTHORIZATION",
+    "ood_axes": ["source_location", "ventilation", "geometry", "hrr_profile"]
+  },
+  "budget": {
+    "pilot_case_count": "TBD_BY_APPROVAL_BEFORE_EXECUTION",
+    "formal_case_count": "TBD_BY_APPROVAL_BEFORE_EXECUTION",
+    "max_retry_per_case": 0,
+    "adaptive_budget_increase": false
+  },
+  "failure_policy": {
+    "retain_failed_case_manifest": true,
+    "retain_failure_log": true,
+    "retry_policy": "no automatic retry; any approved rerun receives a new case/version identifier",
+    "success_only_selection": false,
+    "output_overwrite": false
+  },
+  "release_rule": "no generated data enters train/dev/test or public release until license, split, quality, and leakage gates pass",
+  "hash_scope": "this JSON plus referenced versioned configs and governance records",
+  "hash": "TO_BE_FILLED_AFTER_FREEZE_FILES_STABILIZE"
+}

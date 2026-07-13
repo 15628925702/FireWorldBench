@@ -1,0 +1,24 @@
+{
+  "task_id": "P2-FREEZE-001",
+  "handoff_id": "H-20260714-S015-001",
+  "status": "DONE_WITH_BLOCKED_GATES",
+  "generated_at": "2026-07-14 Asia/Shanghai",
+  "external_dataset_policy": "repository-external ../../3.数据集 was not modified or newly read",
+  "private_test_assets": "not created or read",
+  "files": [
+    {"path":"项目治理/ontology_P2-ONTOLOGY-001.json","bytes":8267,"sha256":"150D1B230516458B66E75E5FE818B5BE798AEDF413335096F7018F8D1F843111","disposition":"CONDITIONAL_FREEZE"},
+    {"path":"schemas/benchmark_sample.v2.schema.json","bytes":4915,"sha256":"1064A99C0995C0939089B8D8F7BB285C4346453BB52CC2DFF2E981984E077AF8","disposition":"FROZEN"},
+    {"path":"schemas/prediction.v2.schema.json","bytes":1264,"sha256":"D88B3B702D50E3E40A9403686EF7DAF373BC30BC42E3C8F2C44F01660683C42C","disposition":"FROZEN"},
+    {"path":"configs/split_P2-SPLIT-001.json","bytes":1592,"sha256":"664E881BA63D1D6D0DE08719A628047954EB6F89ECA707655DD376E600CDB7B1","disposition":"CONDITIONAL_FREEZE"},
+    {"path":"项目治理/split_groups_P2-SPLIT-001.json","bytes":2765,"sha256":"00953E20B696683E94312A660B465FF51B81929E146C35DB82DA5DAEFE13983D","disposition":"CONDITIONAL_FREEZE"},
+    {"path":"configs/leak_policy_P2-LEAK-001.json","bytes":958,"sha256":"3C455AECE9B07927E825F14E524785526E6030CD8D69000F0652269A49CE17BA","disposition":"CONDITIONAL_FREEZE"},
+    {"path":"configs/evaluation_P2-EVAL-001.json","bytes":2200,"sha256":"D28EDE25D2FE800962F9A418B2BA728C858FCED6864CBFBC84CE478B3873EB40","disposition":"CONDITIONAL_FREEZE"},
+    {"path":"configs/test_embargo.toml","bytes":659,"sha256":"B155B1C07920129341D934C54395A5E8D8CD25F6BEAA54CD3D758BE1EDC3A73B","disposition":"ACTIVE"},
+    {"path":"项目治理/测试集访问记录.md","bytes":911,"sha256":"2BBC107A41F54CCD67995AC515D0D0FA4B262049C5863DDFE4C1968F01BBD2D5","disposition":"NO_ACCESS_CONFIRMED"},
+    {"path":"项目治理/test_embargo_no_access_P2-FREEZE-001.md","bytes":655,"sha256":"905BE81B6F4435CE94D9BB11C8D55E16C29279CDD64FDB4CD40D9003026D24E7","disposition":"NO_ACCESS_CONFIRMED"},
+    {"path":"项目治理/fdgen_generation_plan_P2-FREEZE-001.json","bytes":1950,"sha256":"44FB81029702D5B6856F9972861301B69A274166C7B62CD60C25403DA685F4C2","disposition":"FROZEN_PLAN_NOT_EXECUTED"},
+    {"path":"项目治理/p2_migration_rules_P2-FREEZE-001.md","bytes":1186,"sha256":"EB13E326FBB79736CD562AAB0DEB1AFDC37862A67D84DD675D264A6601A5D1C3","disposition":"FROZEN"}
+  ],
+  "blocked_gates": ["D-005 approval pending", "D-007 approval pending", "P1 data license eligibility", "perceptual near-duplicate audit", "FDS/FD-Gen runtime and version approval"],
+  "next_task": "P3-PIPELINE-001"
+}

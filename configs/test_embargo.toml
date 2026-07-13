@@ -1,8 +1,10 @@
 schema_version = 1
 
 [embargo]
-state = "PLANNED"
+state = "ACTIVE"
 activation_task = "P2-FREEZE-001"
+activated_at = "2026-07-14 Asia/Shanghai"
+activation_reason = "P2-FREEZE-001 test embargo activation"
 private_root_env = "FIREWORLDBENCH_PRIVATE_ROOT"
 developer_may_read_test_inputs = false
 developer_may_read_test_gold = false
@@ -17,4 +19,3 @@ protected_categories = [
   "private_scoring_metadata",
   "restricted_test_inputs",
 ]
-
