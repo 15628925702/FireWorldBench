@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S031-001
+handoff_id: H-20260714-S032-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S031_P5-FINAL-CALIBRATION-001最终train_dev校准封存.md
-current_task: P5-PREREG-001
+task_status: READY
+source_session: 2026-07-14_S032_P5-PREREG-001正式评测预注册与测试封存.md
+current_task: P5-MAIN-001
 ---
 
 # Current Status
+
+## P5-PREREG-001 completion
+
+- 已冻结 hypotheses、9 个 primary metrics、secondary metrics、case/pair bootstrap 统计族、model/track matrix、预注册消融、repetitions、exclusions、stopping rules 和 post-freeze version policy。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`，test input/gold/private mapping 均为 false；禁止 test-based model/prompt/threshold/track selection。
+- 因模型槽位和 paper-ready 输入仍未批准，计划状态为 `BLOCKED_PENDING_APPROVAL`；未读取 test 结果或生成正式评测结果。
+- 验证：`pytest` 79 passed；`mypy` 通过；CLI 通过；project check 通过。
+- 下一唯一任务：`P5-MAIN-001`。
 
 ## P5-FINAL-CALIBRATION-001 completion
 

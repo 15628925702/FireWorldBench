@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S031-001
+handoff_id: H-20260714-S032-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S031_P5-FINAL-CALIBRATION-001最终train_dev校准封存.md
-current_task: P5-PREREG-001
+task_status: READY
+source_session: 2026-07-14_S032_P5-PREREG-001正式评测预注册与测试封存.md
+current_task: P5-MAIN-001
 ---
 
 # 下一任务增量
+
+## P5-PREREG-001 completed
+
+The preregistration contract freezes hypotheses, all nine primary metrics, secondary metrics, statistical families, model/track matrix, ablations, repetitions, exclusions, stopping rules, and versioned post-freeze changes. Test access remains `NO_ACCESS_CONFIRMED`; no test asset or result was read. The plan is `BLOCKED_PENDING_APPROVAL` until model and data gates close.
+
+## Next window: one task only
+
+`P5-MAIN-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and audit whether the frozen main matrix can run. Ordinary development must not read test input/gold/private mapping. If approved models, inputs, or runtime are unavailable, record a formal blocked run plan and no model outputs. Run checks, commit, and push.
 
 ## P5-FINAL-CALIBRATION-001 completed
 

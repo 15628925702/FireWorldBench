@@ -25,6 +25,7 @@ from fireworldbench.pilot_freeze import write_pilot_plan
 from fireworldbench.fdgen import write_fdgen_decision
 from fireworldbench.benchmark_integration import write_integration_decision
 from fireworldbench.calibration import write_calibration_decision
+from fireworldbench.preregister import write_preregistration
 
 
 def doctor(root: Path) -> int:
@@ -110,6 +111,8 @@ def build_parser() -> argparse.ArgumentParser:
     calibration_parser.add_argument("--output", type=Path, required=True)
     calibration_parser.add_argument("--samples", type=Path)
     calibration_parser.add_argument("--model-config", type=Path)
+    prereg_parser = subparsers.add_parser("prereg-freeze", help="write the frozen preregistration and test embargo")
+    prereg_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -267,6 +270,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "blocker_count": len(result["blockers"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "prereg-freeze":
+        try:
+            result = write_preregistration(args.output)
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "plan_sha256": result["plan_sha256"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

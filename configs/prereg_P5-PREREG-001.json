@@ -1,0 +1,14 @@
+{
+  "prereg_version": "P5-PREREG-001",
+  "status": "BLOCKED_PENDING_APPROVAL",
+  "test_access": {
+    "ledger": "NO_ACCESS_CONFIRMED",
+    "test_input_read": false,
+    "test_gold_read": false,
+    "private_mapping_read": false
+  },
+  "main_matrix": ["text_only_table", "retrieval"],
+  "exploratory_matrix": ["multimodal", "plot", "formula_fds_proxy", "tool_use"],
+  "selection_rule": "freeze_without_test_performance; no post-freeze model_or_prompt selection",
+  "post_freeze_change_policy": "new_version_and_exploratory_label_required"
+}
