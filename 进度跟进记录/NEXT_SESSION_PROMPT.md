@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S036-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S036_P5-STATS-001无raw统计决策.md
 current_task: P5-ERROR-001
 ---
@@ -15,6 +15,10 @@ Statistics are formally `BLOCKED_NO_RAW_OUTPUT`. The frozen contract requires al
 ## Next window: one task only
 
 `P5-ERROR-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze blind error-analysis taxonomy, sampling, adjudication, and representative-case index. Without raw predictions, record a formal no-input decision and do not inspect test/private assets. Run checks, commit, and push.
+
+## Push block carried forward
+
+P5-STATS-001 is locally complete at `988ea2d19530ca306d9ff3df0af3a2afdbde29ed`, but GitHub push and remote SHA verification failed. Keep `BLOCKED_PUSH`, retry during the next delivery, and continue P5-ERROR-001 locally.
 
 ## P5-ROBUST-001 completed
 

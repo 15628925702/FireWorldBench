@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S036-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S036_P5-STATS-001无raw统计决策.md
 current_task: P5-ERROR-001
 ---
@@ -15,6 +15,7 @@ current_task: P5-ERROR-001
 - test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试资产或修改 `../../3.数据集`。
 - 验证：`pytest` 91 passed；`mypy` 通过；CLI 返回 `BLOCKED_NO_RAW_OUTPUT`；project check 通过。
 - 下一唯一任务：`P5-ERROR-001`。
+- P5-STATS-001 本地提交为 `988ea2d19530ca306d9ff3df0af3a2afdbde29ed`；GitHub push/远端校验因连接重置/443 不可达失败，当前标记 `BLOCKED_PUSH`，本地继续 P5-ERROR-001。
 
 ## P5-ROBUST-001 completion
 
