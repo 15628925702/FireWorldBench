@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S026-001
+handoff_id: H-20260714-S027-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S026_P4-BASELINE-LLM模型与提示冻结.md
-current_task: P4-TOOL-001
+task_status: READY
+source_session: 2026-07-14_S027_P4-TOOL-001工具轨道与轨迹冻结.md
+current_task: P4-PILOT-FREEZE-001
 ---
 
 # 下一任务增量
+
+## P4-TOOL-001 completed
+
+Tool tracks are frozen independently for retrieval, plot, formula/FDS proxy, and declared tool use. Each has its own whitelist, knowledge-base identity, call/cost limits, replayable trace, and information-budget label. Current execution is `BLOCKED` without an approved model/runtime; no test/private assets were read.
+
+## Next window: one task only
+
+`P4-PILOT-FREEZE-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze the train/dev pilot matrix, model/track set, repetitions, sample counts, prompts, budgets, failure rules, main/exploratory matrix, and test-access ledger. Do not select anything from test performance. Run checks, commit, and retry all pending GitHub pushes.
 
 ## Push block carried forward
 

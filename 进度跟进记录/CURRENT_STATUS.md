@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S026-001
+handoff_id: H-20260714-S027-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S026_P4-BASELINE-LLM模型与提示冻结.md
-current_task: P4-TOOL-001
+task_status: READY
+source_session: 2026-07-14_S027_P4-TOOL-001工具轨道与轨迹冻结.md
+current_task: P4-PILOT-FREEZE-001
 ---
 
 # Current Status
+
+## P4-TOOL-001 completion
+
+- 已冻结 retrieval、plot、formula/FDS proxy、tool-use 四条独立轨道：知识库身份、工具白名单、调用上限、成本单位和 information budget 均显式记录。
+- sandbox 对成功和拒绝调用均生成可回放、可哈希校验的 trace；报告强制 `budget_mixing=false`、`joint_ranking=false`。
+- 当前没有批准模型或工具运行时，正式 ablation 为 `BLOCKED`；本地 callback 只用于契约测试，不是模型结果。
+- 未读取 test/private 资产或修改 `../../3.数据集`。验证：`pytest` 60 passed；`mypy` 通过；CLI 四轨道 BLOCKED；project check 通过。
+- 下一唯一任务：`P4-PILOT-FREEZE-001`。
 
 ## P4-BASELINE-LLM push block
 

@@ -1,0 +1,47 @@
+{
+  "tool_version": "P4-TOOL-001",
+  "status": "BLOCKED",
+  "block_reason": "no_approved_model_or_tool_runtime",
+  "policies": {
+    "retrieval": {
+      "knowledge_base_id": "KB_NOT_APPROVED",
+      "allowed_tools": ["knowledge_base_lookup"],
+      "max_calls": 2,
+      "max_cost_units": 2,
+      "information_budget": "retrieval_only"
+    },
+    "plot": {
+      "knowledge_base_id": "NO_PLOT_DATASET_APPROVED",
+      "allowed_tools": ["plot_series"],
+      "max_calls": 2,
+      "max_cost_units": 2,
+      "information_budget": "plot_only"
+    },
+    "formula_fds_proxy": {
+      "knowledge_base_id": "FDS_PROXY_NOT_APPROVED",
+      "allowed_tools": ["formula_eval", "fds_proxy"],
+      "max_calls": 2,
+      "max_cost_units": 4,
+      "information_budget": "formula_or_fds_proxy_only"
+    },
+    "tool_use": {
+      "knowledge_base_id": "KB_PLOT_FORMULA_REGISTRY_FROZEN",
+      "allowed_tools": ["knowledge_base_lookup", "plot_series", "formula_eval", "fds_proxy"],
+      "max_calls": 4,
+      "max_cost_units": 8,
+      "information_budget": "declared_tool_use_only"
+    }
+  },
+  "pilot_boundary": {
+    "allowed_splits": ["train_id", "dev_id"],
+    "forbidden_splits": ["test_id", "test_ood", "external_test"],
+    "test_asset_read": false
+  },
+  "reporting": {
+    "trace_schema_version": "1.0",
+    "report_cost_units": true,
+    "report_failures": true,
+    "joint_ranking": false,
+    "replay_required": true
+  }
+}
