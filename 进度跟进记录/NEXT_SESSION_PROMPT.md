@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260714-S041-001
+handoff_id: H-20260714-S042-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S041_P6-PAPER-TEXT-001正文数字registry无结果决策.md
-current_task: P6-AUDIT-001
+source_session: 2026-07-14_S042_P6-AUDIT-001论文数字独立追踪无结果决策.md
+current_task: P6-EXPORT-001
 ---
+
+## P6-AUDIT-001 completed
+
+已建立论文数字独立追踪审计：对 claims、table、figure、text 做全量扫描和固定随机抽查，要求数字映射冻结 run，并检查统计、单位、取整、样本数、引用、许可、双盲和 claims matrix。当前无冻结论文导出物，正式状态为 `BLOCKED_NO_FROZEN_EXPORTS`；未解释数字差异为空但没有生成任何结果数字，修复不得覆盖旧导出。
+
+## Next window: one task only
+
+`P6-EXPORT-001`: 按顺序读取 handoff 文件和任务包，创建新的 `IN_PROGRESS` 会话草稿，按论文数据导出规范评估 public/private 两个独立根、manifest/checksum、泄漏扫描和本地重建。当前没有冻结结果时记录正式 blocked/no-input 决策，不生成伪造论文包。完成检查、commit，并尝试 push `origin/main`。
 
 ## P6-PAPER-TEXT-001 completed
 

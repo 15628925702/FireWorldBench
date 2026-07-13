@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S041-001
+handoff_id: H-20260714-S042-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S041_P6-PAPER-TEXT-001正文数字registry无结果决策.md
-current_task: P6-AUDIT-001
+source_session: 2026-07-14_S042_P6-AUDIT-001论文数字独立追踪无结果决策.md
+current_task: P6-EXPORT-001
 ---
 
 # Current Status
+
+## P6-AUDIT-001 completion
+
+- 已建立 claims、tables、figures、text 四类论文数字的全量扫描和固定随机抽查审计；每个接受的数字都必须反向追踪到冻结 run，并检查统计、单位、取整、样本数、引用、许可、双盲和 claims matrix。
+- 当前四类导出物均没有冻结 run ID，正式状态为 `BLOCKED_NO_FROZEN_EXPORTS`；未解释数字差异清单为空是因为没有接受任何结果数字，不是把空结果当作零分。
+- 审计禁止覆盖旧导出；修复结果必须写入新的版本化文件。test access ledger 为 `NO_ACCESS_CONFIRMED`，未读取测试/私有资产，未修改 `../../3.数据集`。
+- 验证：`python -m pytest -q`（`PYTHONPATH=.;src`）109 passed；`mypy src` 通过；CLI 返回 `BLOCKED_NO_FROZEN_EXPORTS`；doctor 通过。
+- 下一唯一任务：`P6-EXPORT-001`。
 
 ## P6-PAPER-TEXT-001 completion
 

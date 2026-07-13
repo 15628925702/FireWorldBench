@@ -35,6 +35,7 @@ from fireworldbench.claims import write_claims_matrix
 from fireworldbench.paper_tables import write_table_export_decision
 from fireworldbench.paper_figures import write_figure_decision
 from fireworldbench.paper_text import write_text_decision
+from fireworldbench.paper_audit import write_paper_audit
 
 
 def doctor(root: Path) -> int:
@@ -151,6 +152,12 @@ def build_parser() -> argparse.ArgumentParser:
     text_parser.add_argument("--output", type=Path, required=True)
     text_parser.add_argument("--results", type=Path)
     text_parser.add_argument("--manuscript", type=Path)
+    audit_parser = subparsers.add_parser("paper-audit-assess", help="audit paper-number provenance and export alignment")
+    audit_parser.add_argument("--output", type=Path, required=True)
+    audit_parser.add_argument("--claims", type=Path)
+    audit_parser.add_argument("--tables", type=Path)
+    audit_parser.add_argument("--figures", type=Path)
+    audit_parser.add_argument("--text", type=Path)
     return parser
 
 
@@ -384,6 +391,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.command == "paper-text-assess":
         try:
             result = write_text_decision(args.output, args.results, args.manuscript)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "blocker_count": len(result["blockers"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "paper-audit-assess":
+        try:
+            result = write_paper_audit(args.output, args.claims, args.tables, args.figures, args.text)
         except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
             print(f"ERROR: {exc}")
             return 2

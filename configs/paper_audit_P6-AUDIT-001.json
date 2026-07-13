@@ -1,0 +1,24 @@
+{
+  "task_id": "P6-AUDIT-001",
+  "audit_version": "P6-AUDIT-001",
+  "sources": ["claims", "tables", "figures", "text"],
+  "scan_policy": {
+    "full_scan": true,
+    "random_sample_scan": true,
+    "random_seed": 20270714,
+    "overwrite_existing_exports": false
+  },
+  "required_checks": [
+    "run_mapping",
+    "statistics",
+    "units",
+    "rounding",
+    "sample_counts",
+    "citations",
+    "licenses",
+    "double_blind",
+    "claims_matrix"
+  ],
+  "zero_unexplained_numeric_differences": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}
