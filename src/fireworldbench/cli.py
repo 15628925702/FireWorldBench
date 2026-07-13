@@ -24,6 +24,7 @@ from fireworldbench.tool_tracks import run_tool_ablation_file
 from fireworldbench.pilot_freeze import write_pilot_plan
 from fireworldbench.fdgen import write_fdgen_decision
 from fireworldbench.benchmark_integration import write_integration_decision
+from fireworldbench.calibration import write_calibration_decision
 
 
 def doctor(root: Path) -> int:
@@ -105,6 +106,10 @@ def build_parser() -> argparse.ArgumentParser:
     integration_parser = subparsers.add_parser("benchmark-integrate", help="audit generated-case integration readiness")
     integration_parser.add_argument("--fdgen-decision", type=Path, required=True)
     integration_parser.add_argument("--output", type=Path, required=True)
+    calibration_parser = subparsers.add_parser("calibration-assess", help="audit final train/dev calibration readiness")
+    calibration_parser.add_argument("--output", type=Path, required=True)
+    calibration_parser.add_argument("--samples", type=Path)
+    calibration_parser.add_argument("--model-config", type=Path)
     return parser
 
 
@@ -254,6 +259,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "input_case_count": result["input_case_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "calibration-assess":
+        try:
+            result = write_calibration_decision(args.output, samples_path=args.samples, model_config_path=args.model_config)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "blocker_count": len(result["blockers"]), "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

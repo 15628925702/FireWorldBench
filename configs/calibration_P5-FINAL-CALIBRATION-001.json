@@ -1,0 +1,22 @@
+{
+  "calibration_version": "P5-FINAL-CALIBRATION-001",
+  "status": "BLOCKED",
+  "blockers": [
+    "paper_ready_train_dev_manifest_missing",
+    "approved_model_config_missing",
+    "approved_calibration_runtime_missing"
+  ],
+  "model_set": [],
+  "checkpoint_manifest": [],
+  "prompt_hashes": [],
+  "calibration_results": [],
+  "selection_log": [],
+  "sealed_run_plan_input": {
+    "source": "P4-PILOT-FREEZE-001",
+    "test_selection": false,
+    "model_set_change": false
+  },
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_tuning": false,
+  "test_asset_read": false
+}

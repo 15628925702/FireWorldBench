@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S030-001
+handoff_id: H-20260714-S031-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S030_P5-BENCHMARK-INTEGRATE-001无输入集成决策.md
-current_task: P5-FINAL-CALIBRATION-001
+source_session: 2026-07-14_S031_P5-FINAL-CALIBRATION-001最终train_dev校准封存.md
+current_task: P5-PREREG-001
 ---
 
 # 下一任务增量
+
+## P5-FINAL-CALIBRATION-001 completed
+
+Final calibration is formally `BLOCKED`: paper-ready train/dev manifest, approved model configuration, and approved runtime are unavailable. No checkpoint, prompt adaptation, threshold fit, or calibration score was fabricated; model set and primary metrics remain frozen, and test access is `NO_ACCESS_CONFIRMED`.
+
+## Next window: one task only
+
+`P5-PREREG-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze hypotheses, primary/secondary metrics, statistical families, model matrix, ablations, repeats, exclusions, stopping rules, and test-access ledger before any test asset access. Do not read test input/gold/private mapping. Run checks, commit, and push.
 
 ## P5-BENCHMARK-INTEGRATE-001 completed
 

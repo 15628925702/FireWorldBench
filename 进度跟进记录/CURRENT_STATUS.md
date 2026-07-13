@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S030-001
+handoff_id: H-20260714-S031-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S030_P5-BENCHMARK-INTEGRATE-001无输入集成决策.md
-current_task: P5-FINAL-CALIBRATION-001
+source_session: 2026-07-14_S031_P5-FINAL-CALIBRATION-001最终train_dev校准封存.md
+current_task: P5-PREREG-001
 ---
 
 # Current Status
+
+## P5-FINAL-CALIBRATION-001 completion
+
+- 已建立最终 train/dev 校准 readiness gate；当前正式状态为 `BLOCKED`，缺少 paper-ready train/dev manifest、批准模型配置和批准运行时。
+- model set、checkpoint、prompt hash、selection log 和 calibration results 均为空；没有改变 P4 冻结的模型集合或主指标，也没有读取 test 资产。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取或修改 `../../3.数据集`。
+- 验证：`pytest` 75 passed；`mypy` 通过；CLI 返回 3 个 blockers；project check 通过。
+- 下一唯一任务：`P5-PREREG-001`。
 
 ## P5-BENCHMARK-INTEGRATE-001 completion
 
