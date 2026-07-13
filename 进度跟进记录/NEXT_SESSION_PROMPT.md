@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S034-001
+handoff_id: H-20260714-S035-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S034_P5-ABLATION-001预注册消融无运行决策.md
-current_task: P5-ROBUST-001
+source_session: 2026-07-14_S035_P5-ROBUST-001稳健性压力测试无运行决策.md
+current_task: P5-STATS-001
 ---
 
 # 下一任务增量
+
+## P5-ROBUST-001 completed
+
+The six robustness transformations are frozen with label-invariance requirements: sensor noise, missing observation, sensor fault, visual degradation, wording variation, and tool failure. No main run exists, so the status is `BLOCKED_NO_MAIN_RUN` and all performance/failure/cost slices remain empty.
+
+## Next window: one task only
+
+`P5-STATS-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and audit raw prediction availability for case/pair statistics, 95% CI, effect sizes, multiple comparisons, cost, and failures. Without raw outputs, record a formal no-input decision and never hand-edit metrics. Run checks, commit, and push.
 
 ## P5-ABLATION-001 completed
 

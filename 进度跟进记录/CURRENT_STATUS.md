@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S034-001
+handoff_id: H-20260714-S035-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S034_P5-ABLATION-001预注册消融无运行决策.md
-current_task: P5-ROBUST-001
+source_session: 2026-07-14_S035_P5-ROBUST-001稳健性压力测试无运行决策.md
+current_task: P5-STATS-001
 ---
 
 # Current Status
+
+## P5-ROBUST-001 completion
+
+- 已冻结六类预注册稳健性变换：sensor noise、missing observation、sensor fault、visual degradation、wording variation、tool failure。
+- 每类变换都要求 label invariant；标签变化不得被包装成 robustness evidence。因主矩阵无 run，正式状态为 `BLOCKED_NO_MAIN_RUN`，没有性能/失败/成本切片。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试资产或修改 `../../3.数据集`。
+- 验证：`pytest` 88 passed；`mypy` 通过；CLI 返回 6 transformations/no-run；project check 通过。
+- 下一唯一任务：`P5-STATS-001`。
 
 ## P5-ABLATION-001 completion
 

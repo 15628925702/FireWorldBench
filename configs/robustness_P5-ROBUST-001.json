@@ -1,0 +1,20 @@
+{
+  "robustness_version": "P5-ROBUST-001",
+  "status": "BLOCKED_NO_MAIN_RUN",
+  "blockers": ["main_run_not_ready", "main_run_index_empty"],
+  "transformations": [
+    "sensor_noise",
+    "missing_observation",
+    "sensor_fault",
+    "visual_degradation",
+    "wording_variation",
+    "tool_failure"
+  ],
+  "label_change_is_not_robustness_evidence": true,
+  "runs": [],
+  "performance_slices": [],
+  "failure_slices": [],
+  "cost_slices": [],
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}
