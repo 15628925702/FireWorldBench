@@ -1,0 +1,16 @@
+{
+  "ablation_version": "P5-ABLATION-001",
+  "status": "BLOCKED_NO_MAIN_RUN",
+  "blockers": ["main_run_not_ready", "main_run_index_empty"],
+  "factors": [
+    {"name": "information_budget", "changed_factor_count": 1},
+    {"name": "evidence_visibility", "changed_factor_count": 1},
+    {"name": "uncertainty_reporting", "changed_factor_count": 1}
+  ],
+  "ablation_runs": [],
+  "parameter_diffs": [],
+  "paired_result_index": [],
+  "extra_findings_label": "exploratory_only",
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}

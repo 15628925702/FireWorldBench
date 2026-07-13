@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S033-001
+handoff_id: H-20260714-S034-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S033_P5-MAIN-001主矩阵执行门.md
-current_task: P5-ABLATION-001
+task_status: READY
+source_session: 2026-07-14_S034_P5-ABLATION-001预注册消融无运行决策.md
+current_task: P5-ROBUST-001
 ---
 
 # Current Status
+
+## P5-ABLATION-001 completion
+
+- 已冻结三类一因子消融：information budget、evidence visibility、uncertainty reporting；每个 variant 只改变一个声明因子，额外发现标记为 exploratory。
+- 因主矩阵没有可执行 run index，消融正式状态为 `BLOCKED_NO_MAIN_RUN`；没有生成 ablation run、parameter diff 或 paired result。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试资产或修改 `../../3.数据集`。
+- 验证：`pytest` 85 passed；`mypy` 通过；CLI 返回 `BLOCKED_NO_MAIN_RUN`；project check 通过。
+- 下一唯一任务：`P5-ROBUST-001`。
 
 ## P5-MAIN-001 completion
 

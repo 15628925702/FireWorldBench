@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S033-001
+handoff_id: H-20260714-S034-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S033_P5-MAIN-001主矩阵执行门.md
-current_task: P5-ABLATION-001
+task_status: READY
+source_session: 2026-07-14_S034_P5-ABLATION-001预注册消融无运行决策.md
+current_task: P5-ROBUST-001
 ---
 
 # 下一任务增量
+
+## P5-ABLATION-001 completed
+
+The preregistered ablation factors are frozen one at a time: information budget, evidence visibility, and uncertainty reporting. Main execution has no run index, so the formal status is `BLOCKED_NO_MAIN_RUN`; ablation runs, parameter diffs, and paired results remain empty. Extra findings are exploratory only.
+
+## Next window: one task only
+
+`P5-ROBUST-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and audit preregistered noise, missingness, sensor-fault, visual-degradation, wording, and tool-failure transformations. Without main outputs, record a formal no-run decision and do not fabricate robustness metrics. Run checks, commit, and retry pending pushes.
 
 ## P5-MAIN-001 completed
 
