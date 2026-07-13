@@ -1,0 +1,121 @@
+{
+  "ontology_version": "P2-ONTOLOGY-001",
+  "status": "DESIGNED_PENDING_EXPERT_APPROVAL",
+  "tasks": [
+    {
+      "id": "T1-A",
+      "name": "early_fire_discrimination",
+      "answer_labels": ["fire_forming", "not_fire_forming", "insufficient_information"],
+      "required_fields": ["risk_level", "evidence", "uncertainty", "missing_information"],
+      "observability": "inferable_from_observed_sensor_or_validated_visual_evidence",
+      "gold_origin": ["direct_measurement", "simulator_truth", "deterministic_rule", "expert_annotation"],
+      "forbidden_inference": ["unobserved_cfd_field_from_visual_only"],
+      "missing_or_refusal": "insufficient_information"
+    },
+    {
+      "id": "T1-B",
+      "name": "anomaly_attribution",
+      "answer_labels": ["fire", "non_fire", "ventilation_disturbance", "sensor_fault", "insufficient_information"],
+      "required_fields": ["dominant_mechanism", "evidence", "uncertainty", "missing_information"],
+      "observability": "inferable_only_when_discriminating_observations_exist",
+      "gold_origin": ["direct_measurement", "simulator_truth", "deterministic_rule", "expert_annotation"],
+      "forbidden_inference": ["sensor_fault_without_sensor_quality_evidence"],
+      "missing_or_refusal": "insufficient_information"
+    },
+    {
+      "id": "T1-C",
+      "name": "information_need_selection",
+      "answer_labels": ["query_observation", "stop_and_decide", "insufficient_information"],
+      "required_fields": ["selected_observation_id_or_stop", "query_cost", "expected_information_value", "evidence"],
+      "observability": "decision_is_observable;_information_value_requires_frozen_query_set",
+      "gold_origin": ["deterministic_rule", "expert_annotation"],
+      "forbidden_inference": ["query_answer_leakage_from_observation_name"],
+      "missing_or_refusal": "insufficient_information"
+    },
+    {
+      "id": "T2-A",
+      "name": "fire_state_recognition",
+      "answer_labels": ["baseline_or_no_fire", "forming_or_early", "growth", "developed_or_peak", "decay_or_ventilation_change", "state_unknown"],
+      "required_fields": ["state_label", "risk_level", "evidence", "uncertainty"],
+      "observability": "inferable_from_time_series_or_simulator_truth;_phase_must_not_be_guessed_from_single_visual_frame",
+      "gold_origin": ["direct_measurement", "simulator_truth", "deterministic_rule", "expert_annotation"],
+      "forbidden_inference": ["exact_hrr_bin_without_hrr_or_validated_proxy"],
+      "missing_or_refusal": "state_unknown"
+    },
+    {
+      "id": "T2-B",
+      "name": "dominant_mechanism_recognition",
+      "answer_labels": ["buoyant_plume", "ceiling_jet", "longitudinal_ventilation", "sidewall_extraction", "backlayering", "smoke_layer_formation", "sensor_artifact", "multiple_mechanisms", "mechanism_unknown"],
+      "required_fields": ["mechanism_labels", "evidence", "uncertainty", "missing_information"],
+      "observability": "multi_label_inference_from_observable_signatures;_unobserved_mechanism_is_unknown",
+      "gold_origin": ["simulator_truth", "direct_measurement", "literature", "expert_annotation"],
+      "forbidden_inference": ["mechanism_label_from_visual_appearance_without_supporting_observation"],
+      "missing_or_refusal": "mechanism_unknown"
+    },
+    {
+      "id": "T2-C",
+      "name": "physical_consistency_judgment",
+      "answer_labels": ["consistent", "inconsistent", "underdetermined"],
+      "required_fields": ["consistency_label", "violation_codes", "evidence", "uncertainty"],
+      "observability": "judgment_is_observable_from_supplied_evidence_and_frozen_rules",
+      "gold_origin": ["deterministic_rule", "simulator_truth", "expert_annotation"],
+      "forbidden_inference": ["violation_claim_without_applicable_constraint"],
+      "missing_or_refusal": "underdetermined"
+    },
+    {
+      "id": "T3-A",
+      "name": "future_trend_prediction",
+      "answer_labels": ["increase", "decrease", "stable", "mixed_or_non_monotonic", "trend_unknown"],
+      "required_fields": ["horizon_s", "target_variable", "trend_label", "interval_or_range", "evidence", "uncertainty"],
+      "observability": "future_is_gold_only_when_time_horizon_and_target_are_defined",
+      "gold_origin": ["direct_measurement", "simulator_truth", "deterministic_rule"],
+      "forbidden_inference": ["exact_future_value_without_calibrated_unit_and_horizon"],
+      "missing_or_refusal": "trend_unknown"
+    },
+    {
+      "id": "T3-B",
+      "name": "counterfactual_intervention_reasoning",
+      "answer_labels": ["case_a_higher_risk", "case_b_higher_risk", "no_material_difference", "pair_invalid", "underdetermined"],
+      "required_fields": ["pair_id", "intervention_variable", "direction", "causal_chain", "evidence", "uncertainty"],
+      "observability": "requires_validated_single_variable_pair;_invalid_pair_is_not_a_physical_gold",
+      "gold_origin": ["simulator_truth", "deterministic_rule", "expert_annotation"],
+      "forbidden_inference": ["causal_claim_from_d01_configuration_comparison"],
+      "missing_or_refusal": "pair_invalid_or_underdetermined"
+    },
+    {
+      "id": "T3-C",
+      "name": "state_transition_trace",
+      "answer_labels": ["trace_supported", "trace_partially_supported", "trace_unknown"],
+      "required_fields": ["initial_state", "mechanism_chain", "transitions", "outcome", "evidence", "uncertainty"],
+      "observability": "nodes_and_edges_must_be_supported_or_explicitly_unknown",
+      "gold_origin": ["direct_measurement", "simulator_truth", "deterministic_rule", "literature", "expert_annotation"],
+      "forbidden_inference": ["unobserved_transition_as_fact", "correct_final_answer_with_unsupported_chain"],
+      "missing_or_refusal": "trace_unknown"
+    }
+  ],
+  "gold_origins": ["direct_measurement", "simulator_truth", "deterministic_rule", "literature", "expert_annotation"],
+  "observability_levels": ["directly_observed", "inferable_from_observed", "simulator_only", "expert_only", "unobservable"],
+  "uncertainty_levels": ["low", "medium", "high", "unknown"],
+  "physical_violation_taxonomy": [
+    {"code": "V_DIRECTION", "name": "wrong_direction", "definition": "Predicted trend or response direction contradicts a frozen relation or paired gold."},
+    {"code": "V_TEMPORAL_ORDER", "name": "wrong_event_order", "definition": "Predicted event or sensor response order contradicts observed or simulator order."},
+    {"code": "V_VENTILATION_SIGN", "name": "ventilation_sign_error", "definition": "Claimed ventilation or extraction effect has an unsupported or contradictory sign."},
+    {"code": "V_BACKLAYERING", "name": "backlayering_constraint", "definition": "Backlayering claim contradicts the applicable flow/geometry evidence."},
+    {"code": "V_MASS_ENERGY", "name": "mass_energy_constraint", "definition": "Claim violates a supplied mass/energy or HRR constraint."},
+    {"code": "V_UNIT", "name": "unit_or_dimension_error", "definition": "Value or comparison uses an invalid, missing, or incompatible unit."},
+    {"code": "V_EVIDENCE", "name": "unsupported_evidence", "definition": "Claim cites no valid observation or cites an observation that does not support it."},
+    {"code": "V_OBSERVABILITY", "name": "unobservable_claim", "definition": "Output asserts hidden CFD truth or unavailable state as observed fact."},
+    {"code": "V_CAUSAL_LEAP", "name": "causal_leap", "definition": "Causal edge is asserted without intervention, mechanism, or evidence support."},
+    {"code": "V_STATE_TRANSITION", "name": "invalid_state_transition", "definition": "Trace contains an impossible or unsupported state transition."},
+    {"code": "V_PAIR_INVALID", "name": "invalid_counterfactual_pair", "definition": "A/B pair changes multiple uncontrolled factors or lacks a valid intervention record."},
+    {"code": "V_METADATA_LEAK", "name": "metadata_answer_leak", "definition": "Answer can be recovered from filename, source, split, or query name rather than observations."}
+  ],
+  "global_rules": {
+    "unknown_is_not_negative": true,
+    "visual_only_cannot_imply_unobserved_cfd_truth": true,
+    "evidence_ids_must_resolve": true,
+    "case_is_statistical_unit": true,
+    "invalid_pair_cannot_receive_causal_score": true,
+    "test_gold_and_scoring_metadata_private": true
+  }
+}
