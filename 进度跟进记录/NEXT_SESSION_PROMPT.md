@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S028-001
+handoff_id: H-20260714-S029-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S028_P4-PILOT-FREEZE-001主实验矩阵与预算冻结.md
-current_task: P5-FDGEN-001
+task_status: READY
+source_session: 2026-07-14_S029_P5-FDGEN-001受控场景生成决策.md
+current_task: P5-BENCHMARK-INTEGRATE-001
 ---
 
 # 下一任务增量
+
+## P5-FDGEN-001 completed
+
+The frozen FD-Gen plan remains `FROZEN_PLAN_NOT_EXECUTED`. The P5 decision is formally `BLOCKED` because generator/FDS versions, case counts, final plan hash, runtime, and approvals are unresolved. No simulator ran, no scenes were fabricated, and generation/failure/cost outputs remain empty or unset.
+
+## Next window: one task only
+
+`P5-BENCHMARK-INTEGRATE-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and make a formal no-input integration decision if P5-FDGEN produced no cases. If approved generated cases later exist, re-run the full canonical adapter, builders, split/leak audit, gold/trace, schema, and scorer chain without reading model test results. Run checks, commit, and retry pending GitHub pushes.
 
 ## P4-PILOT-FREEZE-001 completed
 

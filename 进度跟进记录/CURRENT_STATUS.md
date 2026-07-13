@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S028-001
+handoff_id: H-20260714-S029-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S028_P4-PILOT-FREEZE-001主实验矩阵与预算冻结.md
-current_task: P5-FDGEN-001
+task_status: READY
+source_session: 2026-07-14_S029_P5-FDGEN-001受控场景生成决策.md
+current_task: P5-BENCHMARK-INTEGRATE-001
 ---
 
 # Current Status
+
+## P5-FDGEN-001 completion
+
+- 已审计 P2 冻结的 FD-Gen 计划；generator/FDS 版本、pilot/formal case 数量、最终 hash、运行时和审批门均未闭合，因此正式状态为 `BLOCKED`。
+- 没有启动模拟器，没有生成场景，没有写入数据；机器报告保留空 generation/failure manifest、空成本和 `generated_data_written=false`，不伪造成功率或失败率。
+- 保留 master seed、case seed 公式、8 个 family、单主轴干预、失败保留和无 success-only selection 规则；未读取 test/private 资产或修改 `../../3.数据集`。
+- 验证：`pytest` 67 passed；`mypy` 通过；CLI 7 blockers；project check 通过。
+- 下一唯一任务：`P5-BENCHMARK-INTEGRATE-001`。
 
 ## P4-PILOT-FREEZE-001 completion
 

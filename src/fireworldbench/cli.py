@@ -22,6 +22,7 @@ from fireworldbench.vision_baseline import assess_visual_baseline_file
 from fireworldbench.llm_baseline import run_llm_pilot_file
 from fireworldbench.tool_tracks import run_tool_ablation_file
 from fireworldbench.pilot_freeze import write_pilot_plan
+from fireworldbench.fdgen import write_fdgen_decision
 
 
 def doctor(root: Path) -> int:
@@ -97,6 +98,9 @@ def build_parser() -> argparse.ArgumentParser:
     tool_parser.add_argument("--samples", type=Path)
     pilot_parser = subparsers.add_parser("pilot-freeze", help="write the frozen train/dev pilot plan")
     pilot_parser.add_argument("--output", type=Path, required=True)
+    fdgen_parser = subparsers.add_parser("fdgen-assess", help="audit frozen FD-Gen readiness without generating scenes")
+    fdgen_parser.add_argument("--plan", type=Path, required=True)
+    fdgen_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -230,6 +234,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "plan_sha256": result["plan_sha256"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "fdgen-assess":
+        try:
+            result = write_fdgen_decision(args.plan, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "blocker_count": len(result["blockers"]), "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

@@ -1,0 +1,23 @@
+{
+  "fdgen_version": "P5-FDGEN-001",
+  "status": "BLOCKED",
+  "decision": "FROZEN_PLAN_NOT_EXECUTED",
+  "blockers": [
+    "generator_version_not_frozen",
+    "fds_version_not_frozen",
+    "pilot_case_count_not_approved",
+    "formal_case_count_not_approved",
+    "frozen_plan_hash_not_final",
+    "fdgen_runtime_not_available",
+    "generation_approval_gates_not_closed"
+  ],
+  "generated_count": 0,
+  "success_count": 0,
+  "failure_count": 0,
+  "generation_manifest": [],
+  "failure_log": [],
+  "resource_cost": null,
+  "generated_data_written": false,
+  "test_asset_read": false,
+  "next_gate": "freeze generator/FDS versions, case counts, final plan hash, runtime, and approvals before execution"
+}
