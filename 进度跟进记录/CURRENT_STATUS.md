@@ -1,12 +1,19 @@
 ---
-handoff_id: H-20260714-S024-001
+handoff_id: H-20260714-S025-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S024_P4-BASELINE-NUM数值与时间序列baseline.md
-current_task: P4-BASELINE-VISION
+source_session: 2026-07-14_S025_P4-BASELINE-VISION视觉N_A决策.md
+current_task: P4-BASELINE-LLM
 ---
 
 # Current Status
+
+## P4-BASELINE-VISION completion
+
+- Formal visual baseline decision is `N/A`: no approved visual data, region annotations, interference protocol, or reproducible visual runtime is available, so no detection or physical-reasoning result was fabricated.
+- Separate metric fields, resource gaps, forbidden claims, train/dev boundaries, and protected-path refusal are implemented. `../../3.数据集` and test/private assets were not read or modified.
+- Verification: `pytest` 53 passed; `mypy` passed; `python scripts/check_project.py` passed; source-path `vision-baseline` CLI passed.
+- Next single task: `P4-BASELINE-LLM`.
 
 更新时间：`2026-07-14 Asia/Shanghai`  
 项目版本：`0.1.0`  

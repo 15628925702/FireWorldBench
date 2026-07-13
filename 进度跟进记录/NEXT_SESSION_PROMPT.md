@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S024-001
+handoff_id: H-20260714-S025-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S024_P4-BASELINE-NUM数值与时间序列baseline.md
-current_task: P4-BASELINE-VISION
+source_session: 2026-07-14_S025_P4-BASELINE-VISION视觉N_A决策.md
+current_task: P4-BASELINE-LLM
 ---
 
 # 下一任务增量
+
+## P4-BASELINE-VISION completed
+
+Visual baseline is formally `N/A` because approved visual assets, region annotations, interference protocol, and a reproducible runtime are unavailable. Detection and physical-reasoning metrics remain separate and unset; only train/dev is accepted, and no dataset or test/private asset was read.
+
+## Next window: one task only
+
+`P4-BASELINE-LLM`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, freeze model ID, prompt, few-shot, sampling, retries, parser, budget, and runtime boundaries. Without an approved model or API, record `BLOCKED` and do not fabricate results. Run checks, commit, and try `push origin main`.
 
 - 任务 ID：`P2-FREEZE-001`
 - 目标：逐条审计 P2 出口，冻结 Schema、ontology、split、leak 规则、公开/私有边界和评测协议；封存测试资产与 FD-Gen generation plan。

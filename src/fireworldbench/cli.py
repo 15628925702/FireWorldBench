@@ -18,6 +18,7 @@ from fireworldbench.expert import consistency_file
 from fireworldbench.release import build_mvp_rc1
 from fireworldbench.harness import run_harness
 from fireworldbench.baseline import run_baseline_file
+from fireworldbench.vision_baseline import assess_visual_baseline_file
 
 
 def doctor(root: Path) -> int:
@@ -79,6 +80,10 @@ def build_parser() -> argparse.ArgumentParser:
     baseline_parser.add_argument("--output", type=Path, required=True)
     baseline_parser.add_argument("--strategy", choices=("chance", "majority", "domain_threshold", "traditional_ml", "temporal_persistence"), required=True)
     baseline_parser.add_argument("--train-samples", type=Path)
+    vision_parser = subparsers.add_parser("vision-baseline", help="record the train/dev-only visual baseline decision")
+    vision_parser.add_argument("--output", type=Path, required=True)
+    vision_parser.add_argument("--samples", type=Path)
+    vision_parser.add_argument("--visual-root", type=Path)
     return parser
 
 
@@ -180,6 +185,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"strategy": result["strategy"], "sample_count": result["sample_count"], "failure_count": result["failure_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "vision-baseline":
+        try:
+            result = assess_visual_baseline_file(args.output, samples_path=args.samples, visual_root=args.visual_root)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 
