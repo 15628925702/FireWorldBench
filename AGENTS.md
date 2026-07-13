@@ -33,16 +33,18 @@
 - 不得静默改变任务定义、主指标、数据划分或已冻结测试集；变更必须进入 `项目治理/决策记录.md`。
 - 不修改用户已有内容；发现冲突时保留现场并在交接记录中说明。
 - 可变事实优先级：当前文件系统/Git/带退出码的验证证据 > `CURRENT_STATUS.md` > 最近会话记录 > `NEXT_SESSION_PROMPT.md`。需求边界仍遵循 README 中的事实源优先级。
-- 未经当前窗口中的用户明确授权，禁止安装/下载包、模型或数据，禁止 commit、push、pull、merge、rebase、tag、修改 remote、clean、stash、reset 或 checkout 覆盖改动。
-- 安装和 Git 写操作授权不跨窗口继承；新窗口必须重新获得明确授权。
+- 未经用户明确授权，禁止安装/下载包、模型或数据；禁止 pull、merge、rebase、tag、修改 remote、clean、stash、reset 或 checkout 覆盖改动。
+- 自本项目当前约定起，每个任务在“验收标准全部满足”后，必须执行一次任务级 Git 交付：整理提交范围、`git add`、`git commit`，并 `git push origin main` 到既有 GitHub 远端；若 push 失败，任务不得标记为 `DONE`，必须记录失败原因并保持 `BLOCKED` 或 `IN_PROGRESS`。
+- 除“任务验收后的任务级 commit/push”外，其余 Git 写操作仍需谨慎；不得为规避失败验收而拆分、重写或静默跳过提交。
 - 任何正式 benchmark 构建、pilot、主实验和论文导出必须绑定 clean Git commit；在当前 UNBORN/dirty 状态下只能做初始化与预研，不得生成正式结果。无法 commit 时必须先生成经批准的不可变源码归档与 SHA-256，但主实验仍需在 freeze 决策中明确接受。
 
 ## 4. 每轮结束条件
 
 1. 运行与本次改动相称的测试或检查，并记录命令、退出码和关键结果。
-2. 更新 `进度跟进记录/CURRENT_STATUS.md`。
-3. 新建一份会话记录，使用 `进度跟进记录/SESSION_HANDOFF_TEMPLATE.md`。
-4. 更新 `进度跟进记录/NEXT_SESSION_PROMPT.md`，使下一轮可直接开始唯一任务。
-5. 若修改需求、数据、评测或结论，同时更新相应治理台账。
+2. 若本轮任务已验收通过，执行任务级 Git 交付并记录 commit SHA、push 结果与远端分支；push 失败不得写 `DONE`。
+3. 更新 `进度跟进记录/CURRENT_STATUS.md`。
+4. 新建一份会话记录，使用 `进度跟进记录/SESSION_HANDOFF_TEMPLATE.md`。
+5. 更新 `进度跟进记录/NEXT_SESSION_PROMPT.md`，使下一轮可直接开始唯一任务。
+6. 若修改需求、数据、评测或结论，同时更新相应治理台账。
 
 项目预留 Conda 环境 `fireworldbench-v1`，定义在 `environment.yml`。当前它是按用户要求创建的空环境，不得擅自安装包；进入实现阶段后需经明确确认再依据 `pyproject.toml` 安装依赖。不得把个人 base 环境或临时 `.venv` 的成功结果当作正式验收证据。

@@ -22,7 +22,7 @@ current_task: P1-DATA-002
 - staged / unstaged / untracked：`0 / 3 / 4`（本轮 3 个既有文件修改，4 个新增交付文件）
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
 - 最近预检：Anaconda base，project check / pytest / mypy / CLI / UTF-8 通过；Ruff `NOT_RUN`
-- 当前限制：未经新授权，不安装/下载，不 push/pull/merge/rebase/tag/修改 remote，不读取仓库外 `../../4.升级拓展`
+- 当前限制：不安装/下载；不得 pull/merge/rebase/tag/修改 remote；每个任务验收通过后必须 commit 并 push 到既有 `origin/main`；不读取仓库外 `../../4.升级拓展`
 
 ## 已完成
 

@@ -19,6 +19,9 @@ next_task: {{NEXT_TASK_ID_OR_TBD}}
 - Git branch：`{{BRANCH}}`
 - Git HEAD：`{{COMMIT_OR_UNBORN}}`
 - Git remote：`{{FETCH_AND_PUSH_URLS}}`
+- 任务级 Git 交付：`{{NOT_REQUIRED|PENDING|COMMIT_ONLY|PUSHED|PUSH_FAILED}}`
+- 任务提交 SHA：`{{COMMIT_SHA_OR_NONE}}`
+- 远端推送结果：`{{REMOTE_BRANCH_AND_RESULT}}`
 - 基线快照时间：`{{ISO_DATETIME_WITH_TIMEZONE}}`
 - 基线 staged/unstaged/untracked：`{{COUNTS_AND_PATHS}}`
 - 结束 staged/unstaged/untracked：`{{COUNTS_AND_PATHS}}`
@@ -90,3 +93,4 @@ next_task: {{NEXT_TASK_ID_OR_TBD}}
 - 必须复用：{{REUSABLE_OUTPUTS}}
 - 禁止重复/禁止做：{{DO_NOT_REPEAT_OR_EXPAND}}
 - 完成标准：{{NEXT_ACCEPTANCE}}
+- 若本轮状态为 `DONE`：必须写明 commit SHA、push 目标分支与成功证据；缺一不可。
