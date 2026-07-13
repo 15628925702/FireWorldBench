@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S031-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S031_P5-FINAL-CALIBRATION-001最终train_dev校准封存.md
 current_task: P5-PREREG-001
 ---
@@ -15,6 +15,7 @@ current_task: P5-PREREG-001
 - test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取或修改 `../../3.数据集`。
 - 验证：`pytest` 75 passed；`mypy` 通过；CLI 返回 3 个 blockers；project check 通过。
 - 下一唯一任务：`P5-PREREG-001`。
+- P5-FINAL-CALIBRATION-001 本地提交为 `56941c96d36d6d1bd9367fd817b80d38500216ae`；GitHub push 因连接重置/443 不可达失败，当前标记 `BLOCKED_PUSH`，本地继续进入 P5-PREREG-001。
 
 ## P5-BENCHMARK-INTEGRATE-001 completion
 

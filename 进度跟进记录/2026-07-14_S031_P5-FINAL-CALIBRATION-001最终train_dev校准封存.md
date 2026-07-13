@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S031-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 session_id: 2026-07-14_S031
 task_id: P5-FINAL-CALIBRATION-001
 next_task: P5-PREREG-001
@@ -38,7 +38,13 @@ formal blocked decision without calibration results.
 - local commit before amendment: `a1a6f117d2462187311d554f13201d758cfd973b`
 - branch: `main`
 - post-commit staged / unstaged / untracked: `0 / 0 / 0`
-- push verification: pending; remote SHA must be checked after delivery.
+- push verification: BLOCKED_PUSH; push failed with connection reset and then GitHub port 443 unreachable.
+
+## Push block
+
+- Local commit: `56941c96d36d6d1bd9367fd817b80d38500216ae`.
+- The calibration gate is locally complete but remains `BLOCKED_PUSH` until remote SHA matches local HEAD.
+- Per continuation policy, continue local P5-PREREG-001 and retry during the next delivery.
 
 ## Delivery
 

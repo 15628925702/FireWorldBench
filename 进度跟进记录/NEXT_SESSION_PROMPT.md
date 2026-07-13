@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S031-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S031_P5-FINAL-CALIBRATION-001最终train_dev校准封存.md
 current_task: P5-PREREG-001
 ---
@@ -15,6 +15,10 @@ Final calibration is formally `BLOCKED`: paper-ready train/dev manifest, approve
 ## Next window: one task only
 
 `P5-PREREG-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze hypotheses, primary/secondary metrics, statistical families, model matrix, ablations, repeats, exclusions, stopping rules, and test-access ledger before any test asset access. Do not read test input/gold/private mapping. Run checks, commit, and push.
+
+## Push block carried forward
+
+P5-FINAL-CALIBRATION-001 is locally complete at `56941c96d36d6d1bd9367fd817b80d38500216ae`, but GitHub push and remote SHA verification failed. Keep `BLOCKED_PUSH`, retry during the next delivery, and continue P5-PREREG-001 locally.
 
 ## P5-BENCHMARK-INTEGRATE-001 completed
 
