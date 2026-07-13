@@ -1,0 +1,41 @@
+{
+  "schema_version": "P2-EVAL-001",
+  "status": "DESIGNED_PENDING_P2_FREEZE",
+  "statistical_unit": "case",
+  "pair_statistical_unit": "validated_pair",
+  "window_is_never_an_independent_unit": true,
+  "primary_metrics": {
+    "T1-A": "auprc_case",
+    "T1-B": "macro_f1_case",
+    "T1-C": "budgeted_decision_utility_case",
+    "T2-A": "macro_f1_case",
+    "T2-B": "mechanism_macro_f1_case",
+    "T2-C": "balanced_accuracy_case",
+    "T3-A": "trend_direction_macro_accuracy_case",
+    "T3-B": "pair_ranking_accuracy_pair",
+    "T3-C": "state_trace_score_case"
+  },
+  "secondary_metrics": {
+    "common": ["evidence_f1", "uncertainty_calibration", "physical_violation_rate"],
+    "T1-A": ["auroc_case", "miss_rate", "false_alarm_rate", "case_level_lead_time", "brier", "ece"],
+    "T1-B": ["per_class_recall", "calibration"],
+    "T1-C": ["query_count", "invalid_query_rate", "final_T1_A_performance"],
+    "T2-A": ["state_accuracy", "region_distance_or_iou", "incomplete_field_rate"],
+    "T2-B": ["evidence_precision", "evidence_recall", "hierarchy_consistency"],
+    "T2-C": ["violation_type_f1", "evidence_f1"],
+    "T3-A": ["event_time_error", "interval_coverage", "mae_or_rmse"],
+    "T3-B": ["counterfactual_direction_consistency", "response_order_score", "causal_edge_f1"],
+    "T3-C": ["causal_edge_f1", "transition_order_accuracy", "outcome_accuracy"]
+  },
+  "failure_scoring": {
+    "invalid_json": "structure_failure_and_zero_structured_fields",
+    "timeout": "failure_after_max_retries;retain_record",
+    "api_or_tool_error": "failure_after_max_retries;retain_record",
+    "refusal_or_abstention": "score_under_task_refusal_rule;do_not_delete",
+    "unknown_or_underdetermined": "valid_label_when_gold_is_unknown_or_underdetermined",
+    "unknown_evidence_id": "evidence_score_zero_and_V_EVIDENCE"
+  },
+  "bootstrap": {"unit": "case_or_validated_pair", "resamples": 2000, "seed": 20260714, "interval": "percentile_95"},
+  "composite_score": {"enabled": false, "reason": "D-007 remains pending; report every task metric separately"},
+  "human_rubric": {"minimum_independent_raters": 2, "domain_reviewer_required_for_physical_claims": true, "calibration_set_excluded_from_test": true}
+}
