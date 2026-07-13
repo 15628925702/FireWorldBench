@@ -13,6 +13,7 @@ from fireworldbench.pipeline import build_canonical, inventory, write_json
 from fireworldbench.t1_builder import build_t1
 from fireworldbench.t2_builder import build_t2
 from fireworldbench.t3_builder import build_t3
+from fireworldbench.scorer import score_files
 
 
 def doctor(root: Path) -> int:
@@ -54,6 +55,10 @@ def build_parser() -> argparse.ArgumentParser:
     t3_parser.add_argument("--input", type=Path, required=True, help="canonical pipeline JSON")
     t3_parser.add_argument("--split", choices=("train_id", "dev_id"), default="dev_id")
     t3_parser.add_argument("--output", type=Path, required=True)
+    score_parser = subparsers.add_parser("score", help="score predictions against explicit samples")
+    score_parser.add_argument("--samples", type=Path, required=True)
+    score_parser.add_argument("--predictions", type=Path, required=True)
+    score_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -113,6 +118,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"sample_count": result["sample_count"], "failure_count": result["failure_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "score":
+        try:
+            result = score_files(args.samples, args.predictions, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"sample_count": len(result["sample_scores"]), "failure_counts": result["failure_counts"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

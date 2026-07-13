@@ -1,0 +1,15 @@
+{
+  "scorer_version": "P3-SCORER-001",
+  "tasks": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"],
+  "statistical_units": {"default": "case", "T3-B": "validated_pair"},
+  "window_is_never_an_independent_unit": true,
+  "failure_policy": {
+    "invalid_json": "retain_record_and_score_zero",
+    "missing_prediction": "retain_record_and_score_zero",
+    "invalid_prediction": "retain_record; structured label may be reported separately",
+    "unknown_evidence": "evidence_score_zero_and_V_EVIDENCE"
+  },
+  "bootstrap": {"seed": 20260714, "resamples": 2000, "interval": "percentile_95"},
+  "composite_score": {"enabled": false},
+  "test_asset_policy": "only explicit sample/prediction inputs; never read hidden test gold or private mapping"
+}

@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S019-001
+handoff_id: H-20260714-S020-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S019_P3-BUILD-T3趋势与反事实样本.md
-current_task: P3-SCORER-001
+source_session: 2026-07-14_S020_P3-SCORER-001参考评分器闭环.md
+current_task: P3-EXPERT-001
 ---
 
 # Current Status
@@ -112,3 +112,8 @@ current_task: P3-SCORER-001
 - 已实现 T3-A/B/C 趋势、单变量反事实和状态转移 trace builder；future horizon、pair validity、causal chain 和 evidence 均有边界校验。
 - 未读取 test input/gold/private mapping，未修改 `../../3.数据集`。
 - 下一唯一任务：`P3-SCORER-001`。
+## P3-SCORER-001 收尾
+
+- 已实现 9 个任务参考评分、case/pair 聚合、失败计分、证据违规和确定性统计报告；不启用 composite score。
+- 未读取 test gold/private mapping，未生成模型测试结果。
+- 下一唯一任务：`P3-EXPERT-001`。

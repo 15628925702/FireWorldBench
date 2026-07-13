@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S019-001
+handoff_id: H-20260714-S020-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S019_P3-BUILD-T3趋势与反事实样本.md
-current_task: P3-SCORER-001
+source_session: 2026-07-14_S020_P3-SCORER-001参考评分器闭环.md
+current_task: P3-EXPERT-001
 ---
 
 # 下一任务增量
@@ -51,3 +51,6 @@ P3-BUILD-T2 实现提交 `48683d3` 及阻塞记录 `264aff5` 尚未推送，GitH
 ## P3-BUILD-T3 已完成
 
 已实现趋势、有效单变量 pair 和状态转移 trace builder，缺少必要证据时明确拒绝或输出 unknown。下一唯一任务：`P3-SCORER-001`。
+## P3-SCORER-001 已完成
+
+已完成 9 个任务的参考评分闭环，保留 sample/case/pair 原始分数和失败记录。下一唯一任务：`P3-EXPERT-001`。
