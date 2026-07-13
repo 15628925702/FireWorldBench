@@ -1,0 +1,13 @@
+{
+  "tables_version": "P6-PAPER-TABLES-001",
+  "status": "BLOCKED_NO_FROZEN_RESULTS",
+  "blockers": ["frozen_results_missing", "result_freeze_manifest_has_no_run_ids"],
+  "table_spec": {"main": [], "appendix": [], "cell_provenance_required": true},
+  "csv_outputs": [],
+  "json_outputs": [],
+  "latex_outputs": [],
+  "run_metric_mapping": [],
+  "manual_number_copy": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}

@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S038-001
+handoff_id: H-20260714-S039-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S038_P5-CLAIMS-FREEZE-001主张证据冻结.md
-current_task: P6-PAPER-TABLES-001
+source_session: 2026-07-14_S039_P6-PAPER-TABLES-001无冻结结果导表决策.md
+current_task: P6-PAPER-FIGURES-001
 ---
 
 # 下一任务增量
+
+## P6-PAPER-TABLES-001 completed
+
+Paper-table export is formally `BLOCKED_NO_FROZEN_RESULTS`. No CSV, JSON, or LaTeX metrics were generated; future table cells must be traced to immutable sample scores/raw runs and source hashes.
+
+## Next window: one task only
+
+`P6-PAPER-FIGURES-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze source data, plot specs, scripts, styles, rendering, and caption facts. With no frozen result data, record a no-input figure decision and do not fabricate PDF/PNG figures. Run checks, commit, and push.
 
 ## P5-CLAIMS-FREEZE-001 completed
 
