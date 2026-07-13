@@ -19,6 +19,7 @@ from fireworldbench.release import build_mvp_rc1
 from fireworldbench.harness import run_harness
 from fireworldbench.baseline import run_baseline_file
 from fireworldbench.vision_baseline import assess_visual_baseline_file
+from fireworldbench.llm_baseline import run_llm_pilot_file
 
 
 def doctor(root: Path) -> int:
@@ -84,6 +85,10 @@ def build_parser() -> argparse.ArgumentParser:
     vision_parser.add_argument("--output", type=Path, required=True)
     vision_parser.add_argument("--samples", type=Path)
     vision_parser.add_argument("--visual-root", type=Path)
+    llm_parser = subparsers.add_parser("llm-pilot", help="run or record a frozen train/dev-only LLM pilot")
+    llm_parser.add_argument("--config", type=Path, required=True)
+    llm_parser.add_argument("--output", type=Path, required=True)
+    llm_parser.add_argument("--samples", type=Path)
     return parser
 
 
@@ -190,6 +195,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         try:
             result = assess_visual_baseline_file(args.output, samples_path=args.samples, visual_root=args.visual_root)
         except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "llm-pilot":
+        try:
+            result = run_llm_pilot_file(args.samples, args.config, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))

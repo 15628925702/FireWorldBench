@@ -1,0 +1,43 @@
+{
+  "baseline_version": "P4-BASELINE-LLM",
+  "status": "BLOCKED",
+  "block_reason": "no_approved_model_id_or_api_budget",
+  "default_config": {
+    "track": "text_only_table",
+    "prompt_id": "text_table_v1",
+    "model_id": null,
+    "approved": false,
+    "repeats": 1,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_input_tokens": 4096,
+    "max_output_tokens": 512,
+    "max_retries": 0,
+    "timeout_s": 30.0,
+    "max_cost_usd": 0.0,
+    "input_usd_per_1k_tokens": 0.0,
+    "output_usd_per_1k_tokens": 0.0
+  },
+  "tracks": {
+    "text_only_table": {
+      "prompt_id": "text_table_v1",
+      "model_id": null,
+      "status": "BLOCKED_UNTIL_MODEL_APPROVAL",
+      "visual_input": false
+    },
+    "multimodal": {
+      "prompt_id": "multimodal_v1",
+      "model_id": null,
+      "status": "BLOCKED_UNTIL_MODEL_APPROVAL",
+      "visual_input": true,
+      "requires_approved_visual_assets": true
+    }
+  },
+  "pilot_boundary": {
+    "allowed_splits": ["train_id", "dev_id"],
+    "forbidden_splits": ["test_id", "test_ood", "external_test"],
+    "test_tuning": false,
+    "test_asset_read": false
+  },
+  "report_fields": ["variance", "cost", "failures", "config_sha256"]
+}

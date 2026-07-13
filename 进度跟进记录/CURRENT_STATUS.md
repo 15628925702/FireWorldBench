@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S025-001
+handoff_id: H-20260714-S026-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S025_P4-BASELINE-VISION视觉N_A决策.md
-current_task: P4-BASELINE-LLM
+source_session: 2026-07-14_S026_P4-BASELINE-LLM模型与提示冻结.md
+current_task: P4-TOOL-001
 ---
 
 # Current Status
+
+## P4-BASELINE-LLM completion
+
+- 已实现 text/table 与 multimodal 两条分离轨道的模型/提示注册、冻结配置哈希、sampling、few-shot、token budget、重试、超时、成本和失败报告。
+- 当前没有批准模型 ID、API 预算或可复现运行时，因此正式 pilot 状态为 `BLOCKED`；没有生成或声称任何模型准确率。
+- 只允许显式 train/dev；未读取 test input、test gold、private mapping 或 `../../3.数据集`，不混合不同 information budget。
+- 验证：`pytest` 56 passed；`mypy` 通过；源码路径下 `llm-pilot` 返回 `BLOCKED`；项目检查在提交前执行。
+- 下一唯一任务：`P4-TOOL-001`。
 
 ## P4-BASELINE-VISION completion
 
