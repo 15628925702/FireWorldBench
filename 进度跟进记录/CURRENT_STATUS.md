@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S006-001
+handoff_id: H-20260714-S007-001
 handoff_state: READY
-source_session: 2026-07-14_S006_P1-DATA-002字段单位标准化契约.md
-current_task: P1-DATA-003
+source_session: 2026-07-14_S007_P1-DATA-003数据质量case泄漏审计.md
+current_task: P1-RESEARCH-001
 ---
 
 # Current Status
@@ -10,14 +10,14 @@ current_task: P1-DATA-003
 更新时间：`2026-07-14 Asia/Shanghai`  
 项目版本：`0.1.0`  
 当前阶段：`P1 数据与论文可行性`  
-总体状态：`READY_FOR_NEXT_TASK`（P1-DATA-002 已完成；未知单位和未闭合来源继续 fail-closed）
+总体状态：`READY_FOR_NEXT_TASK`（P1-DATA-003 已完成；D01 pair 降级为配置比较，未闭合来源继续 BLOCKED）
 
 ## 窗口与 Git 快照
 
-- 最近完成会话：`2026-07-14_S006_P1-DATA-002字段单位标准化契约.md`
+- 最近完成会话：`2026-07-14_S007_P1-DATA-003数据质量case泄漏审计.md`
 - 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `1d856ed`（P1-DATA-002 任务提交，已推送）
+- branch / HEAD：`main` / `6dabf7f`（P1-DATA-002 交付状态，P1-DATA-003 待提交）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
@@ -36,6 +36,7 @@ current_task: P1-DATA-003
 - [x] 完成许可证据与用途资格审计；训练、开发、测试、派生发布、再分发全部按证据不足标记 `BLOCKED`。
 - [x] 更新 `configs/data_sources.toml`、数据许可证审计报告和本轮会话记录。
 - [x] 完成 P1-DATA-002：D01-D04 字段字典、单位边界、L0->L1 Schema、可逆转换规则和只读探查脚本。
+- [x] 完成 P1-DATA-003：质量扫描、case/family/sequence 注册、D01 pair 核验、泄漏键和 disposition。
 
 ## 进行中
 
@@ -43,10 +44,10 @@ current_task: P1-DATA-003
 
 ## 当前唯一下一任务
 
-- 任务 ID：`P1-DATA-003`
-- 目标：统计缺失、异常、零字节、重复、标签问题和采样特征，确认 case/family/sequence/near-duplicate/template 泄漏键。
+- 任务 ID：`P1-RESEARCH-001`
+- 目标：核验目标会议约束、相关工作差异、数据污染风险和可证实贡献边界。
 - 入口：`NEXT_SESSION_PROMPT.md`
-- 完成标准：质量问题有 disposition，split group 可执行，Immersed pair 语义可验证或降级为配置比较；下一任务只能是 `P1-RESEARCH-001`。
+- 完成标准：会议约束、相关工作、贡献差异和污染缓解均有证据；下一任务只能是 `P1-FREEZE-001`。
 
 ## 已知阻塞/待决策
 
