@@ -1,0 +1,13 @@
+{
+  "builder_version": "P3-BUILD-T3-001",
+  "tasks": ["T3-A", "T3-B", "T3-C"],
+  "allowed_splits": ["train_id", "dev_id"],
+  "forbidden_splits": ["test_id", "test_ood_source_location", "test_ood_ventilation", "test_ood_hrr", "test_ood_geometry_or_layout", "test_external_experiment"],
+  "trend_policy": "future horizon and target variable are mandatory; otherwise trend_unknown",
+  "pair_policy": "valid causal label requires pair_valid=true, single_variable=true, intervention variable and direction",
+  "trace_policy": "supported trace requires initial state, mechanism chain, transitions, outcome, and evidence",
+  "invalid_pair_label": "pair_invalid",
+  "unknown_trace_label": "trace_unknown",
+  "gold_origins": ["deterministic_rule"],
+  "test_asset_policy": "never read test input, test gold, or private mapping"
+}
