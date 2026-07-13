@@ -1,12 +1,21 @@
 ---
-handoff_id: H-20260714-S040-001
+handoff_id: H-20260714-S041-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S040_P6-PAPER-FIGURES-001无冻结结果图决策.md
-current_task: P6-PAPER-TEXT-001
+source_session: 2026-07-14_S041_P6-PAPER-TEXT-001正文数字registry无结果决策.md
+current_task: P6-AUDIT-001
 ---
 
 # Current Status
+
+## P6-PAPER-TEXT-001 completion
+
+- 已建立正文数字 registry contract、`text_number_map` 字段、显式论文源数字扫描和非结果数字 allowlist；每个未来结果数字必须绑定 run ID、metric、取整、单位和 provenance。
+- 当前没有带 run ID 的冻结统计结果，正式状态为 `BLOCKED_NO_FROZEN_RESULTS`；registry、结果数字和 run-metric provenance 均为空，没有生成或手抄论文结果数字。
+- 显式 manuscript 扫描遇到数字时默认标记 `UNMAPPED` 并阻断，只有完成冻结结果映射或进入带 provenance 的 allowlist 后才能放行。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试/私有资产，未修改 `../../3.数据集`。
+- 验证：`python -m pytest -q`（`PYTHONPATH=.;src`）106 passed；`mypy src` 通过；CLI 返回 `BLOCKED_NO_FROZEN_RESULTS`；doctor 通过；ruff 不在当前环境，未安装。
+- 下一唯一任务：`P6-AUDIT-001`。
 
 ## P6-PAPER-FIGURES-001 completion
 

@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260714-S040-001
+handoff_id: H-20260714-S041-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S040_P6-PAPER-FIGURES-001无冻结结果图决策.md
-current_task: P6-PAPER-TEXT-001
+source_session: 2026-07-14_S041_P6-PAPER-TEXT-001正文数字registry无结果决策.md
+current_task: P6-AUDIT-001
 ---
+
+## P6-PAPER-TEXT-001 completed
+
+正文数字 registry 已冻结门禁：仅允许来自冻结统计结果的数字进入正文，字段包含 run ID、metric、取整、单位和 provenance；显式论文源扫描到的数字默认是 `UNMAPPED`，非结果数字必须进入有 provenance 的 allowlist。当前无冻结统计结果，因此正式状态为 `BLOCKED_NO_FROZEN_RESULTS`，没有生成 `text_number_map.csv` 或任何论文结果数字。
+
+## Next window: one task only
+
+`P6-AUDIT-001`: 按顺序读取 handoff 文件和任务包，创建新的 `IN_PROGRESS` 会话草稿，审计 claims、tables、figures、text 中所有数字是否映射到冻结 run；当前没有冻结导出物时记录正式 no-input/block decision，不生成差异或论文数字。完成检查、commit，并尝试 push `origin/main`。
 
 # 下一任务增量
 
