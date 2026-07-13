@@ -1,6 +1,6 @@
 ---
 handoff_id: H-20260714-S014-001
-handoff_state: IN_PROGRESS
+handoff_state: READY
 source_session: 2026-07-14_S014_P2-EVAL-001指标评分统计预案.md
 current_task: P2-EVAL-001
 ---
@@ -10,14 +10,14 @@ current_task: P2-EVAL-001
 更新时间：`2026-07-14 Asia/Shanghai`  
 项目版本：`0.1.0`  
 当前阶段：`P1 数据与论文可行性`  
-总体状态：`IN_PROGRESS`（P2-EVAL-001 本地提交完成，但 GitHub 推送连续失败）
+总体状态：`READY_FOR_NEXT_TASK`（P2-EVAL-001 已推送；可进入 P2-FREEZE-001）
 
 ## 窗口与 Git 快照
 
 - 最近完成会话：`2026-07-14_S014_P2-EVAL-001指标评分统计预案.md`
-- 当前 `IN_PROGRESS` 草稿：P2-EVAL-001，等待推送成功后收敛为 READY
+- 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `69d5d9e`（本地提交完成，origin/main 尚未更新）
+- branch / HEAD：`main` / `c1dd2d6`（P2-EVAL-001 已推送）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
@@ -51,10 +51,10 @@ current_task: P2-EVAL-001
 
 ## 当前唯一任务
 
-- 任务 ID：`P2-EVAL-001`
-- 目标：完成已本地提交的评测配置、评分器和统计预案的远端推送；推送成功后才进入 `P2-FREEZE-001`。
+- 任务 ID：`P2-FREEZE-001`
+- 目标：逐条审计 P2 ontology、Schema、split、leak 和 evaluation 出口，封存测试资产访问控制。
 - 入口：`NEXT_SESSION_PROMPT.md`
-- 完成标准：`git push origin main` 成功；随后再把 handoff 切换为 READY。
+- 完成标准：P2 freeze/test embargo/private manifest/FD-Gen plan 完成；下一任务只能是 `P3-PIPELINE-001`。
 
 ## 已知阻塞/待决策
 
@@ -66,7 +66,7 @@ current_task: P2-EVAL-001
 
 ## 基线事实
 
-- 当前任务交付由 Git commit `50d8e10` 重建；已 push 到 `origin/main`，remote 未修改。
+- 当前任务交付由 Git commit `c1dd2d6` 重建；已 push 到 `origin/main`，remote 未修改。
 - `项目治理/source_baseline_manifest.json` 记录全部拟提交源码文件的相对路径、大小和 SHA-256，manifest 不自包含。
 - 仓库内 `data/` 与 `artifacts/` 当前仅保留 README 占位，不含原始数据或运行产物。
 - 当前最大入库文件为 `开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf`（约 390 KB），体量可接受。
