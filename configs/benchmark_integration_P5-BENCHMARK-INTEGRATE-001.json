@@ -1,0 +1,21 @@
+{
+  "integration_version": "P5-BENCHMARK-INTEGRATE-001",
+  "status": "BLOCKED_NO_INPUT",
+  "source_fdgen_status": "BLOCKED",
+  "input_case_count": 0,
+  "input_manifest": [],
+  "required_chain": [
+    "canonical_adapter",
+    "sample_builders",
+    "group_split",
+    "leak_audit",
+    "gold_trace",
+    "schema_validation",
+    "reference_scorer"
+  ],
+  "integration_written": false,
+  "existing_p3_p4_artifacts_modified": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false,
+  "next_condition": "complete generated case manifest plus approved FD-Gen decision"
+}

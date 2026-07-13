@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S029-001
+handoff_id: H-20260714-S030-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S029_P5-FDGEN-001受控场景生成决策.md
-current_task: P5-BENCHMARK-INTEGRATE-001
+source_session: 2026-07-14_S030_P5-BENCHMARK-INTEGRATE-001无输入集成决策.md
+current_task: P5-FINAL-CALIBRATION-001
 ---
 
 # Current Status
+
+## P5-BENCHMARK-INTEGRATE-001 completion
+
+- FD-Gen 当前没有生成 cases，因此集成决策正式为 `BLOCKED_NO_INPUT`；没有将空清单写入 benchmark，也没有修改 P3/P4 产物。
+- 已冻结未来有完整 generated manifest 时必须依次执行的七步链：canonical adapter、sample builders、group/split、leak audit、gold/trace、schema validation、reference scorer。
+- test access ledger 保持 `NO_ACCESS_CONFIRMED`；未读取模型 test 结果、测试资产或修改 `../../3.数据集`。
+- 验证：`pytest` 71 passed；`mypy` 通过；CLI 返回 `BLOCKED_NO_INPUT`；project check 通过。
+- 下一唯一任务：`P5-FINAL-CALIBRATION-001`。
 
 ## P5-FDGEN-001 completion
 

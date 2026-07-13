@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S029-001
+handoff_id: H-20260714-S030-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S029_P5-FDGEN-001受控场景生成决策.md
-current_task: P5-BENCHMARK-INTEGRATE-001
+source_session: 2026-07-14_S030_P5-BENCHMARK-INTEGRATE-001无输入集成决策.md
+current_task: P5-FINAL-CALIBRATION-001
 ---
 
 # 下一任务增量
+
+## P5-BENCHMARK-INTEGRATE-001 completed
+
+FD-Gen produced no cases, so integration is formally `BLOCKED_NO_INPUT`. No empty or fabricated benchmark addendum was written. The future seven-step integration chain is frozen and test access remains `NO_ACCESS_CONFIRMED`.
+
+## Next window: one task only
+
+`P5-FINAL-CALIBRATION-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and use only available paper-ready train/dev inputs plus the frozen P4 selection protocol. Do not read individual test input/gold or change the model set/main metrics. If approved models or inputs are unavailable, record `BLOCKED` and do not fabricate calibration results. Run checks, commit, and push.
 
 ## P5-FDGEN-001 completed
 
