@@ -1,0 +1,26 @@
+{
+  "schema_version": "P2-LEAK-001",
+  "public_id": {
+    "format": "FWB-{benchmark_version}-{task}-{split}-{opaque_id}",
+    "algorithm": "hmac-sha256",
+    "salt_source": "FWB_PRIVATE_ID_SALT environment/secret store",
+    "published_salt": false,
+    "published_reverse_mapping": false,
+    "raw_source_case_key_in_public_payload": false
+  },
+  "forbidden_public_fields": ["gold", "gold_ref", "physical_trace", "scoring_metadata", "source_case_key", "private_salt", "reverse_mapping"],
+  "scan_rules": [
+    "exact_sha256_duplicate",
+    "perceptual_duplicate_required",
+    "sequence_and_neighbor_frame_group",
+    "family_group_disjointness",
+    "template_and_generator_group_disjointness",
+    "raw_filename_source_token",
+    "raw_path_and_absolute_path",
+    "metadata_answer_token",
+    "private_prediction_field"
+  ],
+  "fail_closed": true,
+  "perceptual_scan_status": "BLOCKED_NO_IMAGE_DECODER_APPROVED",
+  "test_payloads_must_be_opaque": true
+}
