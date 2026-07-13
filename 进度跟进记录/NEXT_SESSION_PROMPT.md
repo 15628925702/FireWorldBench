@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S033-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S033_P5-MAIN-001主矩阵执行门.md
 current_task: P5-ABLATION-001
 ---
@@ -15,6 +15,10 @@ The preregistered main matrix is formally `BLOCKED`: preregistration, approved m
 ## Next window: one task only
 
 `P5-ABLATION-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and audit the preregistered one-factor-at-a-time ablation plan. Without an executable main run, record a formal no-input/no-run decision and do not invent paired results. Run checks, commit, and retry pending pushes.
+
+## Push block carried forward
+
+P5-MAIN-001 is locally complete at `de0b449eae9c414df360e6f802b639624205cbda`; push reported success but remote SHA verification failed. Keep `BLOCKED_PUSH`, retry during the next delivery, and continue P5-ABLATION-001 locally.
 
 ## P5-PREREG-001 completed
 

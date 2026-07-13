@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S033-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S033_P5-MAIN-001主矩阵执行门.md
 current_task: P5-ABLATION-001
 ---
@@ -15,6 +15,7 @@ current_task: P5-ABLATION-001
 - runner 明确不读取 gold，test access ledger 仍为 `NO_ACCESS_CONFIRMED`；未读取或修改 `../../3.数据集`。
 - 验证：`pytest` 82 passed；`mypy` 通过；CLI 5 blockers；project check 通过。
 - 下一唯一任务：`P5-ABLATION-001`。
+- P5-MAIN-001 本地提交为 `de0b449eae9c414df360e6f802b639624205cbda`；push 输出成功但远端 SHA 校验因连接重置/443 不可达失败，当前标记 `BLOCKED_PUSH`，本地继续进入 P5-ABLATION-001。
 
 ## P5-PREREG-001 completion
 
