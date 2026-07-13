@@ -17,7 +17,7 @@ current_task: P1-FREEZE-001
 - 最近完成会话：`2026-07-14_S008_P1-RESEARCH-001会议相关工作污染审计.md`
 - 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `490a1e7`（P1-RESEARCH-001 待提交）
+- branch / HEAD：`main` / `043f4a3`（P1-RESEARCH-001 已提交并推送，状态修复待提交）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
