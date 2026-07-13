@@ -11,6 +11,7 @@ from fireworldbench import __version__
 from fireworldbench.project_checks import discover_project_root, validate_project
 from fireworldbench.pipeline import build_canonical, inventory, write_json
 from fireworldbench.t1_builder import build_t1
+from fireworldbench.t2_builder import build_t2
 
 
 def doctor(root: Path) -> int:
@@ -44,6 +45,10 @@ def build_parser() -> argparse.ArgumentParser:
     t1_parser.add_argument("--input", type=Path, required=True, help="canonical pipeline JSON")
     t1_parser.add_argument("--split", choices=("train_id", "dev_id"), default="dev_id")
     t1_parser.add_argument("--output", type=Path, required=True)
+    t2_parser = subparsers.add_parser("build-t2", help="build T2-A/B/C train or dev samples")
+    t2_parser.add_argument("--input", type=Path, required=True, help="canonical pipeline JSON")
+    t2_parser.add_argument("--split", choices=("train_id", "dev_id"), default="dev_id")
+    t2_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -78,6 +83,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         try:
             payload = json.loads(args.input.read_text(encoding="utf-8"))
             result = build_t1(payload.get("records", []), split=args.split, parent_manifest_sha256=payload.get("manifest_sha256"))
+            write_json(result, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"sample_count": result["sample_count"], "failure_count": result["failure_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "build-t2":
+        try:
+            payload = json.loads(args.input.read_text(encoding="utf-8"))
+            result = build_t2(payload.get("records", []), split=args.split, parent_manifest_sha256=payload.get("manifest_sha256"))
             write_json(result, args.output)
         except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
             print(f"ERROR: {exc}")

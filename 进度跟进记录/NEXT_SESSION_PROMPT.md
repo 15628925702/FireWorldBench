@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S017-001
+handoff_id: H-20260714-S018-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S017_P3-BUILD-T1火灾预警样本.md
-current_task: P3-BUILD-T2
+source_session: 2026-07-14_S018_P3-BUILD-T2状态与机制样本.md
+current_task: P3-BUILD-T3
 ---
 
 # 下一任务增量
@@ -39,3 +39,6 @@ P3-PIPELINE-001 本地 commit `4801792` 已完成，三次 `git push origin main
 ## P3-BUILD-T1 已完成
 
 已实现 T1-A/B/C 火灾预警样本 builder，限定 train/dev，拒绝 test/OOD 和未批准阈值；Schema、正常/边界/拒绝路径验证通过。下一唯一任务：`P3-BUILD-T2`。
+## P3-BUILD-T2 已完成
+
+已实现 T2-A/B/C builder，保留 mechanism family、evidence observation ID 和 unknown/underdetermined 边界。下一唯一任务：`P3-BUILD-T3`。

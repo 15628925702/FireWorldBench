@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S017-001
+handoff_id: H-20260714-S018-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S017_P3-BUILD-T1火灾预警样本.md
-current_task: P3-BUILD-T2
+source_session: 2026-07-14_S018_P3-BUILD-T2状态与机制样本.md
+current_task: P3-BUILD-T3
 ---
 
 # Current Status
@@ -93,3 +93,9 @@ current_task: P3-BUILD-T2
 - 已实现 T1-A/B/C builder、train/dev 边界、gold 派生、observation evidence、future horizon 限制和阈值来源校验。
 - 未读取 test input/gold/private mapping，未修改 `../../3.数据集`。
 - 下一唯一任务：`P3-BUILD-T2`。
+## P3-BUILD-T2 收尾
+
+- 已实现 T2-A/B/C 状态、机制和物理一致性 builder；所有正向结论引用 observation ID。
+- 未知机制、未知状态和缺少 violation code 的 inconsistency 不会被强行判定。
+- 未读取 test input/gold/private mapping，未修改 `../../3.数据集`。
+- 下一唯一任务：`P3-BUILD-T3`。

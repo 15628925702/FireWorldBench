@@ -1,0 +1,12 @@
+{
+  "builder_version": "P3-BUILD-T2-001",
+  "tasks": ["T2-A", "T2-B", "T2-C"],
+  "allowed_splits": ["train_id", "dev_id"],
+  "forbidden_splits": ["test_id", "test_ood_source_location", "test_ood_ventilation", "test_ood_hrr", "test_ood_geometry_or_layout", "test_external_experiment"],
+  "state_unknown_policy": "no explicit state label means state_unknown",
+  "mechanism_unknown_policy": "no discriminating mechanism label means mechanism_unknown",
+  "consistency_policy": "inconsistent requires at least one ontology violation code; otherwise underdetermined",
+  "evidence_policy": "all positive claims link to observation IDs; unsupported claims use empty evidence",
+  "gold_origins": ["deterministic_rule"],
+  "test_asset_policy": "never read test input, test gold, or private mapping"
+}
