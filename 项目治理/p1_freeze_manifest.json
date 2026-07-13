@@ -1,0 +1,84 @@
+﻿{
+    "schema_version":  1,
+    "task_id":  "P1-FREEZE-001",
+    "generated_at":  "2026-07-14T00:00:00+08:00",
+    "status":  "freeze_with_blocked_open_gates",
+    "next_task":  "P2-ONTOLOGY-001",
+    "artifacts":  [
+                      {
+                          "path":  "configs/data_sources.toml",
+                          "bytes":  3369,
+                          "sha256":  "e2cc41ca61bd2d2c5ab48a78f83ddd01c4e8302e24aa0fdb19192e6335d07eaf"
+                      },
+                      {
+                          "path":  "项目治理/data_manifest_P1-DATA-001.json",
+                          "bytes":  127167,
+                          "sha256":  "d17133eb136301efda94bc80ece4d066ac142984c74a89d5550fa0acb32d774f"
+                      },
+                      {
+                          "path":  "项目治理/data_manifest_P1-DATA-001.json.sha256",
+                          "bytes":  98,
+                          "sha256":  "40f7c88fa38a14818fe6becd39bc5c87ed54fbee38a2fcb3309f2946d21ff797"
+                      },
+                      {
+                          "path":  "项目治理/data_license_eligibility_P1-DATA-001.md",
+                          "bytes":  4322,
+                          "sha256":  "7101cef1bac699cdc9e4648d171395d2c5081d36c9544ffae067898c3bfd1844"
+                      },
+                      {
+                          "path":  "项目治理/data_field_contract_P1-DATA-002.md",
+                          "bytes":  6389,
+                          "sha256":  "539c4d89c43e69720c268dd262ac8aaa22f6e06f191dfc35c48985b63fc53f4a"
+                      },
+                      {
+                          "path":  "项目治理/data_schema_P1-DATA-002.json",
+                          "bytes":  909,
+                          "sha256":  "19b9b1a297e7eec3a5354928c95dc1ca82578a8af8ee0f6ac65b313968ecbcee"
+                      },
+                      {
+                          "path":  "项目治理/data_quality_case_leakage_P1-DATA-003.md",
+                          "bytes":  5069,
+                          "sha256":  "492ac77099b11f737492ec17a1aa1af951f87ff247e706964bde97adbd094493"
+                      },
+                      {
+                          "path":  "项目治理/research_venue_relatedwork_contamination_P1-RESEARCH-001.md",
+                          "bytes":  8551,
+                          "sha256":  "889fd6be6056fec223791df5e5ac085767b32e31b8fed4f5c697f60889c8846d"
+                      },
+                      {
+                          "path":  "项目治理/决策记录.md",
+                          "bytes":  4701,
+                          "sha256":  "e6a0bb0b4fd01b224de834da2aa03b52e5be313ed0b37ead986e3996bbc1bed0"
+                      },
+                      {
+                          "path":  "项目治理/风险登记.md",
+                          "bytes":  3693,
+                          "sha256":  "4cb2c1b695d3be989a5841c7b2946590ec9984e384aa3e27725ff7ed8c876f6e"
+                      },
+                      {
+                          "path":  "项目治理/开放问题.md",
+                          "bytes":  2834,
+                          "sha256":  "c19818e326d0254425fe1f8640ad00bc15764ef885270e29d28d54560f13ab88"
+                      },
+                      {
+                          "path":  "项目治理/会议目标与时间约束.md",
+                          "bytes":  901,
+                          "sha256":  "63bf8a20d5bd7ae85bd86fddddc9b5bca31ceb4e5631572cde5c19ad6840fcd0"
+                      },
+                      {
+                          "path":  "项目治理/p1_freeze_audit_P1-FREEZE-001.md",
+                          "bytes":  4338,
+                          "sha256":  "c888e7fbe15d659a930bef7e5b134cb68cafb392dde4a6e5e361b5deb9015dfd"
+                      }
+                  ],
+    "dispositions":  {
+                         "data_license":  "BLOCKED",
+                         "field_contract":  "PASS_WITH_SCOPE",
+                         "quality":  "PASS_WITH_SCOPE",
+                         "case_semantics":  "PASS_WITH_SCOPE",
+                         "iclr_2027_policy":  "BLOCKED",
+                         "contamination":  "OPEN",
+                         "paper_ready":  "BLOCKED",
+                         "decisions":  "PENDING_APPROVAL"
+                     }
+}

@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S008-001
+handoff_id: H-20260714-S009-001
 handoff_state: READY
-source_session: 2026-07-14_S008_P1-RESEARCH-001会议相关工作污染审计.md
-current_task: P1-FREEZE-001
+source_session: 2026-07-14_S009_P1-FREEZE-001阶段冻结审计.md
+current_task: P2-ONTOLOGY-001
 ---
 
 # Current Status
@@ -10,14 +10,14 @@ current_task: P1-FREEZE-001
 更新时间：`2026-07-14 Asia/Shanghai`  
 项目版本：`0.1.0`  
 当前阶段：`P1 数据与论文可行性`  
-总体状态：`READY_FOR_NEXT_TASK`（P1-RESEARCH-001 已完成；ICLR 2027 具体 CFP/日期尚未发布，相关政策保持 BLOCKED）
+总体状态：`READY_FOR_NEXT_TASK`（P1-FREEZE-001 已完成；P1 以 BLOCKED/OPEN 门禁冻结，未宣称 paper-ready）
 
 ## 窗口与 Git 快照
 
-- 最近完成会话：`2026-07-14_S008_P1-RESEARCH-001会议相关工作污染审计.md`
+- 最近完成会话：`2026-07-14_S009_P1-FREEZE-001阶段冻结审计.md`
 - 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `93f959e`（P1-RESEARCH-001 已提交并推送）
+- branch / HEAD：`main` / `8082462`（P1-FREEZE-001 待提交）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
@@ -38,6 +38,7 @@ current_task: P1-FREEZE-001
 - [x] 完成 P1-DATA-002：D01-D04 字段字典、单位边界、L0->L1 Schema、可逆转换规则和只读探查脚本。
 - [x] 完成 P1-DATA-003：质量扫描、case/family/sequence 注册、D01 pair 核验、泄漏键和 disposition。
 - [x] 完成 P1-RESEARCH-001：ICLR 2027 venue 状态、相关工作矩阵、可证贡献边界和污染探针。
+- [x] 完成 P1-FREEZE-001：P1 出口审计、决策提交状态、冻结 manifest、遗留风险和 P2 输入边界。
 
 ## 进行中
 
@@ -45,10 +46,10 @@ current_task: P1-FREEZE-001
 
 ## 当前唯一下一任务
 
-- 任务 ID：`P1-FREEZE-001`
-- 目标：逐条审计 P1 数据许可、字段、质量、venue 和污染出口，生成 P1 freeze manifest。
+- 任务 ID：`P2-ONTOLOGY-001`
+- 目标：冻结 9 个子任务的标签空间、机制层级、风险状态、缺失/拒答、证据和 physical violation taxonomy。
 - 入口：`NEXT_SESSION_PROMPT.md`
-- 完成标准：P1 出口逐条有 PASS/BLOCKED/OPEN disposition；下一任务只能是 `P2-ONTOLOGY-001`。
+- 完成标准：标签无歧义、可观测性和 gold origin 明确；下一任务只能是 `P2-SCHEMA-001`。
 
 ## 已知阻塞/待决策
 
