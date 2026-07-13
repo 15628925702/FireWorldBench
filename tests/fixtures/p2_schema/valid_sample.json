@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "FWB-v1-T3-B-dev_id-0001",
+  "benchmark_version": "v1-mvp",
+  "task": "T3-B",
+  "split": "dev_id",
+  "scenario": {"case_uid": "case_abc123", "family_uid": "family_f01", "domain": "tunnel_cfd", "intervention": {"variable": "ventilation_flow", "single_variable": true}},
+  "observations": [{"observation_id": "obs_a", "modality": "sensor_table", "time_range_s": [0, 30], "content_ref": "private://obs_a", "units": {"Time": "s", "temperature": "K"}, "quality": "valid"}],
+  "question": {"format": "structured_json", "prompt": "Compare the two cases."},
+  "answer": {"label": "case_a_higher_risk"},
+  "physical_trace": {"initial_state": {}, "mechanism_chain": ["ceiling_jet"], "transitions": [], "outcome": {}, "evidence_links": ["obs_a"], "origin": ["simulator_truth"]},
+  "scoring_metadata": {"visibility": "private", "gold_ref": "gold_t3b_0001", "metric_profile": "pair_ranking_v1"},
+  "provenance": {"source_id": "D01", "source_version": "blocked_local_manifest", "parent_manifest_sha256": "d17133eb136301efda94bc80ece4d066ac142984c74a89d5550fa0acb32d774f", "builder_version": "fixture-1", "config_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "annotation_status": "automatic"}
+}

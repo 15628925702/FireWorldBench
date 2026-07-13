@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "FWB-v1-T2-B-dev_id-0003",
+  "benchmark_version": "v1-mvp",
+  "task": "T2-B",
+  "split": "dev_id",
+  "scenario": {"case_uid": "case_refuse1", "family_uid": null, "domain": "visual_aux"},
+  "observations": [{"observation_id": "obs_frame", "modality": "image", "time_range_s": [0, 0], "content_ref": "private://frame", "units": {}, "quality": "valid"}],
+  "question": {"format": "open_json", "prompt": "What mechanism is present?"},
+  "answer": {"label": "mechanism_unknown"},
+  "physical_trace": {"initial_state": {}, "mechanism_chain": [], "transitions": [], "outcome": {}, "evidence_links": [], "origin": ["expert_annotation"]},
+  "scoring_metadata": {"visibility": "private", "gold_ref": "gold_refuse1", "metric_profile": "mechanism_v1"},
+  "provenance": {"source_id": "D05", "source_version": "blocked_aux", "parent_manifest_sha256": "d17133eb136301efda94bc80ece4d066ac142984c74a89d5550fa0acb32d774f", "builder_version": "fixture-1", "config_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "annotation_status": "automatic"}
+}

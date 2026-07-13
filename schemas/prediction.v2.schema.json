@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireworldbench.invalid/schemas/prediction.v2.schema.json",
+  "title": "FireWorldBench Prediction v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "sample_id", "task", "answer", "evidence", "uncertainty", "missing_information"],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "sample_id": {"type": "string", "pattern": "^FWB-v[0-9]+-(T[123]-[ABC])-[a-z0-9_]+-[A-Za-z0-9_-]+$"},
+    "task": {"enum": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"]},
+    "answer": {"type": "object", "minProperties": 1},
+    "risk_level": {"type": ["string", "null"]},
+    "dominant_mechanism": {"type": ["string", "null"]},
+    "causal_chain": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array", "items": {"type": "string", "pattern": "^obs_[A-Za-z0-9_-]+$"}, "uniqueItems": true},
+    "uncertainty": {"type": "object", "additionalProperties": false, "required": ["level", "reason"], "properties": {"level": {"enum": ["low", "medium", "high", "unknown"]}, "reason": {"type": "string"}}},
+    "missing_information": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }
+}

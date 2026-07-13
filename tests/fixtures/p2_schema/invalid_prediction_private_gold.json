@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "FWB-v1-T3-B-dev_id-0001",
+  "task": "T3-B",
+  "answer": {"label": "case_a_higher_risk"},
+  "evidence": ["obs_not_visible"],
+  "uncertainty": {"level": "medium", "reason": "Unknown."},
+  "missing_information": [],
+  "gold": {"label": "case_b_higher_risk"}
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireworldbench.invalid/schemas/benchmark_sample.v2.schema.json",
+  "title": "FireWorldBench Benchmark Sample v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "sample_id", "benchmark_version", "task", "split", "scenario", "observations", "question", "answer", "physical_trace", "scoring_metadata", "provenance"],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "sample_id": {"type": "string", "pattern": "^FWB-v[0-9]+-(T[123]-[ABC])-[a-z0-9_]+-[A-Za-z0-9_-]+$"},
+    "benchmark_version": {"type": "string", "minLength": 1},
+    "task": {"enum": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"]},
+    "split": {"enum": ["train_id", "dev_id", "test_id", "test_ood_source_location", "test_ood_ventilation", "test_ood_hrr", "test_ood_geometry_or_layout", "test_external_experiment"]},
+    "scenario": {"$ref": "#/$defs/scenario"},
+    "observations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/observation"}},
+    "question": {"$ref": "#/$defs/question"},
+    "answer": {"type": "object", "minProperties": 1},
+    "physical_trace": {"$ref": "#/$defs/physical_trace"},
+    "scoring_metadata": {"$ref": "#/$defs/private_scoring_metadata"},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "scenario": {
+      "type": "object", "additionalProperties": false,
+      "required": ["case_uid", "domain", "family_uid"],
+      "properties": {
+        "case_uid": {"type": "string", "pattern": "^case_[A-Za-z0-9_-]+$"},
+        "family_uid": {"type": ["string", "null"], "pattern": "^family_[A-Za-z0-9_-]+$"},
+        "domain": {"type": "string", "minLength": 1},
+        "intervention": {"type": ["object", "null"]}
+      }
+    },
+    "observation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["observation_id", "modality", "time_range_s", "quality", "content_ref", "units"],
+      "properties": {
+        "observation_id": {"type": "string", "pattern": "^obs_[A-Za-z0-9_-]+$"},
+        "modality": {"enum": ["sensor_table", "image", "video", "plot", "field", "text"]},
+        "time_range_s": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+        "content_ref": {"type": "string", "minLength": 1},
+        "units": {"type": "object", "additionalProperties": {"type": "string", "minLength": 1}},
+        "quality": {"enum": ["valid", "missing", "fault", "degraded", "unknown"]},
+        "visible_fields": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "question": {
+      "type": "object", "additionalProperties": false,
+      "required": ["format", "prompt"],
+      "properties": {
+        "format": {"enum": ["choice", "ranking", "structured_json", "open_json"]},
+        "prompt": {"type": "string", "minLength": 1},
+        "options": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "physical_trace": {
+      "type": "object", "additionalProperties": false,
+      "required": ["initial_state", "mechanism_chain", "transitions", "outcome", "evidence_links", "origin"],
+      "properties": {
+        "initial_state": {"type": "object"},
+        "mechanism_chain": {"type": "array", "items": {"type": "string"}},
+        "transitions": {"type": "array", "items": {"type": "object"}},
+        "outcome": {"type": "object"},
+        "evidence_links": {"type": "array", "items": {"type": "string", "pattern": "^obs_[A-Za-z0-9_-]+$"}, "uniqueItems": true},
+        "origin": {"type": "array", "minItems": 1, "items": {"enum": ["direct_measurement", "simulator_truth", "deterministic_rule", "literature", "expert_annotation"]}, "uniqueItems": true}
+      }
+    },
+    "private_scoring_metadata": {
+      "type": "object", "additionalProperties": false,
+      "required": ["visibility", "gold_ref", "metric_profile"],
+      "properties": {
+        "visibility": {"const": "private"},
+        "gold_ref": {"type": "string", "pattern": "^gold_[A-Za-z0-9_-]+$"},
+        "metric_profile": {"type": "string", "minLength": 1},
+        "tolerances": {"type": "object"}
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_id", "source_version", "parent_manifest_sha256", "builder_version", "config_sha256", "annotation_status"],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^D[0-9]{2}$"},
+        "source_version": {"type": "string", "minLength": 1},
+        "parent_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "builder_version": {"type": "string", "minLength": 1},
+        "config_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "annotation_status": {"enum": ["automatic", "single_reviewed", "double_reviewed", "adjudicated"]}
+      }
+    }
+  }
+}

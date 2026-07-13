@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "FWB-v1-T3-B-dev_id-0002",
+  "benchmark_version": "v1-mvp",
+  "task": "T3-B",
+  "split": "dev_id",
+  "scenario": {"case_uid": "case_bad123", "family_uid": "family_bad", "domain": "tunnel_cfd", "intervention": {"variable": "many_values", "single_variable": false}},
+  "observations": [{"observation_id": "obs_bad", "modality": "sensor_table", "time_range_s": [0, 30], "content_ref": "private://obs_bad", "units": {"temperature": "UNKNOWN"}, "quality": "valid"}],
+  "question": {"format": "structured_json", "prompt": "Compare."},
+  "answer": {"label": "case_a_higher_risk"},
+  "physical_trace": {"initial_state": {}, "mechanism_chain": [], "transitions": [], "outcome": {}, "evidence_links": ["obs_bad"], "origin": ["simulator_truth"]},
+  "scoring_metadata": {"visibility": "private", "gold_ref": "gold_bad", "metric_profile": "pair_ranking_v1"},
+  "provenance": {"source_id": "D01", "source_version": "blocked", "parent_manifest_sha256": "d17133eb136301efda94bc80ece4d066ac142984c74a89d5550fa0acb32d774f", "builder_version": "fixture-1", "config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "annotation_status": "automatic"}
+}
