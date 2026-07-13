@@ -1,0 +1,15 @@
+{
+  "pipeline_version": "P3-PIPELINE-001",
+  "read_only": true,
+  "supported_suffixes": [".csv", ".json", ".jsonl"],
+  "source_dataset_id_required": true,
+  "case_key_order": ["case_id", "case", "scenario_id"],
+  "sequence_key": "sequence_id",
+  "time_keys": ["time_value_l0", "time_s", "time"],
+  "supported_time_units_to_seconds": {"s": 1.0, "sec": 1.0, "ms": 0.001, "min": 60.0},
+  "unknown_unit_policy": "retain_l0_and_emit_blocked_record",
+  "missing_case_policy": "emit_ROW_INVALID_failure",
+  "unsupported_file_policy": "emit_UNSUPPORTED_SUFFIX_failure",
+  "output_order": ["case_id", "sequence_id", "source_relative_path", "source_row_index"],
+  "test_asset_policy": "never read test input, test gold, or private mapping"
+}

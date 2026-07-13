@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 from typing import Sequence
 
 from fireworldbench import __version__
 from fireworldbench.project_checks import discover_project_root, validate_project
+from fireworldbench.pipeline import build_canonical, inventory, write_json
 
 
 def doctor(root: Path) -> int:
@@ -30,6 +32,13 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         help="project root; otherwise discover from cwd",
     )
+    inventory_parser = subparsers.add_parser("pipeline-inventory", help="hash source files without modifying them")
+    inventory_parser.add_argument("--root", type=Path, required=True)
+    inventory_parser.add_argument("--output", type=Path, required=True)
+    pipeline_parser = subparsers.add_parser("pipeline-build", help="build canonical records and case graph")
+    pipeline_parser.add_argument("--root", type=Path, required=True)
+    pipeline_parser.add_argument("--source-dataset-id", default="UNKNOWN")
+    pipeline_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -42,6 +51,24 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         return doctor(root)
+    if args.command == "pipeline-inventory":
+        try:
+            result = inventory(args.root)
+            write_json(result, args.output)
+        except (OSError, ValueError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"file_count": result["file_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "pipeline-build":
+        try:
+            result = build_canonical(args.root, source_dataset_id=args.source_dataset_id)
+            write_json(result, args.output)
+        except (OSError, ValueError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"record_count": result["record_count"], "failure_count": result["failure_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 
 

@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S015-001
+handoff_id: H-20260714-S016-001
 handoff_state: READY
-source_session: 2026-07-14_S015_P2-FREEZE-001契约测试封存.md
-current_task: P3-PIPELINE-001
+source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
+current_task: P3-BUILD-T1
 ---
 
 # 下一任务增量
@@ -23,3 +23,12 @@ P2 出口、ACTIVE test embargo、无访问确认、FD-Gen 冻结计划、P2 man
 任务 ID：`P3-PIPELINE-001`
 
 先按 AGENTS.md、CURRENT_STATUS.md、source_session、NEXT_SESSION_PROMPT.md 和任务包顺序读取；创建新的 IN_PROGRESS 会话草稿；仅使用已批准且可访问的仓库内契约与 fixture 开展 pipeline 骨架工作；不得读取隐藏测试资产、不得修改 `../../3.数据集`、不得安装或下载包；完成后必须运行现有检查、commit 并 push `origin/main`。
+## P3-PIPELINE-001 已完成
+
+已完成只读 inventory、CSV/JSON/JSONL adapter、L0 保留、时间单位转换、case graph、canonical manifest 和结构化 failure report。未知单位不猜测，坏行不静默丢弃，受保护测试路径直接拒绝访问。
+
+## 下一窗口唯一任务
+
+任务 ID：`P3-BUILD-T1`
+
+先按 AGENTS.md、CURRENT_STATUS.md、source_session、NEXT_SESSION_PROMPT.md 和任务包顺序读取；创建新的 IN_PROGRESS 会话草稿；只使用 pipeline 产出的 train/dev 或仓库 fixture，禁止读取 test input/gold/private mapping，禁止修改 `../../3.数据集`，禁止安装/下载包；完成后运行检查、commit 并 push `origin/main`。

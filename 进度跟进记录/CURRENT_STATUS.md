@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S015-001
+handoff_id: H-20260714-S016-001
 handoff_state: READY
-source_session: 2026-07-14_S015_P2-FREEZE-001契约测试封存.md
-current_task: P3-PIPELINE-001
+source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
+current_task: P3-BUILD-T1
 ---
 
 # Current Status
@@ -79,3 +79,9 @@ current_task: P3-PIPELINE-001
 - D-005、D-007、数据许可、感知近重复和 FDS/FD-Gen 环境仍为 BLOCKED/PENDING_APPROVAL。
 - 当前 Git：`main` / `2ecc3f8`，已推送 `origin/main`。
 - 下一唯一任务：`P3-PIPELINE-001`。
+## P3-PIPELINE-001 收尾
+
+- 已实现只读数据 inventory、adapter/normalizer、canonical case graph、SHA-256、单位转换、配置和失败报告。
+- 已加入 test embargo 保护；本轮未读取或修改 `../../3.数据集`，未读取 test input/gold/private mapping。
+- 验证：pytest 29 passed；project check、mypy、CLI 确定性重建均通过。
+- 下一唯一任务：`P3-BUILD-T1`。
