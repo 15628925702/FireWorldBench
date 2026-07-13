@@ -1,0 +1,12 @@
+{
+  "baseline_version": "P4-BASELINE-NUM",
+  "strategies": ["chance", "majority", "domain_threshold", "traditional_ml", "temporal_persistence"],
+  "allowed_splits": ["train_id", "dev_id"],
+  "forbidden_tuning_split": "test_id",
+  "seed": 20260714,
+  "majority_source": "train_only",
+  "threshold_source": ["train", "calibration"],
+  "temporal_policy": "pre_registered_persistence_without_test_adaptation",
+  "composite_score": false,
+  "test_asset_policy": "never read test input, test gold, or private mapping"
+}

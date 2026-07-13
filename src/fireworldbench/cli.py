@@ -17,6 +17,7 @@ from fireworldbench.scorer import score_files
 from fireworldbench.expert import consistency_file
 from fireworldbench.release import build_mvp_rc1
 from fireworldbench.harness import run_harness
+from fireworldbench.baseline import run_baseline_file
 
 
 def doctor(root: Path) -> int:
@@ -73,6 +74,11 @@ def build_parser() -> argparse.ArgumentParser:
     harness_parser.add_argument("--output", type=Path, required=True)
     harness_parser.add_argument("--max-retries", type=int, default=0)
     harness_parser.add_argument("--timeout-s", type=float, default=30.0)
+    baseline_parser = subparsers.add_parser("baseline-run", help="run deterministic train/dev baselines")
+    baseline_parser.add_argument("--samples", type=Path, required=True)
+    baseline_parser.add_argument("--output", type=Path, required=True)
+    baseline_parser.add_argument("--strategy", choices=("chance", "majority", "domain_threshold", "traditional_ml", "temporal_persistence"), required=True)
+    baseline_parser.add_argument("--train-samples", type=Path)
     return parser
 
 
@@ -166,6 +172,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"run_id": result["run_id"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "baseline-run":
+        try:
+            result = run_baseline_file(args.samples, args.output, args.strategy, args.train_samples)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"strategy": result["strategy"], "sample_count": result["sample_count"], "failure_count": result["failure_count"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

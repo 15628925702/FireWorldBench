@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S023-001
+handoff_id: H-20260714-S024-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S023_P4-HARNESS-001统一运行器.md
-current_task: P4-BASELINE-NUM
+source_session: 2026-07-14_S024_P4-BASELINE-NUM数值与时间序列baseline.md
+current_task: P4-BASELINE-VISION
 ---
 
 # 下一任务增量
@@ -63,3 +63,6 @@ P3-BUILD-T2 实现提交 `48683d3` 及阻塞记录 `264aff5` 尚未推送，GitH
 ## P4-HARNESS-001 已完成
 
 已完成统一运行器和 public/private run 隔离，失败样本保留且禁止覆盖已有 run。下一唯一任务：`P4-BASELINE-NUM`。
+## P4-BASELINE-NUM 已完成
+
+已完成数值/时间序列 baseline，并固定 seed、train-only majority、threshold 来源和 test 禁止调参规则。下一唯一任务：`P4-BASELINE-VISION`。

@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S023-001
+handoff_id: H-20260714-S024-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S023_P4-HARNESS-001统一运行器.md
-current_task: P4-BASELINE-NUM
+source_session: 2026-07-14_S024_P4-BASELINE-NUM数值与时间序列baseline.md
+current_task: P4-BASELINE-VISION
 ---
 
 # Current Status
@@ -132,3 +132,8 @@ current_task: P4-BASELINE-NUM
 - 已实现统一运行器、hash、重试、超时、失败保留、raw response 隔离和 train/dev 边界。
 - 未读取 test input/gold/private mapping，未挂载 private root，未修改 `../../3.数据集`。
 - 下一唯一任务：`P4-BASELINE-NUM`。
+## P4-BASELINE-NUM 收尾
+
+- 已实现 seeded chance、train-only majority、domain threshold、traditional ML 接口和 temporal persistence baseline。
+- 未读取 test input/gold/private mapping，未修改 `../../3.数据集`，未进行 test 调参。
+- 下一唯一任务：`P4-BASELINE-VISION`。
