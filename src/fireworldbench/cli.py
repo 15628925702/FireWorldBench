@@ -14,6 +14,7 @@ from fireworldbench.t1_builder import build_t1
 from fireworldbench.t2_builder import build_t2
 from fireworldbench.t3_builder import build_t3
 from fireworldbench.scorer import score_files
+from fireworldbench.expert import consistency_file
 
 
 def doctor(root: Path) -> int:
@@ -59,6 +60,9 @@ def build_parser() -> argparse.ArgumentParser:
     score_parser.add_argument("--samples", type=Path, required=True)
     score_parser.add_argument("--predictions", type=Path, required=True)
     score_parser.add_argument("--output", type=Path, required=True)
+    expert_parser = subparsers.add_parser("expert-consistency", help="compute two-rater calibration agreement")
+    expert_parser.add_argument("--input", type=Path, required=True)
+    expert_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -126,6 +130,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"sample_count": len(result["sample_scores"]), "failure_counts": result["failure_counts"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "expert-consistency":
+        try:
+            result = consistency_file(args.input, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"paired_sample_count": result["paired_sample_count"], "adjudication_required": len(result["adjudication_required"]), "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

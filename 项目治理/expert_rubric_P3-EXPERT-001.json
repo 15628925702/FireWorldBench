@@ -1,0 +1,22 @@
+{
+  "rubric_version": "P3-EXPERT-001-r1",
+  "status": "READY_FOR_EXPERT_REVIEW",
+  "global": {
+    "evidence_required": true,
+    "evidence_must_be_observation_id": true,
+    "unknown_is_not_negative": true,
+    "unsupported_hidden_cfd_truth": "reject_claim",
+    "labeling_unit": "case_or_validated_pair"
+  },
+  "tasks": {
+    "T1-A": {"criterion": "early fire discrimination from supplied signals", "refusal": "insufficient_information", "check": ["signal support", "uncertainty", "evidence resolution"]},
+    "T1-B": {"criterion": "anomaly attribution with discriminating evidence", "refusal": "insufficient_information", "check": ["fire/non-fire/ventilation/fault distinction", "fault requires quality evidence"]},
+    "T1-C": {"criterion": "information need selection from frozen query set", "refusal": "insufficient_information", "check": ["query does not encode answer", "cost recorded", "stop is allowed"]},
+    "T2-A": {"criterion": "state label supported by time series or simulator truth", "refusal": "state_unknown", "check": ["phase evidence", "no single-frame phase guess"]},
+    "T2-B": {"criterion": "mechanism family supported by observable signatures", "refusal": "mechanism_unknown", "check": ["mechanism family", "multi-label justification"]},
+    "T2-C": {"criterion": "physical consistency under frozen constraints", "refusal": "underdetermined", "check": ["applicable constraint", "violation code", "evidence"]},
+    "T3-A": {"criterion": "trend over explicit target and horizon", "refusal": "trend_unknown", "check": ["horizon", "target", "interval"]},
+    "T3-B": {"criterion": "single-variable causal comparison", "refusal": "pair_invalid_or_underdetermined", "check": ["one intervention", "paired controls", "causal chain"]},
+    "T3-C": {"criterion": "supported state transition trace", "refusal": "trace_unknown", "check": ["initial state", "mechanism edges", "transition order", "outcome"]}
+  }
+}

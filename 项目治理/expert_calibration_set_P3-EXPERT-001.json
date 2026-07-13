@@ -1,0 +1,17 @@
+{
+  "calibration_version": "P3-EXPERT-001-cal-r1",
+  "status": "TEMPLATE_NOT_ANNOTATED",
+  "test_split": false,
+  "gold_status": "NOT_AVAILABLE_UNTIL_TWO_DOMAIN_RATERS",
+  "items": [
+    {"sample_id":"cal_T1A_001","task":"T1-A","observation_ids":["obs_cal_1"],"prompt_ref":"synthetic_weak_signal_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T1B_001","task":"T1-B","observation_ids":["obs_cal_2"],"prompt_ref":"synthetic_sensor_quality_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T1C_001","task":"T1-C","observation_ids":["obs_cal_3"],"prompt_ref":"synthetic_query_choice_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T2A_001","task":"T2-A","observation_ids":["obs_cal_4"],"prompt_ref":"synthetic_state_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T2B_001","task":"T2-B","observation_ids":["obs_cal_5"],"prompt_ref":"synthetic_mechanism_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T2C_001","task":"T2-C","observation_ids":["obs_cal_6"],"prompt_ref":"synthetic_constraint_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T3A_001","task":"T3-A","observation_ids":["obs_cal_7"],"prompt_ref":"synthetic_trend_case","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T3B_001","task":"T3-B","observation_ids":["obs_cal_8"],"prompt_ref":"synthetic_single_intervention_pair","expected_annotation_fields":["label","evidence","uncertainty"]},
+    {"sample_id":"cal_T3C_001","task":"T3-C","observation_ids":["obs_cal_9"],"prompt_ref":"synthetic_trace_case","expected_annotation_fields":["label","evidence","uncertainty"]}
+  ]
+}

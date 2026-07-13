@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S020-001
+handoff_id: H-20260714-S021-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S020_P3-SCORER-001参考评分器闭环.md
-current_task: P3-EXPERT-001
+source_session: 2026-07-14_S021_P3-EXPERT-001专家校准与双人标注.md
+current_task: P3-MVP-RC1-001
 ---
 
 # Current Status
@@ -117,3 +117,8 @@ current_task: P3-EXPERT-001
 - 已实现 9 个任务参考评分、case/pair 聚合、失败计分、证据违规和确定性统计报告；不启用 composite score。
 - 未读取 test gold/private mapping，未生成模型测试结果。
 - 下一唯一任务：`P3-EXPERT-001`。
+## P3-EXPERT-001 收尾
+
+- 已建立九任务 rubric、脱敏校准模板、双人一致性和裁决队列；没有伪造专家标签。
+- 专家资源不足，专家门保持 `BLOCKED_UNTIL_TWO_DOMAIN_RATERS`。
+- 下一唯一任务：`P3-MVP-RC1-001`。

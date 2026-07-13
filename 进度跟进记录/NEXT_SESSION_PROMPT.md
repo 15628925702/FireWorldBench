@@ -1,9 +1,9 @@
 ---
-handoff_id: H-20260714-S020-001
+handoff_id: H-20260714-S021-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S020_P3-SCORER-001参考评分器闭环.md
-current_task: P3-EXPERT-001
+source_session: 2026-07-14_S021_P3-EXPERT-001专家校准与双人标注.md
+current_task: P3-MVP-RC1-001
 ---
 
 # 下一任务增量
@@ -54,3 +54,6 @@ P3-BUILD-T2 实现提交 `48683d3` 及阻塞记录 `264aff5` 尚未推送，GitH
 ## P3-SCORER-001 已完成
 
 已完成 9 个任务的参考评分闭环，保留 sample/case/pair 原始分数和失败记录。下一唯一任务：`P3-EXPERT-001`。
+## P3-EXPERT-001 已完成
+
+已完成 rubric、校准模板、双人标注一致性计算和分歧裁决流程；实际标注仍为 0，专家门明确阻塞。下一唯一任务：`P3-MVP-RC1-001`。

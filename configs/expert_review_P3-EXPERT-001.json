@@ -1,0 +1,10 @@
+{
+  "expert_version": "P3-EXPERT-001",
+  "status": "TEMPLATE_READY_EXPERT_GATE_BLOCKED",
+  "minimum_independent_raters": 2,
+  "domain_reviewer_required": true,
+  "calibration_excluded_from_test": true,
+  "agreement": {"label_metric": "cohen_kappa", "evidence_metric": "jaccard", "adjudication_on_disagreement": true},
+  "unsupported_expert_policy": "shrink_task_or_delete_unreliable_gold; never fabricate expert labels",
+  "test_asset_policy": "calibration only; never read hidden test gold or private mapping"
+}
