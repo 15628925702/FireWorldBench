@@ -50,6 +50,11 @@ with provenance.
 
 ## Delivery
 
-- Local commit: `071f6911b54d328731b8bf13fd15ff06041ca75c`.
-- GitHub push: succeeded; `origin/main` verified at the same SHA.
+- Initial task commit `071f6911b54d328731b8bf13fd15ff06041ca75c` was pushed and
+  verified on `origin/main`.
+- A follow-up amend adding this final delivery note created local commit
+  `32784bb`; its push was rejected as non-fast-forward because the remote still
+  contains the already-verified initial commit. No force push, pull, merge, or
+  rebase was used. The follow-up is recorded as `BLOCKED_PUSH` and retained
+  locally for a later permitted retry.
 - Next task: `P6-AUDIT-001`.
