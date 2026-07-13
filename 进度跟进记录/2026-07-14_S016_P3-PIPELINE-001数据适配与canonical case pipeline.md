@@ -1,6 +1,7 @@
 ---
 handoff_id: H-20260714-S016-001
-handoff_state: IN_PROGRESS
+handoff_state: READY
+task_status: BLOCKED_PUSH
 session_id: 2026-07-14_S016
 task_id: P3-PIPELINE-001
 next_task: P3-PIPELINE-001

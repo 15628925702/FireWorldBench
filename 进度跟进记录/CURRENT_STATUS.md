@@ -1,6 +1,7 @@
 ---
 handoff_id: H-20260714-S016-001
-handoff_state: IN_PROGRESS
+handoff_state: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
 current_task: P3-PIPELINE-001
 ---
