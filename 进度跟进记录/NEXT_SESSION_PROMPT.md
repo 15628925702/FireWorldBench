@@ -1,16 +1,16 @@
 ---
-handoff_id: H-20260714-S005-001
+handoff_id: H-20260714-S006-001
 handoff_state: READY
-source_session: 2026-07-14_S005_P1-DATA-001数据清单许可审计.md
-current_task: P1-DATA-002
+source_session: 2026-07-14_S006_P1-DATA-002字段单位标准化契约.md
+current_task: P1-DATA-003
 ---
 
 # 下一任务增量
 
 - 任务 ID：`P1-DATA-002`
-- 目标：为 D01-D11 生成逐文件相对路径/大小/SHA-256 manifest，核验来源版本、获取日期和官方许可，分别判断训练、开发、测试、派生发布和再分发资格；未知项必须 `BLOCKED`。
-- 第一动作：创建本轮 `IN_PROGRESS` 草稿，复用本轮 manifest 与许可证据表，建立允许研究来源的字段/单位契约。
+- 目标：统计缺失、异常、零字节、重复、标签问题和采样特征，确认 case/family/sequence/near-duplicate/template 泄漏键，并验证 Immersed 配置 pair 语义。
+- 第一动作：创建本轮 `IN_PROGRESS` 草稿，复用 P1-DATA-001 manifest、P1-DATA-002 字段契约和只读探查脚本。
 - 输入：`configs/data_sources.toml`、`项目治理/数据资产登记.md`、仓库外 `../../3.数据集`、各来源官方许可证据。
-- 交付：逐源字段字典、单位/坐标规范、canonical mapping、Schema 草案和抽查报告。
-- 门禁：D01-D04 关键字段有原文证据，原单位保留，转换可重算；BLOCKED 来源不得作为可用数据；下一任务只能是 `P1-DATA-003`。
+- 交付：质量报告、case/family 注册表、潜在泄漏键、pair 参数 diff、修复/排除策略。
+- 门禁：质量问题均有 disposition，split group 可执行；视觉空标签语义明确或阻塞；下一任务只能是 `P1-RESEARCH-001`。
 - 当前限制：空 Conda 环境；不得安装/下载；不得修改仓库外 `../../3.数据集` 原始文件；不得读取仓库外 `../../4.升级拓展`；任务验收通过后必须执行任务级 `commit + push origin main`。

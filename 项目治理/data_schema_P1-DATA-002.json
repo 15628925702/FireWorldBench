@@ -1,0 +1,26 @@
+{
+  "schema_version": "P1-DATA-002",
+  "status": "contract_only_blocked_sources_remain_blocked",
+  "record": {
+    "source_dataset_id": "string",
+    "source_relative_path": "string",
+    "source_sha256": "string",
+    "source_row_index": "integer",
+    "case_id": "string_or_unknown",
+    "sequence_id": "string_or_unknown",
+    "time_value_l0": "number_or_null",
+    "time_unit_l0": "string_or_UNKNOWN",
+    "variables_l0": "object_raw_name_to_raw_value",
+    "units_l0": "object_raw_name_to_unit_or_UNKNOWN",
+    "canonical_values": "object_or_null",
+    "conversion_trace": "array",
+    "raw_value": "preserved",
+    "missing_reason": "string_or_null",
+    "status": "valid_or_UNKNOWN_UNIT_or_BLOCKED"
+  },
+  "conversion_rules": [
+    {"id": "identity_numeric", "reversible": true},
+    {"id": "time_s_to_s", "reversible": true},
+    {"id": "unit_unknown", "reversible": false, "status": "BLOCKED"}
+  ]
+}
