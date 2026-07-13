@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S035-001
+handoff_id: H-20260714-S036-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S035_P5-ROBUST-001稳健性压力测试无运行决策.md
-current_task: P5-STATS-001
+source_session: 2026-07-14_S036_P5-STATS-001无raw统计决策.md
+current_task: P5-ERROR-001
 ---
 
 # 下一任务增量
+
+## P5-STATS-001 completed
+
+Statistics are formally `BLOCKED_NO_RAW_OUTPUT`. The frozen contract requires all sample/case/pair metrics, confidence intervals, effect sizes, multiple-comparison, cost, and failure fields to be recomputed from immutable raw predictions; no manual metrics were created.
+
+## Next window: one task only
+
+`P5-ERROR-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze blind error-analysis taxonomy, sampling, adjudication, and representative-case index. Without raw predictions, record a formal no-input decision and do not inspect test/private assets. Run checks, commit, and push.
 
 ## P5-ROBUST-001 completed
 

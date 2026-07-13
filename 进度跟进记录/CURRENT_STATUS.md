@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S035-001
+handoff_id: H-20260714-S036-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S035_P5-ROBUST-001稳健性压力测试无运行决策.md
-current_task: P5-STATS-001
+source_session: 2026-07-14_S036_P5-STATS-001无raw统计决策.md
+current_task: P5-ERROR-001
 ---
 
 # Current Status
+
+## P5-STATS-001 completion
+
+- 已建立 raw prediction 到 statistics 的自动重算门：sample/case/pair 分数、primary metrics、95% CI、effect size、多重比较、成本和失败字段彼此分离。
+- 当前没有 raw predictions，正式状态为 `BLOCKED_NO_RAW_OUTPUT`；没有把空结果当成零指标，没有手工编辑 metrics。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试资产或修改 `../../3.数据集`。
+- 验证：`pytest` 91 passed；`mypy` 通过；CLI 返回 `BLOCKED_NO_RAW_OUTPUT`；project check 通过。
+- 下一唯一任务：`P5-ERROR-001`。
 
 ## P5-ROBUST-001 completion
 

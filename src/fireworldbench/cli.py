@@ -29,6 +29,7 @@ from fireworldbench.preregister import write_preregistration
 from fireworldbench.main_run import write_main_run_decision
 from fireworldbench.ablation import write_ablation_decision
 from fireworldbench.robustness import write_robustness_decision
+from fireworldbench.stats import write_statistics_decision
 
 
 def doctor(root: Path) -> int:
@@ -127,6 +128,9 @@ def build_parser() -> argparse.ArgumentParser:
     robust_parser = subparsers.add_parser("robustness-assess", help="audit preregistered robustness readiness")
     robust_parser.add_argument("--main-run", type=Path, required=True)
     robust_parser.add_argument("--output", type=Path, required=True)
+    stats_parser = subparsers.add_parser("stats-assess", help="audit raw-prediction statistics readiness")
+    stats_parser.add_argument("--output", type=Path, required=True)
+    stats_parser.add_argument("--raw-predictions", type=Path)
     return parser
 
 
@@ -316,6 +320,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "transformation_count": len(result["transformations"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "stats-assess":
+        try:
+            result = write_statistics_decision(args.output, args.raw_predictions)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

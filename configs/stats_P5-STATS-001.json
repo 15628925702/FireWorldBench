@@ -1,0 +1,19 @@
+{
+  "stats_version": "P5-STATS-001",
+  "status": "BLOCKED_NO_RAW_OUTPUT",
+  "blockers": ["raw_predictions_missing", "main_run_not_ready"],
+  "raw_predictions_sha256": null,
+  "sample_scores": [],
+  "case_scores": [],
+  "pair_scores": [],
+  "primary_metrics": {},
+  "confidence_intervals": {},
+  "effect_sizes": {},
+  "multiple_comparison_report": null,
+  "cost_report": null,
+  "failure_report": [],
+  "manual_metric_edit": false,
+  "recompute_from_raw_required": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}
