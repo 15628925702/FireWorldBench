@@ -1,9 +1,9 @@
 ---
 handoff_id: H-20260714-S016-001
-handoff_state: READY
+handoff_state: IN_PROGRESS
 session_id: 2026-07-14_S016
 task_id: P3-PIPELINE-001
-next_task: P3-BUILD-T1
+next_task: P3-PIPELINE-001
 started_at: 2026-07-14 Asia/Shanghai
 ---
 
@@ -24,7 +24,7 @@ started_at: 2026-07-14 Asia/Shanghai
 
 ## 执行记录
 
-- 状态：READY；已完成提交并推送
+- 状态：BLOCKED_PUSH；本地提交完成，GitHub 推送连续失败
 - 外部 `../../3.数据集`：只读；仅按既有 P1 清单和公开占位输入执行。
 - test input/gold/private mapping：未读取。
 
@@ -33,4 +33,4 @@ started_at: 2026-07-14 Asia/Shanghai
 - 已实现只读 inventory、CSV/JSON/JSONL adapter、L0 保留、可逆时间单位转换、case/sequence graph、质量统计和结构化失败报告。
 - 已加入 test embargo 路径保护，不读取 protected test assets。
 - 验证：pytest 29 passed；project check passed；mypy passed；同一 fixture 重建 SHA-256 一致。
-- commit：`41a6a66`；下一任务：`P3-BUILD-T1`。
+- commit：`4801792`；待网络恢复后推送；当前不得进入 `P3-BUILD-T1`。

@@ -1,8 +1,8 @@
 ---
 handoff_id: H-20260714-S016-001
-handoff_state: READY
+handoff_state: IN_PROGRESS
 source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
-current_task: P3-BUILD-T1
+current_task: P3-PIPELINE-001
 ---
 
 # 下一任务增量
@@ -32,3 +32,6 @@ P2 出口、ACTIVE test embargo、无访问确认、FD-Gen 冻结计划、P2 man
 任务 ID：`P3-BUILD-T1`
 
 先按 AGENTS.md、CURRENT_STATUS.md、source_session、NEXT_SESSION_PROMPT.md 和任务包顺序读取；创建新的 IN_PROGRESS 会话草稿；只使用 pipeline 产出的 train/dev 或仓库 fixture，禁止读取 test input/gold/private mapping，禁止修改 `../../3.数据集`，禁止安装/下载包；完成后运行检查、commit 并 push `origin/main`。
+## 当前阻塞
+
+P3-PIPELINE-001 本地 commit `4801792` 已完成，三次 `git push origin main` 均因无法连接 `github.com:443` 失败。下一窗口只先重试推送并核验远端 SHA；推送成功前不要标记 DONE，不要进入 `P3-BUILD-T1`。

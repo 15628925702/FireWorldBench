@@ -1,8 +1,8 @@
 ---
 handoff_id: H-20260714-S016-001
-handoff_state: READY
+handoff_state: IN_PROGRESS
 source_session: 2026-07-14_S016_P3-PIPELINE-001数据适配与canonical case pipeline.md
-current_task: P3-BUILD-T1
+current_task: P3-PIPELINE-001
 ---
 
 # Current Status
@@ -85,3 +85,5 @@ current_task: P3-BUILD-T1
 - 已加入 test embargo 保护；本轮未读取或修改 `../../3.数据集`，未读取 test input/gold/private mapping。
 - 验证：pytest 29 passed；project check、mypy、CLI 确定性重建均通过。
 - 下一唯一任务：`P3-BUILD-T1`。
+- P3-PIPELINE-001 本地实现提交为 `4801792`，但 GitHub 推送连续三次因无法连接 `github.com:443` 失败；任务保持 `BLOCKED_PUSH`。
+- 下一窗口第一动作：重试 `git push origin main`，远端确认与本地 HEAD 一致后，才能将任务置为 READY 并进入 `P3-BUILD-T1`。
