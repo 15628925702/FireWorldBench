@@ -1,0 +1,327 @@
+{
+    "schema_version":  1,
+    "manifest_type":  "source_baseline",
+    "generated_at":  "2026-07-14T02:55:44.4149775+08:00",
+    "root":  "5.项目实现/v1",
+    "algorithm":  "sha256",
+    "excludes":  [
+                     "项目治理/source_baseline_manifest.json"
+                 ],
+    "files":  [
+                  {
+                      "path":  ".editorconfig",
+                      "size":  285,
+                      "sha256":  "f0c91c11053e7965b7f0766caaf78b73bee03be8e53b66709aa9464ffefb77d8"
+                  },
+                  {
+                      "path":  ".gitattributes",
+                      "size":  241,
+                      "sha256":  "d0e99f67bdc252a765448a4ac232732d8cc7026c2d94626635f235d260165ada"
+                  },
+                  {
+                      "path":  ".gitignore",
+                      "size":  718,
+                      "sha256":  "0bc5d7f7b9e9687f5b2e005bbe4915d55c9298f484c6a8c1c830293e5351a546"
+                  },
+                  {
+                      "path":  "AGENTS.md",
+                      "size":  4301,
+                      "sha256":  "63c5a3c8c302be25ab677da5770d88e03c594a7845ccf51f7365b8215b9842e2"
+                  },
+                  {
+                      "path":  "artifacts/README.md",
+                      "size":  353,
+                      "sha256":  "b346710be018438f15775aa8fddb4049994e6393f2f9f96be5f70409362305c9"
+                  },
+                  {
+                      "path":  "CHANGELOG.md",
+                      "size":  806,
+                      "sha256":  "38f841ebd97801ab765b126f9216bbfc9f70b9ff5d18b5167281a69d2b88bd68"
+                  },
+                  {
+                      "path":  "configs/data_sources.toml",
+                      "size":  2551,
+                      "sha256":  "3ba8d8e203dbbd41685ec6bd6fa7c8b848f73f7fc626e0550350038a978afc3f"
+                  },
+                  {
+                      "path":  "configs/evaluation.toml",
+                      "size":  1111,
+                      "sha256":  "1bd16f663d97731e8982c85d6ea9a77e49d546fa993d3187dc6a420d6cf1aa55"
+                  },
+                  {
+                      "path":  "configs/project.toml",
+                      "size":  623,
+                      "sha256":  "9d4214bf52d110db4223cbfcb32a29a4a140baa9e3a4e48105563cefd894029c"
+                  },
+                  {
+                      "path":  "configs/splits.toml",
+                      "size":  987,
+                      "sha256":  "addcbefaf2707c115a3f874c44c1cfaaca6d32a4a3ddbe0a7f8a39c40cae61fa"
+                  },
+                  {
+                      "path":  "configs/test_embargo.toml",
+                      "size":  559,
+                      "sha256":  "ced4aa6b1aea1d7a80ac83b8538904c289cdb4ac5aba415b3b67294bed05f49d"
+                  },
+                  {
+                      "path":  "CONTRIBUTING.md",
+                      "size":  1091,
+                      "sha256":  "a34b916d24196fd0c3a155c959ae52eeec9477534d0b253ebc3498a3555372fc"
+                  },
+                  {
+                      "path":  "data/README.md",
+                      "size":  527,
+                      "sha256":  "623ad48c57cbdba5ae5032e5fd31e2a5d2daca36db062a2e9654fdac685d1393"
+                  },
+                  {
+                      "path":  "environment.yml",
+                      "size":  54,
+                      "sha256":  "08dffc0f1116088294beaa3a494e3af46ecc6f02fff8e15db7d2f11f4586ab62"
+                  },
+                  {
+                      "path":  "LICENSE_POLICY.md",
+                      "size":  799,
+                      "sha256":  "aaab86e17cd4f0e1d376f5119f1fd65144b9bfe59cd76d4404ad301f463ed02b"
+                  },
+                  {
+                      "path":  "PROJECT_CHARTER.md",
+                      "size":  3335,
+                      "sha256":  "8eee124c1213864f3eacb68fb426df63b3ea6789f8ba811e0ba659971ef7155a"
+                  },
+                  {
+                      "path":  "pyproject.toml",
+                      "size":  1076,
+                      "sha256":  "118b1ffe99100556f3556632afe2f9c8a416ee250467aa3a35ec8600792737b7"
+                  },
+                  {
+                      "path":  "README.md",
+                      "size":  3188,
+                      "sha256":  "ce9ecb8d8e21f3ebfd1c146c74ceb13993d4696880caaee4d4d3436d9f492ef4"
+                  },
+                  {
+                      "path":  "REPRODUCIBILITY.md",
+                      "size":  1067,
+                      "sha256":  "0bb8d9be56309c754c4f977599c3401b1fe4d8fbb02e784436fa908a0665ffaa"
+                  },
+                  {
+                      "path":  "ROADMAP.md",
+                      "size":  2346,
+                      "sha256":  "6211842b8436169bf67a2d56f3fd9d7de8889f9bf6b37c596b13d426e6f4f295"
+                  },
+                  {
+                      "path":  "schemas/benchmark_sample.schema.json",
+                      "size":  4568,
+                      "sha256":  "7d37090318b446e25ac6d79cc8d0d9c9864df6468ea0915869acd5a50305d946"
+                  },
+                  {
+                      "path":  "schemas/prediction.schema.json",
+                      "size":  1119,
+                      "sha256":  "868634fb8af8a499f3d23b5fcc0d7c7aca41a38657f71ff0b38ddb2cc7f3b472"
+                  },
+                  {
+                      "path":  "scripts/check_project.py",
+                      "size":  700,
+                      "sha256":  "c8aa88ca24146843864201401edbaa996d7eca344e0d983c6a6fad4ee475b156"
+                  },
+                  {
+                      "path":  "src/fireworldbench/__init__.py",
+                      "size":  89,
+                      "sha256":  "3e055666fb2cdbfe9c0bb21d12f5cf0a48876f3c28398c4cb2f96c72fab5df2f"
+                  },
+                  {
+                      "path":  "src/fireworldbench/__main__.py",
+                      "size":  63,
+                      "sha256":  "895043a2abaeb0fd8b4d32c3d4cf50c377c263286e52556c3c97d811b601e47d"
+                  },
+                  {
+                      "path":  "src/fireworldbench/cli.py",
+                      "size":  1511,
+                      "sha256":  "abd0d4131cfbf4127b7de0e107f9b9f355887e884c13e321aadb723781a32784"
+                  },
+                  {
+                      "path":  "src/fireworldbench/project_checks.py",
+                      "size":  12898,
+                      "sha256":  "b717c44764155b1e60e960134105d4bfb5d8c13098eb14531f689b4d06b4aabd"
+                  },
+                  {
+                      "path":  "tests/fixtures/minimal_prediction.json",
+                      "size":  306,
+                      "sha256":  "1ce1319d8ad2a5acd65bcc7da3c32c0d74d1f86191296427382ab630e9dd85e5"
+                  },
+                  {
+                      "path":  "tests/fixtures/minimal_sample.json",
+                      "size":  1294,
+                      "sha256":  "f55d4b0997d8146194cdfe40835088abab2bb56d78b4ebbc01edb3c1ca1adbc1"
+                  },
+                  {
+                      "path":  "tests/test_bootstrap_contracts.py",
+                      "size":  2988,
+                      "sha256":  "a0891ef9e4ec8f2c2da9be418b95828e3557b1423acd89d49ad26010ff245987"
+                  },
+                  {
+                      "path":  "进度跟进记录/2026-07-14_S001_项目初始化.md",
+                      "size":  3946,
+                      "sha256":  "238d49a66f5a9937fad24ed6ae71eb493b1fcf3c979fe0367910030831ba1a73"
+                  },
+                  {
+                      "path":  "进度跟进记录/2026-07-14_S002_多窗口执行手册.md",
+                      "size":  3015,
+                      "sha256":  "88a3d3613f356905b6386ccbec4cc70e4377f5d31c0d94c05a37b08727b8e12e"
+                  },
+                  {
+                      "path":  "进度跟进记录/2026-07-14_S003_精简新窗口读取协议.md",
+                      "size":  1331,
+                      "sha256":  "cb22d0e070bad8a2bf4e1b962afb1ebe5ccf5d341daac8c111b455eafef747b9"
+                  },
+                  {
+                      "path":  "进度跟进记录/2026-07-14_S004_P0源码基线审计与初始提交.md",
+                      "size":  8382,
+                      "sha256":  "c7dc8997862e8e269c884266f5e01097d0dd1b6e7a4305afe254bb13bbe7fa30"
+                  },
+                  {
+                      "path":  "进度跟进记录/CURRENT_STATUS.md",
+                      "size":  3416,
+                      "sha256":  "81cfe3275315fa5d6598d3b6bf56796e5458ea424c1bb0d606ffb4eb5e265260"
+                  },
+                  {
+                      "path":  "进度跟进记录/NEXT_SESSION_PROMPT.md",
+                      "size":  1332,
+                      "sha256":  "73200718dbda8506e3b5d98c4572ded40d21e5dd386b5e548609861e330542ce"
+                  },
+                  {
+                      "path":  "进度跟进记录/README.md",
+                      "size":  3906,
+                      "sha256":  "9a6795f4499b1fe36106bbeea082f1d860f9384369293d1f724093555159d015"
+                  },
+                  {
+                      "path":  "进度跟进记录/SESSION_HANDOFF_TEMPLATE.md",
+                      "size":  2900,
+                      "sha256":  "70222b54526f774ac10ab313ce6b7068093d1bd9ee0cfa480d645cf41f119d51"
+                  },
+                  {
+                      "path":  "进度跟进记录/窗口切换与中断恢复模板.md",
+                      "size":  4957,
+                      "sha256":  "5919ece25f892b2e96a10b13aa90f66d1529b0a8f5a3b9ecea64e2e295634d35"
+                  },
+                  {
+                      "path":  "进度跟进记录/多窗口开发执行手册.md",
+                      "size":  4372,
+                      "sha256":  "c0be12d7130580bc3967a520903a4749e4bab5f0e0ae67976481e4614a3274b1"
+                  },
+                  {
+                      "path":  "进度跟进记录/任务指令库_从P0到论文数据导出.md",
+                      "size":  21236,
+                      "sha256":  "40d60d30f906cb801391a167082a4e6640ae2b904091f5d80980adaadeb72a83"
+                  },
+                  {
+                      "path":  "开发要求约束/Definition_of_Done.md",
+                      "size":  1752,
+                      "sha256":  "ff95d3fae3cbe9ea683a00a8f423ed6fc80d79eb42b26c81e2e7b8ea4d27e77c"
+                  },
+                  {
+                      "path":  "开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf",
+                      "size":  399624,
+                      "sha256":  "16b4caec881825b8a8d41556a5abe6a428ae77944c98c45e56789add54c8d7ce"
+                  },
+                  {
+                      "path":  "开发要求约束/README.md",
+                      "size":  683,
+                      "sha256":  "9e039422dcdf68561de7e3db4cda2ffcda39b11b1f1107aa9d3780cbca6ec3bb"
+                  },
+                  {
+                      "path":  "开发要求约束/变更控制.md",
+                      "size":  1577,
+                      "sha256":  "ac17e644fb1677963e9dc42509c84d77067f9bec27cf6a746a755e655f9aaa1e"
+                  },
+                  {
+                      "path":  "开发要求约束/测试集封存与访问控制.md",
+                      "size":  2685,
+                      "sha256":  "ed5567bb1fe80eeb6cc139fc679b295a90e94ffbb31d70f6ebb8c2cfe492fa76"
+                  },
+                  {
+                      "path":  "开发要求约束/开发约束总则.md",
+                      "size":  7802,
+                      "sha256":  "26561a783eddbf492e5ed27c83a3b3503e57eb0669377814e1d992976b59e90c"
+                  },
+                  {
+                      "path":  "详细设计规划/00_总体架构与实现设计.md",
+                      "size":  7449,
+                      "sha256":  "5e2fad8bf16c7ac4b2cc4eb725b5fe2b1892bac0ee6b598c07c5acdb992a4f06"
+                  },
+                  {
+                      "path":  "详细设计规划/01_数据与样本协议.md",
+                      "size":  8882,
+                      "sha256":  "af57a9a904c156fb10245ddfbc91a0676f393e8870bc5c65c4ceab85922fa135"
+                  },
+                  {
+                      "path":  "详细设计规划/02_任务与评测协议.md",
+                      "size":  7270,
+                      "sha256":  "22c1e91e94360250fc985770c7341bdbd492b6db0245fa03cb86d8d1a9efee8b"
+                  },
+                  {
+                      "path":  "详细设计规划/03_实验与论文规划.md",
+                      "size":  6735,
+                      "sha256":  "36b3d0eaeae58179dd157c9286669ef2704b95aad8cc3c480242cf8ddcec4366"
+                  },
+                  {
+                      "path":  "详细设计规划/04_里程碑与验收标准.md",
+                      "size":  5626,
+                      "sha256":  "a4fdf3d847a1050abfcf9b9aebb480ab9a67ee2989b3d279caff24218b36c6f4"
+                  },
+                  {
+                      "path":  "详细设计规划/05_论文数据导出规范.md",
+                      "size":  3957,
+                      "sha256":  "69fa277ca441e1fbd8da1215437aa5310f646ebd28adbaf58c4401d13529a5d0"
+                  },
+                  {
+                      "path":  "详细设计规划/README.md",
+                      "size":  1703,
+                      "sha256":  "f3a68a1df679b0a926f118dd93e59fdb12c3d6c11584404d4bd358778c1e6672"
+                  },
+                  {
+                      "path":  "项目治理/README.md",
+                      "size":  892,
+                      "sha256":  "c6ba461e080ac7941d839eb7df985837d62380d63250dae2b8aaff7bf91d5152"
+                  },
+                  {
+                      "path":  "项目治理/测试集访问记录.md",
+                      "size":  680,
+                      "sha256":  "4f3b16c737244c3928fd7a08c6dce99dc63f40fc4d83091dbe9c071f4e91fe27"
+                  },
+                  {
+                      "path":  "项目治理/风险登记.md",
+                      "size":  3693,
+                      "sha256":  "4cb2c1b695d3be989a5841c7b2946590ec9984e384aa3e27725ff7ed8c876f6e"
+                  },
+                  {
+                      "path":  "项目治理/决策记录.md",
+                      "size":  4701,
+                      "sha256":  "e6a0bb0b4fd01b224de834da2aa03b52e5be313ed0b37ead986e3996bbc1bed0"
+                  },
+                  {
+                      "path":  "项目治理/开放问题.md",
+                      "size":  2834,
+                      "sha256":  "c19818e326d0254425fe1f8640ad00bc15764ef885270e29d28d54560f13ab88"
+                  },
+                  {
+                      "path":  "项目治理/论文证据矩阵.md",
+                      "size":  2349,
+                      "sha256":  "bc67fd9d11100634b7d338f96bd6eb8c2c0b2828110fb6d3e95e429df95ee2da"
+                  },
+                  {
+                      "path":  "项目治理/术语表.md",
+                      "size":  1547,
+                      "sha256":  "73583e7a8900e64b2b751937ab739d13580b2edc9fff89ea7af56737955e63d9"
+                  },
+                  {
+                      "path":  "项目治理/数据资产登记.md",
+                      "size":  3019,
+                      "sha256":  "946a24f149ca26e8549893c0e2505b57de8cf57a43a4b34e8145192913468731"
+                  },
+                  {
+                      "path":  "项目治理/需求追踪矩阵.md",
+                      "size":  2631,
+                      "sha256":  "5f07908b3186e39a000f664c5ac7e9495698f22f2e19049fe26a5508556a5f22"
+                  }
+              ]
+}

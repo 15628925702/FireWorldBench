@@ -1,0 +1,20 @@
+schema_version = 1
+
+[embargo]
+state = "PLANNED"
+activation_task = "P2-FREEZE-001"
+private_root_env = "FIREWORLDBENCH_PRIVATE_ROOT"
+developer_may_read_test_inputs = false
+developer_may_read_test_gold = false
+model_may_read_test_gold = false
+test_inputs_access = "batch_harness_only_after_preregistration"
+test_gold_access = "scoring_custodian_only"
+access_ledger_required = true
+access_ledger = "项目治理/测试集访问记录.md"
+protected_categories = [
+  "test_gold",
+  "private_id_mapping",
+  "private_scoring_metadata",
+  "restricted_test_inputs",
+]
+

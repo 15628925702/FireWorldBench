@@ -1,0 +1,41 @@
+{
+  "sample_id": "FWB-0.1.0-T1A-example0001",
+  "benchmark_version": "0.1.0-dev",
+  "task": "T1-A",
+  "split": "train_id",
+  "scenario": {
+    "case_uid": "opaque-case-0001",
+    "family_uid": null,
+    "domain": "synthetic_fixture"
+  },
+  "observations": [
+    {
+      "observation_id": "sensor-window-1",
+      "modality": "sensor_table",
+      "time_range_s": [0.0, 3.0],
+      "content": {"columns": ["time_s", "temperature_k"], "rows": [[0.0, 293.15]]},
+      "units": {"time_s": "s", "temperature_k": "K"},
+      "quality": "valid"
+    }
+  ],
+  "question": {"format": "structured_json", "prompt": "Return the early-warning state."},
+  "answer": {"fire_forming": false},
+  "physical_trace": {
+    "initial_state": {"fire": false},
+    "mechanism_chain": [],
+    "transitions": [],
+    "outcome": {"fire_forming": false},
+    "evidence_links": ["sensor-window-1"],
+    "origin": ["deterministic_rule"]
+  },
+  "scoring_metadata": {"label": "non_fire"},
+  "provenance": {
+    "source_id": "D01",
+    "source_version": "fixture",
+    "parent_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "builder_version": "0.1.0",
+    "config_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "annotation_status": "automatic"
+  }
+}
+

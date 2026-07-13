@@ -1,0 +1,112 @@
+schema_version = 1
+
+[[sources]]
+id = "D01"
+name = "Immersed-Tunnel-CFD"
+local_dirs = ["01_Immersed-Tunnel-CFD"]
+state = "candidate"
+eligible = false
+roles = ["t1_primary", "t2_primary", "t3_pair_prototype"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D02"
+name = "PolyUFire"
+local_dirs = ["02_PolyUFire"]
+state = "candidate"
+eligible = false
+roles = ["external_experiment", "mechanism_knowledge"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D03"
+name = "FDS-exp"
+local_dirs = ["03_FDS-exp"]
+state = "candidate"
+eligible = false
+roles = ["external_experiment", "physics_sanity"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D04"
+name = "FD-Gen"
+local_dirs = ["04_FD-Gen"]
+state = "generator_candidate"
+eligible = false
+roles = ["t3_generator", "ood_generator"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D05"
+name = "D-Fire"
+local_dirs = ["05_D-Fire", "05_D-Fire-sample"]
+state = "candidate_aux_only"
+eligible = false
+roles = ["t1_visual_aux", "t2_visual_aux"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D06"
+name = "DetectiumFire"
+local_dirs = ["06_DetectiumFire-sample"]
+state = "blocked_incomplete"
+eligible = false
+roles = ["t1_visual_aux", "t2_visual_aux", "grounding_aux"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D07"
+name = "Fire360"
+local_dirs = ["07_Fire360-sample"]
+state = "ineligible_placeholder"
+eligible = false
+roles = ["research_placeholder"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D08"
+name = "MS-FSDB"
+local_dirs = ["08_MS-FSDB-sample"]
+state = "ineligible_placeholder"
+eligible = false
+roles = ["research_placeholder"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D09"
+name = "DFS"
+local_dirs = ["09_DFS-sample"]
+state = "ineligible_placeholder"
+eligible = false
+roles = ["research_placeholder"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D10"
+name = "FIgLib-SmokeyNet"
+local_dirs = ["10_FIgLib-SmokeyNet-sample"]
+state = "candidate_aux_only"
+eligible = false
+roles = ["t1_visual_aux", "wildfire_ood_aux"]
+license_status = "unverified"
+version_status = "unverified"
+
+[[sources]]
+id = "D11"
+name = "Boreal-Forest-Fire"
+local_dirs = ["11_Boreal-Forest-Fire-sample"]
+state = "ineligible_placeholder"
+eligible = false
+roles = ["research_placeholder"]
+license_status = "unverified"
+version_status = "unverified"
+

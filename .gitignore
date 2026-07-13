@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.nox/
+.tox/
+.cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+.python-version
+build/
+dist/
+pip-wheel-metadata/
+.ipynb_checkpoints/
+*.log
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Raw/private data and generated artifacts
+data/raw/**
+data/interim/**
+data/processed/**
+data/private/**
+!data/README.md
+artifacts/**
+!artifacts/README.md
+runs/
+outputs/
+checkpoints/
+tmp/
+temp/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Local manifests may contain private paths/IDs; publish sanitized versions explicitly
+*.local.toml
+*.private.json
+private_*.jsonl

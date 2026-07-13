@@ -1,0 +1,11 @@
+{
+  "sample_id": "FWB-0.1.0-T1A-example0001",
+  "answer": {"fire_forming": false},
+  "risk_level": "low",
+  "dominant_mechanism": null,
+  "causal_chain": [],
+  "evidence": ["sensor-window-1"],
+  "uncertainty": {"level": "low", "reason": "No sustained response is present."},
+  "missing_information": []
+}
+

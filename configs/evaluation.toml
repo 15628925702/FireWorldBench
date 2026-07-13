@@ -1,0 +1,40 @@
+schema_version = 1
+
+[tracks]
+names = ["closed_book", "retrieval", "plot", "tool_use", "oracle_ablation"]
+ranked = ["closed_book", "retrieval", "plot", "tool_use"]
+oracle_is_diagnostic_only = true
+
+[primary_metrics]
+t1_a = "auprc"
+t1_b = "macro_f1"
+t1_c = "budgeted_decision_utility"
+t2_a = "hierarchical_macro_f1"
+t2_b = "mechanism_macro_f1"
+t2_c = "macro_f1_tbd_by_calibration"
+t3_a = "trend_direction_macro_accuracy"
+t3_b = "pair_ranking_accuracy"
+t3_c = "state_trace_score"
+
+[reporting]
+single_composite_is_primary = false
+report_by_task = true
+report_by_source = true
+report_id_ood = true
+report_cost_latency_failure = true
+report_physical_violation = true
+
+[statistics]
+analysis_unit = "case_or_counterfactual_pair"
+confidence_level = 0.95
+method = "paired_case_level_bootstrap"
+bootstrap_replicates = 10000
+multiple_comparison_plan = "TBD_BEFORE_MAIN_EVALUATION"
+
+[failures]
+invalid_json = "score_required_fields_as_missing"
+timeout_after_retries = "count_as_failure"
+tool_failure = "count_as_failure_and_report"
+refusal_or_filter = "count_and_report_by_pre_registered_rule"
+manual_answer_repair = false
+

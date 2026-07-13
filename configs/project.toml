@@ -1,0 +1,23 @@
+[project]
+name = "FireWorldBench"
+package_version = "0.1.0"
+benchmark_version = "0.1.0-dev"
+stage = "P0_INITIALIZED"
+timezone = "Asia/Shanghai"
+default_seed = 20260714
+data_root_env = "FIREWORLDBENCH_DATA_ROOT"
+artifact_root_env = "FIREWORLDBENCH_ARTIFACT_ROOT"
+
+[scope]
+tasks = ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"]
+forbidden_input_names = ["4.升级拓展"]
+research_only = true
+real_system_decision_support = false
+
+[policy]
+raw_data_read_only = true
+split_before_windowing = true
+placeholder_data_must_be_ineligible = true
+test_labels_private = true
+frozen_runs_are_immutable = true
+

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireworldbench.invalid/schemas/benchmark_sample.schema.json",
+  "title": "FireWorldBench Benchmark Sample",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sample_id",
+    "benchmark_version",
+    "task",
+    "split",
+    "scenario",
+    "observations",
+    "question",
+    "answer",
+    "physical_trace",
+    "scoring_metadata",
+    "provenance"
+  ],
+  "properties": {
+    "sample_id": {"type": "string", "pattern": "^FWB-[A-Za-z0-9._-]+$"},
+    "benchmark_version": {"type": "string", "minLength": 1},
+    "task": {
+      "enum": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"]
+    },
+    "split": {
+      "enum": [
+        "train_id",
+        "dev_id",
+        "test_id",
+        "test_ood_source_location",
+        "test_ood_ventilation",
+        "test_ood_hrr",
+        "test_ood_geometry_or_layout",
+        "test_external_experiment"
+      ]
+    },
+    "scenario": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["case_uid", "domain"],
+      "properties": {
+        "case_uid": {"type": "string", "minLength": 8},
+        "family_uid": {"type": ["string", "null"]},
+        "domain": {"type": "string", "minLength": 1}
+      }
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/observation"}
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["format", "prompt"],
+      "properties": {
+        "format": {"enum": ["choice", "ranking", "structured_json", "open_json"]},
+        "prompt": {"type": "string", "minLength": 1},
+        "options": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "answer": {"type": "object", "minProperties": 1, "additionalProperties": true},
+    "physical_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["initial_state", "mechanism_chain", "transitions", "outcome", "evidence_links", "origin"],
+      "properties": {
+        "initial_state": {"type": "object", "additionalProperties": true},
+        "mechanism_chain": {"type": "array", "items": {"type": "string"}},
+        "transitions": {"type": "array", "items": {"type": "object", "additionalProperties": true}},
+        "outcome": {"type": "object", "additionalProperties": true},
+        "evidence_links": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "origin": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": ["direct_measurement", "simulator_truth", "deterministic_rule", "literature", "expert_annotation"]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "scoring_metadata": {"type": "object", "minProperties": 1, "additionalProperties": true},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observation_id", "modality", "time_range_s", "quality"],
+      "properties": {
+        "observation_id": {"type": "string", "minLength": 1},
+        "modality": {"enum": ["sensor_table", "image", "video", "plot", "field", "text"]},
+        "time_range_s": {
+          "type": "array",
+          "prefixItems": [{"type": "number"}, {"type": "number"}],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "ref": {"type": "string"},
+        "content": {},
+        "units": {"type": "object", "additionalProperties": {"type": "string"}},
+        "quality": {"enum": ["valid", "missing", "fault", "degraded", "unknown"]}
+      },
+      "anyOf": [{"required": ["ref"]}, {"required": ["content"]}]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_version",
+        "parent_manifest_sha256",
+        "builder_version",
+        "config_sha256",
+        "annotation_status"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^D[0-9]{2}$"},
+        "source_version": {"type": "string", "minLength": 1},
+        "parent_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "builder_version": {"type": "string", "minLength": 1},
+        "config_sha256": {"$ref": "#/$defs/sha256"},
+        "annotation_status": {"enum": ["automatic", "single_reviewed", "double_reviewed", "adjudicated"]}
+      }
+    },
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

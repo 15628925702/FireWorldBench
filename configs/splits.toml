@@ -1,0 +1,49 @@
+schema_version = 1
+
+[split]
+strategy = "group_first"
+seed = 20260714
+split_before_windowing = true
+ratios_status = "TBD_AFTER_P1_INVENTORY"
+group_keys = [
+  "source_case",
+  "simulation_family",
+  "physical_scenario",
+  "video_sequence",
+  "near_duplicate_group",
+  "question_template_family",
+]
+
+[partitions]
+names = [
+  "train_id",
+  "dev_id",
+  "test_id",
+  "test_ood_source_location",
+  "test_ood_ventilation",
+  "test_ood_hrr",
+  "test_ood_geometry_or_layout",
+  "test_external_experiment",
+]
+
+[ood]
+axes = ["source_location", "ventilation", "hrr", "geometry_or_layout", "source_domain"]
+require_unseen_combination = true
+require_group_disjointness = true
+require_confound_report = true
+
+[leakage]
+exact_hash = true
+perceptual_hash = true
+temporal_neighbor = true
+family_overlap = true
+template_overlap = true
+metadata_answer_cue = true
+allowed_known_leaks = 0
+
+[privacy]
+opaque_public_ids = true
+private_reverse_mapping = true
+hide_test_labels = true
+hide_scoring_metadata = true
+
