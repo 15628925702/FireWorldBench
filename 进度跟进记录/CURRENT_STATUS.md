@@ -72,3 +72,10 @@ current_task: P3-PIPELINE-001
 - 当前最大入库文件为 `开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf`（约 390 KB），体量可接受。
 - `fireworldbench-v1` 是空 Conda 环境；后续安装任何包前仍需得到用户明确许可。
 - Ruff 未运行，因为当前 base 环境无 Ruff，且本轮禁止下载新包。
+## P2-FREEZE-001 收尾
+
+- P2 ontology/schema/split/leak/evaluation 出口已完成封存；test embargo 已 ACTIVE。
+- 私有测试资产未创建、未读取；FD-Gen 仅冻结生成计划，未执行 pilot，未生成模型测试结果。
+- D-005、D-007、数据许可、感知近重复和 FDS/FD-Gen 环境仍为 BLOCKED/PENDING_APPROVAL。
+- 当前 Git：`main` / `2ecc3f8`，已推送 `origin/main`。
+- 下一唯一任务：`P3-PIPELINE-001`。
