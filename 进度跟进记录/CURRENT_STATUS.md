@@ -20,6 +20,7 @@ current_task: P4-PILOT-FREEZE-001
 
 - P4-BASELINE-LLM 本地提交为 `f0a25ceecc07fa7cc4de7051d71ddc9b92838618`；GitHub push 和远端 SHA 校验因 `github.com:443` 失败，当前标记 `BLOCKED_PUSH`。
 - 本地任务链按用户要求继续，下一唯一任务仍为 `P4-TOOL-001`；后续交付继续重试 push。
+- 后续 P4-TOOL-001 push 已成功，LLM 提交链已随之进入 `origin/main`，远端 SHA 为 `96ece1811e0c9dfabfce580eeb0f308ddea862e7`；该历史阻塞已解除。
 
 ## P4-BASELINE-LLM completion
 

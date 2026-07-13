@@ -16,9 +16,9 @@ Tool tracks are frozen independently for retrieval, plot, formula/FDS proxy, and
 
 `P4-PILOT-FREEZE-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and freeze the train/dev pilot matrix, model/track set, repetitions, sample counts, prompts, budgets, failure rules, main/exploratory matrix, and test-access ledger. Do not select anything from test performance. Run checks, commit, and retry all pending GitHub pushes.
 
-## Push block carried forward
+## Earlier push block resolved
 
-P4-BASELINE-LLM is locally complete at `f0a25ceecc07fa7cc4de7051d71ddc9b92838618`, but GitHub port 443 was unreachable during push and remote SHA verification. Keep `BLOCKED_PUSH`, retry push during the next delivery, and continue the local P4-TOOL-001 task.
+P4-BASELINE-LLM was locally complete at `f0a25ceecc07fa7cc4de7051d71ddc9b92838618`; its initial GitHub port 443 block was resolved when the P4-TOOL-001 chain reached `origin/main` at `96ece1811e0c9dfabfce580eeb0f308ddea862e7`.
 
 ## P4-BASELINE-VISION completed
 
