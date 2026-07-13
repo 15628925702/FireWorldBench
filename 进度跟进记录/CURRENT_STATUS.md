@@ -17,7 +17,7 @@ current_task: P2-SPLIT-001
 - 最近完成会话：`2026-07-14_S011_P2-SCHEMA-001样本预测Schema与语义validator.md`
 - 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `d46be75`（P2-SCHEMA-001 待提交）
+- branch / HEAD：`main` / `8a92376`（P2-SCHEMA-001 已提交并推送）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
@@ -63,7 +63,7 @@ current_task: P2-SPLIT-001
 
 ## 基线事实
 
-- 当前任务交付由 Git commit `d70d188` 重建；已 push 到 `origin/main`，remote 未修改。
+- 当前任务交付由 Git commit `8a92376` 重建；已 push 到 `origin/main`，remote 未修改。
 - `项目治理/source_baseline_manifest.json` 记录全部拟提交源码文件的相对路径、大小和 SHA-256，manifest 不自包含。
 - 仓库内 `data/` 与 `artifacts/` 当前仅保留 README 占位，不含原始数据或运行产物。
 - 当前最大入库文件为 `开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf`（约 390 KB），体量可接受。
