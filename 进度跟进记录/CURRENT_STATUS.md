@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S036-001
+handoff_id: H-20260714-S037-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S036_P5-STATS-001无raw统计决策.md
-current_task: P5-ERROR-001
+task_status: READY
+source_session: 2026-07-14_S037_P5-ERROR-001盲化误差无输入决策.md
+current_task: P5-CLAIMS-FREEZE-001
 ---
 
 # Current Status
+
+## P5-ERROR-001 completion
+
+- 已冻结盲化误差 taxonomy：perception、state、mechanism、causal、temporal、physical、uncertainty、tool、format；禁止 post-hoc case selection。
+- 已冻结预注册抽样、隐藏模型身份、双人一致性/裁决和 negative results 保留规则；因无 raw predictions，正式状态为 `BLOCKED_NO_RAW_OUTPUT`，没有生成 error labels 或代表案例。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试资产或修改 `../../3.数据集`。
+- 验证：`pytest` 94 passed；`mypy` 通过；CLI 返回 9 类 taxonomy/no-input；project check 通过。
+- 下一唯一任务：`P5-CLAIMS-FREEZE-001`。
 
 ## P5-STATS-001 completion
 

@@ -1,0 +1,13 @@
+{
+  "error_version": "P5-ERROR-001",
+  "status": "BLOCKED_NO_RAW_OUTPUT",
+  "blockers": ["raw_predictions_missing"],
+  "taxonomy": ["perception", "state", "mechanism", "causal", "temporal", "physical", "uncertainty", "tool", "format"],
+  "sampling": {"method": "pre_registered_stratified_sample", "model_identity_visible": false, "posthoc_case_selection": false},
+  "error_labels": [],
+  "sampling_list": [],
+  "adjudication": {"rater_count": 2, "consistency_required": true, "disagreement_queue": [], "representative_case_index": []},
+  "negative_results_retained": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}

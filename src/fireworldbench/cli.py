@@ -30,6 +30,7 @@ from fireworldbench.main_run import write_main_run_decision
 from fireworldbench.ablation import write_ablation_decision
 from fireworldbench.robustness import write_robustness_decision
 from fireworldbench.stats import write_statistics_decision
+from fireworldbench.error_analysis import write_error_decision
 
 
 def doctor(root: Path) -> int:
@@ -131,6 +132,9 @@ def build_parser() -> argparse.ArgumentParser:
     stats_parser = subparsers.add_parser("stats-assess", help="audit raw-prediction statistics readiness")
     stats_parser.add_argument("--output", type=Path, required=True)
     stats_parser.add_argument("--raw-predictions", type=Path)
+    error_parser = subparsers.add_parser("error-assess", help="audit blind error-analysis readiness")
+    error_parser.add_argument("--output", type=Path, required=True)
+    error_parser.add_argument("--raw-predictions", type=Path)
     return parser
 
 
@@ -328,6 +332,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "sample_count": result["sample_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "error-assess":
+        try:
+            result = write_error_decision(args.output, args.raw_predictions)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "taxonomy_count": len(result["taxonomy"]), "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 
