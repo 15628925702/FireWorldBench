@@ -1,0 +1,19 @@
+{
+  "claims_version": "P5-CLAIMS-FREEZE-001",
+  "status": "FROZEN_WITH_BLOCKED_CLAIMS",
+  "result_freeze_manifest": {
+    "run_ids": [],
+    "result_hashes": [],
+    "raw_prediction_hashes": [],
+    "metrics": {}
+  },
+  "limitations_and_negative_results": [
+    "no_approved_model_or_runtime",
+    "no_paper_ready_train_dev_manifest",
+    "no_generated_fdgen_cases",
+    "no_raw_predictions",
+    "visual_baseline_na"
+  ],
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_asset_read": false
+}

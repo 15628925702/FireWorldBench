@@ -31,6 +31,7 @@ from fireworldbench.ablation import write_ablation_decision
 from fireworldbench.robustness import write_robustness_decision
 from fireworldbench.stats import write_statistics_decision
 from fireworldbench.error_analysis import write_error_decision
+from fireworldbench.claims import write_claims_matrix
 
 
 def doctor(root: Path) -> int:
@@ -135,6 +136,8 @@ def build_parser() -> argparse.ArgumentParser:
     error_parser = subparsers.add_parser("error-assess", help="audit blind error-analysis readiness")
     error_parser.add_argument("--output", type=Path, required=True)
     error_parser.add_argument("--raw-predictions", type=Path)
+    claims_parser = subparsers.add_parser("claims-freeze", help="write the claims-evidence freeze matrix")
+    claims_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -340,6 +343,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "taxonomy_count": len(result["taxonomy"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "claims-freeze":
+        try:
+            result = write_claims_matrix(args.output)
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "claim_count": len(result["claims"]), "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

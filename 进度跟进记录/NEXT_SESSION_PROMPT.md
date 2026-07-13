@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S037-001
+handoff_id: H-20260714-S038-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S037_P5-ERROR-001盲化误差无输入决策.md
-current_task: P5-CLAIMS-FREEZE-001
+source_session: 2026-07-14_S038_P5-CLAIMS-FREEZE-001主张证据冻结.md
+current_task: P6-PAPER-TABLES-001
 ---
 
 # 下一任务增量
+
+## P5-CLAIMS-FREEZE-001 completed
+
+The claims-evidence matrix is frozen with six explicitly supported, conditional, blocked, N/A, or removed claims. The result freeze manifest contains no run IDs or result hashes, so no unsupported performance or table claim remains.
+
+## Next window: one task only
+
+`P6-PAPER-TABLES-001`: read the mandated handoff files and task package, create a new `IN_PROGRESS` session draft, and generate tables only from frozen result files. With no frozen results, record a formal no-input export decision and do not fabricate CSV/LaTeX values. Run checks, commit, and push.
 
 ## P5-ERROR-001 completed
 
