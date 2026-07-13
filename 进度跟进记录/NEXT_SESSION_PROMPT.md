@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S018-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S018_P3-BUILD-T2状态与机制样本.md
 current_task: P3-BUILD-T3
 ---
@@ -42,3 +42,6 @@ P3-PIPELINE-001 本地 commit `4801792` 已完成，三次 `git push origin main
 ## P3-BUILD-T2 已完成
 
 已实现 T2-A/B/C builder，保留 mechanism family、evidence observation ID 和 unknown/underdetermined 边界。下一唯一任务：`P3-BUILD-T3`。
+## 当前阻塞
+
+P3-BUILD-T2 本地 commit `48683d3` 已完成，GitHub 推送连续三次失败。下一窗口第一动作是重试 `git push origin main` 并核验远端 SHA；成功前保持 `BLOCKED_PUSH`，不要进入 `P3-BUILD-T3`。
