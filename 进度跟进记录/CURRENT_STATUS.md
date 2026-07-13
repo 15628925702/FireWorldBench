@@ -17,7 +17,7 @@ current_task: P1-FREEZE-001
 - 最近完成会话：`2026-07-14_S008_P1-RESEARCH-001会议相关工作污染审计.md`
 - 当前 `IN_PROGRESS` 草稿：已收敛为 READY
 - 快照时间：`2026-07-14 Asia/Shanghai，任务交付后`
-- branch / HEAD：`main` / `043f4a3`（P1-RESEARCH-001 已提交并推送，状态修复待提交）
+- branch / HEAD：`main` / `93f959e`（P1-RESEARCH-001 已提交并推送）
 - remote：`origin` fetch/push 均保持为既有 GitHub remote
 - staged / unstaged / untracked：`0 / 0 / 0`
 - 最近正式环境验证：无；`fireworldbench-v1` 仍为空环境
@@ -52,7 +52,7 @@ current_task: P1-FREEZE-001
 
 ## 已知阻塞/待决策
 
-- 目标 A 类会议、截稿日期和双盲/补充材料限制未确定。
+- ICLR 2027 已确定为目标会议；官方 CFP、截稿日期、页数、双盲和 artifact 细则尚未发布，暂以 ICLR 2026 官方指南作保守参考。
 - 主要数据源的再分发与派生 benchmark 许可尚未逐项核验。
 - FDS/FD-Gen 算力预算和可复现运行环境未确定。
 - 火灾领域专家与双人标注资源未落实。
@@ -60,7 +60,7 @@ current_task: P1-FREEZE-001
 
 ## 基线事实
 
-- 当前源码基线由本地 Git initial commit 重建；remote 未变更且未 push。
+- 当前任务交付由 Git commit `93f959e` 重建；已 push 到 `origin/main`，remote 未修改。
 - `项目治理/source_baseline_manifest.json` 记录全部拟提交源码文件的相对路径、大小和 SHA-256，manifest 不自包含。
 - 仓库内 `data/` 与 `artifacts/` 当前仅保留 README 占位，不含原始数据或运行产物。
 - 当前最大入库文件为 `开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf`（约 390 KB），体量可接受。
