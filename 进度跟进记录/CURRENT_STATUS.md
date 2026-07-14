@@ -14,6 +14,7 @@ current_task: P5-MAIN-RUN
 - 缺少批准模型/runtime、train manifest、dev manifest 和正式数据资格；11 个 candidate cases 不能直接作为 pilot 输入。
 - 未运行模型、未调用 API、未下载/安装依赖、未读取 test/private，未生成结果数字。
 - 下一任务：`P5-MAIN-RUN`。
+- 本地提交为 `102ca3d`；首次 `git push origin main` 因 GitHub HTTPS 连接重置失败，当前标记 `BLOCKED_PUSH`，本地继续保留提交。
 
 ## P3-MODEL-ONBOARDING completion
 
