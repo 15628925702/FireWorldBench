@@ -1,0 +1,9 @@
+{
+  "task_id": "P7-ANON-001",
+  "anonymization_version": "P7-ANON-001",
+  "scan_scope": "explicit paper export root only",
+  "findings": ["author_identity", "username", "absolute_path", "private_url", "secret", "git_metadata", "test_gold", "restricted_third_party_data"],
+  "public_assets_require": "provenance_and_license_declaration",
+  "zero_identity_secret_license_leak": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}

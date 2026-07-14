@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260714-S043-001
+handoff_id: H-20260714-S044-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S043_P6-EXPORT-001冻结论文数据包无结果决策.md
-current_task: P7-ANON-001
+source_session: 2026-07-14_S044_P7-ANON-001双盲许可清理无导出决策.md
+current_task: P7-REPRO-001
 ---
+
+## P7-ANON-001 completed
+
+匿名/双盲清理契约已冻结：显式导出根会扫描身份、用户名、绝对路径、私有 URL、secret、Git 元数据、test gold/private mapping 和受限第三方数据；许可与 source-version 声明未解决前资产不得进入 public。当前没有导出根，正式状态为 `BLOCKED_NO_EXPORT`，没有生成匿名包。
+
+## Next window: one task only
+
+`P7-REPRO-001`: 按顺序读取 handoff 文件和任务包，在独立全新环境按 release README 评估 benchmark、代表 baseline 和论文数字 registry 的重建；当前没有合法论文包或冻结结果时记录正式 blocked/no-input 决策，不声称复现成功。完成检查、commit，并尝试 push `origin/main`。
 
 ## P6-EXPORT-001 completed
 
