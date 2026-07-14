@@ -1,12 +1,21 @@
 ---
-handoff_id: H-20260714-S046-001
+handoff_id: H-20260714-S047-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S046_P7-RELEASE-001最终发布冻结阻断决策.md
-current_task: NONE_UNTIL_USER_APPROVAL
+source_session: 2026-07-14_S047_GOV能力数据源任务矩阵变更.md
+current_task: P1-DATA-001
 ---
 
 # Current Status
+
+## 2026-07-14 accepted design change
+
+- 用户已批准 `CR-20260714-CAPABILITY-SOURCE-MATRIX-001`：T1/T2/T3 是统一能力轴，仿真、实验、传感器、视觉和多模态是异构证据来源；数据集不得直接定义任务。
+- v1 仍只覆盖火灾领域；跨领域扩展不进入当前范围。
+- benchmark 与 baseline 必须先完成，方法方向只可依据冻结 train/dev 失败分析决定，不得使用 test 结果选择方法。
+- 已新增 `详细设计规划/06_能力-数据源-任务矩阵.md` 和 P1/P2 变更附录；旧 freeze manifest/hash 保持不变，但 paper-ready 执行前必须重新冻结受影响内容。
+- 之前 P3-P7 的 fixture、门禁和 no-input 决策只证明工程框架，不代表真实 benchmark、正式实验或论文数据完成。
+- 当前恢复点为 `P1-DATA-001` 第二轮：按新矩阵重新核验真实数据准入、来源角色和许可；未闭合前不得跳回 P5-P7 或发布。
 
 ## P7-RELEASE-001 completion
 

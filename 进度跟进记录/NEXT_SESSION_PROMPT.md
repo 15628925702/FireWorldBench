@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260714-S046-001
+handoff_id: H-20260714-S047-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S046_P7-RELEASE-001最终发布冻结阻断决策.md
-current_task: NONE_UNTIL_USER_APPROVAL
+source_session: 2026-07-14_S047_GOV能力数据源任务矩阵变更.md
+current_task: P1-DATA-001
 ---
+
+## Next window: P1-DATA-001 second pass
+
+先读 `AGENTS.md`、`CURRENT_STATUS.md`、本文件、source session、任务库中 `P1-DATA-001`，再读 `详细设计规划/06_能力-数据源-任务矩阵.md` 和 `项目治理/P1_P2_能力数据源任务矩阵变更附录.md`。
+
+只执行 `P1-DATA-001` 第二轮：在不修改 `../../3.数据集`、不读取 `../../4.升级拓展`、不安装/下载的前提下，按仿真、受控实验、传感器、视觉、多模态重新登记 D01-D11 的证据角色，并复核许可、版本、用途资格与 source-task 候选映射。数据集身份不得直接定义任务；未知许可或语义继续 `BLOCKED`。
+
+交付新的版本化数据资格/角色审计和 freeze 输入，不覆盖旧 manifest/hash。下一任务只能在 P1-DATA-001 第二轮验收、commit 和 push 后确定。
 
 ## P7-RELEASE-001 completed
 
