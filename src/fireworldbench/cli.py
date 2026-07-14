@@ -160,6 +160,8 @@ def build_parser() -> argparse.ArgumentParser:
     stats_parser = subparsers.add_parser("stats-assess", help="audit raw-prediction statistics readiness")
     stats_parser.add_argument("--output", type=Path, required=True)
     stats_parser.add_argument("--raw-predictions", type=Path)
+    stats_parser.add_argument("--samples", type=Path)
+    stats_parser.add_argument("--planning-mode", action="store_true")
     error_parser = subparsers.add_parser("error-assess", help="audit blind error-analysis readiness")
     error_parser.add_argument("--output", type=Path, required=True)
     error_parser.add_argument("--raw-predictions", type=Path)
@@ -416,7 +418,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
     if args.command == "stats-assess":
         try:
-            result = write_statistics_decision(args.output, args.raw_predictions)
+            result = write_statistics_decision(args.output, args.raw_predictions, samples_path=args.samples, planning_mode=args.planning_mode)
         except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
             print(f"ERROR: {exc}")
             return 2

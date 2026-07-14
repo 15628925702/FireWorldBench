@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "P5-STATISTICS",
+  "status": "COMPLETED_LOCAL_PLANNING_SMOKE_TEST",
+  "scope": "statistics over four DeepSeek local planning predictions only; not formal benchmark statistics",
+  "sample_count": 4,
+  "case_count": 2,
+  "primary_metrics": {
+    "T1-A": {"primary_metric": 1.0, "n_samples": 2, "n_cases": 2},
+    "T1-B": {"primary_metric": 1.0, "n_samples": 2, "n_cases": 2}
+  },
+  "failure_counts": {},
+  "statistics_artifact_sha256": "08c6669806d328ce94c2d2d476336542310608bde88f9771a68d60c7c8ffe6a9",
+  "formal_benchmark_eligible": false,
+  "paper_claim_allowed": false,
+  "test_private_assets_accessed": false,
+  "notes": [
+    "Tasks without local samples retain n_samples=0 and are not interpreted as zero performance.",
+    "The source artifact remains under ignored artifacts/planning_pilot/."
+  ]
+}

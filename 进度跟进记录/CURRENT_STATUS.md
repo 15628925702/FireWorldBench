@@ -1,12 +1,19 @@
 ---
-handoff_id: H-20260714-S055-001
+handoff_id: H-20260714-S056-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S055_P4-PILOT-RUN-DeepSeek小样本端到端试运行.md
-current_task: P5-STATISTICS
+source_session: 2026-07-14_S056_P5-STATISTICS-PLANNING-SMOKE本地统计闭环.md
+current_task: P5-ERROR-ANALYSIS
 ---
 
 # Current Status
+
+## P5-STATISTICS local planning smoke completion
+
+- 已对 4 条 DeepSeek local planning prediction 完成统计重算；T1-A 和 T1-B 均为 1.0（各 2 个样本），无失败记录。
+- 统计路径必须显式启用 planning mode 并提供 raw prediction + sample；正式主实验统计门禁未改变。
+- 统计摘要为 `项目治理/p5_planning_statistics_P5-STATISTICS.json`；无样本任务保持 `n_samples=0`，不解释为零性能。
+- 下一任务：`P5-ERROR-ANALYSIS`，仅针对本地 smoke 输出。
 
 ## P4-PILOT-RUN DeepSeek smoke test completion
 
