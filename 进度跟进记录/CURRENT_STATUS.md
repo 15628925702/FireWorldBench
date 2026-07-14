@@ -14,6 +14,7 @@ current_task: P5-STATISTICS
 - 缺少批准模型矩阵、冻结校准 manifest、runtime、paper-ready 输入 manifest 和 run index。
 - 未启动模型、未读取 test/private、未下载/安装依赖、未生成结果或论文数字。
 - 下一任务：`P5-STATISTICS`。
+- 本地提交为 `db5480f`；push 因 GitHub 443 不可达失败，当前标记 `BLOCKED_PUSH`，本地提交已保留。
 
 ## P4-PILOT-RUN completion
 
