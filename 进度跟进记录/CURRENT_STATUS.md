@@ -15,6 +15,7 @@ current_task: P4-PILOT-REMEDIATION
 - 正确任务：T1-A、T1-B、T2-C、T3-A；待修复边界：T1-C 交互、T2-A 状态规则、T2-B 机制 gold、T3-C trace 对齐、T3-B 有效 pair/输出解析。
 - 运行摘要和哈希：`项目治理/p4_formal_structure_planning_pilot.json`。这证明完整执行链可运行，但上述五项未修复前不应直接放大到大规模实验。
 - 下一任务：`P4-PILOT-REMEDIATION`。
+- 全任务演练本地提交为 `ab4b7eb`；GitHub HTTPS 连接重置导致 push 失败，当前标记 `BLOCKED_PUSH`。
 
 ## P5-STATISTICS local planning smoke completion
 

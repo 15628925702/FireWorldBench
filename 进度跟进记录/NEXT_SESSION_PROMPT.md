@@ -10,6 +10,8 @@ current_task: P4-PILOT-REMEDIATION
 
 上一任务已完成全九任务 formal-structure local smoke test。下一窗口先修复 T1-C 交互、T2-A/B 标签语义、T3-C trace 契约和 T3-B pair/解析问题，再重跑同一小样本；在复跑通过前不得扩大样本或把结果称为正式 benchmark。
 
+交付提示：全任务演练本地提交为 `ab4b7eb`，GitHub 连接重置导致 push 失败。先重试 `git push origin main`；失败则保留 `BLOCKED_PUSH` 并继续本地修复。
+
 交付提示：本地统计提交为 `98f985c`，GitHub 443 当前不可达。先重试 `git push origin main`；失败则保留 `BLOCKED_PUSH` 并继续本地任务。
 
 交付提示：P5-MAIN-RUN 本地提交为 `db5480f`，GitHub push 因 443 连接失败，先重试 `git push origin main`；失败则继续本地推进并保留 `BLOCKED_PUSH`。
