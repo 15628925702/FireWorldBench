@@ -1,54 +1,60 @@
-﻿{
-    "dataset_id":  "D03",
-    "dataset_name":  "FDS-exp",
-    "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D03_FDS-exp",
-    "source_url":  "https://github.com/firemodels/exp",
-    "acquisition_date":  "2026-07-14",
-    "upstream_version_or_commit":  "UNKNOWN (planning-stage source inventory)",
-    "download_status":  "DOWNLOADED",
-    "license_status":  "UNKNOWN",
-    "redistribution_status":  "UNKNOWN",
-    "intended_role":  "External validation and physics sanity check",
-    "file_count":  7,
-    "total_bytes":  181287,
-    "files":  [
-                  {
-                      "relative_path":  "Aalto_Woods/pine_flaming_25kW.csv",
-                      "size_bytes":  2167,
-                      "sha256":  "4721a9741e7feb66ad332701d8249317854e10c12c0b315c4db09d9c31fa06f7"
-                  },
-                  {
-                      "relative_path":  "Aalto_Woods/pine_smolder_20kW.csv",
-                      "size_bytes":  4937,
-                      "sha256":  "d9bddc3795c965b3ce0f2938f50b9862b831b57a2ec40e4434e6d4c5f2d122a2"
-                  },
-                  {
-                      "relative_path":  "Aalto_Woods/spruce_flaming_25kW.csv",
-                      "size_bytes":  2105,
-                      "sha256":  "cc1855c68b872e1f1948c7c109c13bd4c67932b2ba5561c81b6f331f4a3bfcf8"
-                  },
-                  {
-                      "relative_path":  "ATF_Corridors/ATF_Corridors_048kW_avg.csv",
-                      "size_bytes":  52043,
-                      "sha256":  "fc50158d230cd9706db4d6963bdf542e682718655e0a47cfde151d9a50a0f5f3"
-                  },
-                  {
-                      "relative_path":  "ATF_Corridors/ATF_Corridors_485kW_avg.csv",
-                      "size_bytes":  44411,
-                      "sha256":  "b9562d21361091684252c4b7e33949150463a0dd2a5d02f3356619a1f6518b45"
-                  },
-                  {
-                      "relative_path":  "example_preview.png",
-                      "size_bytes":  75285,
-                      "sha256":  "cf2b2a0e54be3edf1822463af21e12c1583952c40c59a9f5076c8861dce112af"
-                  },
-                  {
-                      "relative_path":  "sample_card.md",
-                      "size_bytes":  339,
-                      "sha256":  "859a67a296d0ce42474206e9824a080028a442e7753dbb53aab7c65f8e2ab077"
-                  }
-              ],
-    "raw_files_unchanged":  true,
-    "formal_benchmark_eligible":  false,
-    "note":  "planning-stage staging only"
+{
+  "dataset_id": "D03",
+  "dataset_name": "FDS-exp",
+  "target_root": "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D03_FDS-exp",
+  "source_url": "https://github.com/firemodels/exp",
+  "acquisition_date": "2026-07-14",
+  "upstream_version_or_commit": "UNKNOWN_existing_local_staging; upstream commit not verified this round",
+  "download_status": "ALREADY_PRESENT",
+  "license_status": "UNKNOWN",
+  "redistribution_status": "UNKNOWN",
+  "intended_role": "External validation and physics sanity-check planning data",
+  "file_count": 7,
+  "total_bytes": 181287,
+  "files": [
+    {
+      "relative_path": "Aalto_Woods/pine_flaming_25kW.csv",
+      "size_bytes": 2167,
+      "sha256": "4721a9741e7feb66ad332701d8249317854e10c12c0b315c4db09d9c31fa06f7"
+    },
+    {
+      "relative_path": "Aalto_Woods/pine_smolder_20kW.csv",
+      "size_bytes": 4937,
+      "sha256": "d9bddc3795c965b3ce0f2938f50b9862b831b57a2ec40e4434e6d4c5f2d122a2"
+    },
+    {
+      "relative_path": "Aalto_Woods/spruce_flaming_25kW.csv",
+      "size_bytes": 2105,
+      "sha256": "cc1855c68b872e1f1948c7c109c13bd4c67932b2ba5561c81b6f331f4a3bfcf8"
+    },
+    {
+      "relative_path": "ATF_Corridors/ATF_Corridors_048kW_avg.csv",
+      "size_bytes": 52043,
+      "sha256": "fc50158d230cd9706db4d6963bdf542e682718655e0a47cfde151d9a50a0f5f3"
+    },
+    {
+      "relative_path": "ATF_Corridors/ATF_Corridors_485kW_avg.csv",
+      "size_bytes": 44411,
+      "sha256": "b9562d21361091684252c4b7e33949150463a0dd2a5d02f3356619a1f6518b45"
+    },
+    {
+      "relative_path": "example_preview.png",
+      "size_bytes": 75285,
+      "sha256": "cf2b2a0e54be3edf1822463af21e12c1583952c40c59a9f5076c8861dce112af"
+    },
+    {
+      "relative_path": "sample_card.md",
+      "size_bytes": 339,
+      "sha256": "859a67a296d0ce42474206e9824a080028a442e7753dbb53aab7c65f8e2ab077"
+    }
+  ],
+  "raw_files_unchanged": true,
+  "formal_benchmark_eligible": false,
+  "note": "planning-stage staging only",
+  "comparison_to_existing_manifest": {
+    "reference_manifest": "????/data_manifest_P1-DATA-001.json",
+    "status": "MATCHED_BY_FILENAME_SIZE_SHA256",
+    "mismatch_count": 0,
+    "mismatched_relative_paths": []
+  }
 }

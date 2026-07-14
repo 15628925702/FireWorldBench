@@ -1,569 +1,575 @@
-﻿{
-    "dataset_id":  "D02",
-    "dataset_name":  "PolyUFire",
-    "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D02_PolyUFire",
-    "source_url":  "https://github.com/PolyUFire/Tunnel_Fire_Database",
-    "acquisition_date":  "2026-07-14",
-    "upstream_version_or_commit":  "UNKNOWN (planning-stage source inventory)",
-    "download_status":  "DOWNLOADED",
-    "license_status":  "UNKNOWN",
-    "redistribution_status":  "UNKNOWN",
-    "intended_role":  "External experimental validation and mechanism knowledge",
-    "file_count":  110,
-    "total_bytes":  70833300,
-    "files":  [
-                  {
-                      "relative_path":  "example_preview.png",
-                      "size_bytes":  122440,
-                      "sha256":  "af0a8be9126e9bedb7fe2c41dc0cb346655e90d53dbcca59d622494c60db2fb4"
-                  },
-                  {
-                      "relative_path":  "sample_card.md",
-                      "size_bytes":  370,
-                      "sha256":  "437ac86bbfca278f0940846609f7dcc27d6b287bded4afdbe25f0a734c99ddd3"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.1. Heat release rate.xlsx",
-                      "size_bytes":  11850,
-                      "sha256":  "7625bb4d87da8dfadd0ce7bf94923448d93d5cc3507c0b67bbd63d3270552013"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.2. Flame length.xlsx",
-                      "size_bytes":  522858,
-                      "sha256":  "056d63ced23d8e46449acbc2a589da7cf2e2220f81f02a99cc3f9ba556a2135d"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.3. Maximum ceiling gas temperature.xlsx",
-                      "size_bytes":  1835602,
-                      "sha256":  "d0ddc22112828059390f575fa70b568844ae54eabd3f5f2d00170a385869cbfd"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.4. Critical velocity.xlsx",
-                      "size_bytes":  6270747,
-                      "sha256":  "d125b6eb730995db9a47754a0cfb73e9deb09c56360e9427308929b819fa17b4"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.5. Back-layering length.xlsx",
-                      "size_bytes":  3998308,
-                      "sha256":  "6fd071386a3521cfaa0d7189205abf49b851b5944c25648327137504edc9c676"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.6. Smoke layer thickness.xlsx",
-                      "size_bytes":  1046420,
-                      "sha256":  "db6e9f76f216e80e0e9256a4cd1ab280f244549472d4beffb98b4e5718d32017"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/3.7. Plug-holing.xlsx",
-                      "size_bytes":  1986142,
-                      "sha256":  "24478fff3c74ed41fed993df6f46c77eea09f203d120c0555464d96e091b51cf"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Accident_list/Tunnel_Fire_Accidents_List.CSV",
-                      "size_bytes":  13849,
-                      "sha256":  "26bbc41c040ef39f828b10449a900f49306b5473ffbac3a6f07815b51c61ea6e"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/ANN.py",
-                      "size_bytes":  2820,
-                      "sha256":  "ced660559c97dccb299f2334860f3b8809c59e327a3d050b9180b4b80e760038"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database.xlsx",
-                      "size_bytes":  164915,
-                      "sha256":  "f173a9159b650a7e3193ea9509d47846e6cf03e3c415e909719d61136c75ffe2"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Li_2010.csv",
-                      "size_bytes":  32095,
-                      "sha256":  "6b803b30adcaf6af9acc14df30526e23ab1d83bfce3bc23fb76e3959f585e06e"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Tang_2018.csv",
-                      "size_bytes":  24349,
-                      "sha256":  "4cbb5c5f30049a3ddfa1766187ef8b0de275b59bac736007eb4dfa9262d704ad"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Weng_2015.csv",
-                      "size_bytes":  9992,
-                      "sha256":  "af209d7556730a51a6effac22a997b181b624fa3b3344978f8f2504d068b81be"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Wu_2000.csv",
-                      "size_bytes":  97322,
-                      "sha256":  "ef7d4344eeac40ba747dfb9209dcd2f9888e9d758bd95b433595a934265ca9bc"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/README.md",
-                      "size_bytes":  126,
-                      "sha256":  "16d75dd3222fc85eafdd5eac3e92eb648d61f2c2e50d512f31b75df8f0f2f1b6"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/new file",
-                      "size_bytes":  1,
-                      "sha256":  "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/2020_TUST_paper/README.md",
-                      "size_bytes":  781,
-                      "sha256":  "27a327c1c7249257bac61e0a6e0950190a2d8534ffaf98c6c071e5a15a70e5a5"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/README.md",
-                      "size_bytes":  825,
-                      "sha256":  "842ef4820119b63287fefdcc2209cde8b626d8b0ce506f4ee96568e49bb195f4"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/New file",
-                      "size_bytes":  11,
-                      "sha256":  "286f93b7f4db9d7e2ef0825d6099f89b5e7f7aa4b6e2fd904855df4ff3761209"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Read me.txt",
-                      "size_bytes":  717,
-                      "sha256":  "543f89357c57985dc59d14d5db5bb6d5c5be4e42eaff28e388659a55ceecc3f7"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/read me.txt",
-                      "size_bytes":  104,
-                      "sha256":  "660c29e7cd432b2751891729ce5dec4597e4de113528c7653d18c5c958fbc304"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T1.xls",
-                      "size_bytes":  1081856,
-                      "sha256":  "903e39555a6a79885fc9c27cb58d7ffcd9f9999cc4e1fc901cdb32f4b7c2d061"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T2.xls",
-                      "size_bytes":  1080320,
-                      "sha256":  "55e6a4eae49fe318af25a144bd3f1de9f28b5777f6d7d1e774b58247b4848998"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T3.xls",
-                      "size_bytes":  1080320,
-                      "sha256":  "748f0e4ef9189d17e11e9332632640973e2fd0a34ba5f3b57cfb99de5a94991e"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T4.xls",
-                      "size_bytes":  1078784,
-                      "sha256":  "e375650e0486c4cedb17118ba4f891d79a3da86a1f609a1db499597b9c6d85cc"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T5.xls",
-                      "size_bytes":  1240576,
-                      "sha256":  "d41c978a3fbc6f8250dbc9d95c15fc8d66cbc29368262167e2320d5860127b52"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T6.xls",
-                      "size_bytes":  1094144,
-                      "sha256":  "3eca0d7abe9670d084f24ecb72126c485ecf0abb5edec2a3fce01eb1f4db7e4a"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T7.xls",
-                      "size_bytes":  1238016,
-                      "sha256":  "ef850fb204588cb47db7f777a1f87a654b2af4fc6fb18d4a68b04397c7619524"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T8.xls",
-                      "size_bytes":  1076224,
-                      "sha256":  "2378049a008c1b7fafc20cc58f84342bda95311db57b0bb16ce2c80a4bd85d70"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T9.xls",
-                      "size_bytes":  1083904,
-                      "sha256":  "ca53c8dd84eb71ee22e06292881516fd01cc94c0c069f086889da97687827f08"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/Vent temperature profile.xls",
-                      "size_bytes":  645120,
-                      "sha256":  "46100ab5e2b1f9f86441c581604ad3fbe2e0814e1327d5408767323a79e1d060"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/read me.txt",
-                      "size_bytes":  99,
-                      "sha256":  "c94fce7200a2a9325d60ce5c35210a08eb9f8748043c41d1c6fff34ab6b45115"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T1.xls",
-                      "size_bytes":  809984,
-                      "sha256":  "9cbf2eb173b36466b3ad8cd56e1ea669de6a42dc45045e7e3e810a0b35350307"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T2.xls",
-                      "size_bytes":  812032,
-                      "sha256":  "4fa83b5d34e4ed3fd0753fe39435fb588f998e41e350411eb0bccd8cb24eb58f"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T3.xls",
-                      "size_bytes":  814080,
-                      "sha256":  "4083fe8c58952b4d36aa7298a4813b89886a956dcade90504d4d07bb169c475c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T4.xls",
-                      "size_bytes":  813568,
-                      "sha256":  "946976bd341b94e39fa247fd782b14cb5dc7240d80618102f8b47e9541dd52c0"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T5.xls",
-                      "size_bytes":  934912,
-                      "sha256":  "4004b7107babcd45639f7bd9dd8adda1735b32a6aa5db93f65aded1c6fd4aa6c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T6.xls",
-                      "size_bytes":  825856,
-                      "sha256":  "07ffa30c7937db4d6206d0f79d863658d5b7011cef0abad009843c76a846a340"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T7.xls",
-                      "size_bytes":  934400,
-                      "sha256":  "62c6fb1fe463aca23f050e2a686e6dd14af8fc59bd84710136511db890e2fa29"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T8.xls",
-                      "size_bytes":  811008,
-                      "sha256":  "b0837fa648ceecd04d33b4b9aec1b2087fabb7858a8d2dc2594e0ede881913f8"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T9.xls",
-                      "size_bytes":  815616,
-                      "sha256":  "c5307ba64119a956bb9617eecb12055059148276d9acad45f4687bb4c483d702"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/Vent temperature profile.xls",
-                      "size_bytes":  488960,
-                      "sha256":  "254fe8c704aec9e61e35f02a31a98aad80647d992de533a573b12ac0451fe218"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/read me.txt",
-                      "size_bytes":  122,
-                      "sha256":  "bc30e3f21b48ba58166575384f0112fc941554fc16439d46cbc63dd572403d71"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T1.xls",
-                      "size_bytes":  504832,
-                      "sha256":  "29e8a2908c14ab1ca4cabb82932564b1f7de1590d2fea0899fc80e81c34cd40c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T2.xls",
-                      "size_bytes":  505344,
-                      "sha256":  "96a11b3fb1c0b8a549466f0ade987717a2742f27c6081242f8ff95f98672cd43"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T3.xls",
-                      "size_bytes":  507904,
-                      "sha256":  "bfb73bb302aa821db148508d225e580774df924ca303b2c049917b6425cc955c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T4.xls",
-                      "size_bytes":  506880,
-                      "sha256":  "b1af39422fb7ecec6b315cb9aa8c0d4c16eaefb2bd1ef433adafd477ee89cf43"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T5.xls",
-                      "size_bytes":  580608,
-                      "sha256":  "f8126c3bdf8a2ea26d246ecab0ce0378872ade90db9d037babeba40cc0fbb83d"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T6.xls",
-                      "size_bytes":  513536,
-                      "sha256":  "d758626ed55a9315a22afb9c8b9860cd923b6f4f2cf75e7050e534dbc03ec043"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T7.xls",
-                      "size_bytes":  580096,
-                      "sha256":  "86d1550bbda8b50b4e70e0ba3f982fdf4a6d869eed018408e3f882bbf80ead75"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T8.xls",
-                      "size_bytes":  504832,
-                      "sha256":  "5de570dbdfd78147862621170aa8c53071ae7722558d001be58b2e66c38c40f8"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T9.xls",
-                      "size_bytes":  508928,
-                      "sha256":  "9d90ce2e5e3ab98fa23741c5e3472f7799d4933d1cf6f39e036d233da67c5c97"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/Vent temperature profile.xls",
-                      "size_bytes":  307712,
-                      "sha256":  "80b93a0ec10ec7a4b3fc692351c691916fb9a1ec7d1a30db79555a944c747017"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/read me.txt",
-                      "size_bytes":  141,
-                      "sha256":  "254db527a1364f9f9d895e807f7735ff3edea55934a0fc5830f836e33700b072"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T1.xls",
-                      "size_bytes":  739840,
-                      "sha256":  "099f07f9b754ca6c51c66a41f3d72ffc798f2662ff4ac75c4f95283186586aa3"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T2.xls",
-                      "size_bytes":  738816,
-                      "sha256":  "4e45c04906fc00c196672361b193a40d654ffbd1d5042bcfed69b3ba0146bc92"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T3.xls",
-                      "size_bytes":  741888,
-                      "sha256":  "b9bd01790447d5af37fc8ed3209b2c58f39469f03a8dc281cccf80433bc618b4"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T4.xls",
-                      "size_bytes":  741376,
-                      "sha256":  "6ddca8fe1ea049b9e36a106e6b587967d2ce760268a032cd115e3fff001cb687"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T5.xls",
-                      "size_bytes":  850432,
-                      "sha256":  "385507eeb36db0d3acd713bc8803251e88f066994551735c13460453f834deca"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T6.xls",
-                      "size_bytes":  750080,
-                      "sha256":  "38e68f3255912add5f1913385aa93df18eaf3f10d551392bf04d0d239b4e23ce"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T7.xls",
-                      "size_bytes":  849920,
-                      "sha256":  "fbdf4f1cf735f76632af5ca76c969427eb6e5b75a08a656f38e061de4463aeee"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T8.xls",
-                      "size_bytes":  736768,
-                      "sha256":  "a828979ffcb65a677f3e0d66cff8c0de6c018bb4263214bc7ced89887a4b3887"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T9.xls",
-                      "size_bytes":  743936,
-                      "sha256":  "dc315907f4a097e21eea11d1fde26a6674b0479ca08dc643efedbc6af66926dc"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/Vent temperature profile.xls",
-                      "size_bytes":  444928,
-                      "sha256":  "0d11db7ed749192c8af2a6bd85b2f7b3aadbdc8eb21f23ebd113af3128b90208"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/read me.txt",
-                      "size_bytes":  112,
-                      "sha256":  "7302b1959a2abae90bf727bf10fc2df13838817a082c70a22db60293eab72f5e"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T1.xls",
-                      "size_bytes":  425472,
-                      "sha256":  "a4c12e1569a1345470a0dd4cc54cbf6d2c79350addf2ee2f35efd2a3fbdf6c1d"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T2.xls",
-                      "size_bytes":  424448,
-                      "sha256":  "0a47f537f99cdf2bcfc4590a281640f91743a57ca3cbfa5660d941571225ef9e"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T3.xls",
-                      "size_bytes":  424960,
-                      "sha256":  "f9a7490f7ef16187f23e55ac3fce314ebbf53954be56379c6986aafbaef148dd"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T4.xls",
-                      "size_bytes":  424960,
-                      "sha256":  "cd56125a27a28ac9f9d16b5c08203453a95851d7ca583cdd8df37db24feca140"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T5.xls",
-                      "size_bytes":  485888,
-                      "sha256":  "3a3faae390d97fdefee2ff1528a3b06fb4792ba3794f4c7e80521b7c6069cd42"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T6.xls",
-                      "size_bytes":  427008,
-                      "sha256":  "6cd5ba2e7e7e28fe0d5dd0fe66dfbde45282144059cc681dda42872b63beda8e"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T7.xls",
-                      "size_bytes":  482304,
-                      "sha256":  "67e3bedb29c95f8e8a5df0950936cbbc6bd7979ff84be1117faa0911746cc363"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T8.xls",
-                      "size_bytes":  419840,
-                      "sha256":  "faf646daf36a569542583f60618864fecb67282a9f0e0ba0a9e6d59985f010c0"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T9.xls",
-                      "size_bytes":  424448,
-                      "sha256":  "e198198ed7adccbe648bb738e3ed5a3fc1a668e030ba6af97777600704f5c9ea"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/Vent temperature profile.xls",
-                      "size_bytes":  258048,
-                      "sha256":  "87cc23b9121b29d6c43835199e0d485e4486f4b8cb63b8034b8033fa130cee1d"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/read me.txt",
-                      "size_bytes":  154,
-                      "sha256":  "6edeb7306752d8e435edbdfec253343d7e2847783cf50f5ba7036943065f4368"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T1.xls",
-                      "size_bytes":  668160,
-                      "sha256":  "1b47f516de8b7e17e3e93191fa7868cd24190258e56e6ee7a3a7f30cf6056ffb"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T2.xls",
-                      "size_bytes":  666624,
-                      "sha256":  "25a9dbca5c8b8d90107a63ed32a2d0ce4dafede2f4a1a588246078c46a27adf7"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T3.xls",
-                      "size_bytes":  669184,
-                      "sha256":  "ff28c6141ea33b5fa2e4480f56b2b1d1741a8947b42b1ff466f7f062af5c3ce5"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T4.xls",
-                      "size_bytes":  668672,
-                      "sha256":  "8cb0f99832c525dcbcf81a7c61f15862614fb11ec410e909fd3fcf5c14705e3f"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T5.xls",
-                      "size_bytes":  765440,
-                      "sha256":  "7b8785949153c8730822430906c6e4fe4768fcf6ba7ff0afc6b436bacf59ffbe"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T6.xls",
-                      "size_bytes":  676864,
-                      "sha256":  "f9f1cf20e2f96e85129951aef7f1e1856ad6b26d2a91b682d5bd8befc80d2e2c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T7.xls",
-                      "size_bytes":  765440,
-                      "sha256":  "196fe570678cec8f4bc8f4a2032e6eba7e2fbbca59dfdde8c7a91975a52fc204"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T8.xls",
-                      "size_bytes":  665088,
-                      "sha256":  "8007f927765911fd41d22b24f841017fe5d7e44816ddcbad5797fd737632be17"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T9.xls",
-                      "size_bytes":  671744,
-                      "sha256":  "881e4896921f230bc0932833aed78f6944f51b59e672b584dffb52d1727f556d"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/Vent temperature profile.xls",
-                      "size_bytes":  403456,
-                      "sha256":  "736f8ccadc97114cd81d6532695a0320c18e7b52f99eae76b842e48500af0a37"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/read me.txt",
-                      "size_bytes":  121,
-                      "sha256":  "9c735093d24ce7e48e6582437f7888d58dfa557203c0856e3dc735da8be7e115"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T1.xls",
-                      "size_bytes":  779776,
-                      "sha256":  "acfeb905f10097c741b7e85462c527f4518bfce59254f5a9a14b4e641598fe7a"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T2.xls",
-                      "size_bytes":  776192,
-                      "sha256":  "75ea256684869388bba57f8b4aeaa3ea58d4978e4e582b97a3d28eb104806e5b"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T3.xls",
-                      "size_bytes":  778752,
-                      "sha256":  "b4043daadb17c810368ae74799a1c69dee5afe985eaf4fd9eb2f4929c0138aed"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T4.xls",
-                      "size_bytes":  778240,
-                      "sha256":  "68417823f0cd5416136c423f5989991cac62ca720ae57b71f6b21135e6a6deb8"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T5.xls",
-                      "size_bytes":  893952,
-                      "sha256":  "c9834fcb134115580beb7c5d316c6104b14e95220a7a6d94cbf6faf5fc30065c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T6.xls",
-                      "size_bytes":  791040,
-                      "sha256":  "431afba4594094ee35f0d057ba56f0f71c79073d27c36836f767ebe304fd1a04"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T7.xls",
-                      "size_bytes":  894464,
-                      "sha256":  "e4e4753d88bea0730a218ddc8698cfa3a02cb564cf2a3bf90adb66eb76bfd98f"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T8.xls",
-                      "size_bytes":  776192,
-                      "sha256":  "3c670f8940305550dcfcbfaa6a8bdf700b2c699de9f2f51317831ce935d824e1"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T9.xls",
-                      "size_bytes":  784384,
-                      "sha256":  "fc7e4a8de565c8a64f2c40f5bc2b08e9b963bb6e913d79dca298702463b56734"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/Vent temperature profile.xls",
-                      "size_bytes":  468992,
-                      "sha256":  "1c55e78496fa34f3a4552c65943f49d89636b247455c59b9cd049e98d7849cca"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/read me.txt",
-                      "size_bytes":  115,
-                      "sha256":  "c08bcce8ee070c63aa31a65e9c78454292d42c4dc12a5643e8b5cb6ca52716e2"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T1.xls",
-                      "size_bytes":  507904,
-                      "sha256":  "ad4333a57742e8bb8a51db6b51c098725db891377d242ccbb0d32841aff6dfb9"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T2.xls",
-                      "size_bytes":  506368,
-                      "sha256":  "55dd9951e6f746030b0271353d1245088d556afa6de12e297c694346ba2f83c7"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T3.xls",
-                      "size_bytes":  508928,
-                      "sha256":  "49d9825f5d5d01a6a88c9dccba7e25df7437bdd7e87759b469b2e206f8869f7d"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T4.xls",
-                      "size_bytes":  508416,
-                      "sha256":  "a3673a3b70c46cb13bea098c8a9d8e7d63b5bcfa1528db3b5835ebb7ce688429"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T5.xls",
-                      "size_bytes":  581632,
-                      "sha256":  "698775a3e38bc5e501bbd98a21ed296614faee3f86f3e409f5555c5b9e4a1a4b"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T6.xls",
-                      "size_bytes":  513024,
-                      "sha256":  "ab4c3c23743ca2669206d9115d0379030bc4e8747986ad6557598c47c04efb83"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T7.xls",
-                      "size_bytes":  581120,
-                      "sha256":  "ab57dcaf1af581c9c66c687fcca590760555df960c463a0d916d07399491579c"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T8.xls",
-                      "size_bytes":  504832,
-                      "sha256":  "1ca41171cc0d2a94a3efcce8908996259cd0abf1a4d2da79706b0d6459e42a6f"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T9.xls",
-                      "size_bytes":  510464,
-                      "sha256":  "078d634887319107364775770718f11aa206c104eb7b592b3939777c4f9ff4bb"
-                  },
-                  {
-                      "relative_path":  "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/Vent temperature profile.xls",
-                      "size_bytes":  308736,
-                      "sha256":  "25df7f9f2e6572811934ec418348f1719a2b5966403941f7255f03fe0e39be1a"
-                  }
-              ],
-    "raw_files_unchanged":  true,
-    "formal_benchmark_eligible":  false,
-    "note":  "planning-stage staging only"
+{
+  "dataset_id": "D02",
+  "dataset_name": "PolyUFire",
+  "target_root": "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D02_PolyUFire",
+  "source_url": "https://github.com/PolyUFire/Tunnel_Fire_Database",
+  "acquisition_date": "2026-07-14",
+  "upstream_version_or_commit": "UNKNOWN_existing_local_staging; upstream commit not verified this round",
+  "download_status": "ALREADY_PRESENT",
+  "license_status": "UNKNOWN",
+  "redistribution_status": "UNKNOWN",
+  "intended_role": "External experimental validation and mechanism-knowledge planning data",
+  "file_count": 110,
+  "total_bytes": 70833300,
+  "files": [
+    {
+      "relative_path": "example_preview.png",
+      "size_bytes": 122440,
+      "sha256": "af0a8be9126e9bedb7fe2c41dc0cb346655e90d53dbcca59d622494c60db2fb4"
+    },
+    {
+      "relative_path": "sample_card.md",
+      "size_bytes": 370,
+      "sha256": "437ac86bbfca278f0940846609f7dcc27d6b287bded4afdbe25f0a734c99ddd3"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.1. Heat release rate.xlsx",
+      "size_bytes": 11850,
+      "sha256": "7625bb4d87da8dfadd0ce7bf94923448d93d5cc3507c0b67bbd63d3270552013"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.2. Flame length.xlsx",
+      "size_bytes": 522858,
+      "sha256": "056d63ced23d8e46449acbc2a589da7cf2e2220f81f02a99cc3f9ba556a2135d"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.3. Maximum ceiling gas temperature.xlsx",
+      "size_bytes": 1835602,
+      "sha256": "d0ddc22112828059390f575fa70b568844ae54eabd3f5f2d00170a385869cbfd"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.4. Critical velocity.xlsx",
+      "size_bytes": 6270747,
+      "sha256": "d125b6eb730995db9a47754a0cfb73e9deb09c56360e9427308929b819fa17b4"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.5. Back-layering length.xlsx",
+      "size_bytes": 3998308,
+      "sha256": "6fd071386a3521cfaa0d7189205abf49b851b5944c25648327137504edc9c676"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.6. Smoke layer thickness.xlsx",
+      "size_bytes": 1046420,
+      "sha256": "db6e9f76f216e80e0e9256a4cd1ab280f244549472d4beffb98b4e5718d32017"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.7. Plug-holing.xlsx",
+      "size_bytes": 1986142,
+      "sha256": "24478fff3c74ed41fed993df6f46c77eea09f203d120c0555464d96e091b51cf"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Accident_list/Tunnel_Fire_Accidents_List.CSV",
+      "size_bytes": 13849,
+      "sha256": "26bbc41c040ef39f828b10449a900f49306b5473ffbac3a6f07815b51c61ea6e"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/ANN.py",
+      "size_bytes": 2820,
+      "sha256": "ced660559c97dccb299f2334860f3b8809c59e327a3d050b9180b4b80e760038"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database.xlsx",
+      "size_bytes": 164915,
+      "sha256": "f173a9159b650a7e3193ea9509d47846e6cf03e3c415e909719d61136c75ffe2"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Li_2010.csv",
+      "size_bytes": 32095,
+      "sha256": "6b803b30adcaf6af9acc14df30526e23ab1d83bfce3bc23fb76e3959f585e06e"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Tang_2018.csv",
+      "size_bytes": 24349,
+      "sha256": "4cbb5c5f30049a3ddfa1766187ef8b0de275b59bac736007eb4dfa9262d704ad"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Weng_2015.csv",
+      "size_bytes": 9992,
+      "sha256": "af209d7556730a51a6effac22a997b181b624fa3b3344978f8f2504d068b81be"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Wu_2000.csv",
+      "size_bytes": 97322,
+      "sha256": "ef7d4344eeac40ba747dfb9209dcd2f9888e9d758bd95b433595a934265ca9bc"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/README.md",
+      "size_bytes": 126,
+      "sha256": "16d75dd3222fc85eafdd5eac3e92eb648d61f2c2e50d512f31b75df8f0f2f1b6"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/new file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/README.md",
+      "size_bytes": 781,
+      "sha256": "27a327c1c7249257bac61e0a6e0950190a2d8534ffaf98c6c071e5a15a70e5a5"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/README.md",
+      "size_bytes": 825,
+      "sha256": "842ef4820119b63287fefdcc2209cde8b626d8b0ce506f4ee96568e49bb195f4"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/New file",
+      "size_bytes": 11,
+      "sha256": "286f93b7f4db9d7e2ef0825d6099f89b5e7f7aa4b6e2fd904855df4ff3761209"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Read me.txt",
+      "size_bytes": 717,
+      "sha256": "543f89357c57985dc59d14d5db5bb6d5c5be4e42eaff28e388659a55ceecc3f7"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/read me.txt",
+      "size_bytes": 104,
+      "sha256": "660c29e7cd432b2751891729ce5dec4597e4de113528c7653d18c5c958fbc304"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T1.xls",
+      "size_bytes": 1081856,
+      "sha256": "903e39555a6a79885fc9c27cb58d7ffcd9f9999cc4e1fc901cdb32f4b7c2d061"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T2.xls",
+      "size_bytes": 1080320,
+      "sha256": "55e6a4eae49fe318af25a144bd3f1de9f28b5777f6d7d1e774b58247b4848998"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T3.xls",
+      "size_bytes": 1080320,
+      "sha256": "748f0e4ef9189d17e11e9332632640973e2fd0a34ba5f3b57cfb99de5a94991e"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T4.xls",
+      "size_bytes": 1078784,
+      "sha256": "e375650e0486c4cedb17118ba4f891d79a3da86a1f609a1db499597b9c6d85cc"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T5.xls",
+      "size_bytes": 1240576,
+      "sha256": "d41c978a3fbc6f8250dbc9d95c15fc8d66cbc29368262167e2320d5860127b52"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T6.xls",
+      "size_bytes": 1094144,
+      "sha256": "3eca0d7abe9670d084f24ecb72126c485ecf0abb5edec2a3fce01eb1f4db7e4a"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T7.xls",
+      "size_bytes": 1238016,
+      "sha256": "ef850fb204588cb47db7f777a1f87a654b2af4fc6fb18d4a68b04397c7619524"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T8.xls",
+      "size_bytes": 1076224,
+      "sha256": "2378049a008c1b7fafc20cc58f84342bda95311db57b0bb16ce2c80a4bd85d70"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T9.xls",
+      "size_bytes": 1083904,
+      "sha256": "ca53c8dd84eb71ee22e06292881516fd01cc94c0c069f086889da97687827f08"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/Vent temperature profile.xls",
+      "size_bytes": 645120,
+      "sha256": "46100ab5e2b1f9f86441c581604ad3fbe2e0814e1327d5408767323a79e1d060"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/read me.txt",
+      "size_bytes": 99,
+      "sha256": "c94fce7200a2a9325d60ce5c35210a08eb9f8748043c41d1c6fff34ab6b45115"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T1.xls",
+      "size_bytes": 809984,
+      "sha256": "9cbf2eb173b36466b3ad8cd56e1ea669de6a42dc45045e7e3e810a0b35350307"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T2.xls",
+      "size_bytes": 812032,
+      "sha256": "4fa83b5d34e4ed3fd0753fe39435fb588f998e41e350411eb0bccd8cb24eb58f"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T3.xls",
+      "size_bytes": 814080,
+      "sha256": "4083fe8c58952b4d36aa7298a4813b89886a956dcade90504d4d07bb169c475c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T4.xls",
+      "size_bytes": 813568,
+      "sha256": "946976bd341b94e39fa247fd782b14cb5dc7240d80618102f8b47e9541dd52c0"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T5.xls",
+      "size_bytes": 934912,
+      "sha256": "4004b7107babcd45639f7bd9dd8adda1735b32a6aa5db93f65aded1c6fd4aa6c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T6.xls",
+      "size_bytes": 825856,
+      "sha256": "07ffa30c7937db4d6206d0f79d863658d5b7011cef0abad009843c76a846a340"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T7.xls",
+      "size_bytes": 934400,
+      "sha256": "62c6fb1fe463aca23f050e2a686e6dd14af8fc59bd84710136511db890e2fa29"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T8.xls",
+      "size_bytes": 811008,
+      "sha256": "b0837fa648ceecd04d33b4b9aec1b2087fabb7858a8d2dc2594e0ede881913f8"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T9.xls",
+      "size_bytes": 815616,
+      "sha256": "c5307ba64119a956bb9617eecb12055059148276d9acad45f4687bb4c483d702"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/Vent temperature profile.xls",
+      "size_bytes": 488960,
+      "sha256": "254fe8c704aec9e61e35f02a31a98aad80647d992de533a573b12ac0451fe218"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/read me.txt",
+      "size_bytes": 122,
+      "sha256": "bc30e3f21b48ba58166575384f0112fc941554fc16439d46cbc63dd572403d71"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T1.xls",
+      "size_bytes": 504832,
+      "sha256": "29e8a2908c14ab1ca4cabb82932564b1f7de1590d2fea0899fc80e81c34cd40c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T2.xls",
+      "size_bytes": 505344,
+      "sha256": "96a11b3fb1c0b8a549466f0ade987717a2742f27c6081242f8ff95f98672cd43"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T3.xls",
+      "size_bytes": 507904,
+      "sha256": "bfb73bb302aa821db148508d225e580774df924ca303b2c049917b6425cc955c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T4.xls",
+      "size_bytes": 506880,
+      "sha256": "b1af39422fb7ecec6b315cb9aa8c0d4c16eaefb2bd1ef433adafd477ee89cf43"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T5.xls",
+      "size_bytes": 580608,
+      "sha256": "f8126c3bdf8a2ea26d246ecab0ce0378872ade90db9d037babeba40cc0fbb83d"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T6.xls",
+      "size_bytes": 513536,
+      "sha256": "d758626ed55a9315a22afb9c8b9860cd923b6f4f2cf75e7050e534dbc03ec043"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T7.xls",
+      "size_bytes": 580096,
+      "sha256": "86d1550bbda8b50b4e70e0ba3f982fdf4a6d869eed018408e3f882bbf80ead75"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T8.xls",
+      "size_bytes": 504832,
+      "sha256": "5de570dbdfd78147862621170aa8c53071ae7722558d001be58b2e66c38c40f8"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T9.xls",
+      "size_bytes": 508928,
+      "sha256": "9d90ce2e5e3ab98fa23741c5e3472f7799d4933d1cf6f39e036d233da67c5c97"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/Vent temperature profile.xls",
+      "size_bytes": 307712,
+      "sha256": "80b93a0ec10ec7a4b3fc692351c691916fb9a1ec7d1a30db79555a944c747017"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/read me.txt",
+      "size_bytes": 141,
+      "sha256": "254db527a1364f9f9d895e807f7735ff3edea55934a0fc5830f836e33700b072"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T1.xls",
+      "size_bytes": 739840,
+      "sha256": "099f07f9b754ca6c51c66a41f3d72ffc798f2662ff4ac75c4f95283186586aa3"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T2.xls",
+      "size_bytes": 738816,
+      "sha256": "4e45c04906fc00c196672361b193a40d654ffbd1d5042bcfed69b3ba0146bc92"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T3.xls",
+      "size_bytes": 741888,
+      "sha256": "b9bd01790447d5af37fc8ed3209b2c58f39469f03a8dc281cccf80433bc618b4"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T4.xls",
+      "size_bytes": 741376,
+      "sha256": "6ddca8fe1ea049b9e36a106e6b587967d2ce760268a032cd115e3fff001cb687"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T5.xls",
+      "size_bytes": 850432,
+      "sha256": "385507eeb36db0d3acd713bc8803251e88f066994551735c13460453f834deca"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T6.xls",
+      "size_bytes": 750080,
+      "sha256": "38e68f3255912add5f1913385aa93df18eaf3f10d551392bf04d0d239b4e23ce"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T7.xls",
+      "size_bytes": 849920,
+      "sha256": "fbdf4f1cf735f76632af5ca76c969427eb6e5b75a08a656f38e061de4463aeee"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T8.xls",
+      "size_bytes": 736768,
+      "sha256": "a828979ffcb65a677f3e0d66cff8c0de6c018bb4263214bc7ced89887a4b3887"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T9.xls",
+      "size_bytes": 743936,
+      "sha256": "dc315907f4a097e21eea11d1fde26a6674b0479ca08dc643efedbc6af66926dc"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/Vent temperature profile.xls",
+      "size_bytes": 444928,
+      "sha256": "0d11db7ed749192c8af2a6bd85b2f7b3aadbdc8eb21f23ebd113af3128b90208"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/read me.txt",
+      "size_bytes": 112,
+      "sha256": "7302b1959a2abae90bf727bf10fc2df13838817a082c70a22db60293eab72f5e"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T1.xls",
+      "size_bytes": 425472,
+      "sha256": "a4c12e1569a1345470a0dd4cc54cbf6d2c79350addf2ee2f35efd2a3fbdf6c1d"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T2.xls",
+      "size_bytes": 424448,
+      "sha256": "0a47f537f99cdf2bcfc4590a281640f91743a57ca3cbfa5660d941571225ef9e"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T3.xls",
+      "size_bytes": 424960,
+      "sha256": "f9a7490f7ef16187f23e55ac3fce314ebbf53954be56379c6986aafbaef148dd"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T4.xls",
+      "size_bytes": 424960,
+      "sha256": "cd56125a27a28ac9f9d16b5c08203453a95851d7ca583cdd8df37db24feca140"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T5.xls",
+      "size_bytes": 485888,
+      "sha256": "3a3faae390d97fdefee2ff1528a3b06fb4792ba3794f4c7e80521b7c6069cd42"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T6.xls",
+      "size_bytes": 427008,
+      "sha256": "6cd5ba2e7e7e28fe0d5dd0fe66dfbde45282144059cc681dda42872b63beda8e"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T7.xls",
+      "size_bytes": 482304,
+      "sha256": "67e3bedb29c95f8e8a5df0950936cbbc6bd7979ff84be1117faa0911746cc363"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T8.xls",
+      "size_bytes": 419840,
+      "sha256": "faf646daf36a569542583f60618864fecb67282a9f0e0ba0a9e6d59985f010c0"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T9.xls",
+      "size_bytes": 424448,
+      "sha256": "e198198ed7adccbe648bb738e3ed5a3fc1a668e030ba6af97777600704f5c9ea"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/Vent temperature profile.xls",
+      "size_bytes": 258048,
+      "sha256": "87cc23b9121b29d6c43835199e0d485e4486f4b8cb63b8034b8033fa130cee1d"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/read me.txt",
+      "size_bytes": 154,
+      "sha256": "6edeb7306752d8e435edbdfec253343d7e2847783cf50f5ba7036943065f4368"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T1.xls",
+      "size_bytes": 668160,
+      "sha256": "1b47f516de8b7e17e3e93191fa7868cd24190258e56e6ee7a3a7f30cf6056ffb"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T2.xls",
+      "size_bytes": 666624,
+      "sha256": "25a9dbca5c8b8d90107a63ed32a2d0ce4dafede2f4a1a588246078c46a27adf7"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T3.xls",
+      "size_bytes": 669184,
+      "sha256": "ff28c6141ea33b5fa2e4480f56b2b1d1741a8947b42b1ff466f7f062af5c3ce5"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T4.xls",
+      "size_bytes": 668672,
+      "sha256": "8cb0f99832c525dcbcf81a7c61f15862614fb11ec410e909fd3fcf5c14705e3f"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T5.xls",
+      "size_bytes": 765440,
+      "sha256": "7b8785949153c8730822430906c6e4fe4768fcf6ba7ff0afc6b436bacf59ffbe"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T6.xls",
+      "size_bytes": 676864,
+      "sha256": "f9f1cf20e2f96e85129951aef7f1e1856ad6b26d2a91b682d5bd8befc80d2e2c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T7.xls",
+      "size_bytes": 765440,
+      "sha256": "196fe570678cec8f4bc8f4a2032e6eba7e2fbbca59dfdde8c7a91975a52fc204"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T8.xls",
+      "size_bytes": 665088,
+      "sha256": "8007f927765911fd41d22b24f841017fe5d7e44816ddcbad5797fd737632be17"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T9.xls",
+      "size_bytes": 671744,
+      "sha256": "881e4896921f230bc0932833aed78f6944f51b59e672b584dffb52d1727f556d"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/Vent temperature profile.xls",
+      "size_bytes": 403456,
+      "sha256": "736f8ccadc97114cd81d6532695a0320c18e7b52f99eae76b842e48500af0a37"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/read me.txt",
+      "size_bytes": 121,
+      "sha256": "9c735093d24ce7e48e6582437f7888d58dfa557203c0856e3dc735da8be7e115"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T1.xls",
+      "size_bytes": 779776,
+      "sha256": "acfeb905f10097c741b7e85462c527f4518bfce59254f5a9a14b4e641598fe7a"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T2.xls",
+      "size_bytes": 776192,
+      "sha256": "75ea256684869388bba57f8b4aeaa3ea58d4978e4e582b97a3d28eb104806e5b"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T3.xls",
+      "size_bytes": 778752,
+      "sha256": "b4043daadb17c810368ae74799a1c69dee5afe985eaf4fd9eb2f4929c0138aed"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T4.xls",
+      "size_bytes": 778240,
+      "sha256": "68417823f0cd5416136c423f5989991cac62ca720ae57b71f6b21135e6a6deb8"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T5.xls",
+      "size_bytes": 893952,
+      "sha256": "c9834fcb134115580beb7c5d316c6104b14e95220a7a6d94cbf6faf5fc30065c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T6.xls",
+      "size_bytes": 791040,
+      "sha256": "431afba4594094ee35f0d057ba56f0f71c79073d27c36836f767ebe304fd1a04"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T7.xls",
+      "size_bytes": 894464,
+      "sha256": "e4e4753d88bea0730a218ddc8698cfa3a02cb564cf2a3bf90adb66eb76bfd98f"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T8.xls",
+      "size_bytes": 776192,
+      "sha256": "3c670f8940305550dcfcbfaa6a8bdf700b2c699de9f2f51317831ce935d824e1"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T9.xls",
+      "size_bytes": 784384,
+      "sha256": "fc7e4a8de565c8a64f2c40f5bc2b08e9b963bb6e913d79dca298702463b56734"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/Vent temperature profile.xls",
+      "size_bytes": 468992,
+      "sha256": "1c55e78496fa34f3a4552c65943f49d89636b247455c59b9cd049e98d7849cca"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/read me.txt",
+      "size_bytes": 115,
+      "sha256": "c08bcce8ee070c63aa31a65e9c78454292d42c4dc12a5643e8b5cb6ca52716e2"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T1.xls",
+      "size_bytes": 507904,
+      "sha256": "ad4333a57742e8bb8a51db6b51c098725db891377d242ccbb0d32841aff6dfb9"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T2.xls",
+      "size_bytes": 506368,
+      "sha256": "55dd9951e6f746030b0271353d1245088d556afa6de12e297c694346ba2f83c7"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T3.xls",
+      "size_bytes": 508928,
+      "sha256": "49d9825f5d5d01a6a88c9dccba7e25df7437bdd7e87759b469b2e206f8869f7d"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T4.xls",
+      "size_bytes": 508416,
+      "sha256": "a3673a3b70c46cb13bea098c8a9d8e7d63b5bcfa1528db3b5835ebb7ce688429"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T5.xls",
+      "size_bytes": 581632,
+      "sha256": "698775a3e38bc5e501bbd98a21ed296614faee3f86f3e409f5555c5b9e4a1a4b"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T6.xls",
+      "size_bytes": 513024,
+      "sha256": "ab4c3c23743ca2669206d9115d0379030bc4e8747986ad6557598c47c04efb83"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T7.xls",
+      "size_bytes": 581120,
+      "sha256": "ab57dcaf1af581c9c66c687fcca590760555df960c463a0d916d07399491579c"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T8.xls",
+      "size_bytes": 504832,
+      "sha256": "1ca41171cc0d2a94a3efcce8908996259cd0abf1a4d2da79706b0d6459e42a6f"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T9.xls",
+      "size_bytes": 510464,
+      "sha256": "078d634887319107364775770718f11aa206c104eb7b592b3939777c4f9ff4bb"
+    },
+    {
+      "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/Vent temperature profile.xls",
+      "size_bytes": 308736,
+      "sha256": "25df7f9f2e6572811934ec418348f1719a2b5966403941f7255f03fe0e39be1a"
+    }
+  ],
+  "raw_files_unchanged": true,
+  "formal_benchmark_eligible": false,
+  "note": "planning-stage staging only",
+  "comparison_to_existing_manifest": {
+    "reference_manifest": "????/data_manifest_P1-DATA-001.json",
+    "status": "MATCHED_BY_FILENAME_SIZE_SHA256",
+    "mismatch_count": 0,
+    "mismatched_relative_paths": []
+  }
 }

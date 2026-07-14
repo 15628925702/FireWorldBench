@@ -1,12 +1,23 @@
 ---
-handoff_id: H-20260714-S047-001
+handoff_id: H-20260714-S047-STAGING-001
 handoff_state: READY
-task_status: BLOCKED_PUSH
-source_session: 2026-07-14_S047_GOV能力数据源任务矩阵变更.md
-current_task: P1-DATA-001
+task_status: READY_LOCAL_PENDING_PUSH
+source_session: 2026-07-14_S047_P1-PLANNING数据下载staging.md
+current_task: P3-PIPELINE-STAGING-INTEGRATION
 ---
 
 # Current Status
+
+## P1-PLANNING-STAGING completion
+
+- 已完成 planning-stage 本地 staging 登记：D01/D02/D03/D04/D05/D10 均为 `ALREADY_PRESENT`，逐文件 SHA-256 manifest 已写入 `项目治理/download_manifest_<DATASET_ID>_planning.json`。
+- 总登记为 `项目治理/download_staging_registry_P1-PLANNING.json`；审计记录为 `项目治理/download_staging_audit_P1-PLANNING.md`。
+- D01/D02/D03/D04/D05/D10 与既有 `项目治理/data_manifest_P1-DATA-001.json` 按 filename/size/SHA-256 比对均为 `MATCHED_BY_FILENAME_SIZE_SHA256`，未发现 staging 文件不一致。
+- D06/D07/D08/D09/D11 按本轮指令未下载；D06 因全量约 95GB 以上且许可/再分发不清楚未请求继续。
+- 所有 staged 数据仍为 `license_status = UNKNOWN`、`redistribution_status = UNKNOWN`、`formal_benchmark_eligible = false`；`configs/data_sources.toml` 中 `eligible = false` 保持不变。
+- 未修改仓库外 `../../3.数据集`，未读取 `../../4.升级拓展`，未安装依赖，未读取 test gold/private mapping，未产生模型实验结果。
+- 验证：`probe_data_contract_p1_data_002.py` 通过；`audit_data_quality_p1_data_003.py` 通过；`check_project.py` 通过；`pipeline-inventory --root data/raw` 统计 196 文件；`doctor` 通过；`pytest` 120 passed；`mypy src` 通过。
+- 本轮提交与 push 状态待任务级 Git 交付后回填；下一唯一任务：`P3-PIPELINE-STAGING-INTEGRATION`。
 
 ## 2026-07-14 accepted design change
 
