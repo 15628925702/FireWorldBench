@@ -1,8 +1,8 @@
 schema_version = 1
-# P1-DATA-001 audit: all source eligibility remains fail-closed until version,
-# acquisition date, and authoritative license evidence are independently verified.
+# Planning-mode override: local research may use already downloaded staging files;
+# this does not grant public release, redistribution, or hidden-test access.
 # P1-PLANNING staging: raw files may exist under data/raw for pipeline pre-research
-# only. Staging does not grant training/dev/test/redistribution eligibility.
+# only. Planning mode permits local train/dev prototyping without license gating.
 
 [[sources]]
 id = "D01"
@@ -14,6 +14,8 @@ planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D01_planning.json"
 state = "candidate"
 eligible = false
+planning_eligible = true
+planning_use = "local_research_only"
 roles = ["t1_primary", "t2_primary", "t3_pair_prototype"]
 license_status = "blocked_missing_authoritative_evidence"
 version_status = "blocked_missing_version_and_acquisition_date"
@@ -28,6 +30,8 @@ planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D02_planning.json"
 state = "candidate"
 eligible = false
+planning_eligible = true
+planning_use = "local_research_only"
 roles = ["external_experiment", "mechanism_knowledge"]
 license_status = "blocked_missing_authoritative_evidence"
 version_status = "blocked_missing_version_and_acquisition_date"
@@ -42,6 +46,8 @@ planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D03_planning.json"
 state = "candidate"
 eligible = false
+planning_eligible = true
+planning_use = "local_research_only"
 roles = ["external_experiment", "physics_sanity"]
 license_status = "blocked_missing_authoritative_evidence"
 version_status = "blocked_missing_version_and_acquisition_date"
@@ -56,6 +62,8 @@ planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D04_planning.json"
 state = "generator_candidate"
 eligible = false
+planning_eligible = true
+planning_use = "local_research_only"
 roles = ["t3_generator", "ood_generator"]
 license_status = "blocked_license_scope_incomplete"
 version_status = "blocked_missing_version_and_acquisition_date"
@@ -70,6 +78,8 @@ planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D05_planning.json"
 state = "candidate_aux_only"
 eligible = false
+planning_eligible = true
+planning_use = "local_research_only"
 roles = ["t1_visual_aux", "t2_visual_aux"]
 license_status = "blocked_provenance_chain_incomplete"
 version_status = "blocked_missing_local_acquisition_date"
@@ -128,6 +138,8 @@ planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D10_planning.json"
 state = "candidate_aux_only"
 eligible = false
+planning_eligible = true
+planning_use = "local_research_only"
 roles = ["t1_visual_aux", "wildfire_ood_aux"]
 license_status = "blocked_missing_authoritative_evidence"
 version_status = "blocked_missing_version_and_acquisition_date"

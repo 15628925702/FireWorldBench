@@ -1,14 +1,14 @@
 ---
-handoff_id: H-20260714-S053-001
+handoff_id: H-20260714-S054-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S053_P5-MAIN-RUN主实验门禁审计.md
-current_task: P5-STATISTICS
+source_session: 2026-07-14_S054_P3-PLANNING-MODE-ENABLEMENT方案阶段解除许可证门禁.md
+current_task: P4-PILOT-RUN
 ---
 
-## Next window: P5-STATISTICS
+## Next window: P4-PILOT-RUN
 
-上一任务已完成主实验门禁审计，正式状态为 `BLOCKED_NO_APPROVED_MAIN_INPUTS`。下一窗口只评估统计重算门禁；没有 immutable raw predictions 时记录 no-input，不读取 test/private，不手工填写指标，不生成论文数字。
+上一任务已完成 planning-mode 配置、报告重建和回归。现在允许用已下载 D01/D02/D03/D04/D05/D10 做本地 train/dev 原型；不要开放正式 benchmark/test/release/redistribution，不读取 test/private，不修改 raw。
 
 交付提示：P5-MAIN-RUN 本地提交为 `db5480f`，GitHub push 因 443 连接失败，先重试 `git push origin main`；失败则继续本地推进并保留 `BLOCKED_PUSH`。
 

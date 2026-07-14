@@ -91,12 +91,13 @@ def _dataset(root: Path, dataset_id: str) -> dict[str, Any]:
         "candidate_cases": candidates,
         "blockers": blockers,
         "formal_benchmark_eligible": False,
-        "training_eligible": "BLOCKED",
-        "development_eligible": "BLOCKED",
+        "local_planning_eligible": True,
+        "training_eligible": "LOCAL_PLANNING_ALLOWED",
+        "development_eligible": "LOCAL_PLANNING_ALLOWED",
         "testing_eligible": "BLOCKED",
         "derived_release_eligible": "BLOCKED",
         "redistribution_eligible": "BLOCKED",
-        "license_status": "UNKNOWN",
+        "license_status": "NOT_CHECKED_PLANNING_MODE",
         "version_status": "UNKNOWN",
     }
 
@@ -114,7 +115,8 @@ def build_candidate_manifest(root: Path) -> dict[str, Any]:
         "raw_files_modified": False,
         "test_private_assets_accessed": False,
         "formal_benchmark_eligible": False,
-        "next_gate": "source/version/license approval, schema mapping, group split and gold provenance",
+        "local_planning_mode": True,
+        "next_gate": "schema mapping, group split, leakage audit and gold provenance for formal results",
     }
     result["manifest_sha256"] = sha256_bytes(json.dumps(result, sort_keys=True, separators=(",", ":")).encode())
     return result

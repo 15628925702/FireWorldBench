@@ -930,12 +930,13 @@
       "status": "SEMANTIC_SCHEMA_BLOCKED",
       "blocker": "canonical probe produced 0 records and 4820 failures; case/time semantics require an explicit adapter",
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "raw_files_modified": false
     },
     {
@@ -1059,12 +1060,13 @@
       "status": "SEMANTIC_SCHEMA_BLOCKED",
       "blocker": "canonical probe produced 0 records and 3664 failures; case/time semantics require an explicit adapter",
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "raw_files_modified": false
     },
     {
@@ -1365,12 +1367,13 @@
       "status": "SEMANTIC_SCHEMA_BLOCKED",
       "blocker": "canonical probe produced 0 records and 937 failures; case/time semantics require an explicit adapter",
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "raw_files_modified": false
     },
     {
@@ -1412,12 +1415,13 @@
       "status": "GENERATOR_RUNTIME_BLOCKED",
       "blocker": "generator assets are not executable during staging integration",
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "raw_files_modified": false
     },
     {
@@ -1455,12 +1459,13 @@
       "status": "AUX_ONLY_BLOCKED",
       "blocker": "visual auxiliary labels do not expose canonical case/time records",
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "raw_files_modified": false
     },
     {
@@ -1513,17 +1518,19 @@
       "status": "AUX_ONLY_BLOCKED",
       "blocker": "visual auxiliary labels do not expose canonical case/time records",
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "raw_files_modified": false
     }
   ],
   "raw_files_modified": false,
   "test_private_assets_accessed": false,
   "formal_benchmark_eligible": false,
-  "assessment_sha256": "eaeb73cfee3e743c54d964318dac01eaca0204fdd1fb64a60cff76704b9385dc"
+  "local_planning_mode": true,
+  "assessment_sha256": "399f75936e32399e56a8a8638791def0db9710d4117bd913c24e111dc11309bd"
 }

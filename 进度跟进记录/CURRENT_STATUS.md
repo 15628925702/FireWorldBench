@@ -1,12 +1,19 @@
 ---
-handoff_id: H-20260714-S053-001
+handoff_id: H-20260714-S054-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S053_P5-MAIN-RUN主实验门禁审计.md
-current_task: P5-STATISTICS
+source_session: 2026-07-14_S054_P3-PLANNING-MODE-ENABLEMENT方案阶段解除许可证门禁.md
+current_task: P4-PILOT-RUN
 ---
 
 # Current Status
+
+## P3-PLANNING-MODE-ENABLEMENT completion
+
+- 用户已明确要求方案阶段直接使用已下载 staging，不再以许可证核验阻断本地研究流程。
+- D01/D02/D03/D04/D05/D10 已标为 `planning_eligible=true`；本地 train/dev 使用为 `LOCAL_PLANNING_ALLOWED`，正式 benchmark、公开发布、再分发和 test/private 仍关闭。
+- 机器报告已按 planning mode 重建，审计记录为 `项目治理/p3_planning_mode_audit_P3-PLANNING-MODE-ENABLEMENT.md`。
+- 下一任务：`P4-PILOT-RUN` 本地 train/dev 原型。
 
 ## P5-MAIN-RUN completion
 

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "task_id": "P3-PLANNING-MODE-ENABLEMENT",
+  "mode": "LOCAL_RESEARCH_ONLY",
+  "license_gate": "DISABLED_FOR_LOCAL_PLANNING",
+  "sources": ["D01", "D02", "D03", "D04", "D05", "D10"],
+  "local_train_dev_prototyping": true,
+  "formal_benchmark_eligible": false,
+  "public_release_eligible": false,
+  "redistribution_eligible": false,
+  "test_private_access": false,
+  "raw_data_mutation": false
+}

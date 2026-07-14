@@ -29780,12 +29780,13 @@
       ],
       "blockers": [],
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "version_status": "UNKNOWN"
     },
     {
@@ -29826,12 +29827,13 @@
         }
       ],
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "version_status": "UNKNOWN"
     },
     {
@@ -29988,12 +29990,13 @@
         }
       ],
       "formal_benchmark_eligible": false,
-      "training_eligible": "BLOCKED",
-      "development_eligible": "BLOCKED",
+      "local_planning_eligible": true,
+      "training_eligible": "LOCAL_PLANNING_ALLOWED",
+      "development_eligible": "LOCAL_PLANNING_ALLOWED",
       "testing_eligible": "BLOCKED",
       "derived_release_eligible": "BLOCKED",
       "redistribution_eligible": "BLOCKED",
-      "license_status": "UNKNOWN",
+      "license_status": "NOT_CHECKED_PLANNING_MODE",
       "version_status": "UNKNOWN"
     }
   ],
@@ -30001,6 +30004,7 @@
   "raw_files_modified": false,
   "test_private_assets_accessed": false,
   "formal_benchmark_eligible": false,
-  "next_gate": "source/version/license approval, schema mapping, group split and gold provenance",
-  "manifest_sha256": "fc49d38a24007747ff1343f1b2b2e2e5ada7687fbc24e7c3c64626dc9b9e5d4c"
+  "local_planning_mode": true,
+  "next_gate": "schema mapping, group split, leakage audit and gold provenance for formal results",
+  "manifest_sha256": "d3c314dfc524abe93e8ecf48dfd8d2d6a2e9f6564469aa3c1775d94a9db63d50"
 }

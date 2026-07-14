@@ -134,12 +134,13 @@ def assess_staging(root: Path) -> dict[str, Any]:
             "status": reason_code,
             "blocker": reason,
             "formal_benchmark_eligible": False,
-            "training_eligible": "BLOCKED",
-            "development_eligible": "BLOCKED",
+            "local_planning_eligible": True,
+            "training_eligible": "LOCAL_PLANNING_ALLOWED",
+            "development_eligible": "LOCAL_PLANNING_ALLOWED",
             "testing_eligible": "BLOCKED",
             "derived_release_eligible": "BLOCKED",
             "redistribution_eligible": "BLOCKED",
-            "license_status": "UNKNOWN",
+            "license_status": "NOT_CHECKED_PLANNING_MODE",
             "raw_files_modified": False,
         })
     result = {
@@ -151,6 +152,7 @@ def assess_staging(root: Path) -> dict[str, Any]:
         "raw_files_modified": False,
         "test_private_assets_accessed": False,
         "formal_benchmark_eligible": False,
+        "local_planning_mode": True,
     }
     result["assessment_sha256"] = sha256_bytes(json.dumps(result, sort_keys=True, separators=(",", ":")).encode())
     return result
