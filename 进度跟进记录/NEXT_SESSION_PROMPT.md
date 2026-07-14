@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S047-STAGING-001
+handoff_id: H-20260714-S048-001
 handoff_state: READY
-task_status: READY_LOCAL_PENDING_PUSH
-source_session: 2026-07-14_S047_P1-PLANNING数据下载staging.md
+task_status: READY
+source_session: 2026-07-14_S048_增量接入路线修正.md
 current_task: P3-PIPELINE-STAGING-INTEGRATION
 ---
 
@@ -17,16 +17,6 @@ current_task: P3-PIPELINE-STAGING-INTEGRATION
 禁止把 staged 数据标记为正式 train/dev/test/redistribution；禁止提交 `data/raw/**`；禁止读取 test gold/private mapping；禁止读取或使用 `../../4.升级拓展`；禁止下载 D06/D07/D08/D09/D11，除非用户另行批准 D06 的存储和许可证预案。
 
 完成标准：pipeline 预研入口可读取 staging manifest 并生成只读 inventory/probe 结果；不产生模型实验结果；运行现有检查、commit，并尝试 `git push origin main`。若 push 失败，记录 `BLOCKED_PUSH` 并保留本地 commit。
-
-## Previous window: P1-DATA-001 second pass
-
-第一动作：执行 `git push origin main` 并核验 `origin/main` 包含本次能力—数据源矩阵变更。实现提交 `67db92a` 连续三次因 GitHub 连接重置/443 不可达而未推送；成功前保持 `BLOCKED_PUSH`。
-
-先读 `AGENTS.md`、`CURRENT_STATUS.md`、本文件、source session、任务库中 `P1-DATA-001`，再读 `详细设计规划/06_能力-数据源-任务矩阵.md` 和 `项目治理/P1_P2_能力数据源任务矩阵变更附录.md`。
-
-只执行 `P1-DATA-001` 第二轮：在不修改 `../../3.数据集`、不读取 `../../4.升级拓展`、不安装/下载的前提下，按仿真、受控实验、传感器、视觉、多模态重新登记 D01-D11 的证据角色，并复核许可、版本、用途资格与 source-task 候选映射。数据集身份不得直接定义任务；未知许可或语义继续 `BLOCKED`。
-
-交付新的版本化数据资格/角色审计和 freeze 输入，不覆盖旧 manifest/hash。下一任务只能在 P1-DATA-001 第二轮验收、commit 和 push 后确定。
 
 ## P7-RELEASE-001 completed
 

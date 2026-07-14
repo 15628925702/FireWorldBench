@@ -1,8 +1,8 @@
 ---
-handoff_id: H-20260714-S047-STAGING-001
+handoff_id: H-20260714-S048-001
 handoff_state: READY
-task_status: READY_LOCAL_PENDING_PUSH
-source_session: 2026-07-14_S047_P1-PLANNING数据下载staging.md
+task_status: READY
+source_session: 2026-07-14_S048_增量接入路线修正.md
 current_task: P3-PIPELINE-STAGING-INTEGRATION
 ---
 
@@ -17,17 +17,16 @@ current_task: P3-PIPELINE-STAGING-INTEGRATION
 - 所有 staged 数据仍为 `license_status = UNKNOWN`、`redistribution_status = UNKNOWN`、`formal_benchmark_eligible = false`；`configs/data_sources.toml` 中 `eligible = false` 保持不变。
 - 未修改仓库外 `../../3.数据集`，未读取 `../../4.升级拓展`，未安装依赖，未读取 test gold/private mapping，未产生模型实验结果。
 - 验证：`probe_data_contract_p1_data_002.py` 通过；`audit_data_quality_p1_data_003.py` 通过；`check_project.py` 通过；`pipeline-inventory --root data/raw` 统计 196 文件；`doctor` 通过；`pytest` 120 passed；`mypy src` 通过。
-- 本轮提交与 push 状态待任务级 Git 交付后回填；下一唯一任务：`P3-PIPELINE-STAGING-INTEGRATION`。
+- staging 规划提交 `8d91f6e` 已进入 `origin/main`；下一唯一任务：`P3-PIPELINE-STAGING-INTEGRATION`。
 
 ## 2026-07-14 accepted design change
 
 - 用户已批准 `CR-20260714-CAPABILITY-SOURCE-MATRIX-001`：T1/T2/T3 是统一能力轴，仿真、实验、传感器、视觉和多模态是异构证据来源；数据集不得直接定义任务。
 - v1 仍只覆盖火灾领域；跨领域扩展不进入当前范围。
 - benchmark 与 baseline 必须先完成，方法方向只可依据冻结 train/dev 失败分析决定，不得使用 test 结果选择方法。
-- 已新增 `详细设计规划/06_能力-数据源-任务矩阵.md` 和 P1/P2 变更附录；旧 freeze manifest/hash 保持不变，但 paper-ready 执行前必须重新冻结受影响内容。
+- 已新增 `详细设计规划/06_能力-数据源-任务矩阵.md` 和治理附录；现有框架继续复用，新增数据只执行逐来源增量 onboarding，不回退重做完整 P1/P2。
 - 之前 P3-P7 的 fixture、门禁和 no-input 决策只证明工程框架，不代表真实 benchmark、正式实验或论文数据完成。
-- 当前恢复点为 `P1-DATA-001` 第二轮：按新矩阵重新核验真实数据准入、来源角色和许可；未闭合前不得跳回 P5-P7 或发布。
-- 本次设计变更实现提交为 `67db92a`；连续三次 `git push origin main` 因连接重置或 `github.com:443` 不可达失败。推送成功前保持 `BLOCKED_PUSH`，下一窗口先重试推送再执行 P1-DATA-001 第二轮。
+- 能力矩阵与 staging 规划均已进入 `origin/main`；当前直接执行 `P3-PIPELINE-STAGING-INTEGRATION`，然后沿既有 builder/scorer/harness 接入模型、运行 pilot 和正式实验。
 
 ## P7-RELEASE-001 completion
 
