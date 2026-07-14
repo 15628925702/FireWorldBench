@@ -12,6 +12,8 @@ from fireworldbench.project_checks import discover_project_root, validate_projec
 from fireworldbench.pipeline import build_canonical, inventory, write_json
 from fireworldbench.staging_integration import write_staging_assessment
 from fireworldbench.real_benchmark import write_candidate_manifest
+from fireworldbench.deepseek import run_deepseek_pilot_file
+from fireworldbench.planning_pilot import write_planning_t1_pilot
 from fireworldbench.t1_builder import build_t1
 from fireworldbench.t2_builder import build_t2
 from fireworldbench.t3_builder import build_t3
@@ -77,6 +79,15 @@ def build_parser() -> argparse.ArgumentParser:
     real_parser = subparsers.add_parser("real-benchmark-build", help="build non-formal candidate cases from observed staging formats")
     real_parser.add_argument("--root", type=Path, required=True, help="project root containing data/raw")
     real_parser.add_argument("--output", type=Path, required=True)
+    planning_pilot_parser = subparsers.add_parser("planning-pilot-build", help="build a small D01 local train/dev pilot")
+    planning_pilot_parser.add_argument("--root", type=Path, required=True)
+    planning_pilot_parser.add_argument("--output", type=Path, required=True)
+    planning_pilot_parser.add_argument("--max-cases", type=int, default=2)
+    planning_pilot_parser.add_argument("--rows-per-case", type=int, default=6)
+    deepseek_parser = subparsers.add_parser("deepseek-pilot", help="run a capped DeepSeek local planning pilot")
+    deepseek_parser.add_argument("--samples", type=Path, required=True)
+    deepseek_parser.add_argument("--config", type=Path, required=True)
+    deepseek_parser.add_argument("--output", type=Path, required=True)
     t1_parser = subparsers.add_parser("build-t1", help="build T1-A/B/C train or dev samples")
     t1_parser.add_argument("--input", type=Path, required=True, help="canonical pipeline JSON")
     t1_parser.add_argument("--split", choices=("train_id", "dev_id"), default="dev_id")
@@ -226,6 +237,22 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "candidate_case_count": result["candidate_case_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "planning-pilot-build":
+        try:
+            result = write_planning_t1_pilot(args.root, args.output, args.max_cases, args.rows_per_case)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"sample_count": result["sample_count"], "record_count": result["record_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "deepseek-pilot":
+        try:
+            result = run_deepseek_pilot_file(args.samples, args.config, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, RuntimeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "sample_count": result["sample_count"], "executed_count": result["executed_count"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     if args.command == "build-t1":
         try:

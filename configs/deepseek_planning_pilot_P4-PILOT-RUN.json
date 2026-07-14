@@ -1,0 +1,22 @@
+{
+  "pilot_version": "P4-PLANNING-PILOT-001",
+  "provider": "DeepSeek OpenAI-compatible chat completions",
+  "max_samples": 4,
+  "default_config": {
+    "track": "text_only_table",
+    "prompt_id": "text_table_v1",
+    "model_id": "deepseek-chat",
+    "approved": true,
+    "repeats": 1,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_input_tokens": 2048,
+    "max_output_tokens": 180,
+    "max_retries": 0,
+    "timeout_s": 30.0,
+    "max_cost_usd": 0.10,
+    "input_usd_per_1k_tokens": 0.0,
+    "output_usd_per_1k_tokens": 0.0
+  },
+  "scope": "local planning D01 dev_id only; six calls maximum; no test access"
+}

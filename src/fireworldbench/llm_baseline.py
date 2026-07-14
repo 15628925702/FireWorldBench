@@ -10,6 +10,8 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 
+from fireworldbench.schema_validation import TASK_LABELS
+
 LLM_VERSION = "P4-BASELINE-LLM"
 ALLOWED_SPLITS = {"train_id", "dev_id"}
 TRACKS = {"text_only_table", "multimodal"}
@@ -120,6 +122,56 @@ def _parse_response(raw: Any) -> dict[str, Any] | None:
     return None
 
 
+def _render_prompt(sample: Mapping[str, Any], template: str) -> str:
+    """Expose only the model-visible task content, never gold or scoring metadata."""
+    task = str(sample.get("task", ""))
+    observations = sample.get("observations", [])
+    visible_observations = [
+        {
+            "observation_id": item.get("observation_id"),
+            "modality": item.get("modality"),
+            "time_range_s": item.get("time_range_s"),
+            "quality": item.get("quality"),
+            "units": dict(list(dict(item.get("units", {})).items())[:12]),
+            "visible_fields": list(item.get("visible_fields", []))[:12],
+        }
+        for item in observations if isinstance(item, Mapping)
+    ]
+    labels = sorted(TASK_LABELS.get(task, set()))
+    prefix = template.format(task=task, sample_id=sample.get("sample_id", ""))
+    return (
+        f"{prefix}\nQuestion: {sample.get('question', {}).get('prompt', '')}\n"
+        f"Visible observations: {json.dumps(visible_observations, ensure_ascii=False)}\n"
+        f"Allowed label values: {labels}\n"
+        "Return exactly this compact JSON shape: {\"answer\":{\"label\":\"one allowed label\"},"
+        "\"evidence\":[\"obs_id\"],\"uncertainty\":{\"level\":\"low|medium|high|unknown\","
+        "\"reason\":\"20 words maximum\"},\"missing_information\":[]}. Do not put evidence or uncertainty inside answer."
+    )
+
+
+def _normalise_prediction(sample: Mapping[str, Any], parsed: Mapping[str, Any]) -> dict[str, Any]:
+    answer = parsed.get("answer", parsed)
+    if not isinstance(answer, Mapping):
+        answer = {}
+    evidence = parsed.get("evidence", answer.get("evidence", []))
+    missing = parsed.get("missing_information", answer.get("missing_information", []))
+    uncertainty = parsed.get("uncertainty", answer.get("uncertainty", {}))
+    if not isinstance(uncertainty, Mapping):
+        uncertainty = {}
+    return {
+        "schema_version": "2.0",
+        "sample_id": sample.get("sample_id"),
+        "task": sample.get("task"),
+        "answer": {key: value for key, value in answer.items() if key not in {"evidence", "uncertainty", "missing_information"}},
+        "evidence": list(evidence) if isinstance(evidence, list) else [],
+        "uncertainty": {
+            "level": str(uncertainty.get("level", "unknown")),
+            "reason": str(uncertainty.get("reason", "model response")),
+        },
+        "missing_information": list(missing) if isinstance(missing, list) else [],
+    }
+
+
 def run_llm_pilot(
     samples: Sequence[Mapping[str, Any]],
     config: LLMConfig,
@@ -137,10 +189,12 @@ def run_llm_pilot(
     prompt_template = str(PROMPT_REGISTRY[config.prompt_id]["prompt_template"])
     runs: list[dict[str, Any]] = []
     failures: list[dict[str, Any]] = []
+    predictions: list[dict[str, Any]] = []
+    provider_usage: list[dict[str, Any]] = []
     total_input_tokens = 0
     total_output_tokens = 0
     for sample in sorted(samples, key=lambda item: str(item.get("sample_id", ""))):
-        prompt = prompt_template.format(task=sample.get("task", ""), sample_id=sample.get("sample_id", ""))
+        prompt = _render_prompt(sample, prompt_template)
         input_tokens = min(config.max_input_tokens, max(1, math.ceil(len(prompt) / 4)))
         total_input_tokens += input_tokens * config.repeats
         labels: list[str] = []
@@ -166,6 +220,12 @@ def run_llm_pilot(
                 label = parsed.get("answer", {}).get("label")
                 if isinstance(label, str):
                     labels.append(label)
+                prediction = _normalise_prediction(sample, parsed)
+                if repeat == 0:
+                    predictions.append(prediction)
+                usage = parsed.get("_provider_usage")
+                if isinstance(usage, Mapping):
+                    provider_usage.append({"sample_id": sample.get("sample_id"), "repeat": repeat, **dict(usage)})
                 total_output_tokens += min(config.max_output_tokens, max(1, math.ceil(len(json.dumps(parsed)) / 4)))
             statuses.append(status)
         runs.append({
@@ -194,6 +254,8 @@ def run_llm_pilot(
         "variance": {"repeat_disagreement_rate": disagreement / len(runs) if runs else 0.0},
         "cost": {"status": "ESTIMATED", "estimated_usd": estimated_cost, "input_tokens": total_input_tokens, "output_tokens": total_output_tokens},
         "failures": failures,
+        "predictions": predictions,
+        "provider_usage": provider_usage,
         "test_tuning": False,
         "test_asset_read": False,
     }

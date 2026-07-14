@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "P4-PILOT-RUN",
+  "status": "COMPLETED_LOCAL_PLANNING_SMOKE_TEST",
+  "scope": "D01 local planning dev_id only; not a formal benchmark result",
+  "model": "deepseek-chat",
+  "request_count": 4,
+  "sample_count": 4,
+  "case_count": 2,
+  "tasks": {
+    "T1-A": {"n_samples": 2, "primary_metric": 1.0},
+    "T1-B": {"n_samples": 2, "primary_metric": 1.0}
+  },
+  "failure_counts": {},
+  "physical_violation_count": 0,
+  "provider_usage": {"input_tokens": 10714, "output_tokens": 503},
+  "artifact_hashes": {
+    "samples": "beeac71893fa210bd1b1213c566bc3e787fce16c6972f172525c1fa79ba12d1a",
+    "predictions": "89f928dcd0d1333245c1113211a239dcf48d8bd3887dff4d5658907632ddfdd2",
+    "scores": "c147830594b6d382b8c359fca8ed58c6d0b51eb69407ac33bec10da6d4654887"
+  },
+  "test_private_assets_accessed": false,
+  "raw_files_modified": false,
+  "formal_benchmark_eligible": false,
+  "publication_claim_allowed": false,
+  "notes": [
+    "T1-C was excluded because its next-observation action requires an interactive interface, not a full-context prompt.",
+    "API credentials were process-only and are absent from this artifact."
+  ]
+}

@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S054-001
+handoff_id: H-20260714-S055-001
 handoff_state: READY
-task_status: BLOCKED
-source_session: 2026-07-14_S054_P3-PLANNING-MODE-ENABLEMENT方案阶段解除许可证门禁.md
-current_task: P4-PILOT-RUN
+task_status: READY
+source_session: 2026-07-14_S055_P4-PILOT-RUN-DeepSeek小样本端到端试运行.md
+current_task: P5-STATISTICS
 ---
 
 # Current Status
+
+## P4-PILOT-RUN DeepSeek smoke test completion
+
+- 从 D01 原始 FDS CSV 到 canonical planning records、T1 样本、DeepSeek prediction 和 scorer 的小样本链路已跑通。
+- 4/4 请求完成；T1-A 和 T1-B 各 2 个样本的 primary metric 都是 1.0，未出现解析失败或证据违规。
+- 总用量为 10,714 输入 token 和 503 输出 token；只使用 2 个 case、4 个 `dev_id` 样本，没有跑全量。
+- key 只在进程环境变量中使用，不写入仓库；不读取 test/private、不修改 raw。结果仅是 planning smoke test，不能作为正式 benchmark/论文结论。
+- 证据报告：`项目治理/p4_deepseek_smoke_test_P4-PILOT-RUN.json`；下一任务：`P5-STATISTICS`。
 
 ## P3-PLANNING-MODE-ENABLEMENT completion
 

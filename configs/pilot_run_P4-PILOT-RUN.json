@@ -1,21 +1,20 @@
 {
   "schema_version": 1,
   "task_id": "P4-PILOT-RUN",
-  "status": "BLOCKED_NO_PILOT_INPUT_OR_RUNTIME",
+  "status": "COMPLETED_LOCAL_PLANNING_SMOKE_TEST",
   "pilot_scope": "train_dev_only",
-  "model_ids": [],
-  "runtime": null,
-  "budget": null,
+  "model_ids": ["deepseek-chat"],
+  "runtime": "DeepSeek OpenAI-compatible chat completions",
+  "budget": "four requests; 180 max output tokens per request",
   "train_manifest": null,
-  "dev_manifest": null,
+  "dev_manifest": "artifacts/planning_pilot/samples_final.json",
   "candidate_case_manifest_is_formal_input": false,
   "test_access_ledger": "NO_ACCESS_CONFIRMED",
-  "models_run": false,
-  "results_written": false,
+  "models_run": true,
+  "results_written": true,
   "blockers": [
-    "approved_model_runtime_missing",
-    "train_manifest_missing",
-    "dev_manifest_missing",
-    "formal_source_eligibility_missing"
-  ]
+    "formal_source_eligibility_missing",
+    "formal_train_manifest_missing"
+  ],
+  "smoke_test_report": "项目治理/p4_deepseek_smoke_test_P4-PILOT-RUN.json"
 }
