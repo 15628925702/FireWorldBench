@@ -1,14 +1,14 @@
 ---
-handoff_id: H-20260714-S057-001
+handoff_id: H-20260714-S058-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S057_P5-ERROR-ANALYSIS-PLANNING-SMOKE全任务错误分析.md
-current_task: P4-PILOT-REMEDIATION
+source_session: 2026-07-14_S058_P4-PILOT-REMEDIATION全任务语义修复.md
+current_task: P5-MAIN-RUN
 ---
 
-## Next window: P4-PILOT-REMEDIATION
+## Next window: P5-MAIN-RUN
 
-上一任务已完成全九任务 formal-structure local smoke test。下一窗口先修复 T1-C 交互、T2-A/B 标签语义、T3-C trace 契约和 T3-B pair/解析问题，再重跑同一小样本；在复跑通过前不得扩大样本或把结果称为正式 benchmark。
+上一任务已完成全九任务 remediation pilot。下一窗口只做 planning-scale main-run readiness decision：允许规划 D01 扩展，但必须保留 D01-only/自动标签限制、失败恢复 ledger 和所有任务分数；不得读 test/private，不得把 planning 结果称为正式 benchmark 或论文结论。
 
 交付提示：全任务演练本地提交为 `ab4b7eb`，GitHub 连接重置导致 push 失败。先重试 `git push origin main`；失败则保留 `BLOCKED_PUSH` 并继续本地修复。
 

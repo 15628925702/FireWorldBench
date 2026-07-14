@@ -141,11 +141,15 @@ def _render_prompt(sample: Mapping[str, Any], template: str) -> str:
     prefix = template.format(task=task, sample_id=sample.get("sample_id", ""))
     return (
         f"{prefix}\nQuestion: {sample.get('question', {}).get('prompt', '')}\n"
+        f"Question options: {sample.get('question', {}).get('options', [])}\n"
+        f"Scenario: {json.dumps(sample.get('scenario', {}), ensure_ascii=False)}\n"
         f"Visible observations: {json.dumps(visible_observations, ensure_ascii=False)}\n"
         f"Allowed label values: {labels}\n"
         "Return exactly this compact JSON shape: {\"answer\":{\"label\":\"one allowed label\"},"
         "\"evidence\":[\"obs_id\"],\"uncertainty\":{\"level\":\"low|medium|high|unknown\","
         "\"reason\":\"20 words maximum\"},\"missing_information\":[]}. Do not put evidence or uncertainty inside answer."
+        + (" For T1-C, include answer.selected_observation_id_or_stop using only the listed query candidates or 'stop'." if task == "T1-C" else "")
+        + (" For T3-C, raw measurements alone are insufficient for a causal trace: choose trace_unknown unless an explicit causal chain is supplied. If trace_unknown, include empty initial_state, mechanism_chain, transitions, and outcome objects." if task == "T3-C" else "")
     )
 
 
@@ -158,11 +162,14 @@ def _normalise_prediction(sample: Mapping[str, Any], parsed: Mapping[str, Any]) 
     uncertainty = parsed.get("uncertainty", answer.get("uncertainty", {}))
     if not isinstance(uncertainty, Mapping):
         uncertainty = {}
+    normalized_answer = {key: value for key, value in answer.items() if key not in {"evidence", "uncertainty", "missing_information"}}
+    if sample.get("task") == "T3-C" and normalized_answer.get("label") == "trace_unknown":
+        normalized_answer.update({"initial_state": {}, "mechanism_chain": [], "transitions": [], "outcome": {}})
     return {
         "schema_version": "2.0",
         "sample_id": sample.get("sample_id"),
         "task": sample.get("task"),
-        "answer": {key: value for key, value in answer.items() if key not in {"evidence", "uncertainty", "missing_information"}},
+        "answer": normalized_answer,
         "evidence": list(evidence) if isinstance(evidence, list) else [],
         "uncertainty": {
             "level": str(uncertainty.get("level", "unknown")),

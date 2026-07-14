@@ -28,7 +28,7 @@ def build_error_plan() -> dict[str, Any]:
 
 
 def _items(path: Path, field: str) -> list[Mapping[str, Any]]:
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload = json.loads(path.read_text(encoding="utf-8-sig"))
     value = payload.get(field, payload) if isinstance(payload, Mapping) else payload
     if not isinstance(value, list) or not all(isinstance(item, Mapping) for item in value):
         raise TypeError(f"{field} must be a JSON list or object with a {field} list")
@@ -72,7 +72,7 @@ def assess_error_analysis(
         scored = score_samples(samples, prediction_map)
         labels = []
         for item in scored["sample_scores"]:
-            if item["primary_score"] == 1.0:
+            if item["status"] == "ok" and item["label_score"] == 1.0:
                 continue
             missing = item["status"] == "missing_prediction"
             labels.append({

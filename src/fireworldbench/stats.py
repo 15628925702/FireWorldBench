@@ -17,7 +17,7 @@ def _hash(value: Any) -> str:
 
 
 def _load_items(path: Path, field: str) -> list[Mapping[str, Any]]:
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload = json.loads(path.read_text(encoding="utf-8-sig"))
     value = payload.get(field, payload) if isinstance(payload, dict) else payload
     if not isinstance(value, list) or not all(isinstance(item, Mapping) for item in value):
         raise TypeError(f"{field} must be a JSON list or object with a {field} list")
@@ -36,8 +36,8 @@ def assess_statistics(
     if raw_predictions_path is None:
         blockers.append("raw_predictions_missing")
     else:
-        raw_bytes = raw_predictions_path.read_bytes()
-        raw_sha256 = _hash(raw_bytes.decode("utf-8"))
+        raw_text = raw_predictions_path.read_text(encoding="utf-8-sig")
+        raw_sha256 = _hash(raw_text)
         predictions = _load_items(raw_predictions_path, "predictions")
         sample_count = len(predictions)
         if sample_count == 0:

@@ -95,6 +95,8 @@ def build_parser() -> argparse.ArgumentParser:
     deepseek_parser.add_argument("--samples", type=Path, required=True)
     deepseek_parser.add_argument("--config", type=Path, required=True)
     deepseek_parser.add_argument("--output", type=Path, required=True)
+    deepseek_parser.add_argument("--start-index", type=int, default=0)
+    deepseek_parser.add_argument("--max-samples", type=int)
     t1_parser = subparsers.add_parser("build-t1", help="build T1-A/B/C train or dev samples")
     t1_parser.add_argument("--input", type=Path, required=True, help="canonical pipeline JSON")
     t1_parser.add_argument("--split", choices=("train_id", "dev_id"), default="dev_id")
@@ -267,7 +269,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
     if args.command == "deepseek-pilot":
         try:
-            result = run_deepseek_pilot_file(args.samples, args.config, args.output)
+            result = run_deepseek_pilot_file(args.samples, args.config, args.output, start_index=args.start_index, max_samples=args.max_samples)
         except (OSError, ValueError, TypeError, json.JSONDecodeError, RuntimeError) as exc:
             print(f"ERROR: {exc}")
             return 2

@@ -65,19 +65,27 @@ def deepseek_adapter(sample: Mapping[str, Any], prompt: str, config: Mapping[str
     return prediction
 
 
-def run_deepseek_pilot_file(samples_path: Path, config_path: Path, output_path: Path) -> dict[str, Any]:
-    config_payload = json.loads(config_path.read_text(encoding="utf-8"))
+def run_deepseek_pilot_file(
+    samples_path: Path,
+    config_path: Path,
+    output_path: Path,
+    *,
+    start_index: int = 0,
+    max_samples: int | None = None,
+) -> dict[str, Any]:
+    config_payload = json.loads(config_path.read_text(encoding="utf-8-sig"))
     if not isinstance(config_payload, Mapping):
         raise TypeError("DeepSeek pilot config must be an object")
     config = LLMConfig(**config_payload["default_config"])
-    samples_payload = json.loads(samples_path.read_text(encoding="utf-8"))
+    samples_payload = json.loads(samples_path.read_text(encoding="utf-8-sig"))
     samples = samples_payload.get("samples", samples_payload) if isinstance(samples_payload, Mapping) else samples_payload
     if not isinstance(samples, list):
         raise TypeError("DeepSeek pilot samples must be a JSON list or object with samples")
-    max_samples = int(config_payload.get("max_samples", len(samples)))
-    if max_samples < 1:
+    configured_max = int(config_payload.get("max_samples", len(samples)))
+    limit = configured_max if max_samples is None else min(configured_max, max_samples)
+    if start_index < 0 or limit < 1:
         raise ValueError("max_samples must be positive")
-    result = run_llm_pilot(samples[:max_samples], config, adapter=deepseek_adapter)
+    result = run_llm_pilot(samples[start_index:start_index + limit], config, adapter=deepseek_adapter)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return result

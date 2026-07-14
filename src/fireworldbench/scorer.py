@@ -94,8 +94,8 @@ def score_samples(samples: Sequence[Mapping[str, Any]], predictions: Mapping[str
 
 
 def score_files(samples_path: Path, predictions_path: Path, output_path: Path) -> dict[str, Any]:
-    samples = json.loads(samples_path.read_text(encoding="utf-8"))
-    predictions = json.loads(predictions_path.read_text(encoding="utf-8"))
+    samples = json.loads(samples_path.read_text(encoding="utf-8-sig"))
+    predictions = json.loads(predictions_path.read_text(encoding="utf-8-sig"))
     sample_items = samples.get("samples", samples) if isinstance(samples, Mapping) else samples
     prediction_items = predictions.get("predictions", predictions) if isinstance(predictions, Mapping) else predictions
     prediction_map = {str(item["sample_id"]): item for item in prediction_items}

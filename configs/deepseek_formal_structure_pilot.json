@@ -1,6 +1,6 @@
 {
   "pilot_version": "P4-FORMAL-STRUCTURE-PLANNING-SMOKE-001",
-  "max_samples": 17,
+  "max_samples": 51,
   "default_config": {
     "track": "text_only_table",
     "prompt_id": "text_table_v1",
@@ -10,12 +10,12 @@
     "temperature": 0.0,
     "top_p": 1.0,
     "max_input_tokens": 2048,
-    "max_output_tokens": 180,
+    "max_output_tokens": 240,
     "max_retries": 0,
     "timeout_s": 30.0,
-    "max_cost_usd": 0.50,
+    "max_cost_usd": 1.00,
     "input_usd_per_1k_tokens": 0.0,
     "output_usd_per_1k_tokens": 0.0
   },
-  "scope": "four D01 cases, group-first two train/two dev, all nine task contracts, local planning only"
+  "scope": "four D01 cases, group-first two train/two dev, three within-group time windows, all nine task contracts, local planning only"
 }

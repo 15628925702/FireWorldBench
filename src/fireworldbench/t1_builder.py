@@ -140,7 +140,7 @@ def build_t1(
         anomaly_label = anomaly_label if anomaly_label in allowed_anomaly else "insufficient_information"
         anomaly_evidence = [item["observation_id"] for item in observations] if anomaly_label != "insufficient_information" else []
         samples.append(_sample(task="T1-B", case_id=case_id, rows=rows, observations=observations, split=split, benchmark_version=benchmark_version, parent_manifest_sha256=parent_manifest_sha256, config_sha256=config_sha256, gold_origin="deterministic_rule", answer={"label": anomaly_label, "dominant_mechanism": anomaly_label, "evidence": anomaly_evidence, "uncertainty": "medium" if anomaly_evidence else "unknown", "missing_information": [] if anomaly_evidence else ["discriminating_observation"]}))
-        selected = observations[0]["observation_id"] if len(observations) > 1 else None
+        selected = observations[1]["observation_id"] if len(observations) > 1 else None
         query_label = "query_observation" if selected else "stop_and_decide"
         samples.append(_sample(task="T1-C", case_id=case_id, rows=rows, observations=observations, split=split, benchmark_version=benchmark_version, parent_manifest_sha256=parent_manifest_sha256, config_sha256=config_sha256, gold_origin="deterministic_rule", answer={"label": query_label, "selected_observation_id_or_stop": selected or "stop", "query_cost": 1 if selected else 0, "expected_information_value": 1.0 if selected else 0.0, "evidence": [] if selected is None else [selected]}))
     samples.sort(key=lambda sample: (sample["scenario"]["case_uid"], sample["task"]))

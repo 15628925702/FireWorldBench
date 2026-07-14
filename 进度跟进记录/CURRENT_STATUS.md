@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S057-001
+handoff_id: H-20260714-S058-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S057_P5-ERROR-ANALYSIS-PLANNING-SMOKE全任务错误分析.md
-current_task: P4-PILOT-REMEDIATION
+source_session: 2026-07-14_S058_P4-PILOT-REMEDIATION全任务语义修复.md
+current_task: P5-MAIN-RUN
 ---
 
 # Current Status
+
+## P4-PILOT-REMEDIATION completion
+
+- 同一四 source case 的 group-first 2 train/2 dev 矩阵已用 early/middle/late 三窗口重跑，开发侧 51 样本、训练侧 48 样本，九任务均覆盖。
+- T1-C、T2-B、T3-B、T3-C 的接口问题已修复；10 条 DeepSeek 瞬态网络失败经一次定向恢复后全部可评分，最终无缺 prediction。
+- 最终任务分数：T1-A 0.167、T1-B 0.500、T1-C 0.825、T2-A 0.833、T2-B 1.000、T2-C 1.000、T3-A 0.333、T3-B 1.000、T3-C 1.000。
+- 运行工程链可放大；但 D01-only planning rule 标签、early/middle T1 误判和 T3-A 时间趋势误判仍限制科学结论。报告：`项目治理/p4_formal_structure_pilot_remediation.json`。
+- 下一任务：`P5-MAIN-RUN` planning-scale readiness decision。
 
 ## Full Formal-Structure Planning Smoke Completion
 

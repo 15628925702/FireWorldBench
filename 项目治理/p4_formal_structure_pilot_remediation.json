@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "P4-FORMAL-STRUCTURE-PLANNING-SMOKE-002",
+  "status": "COMPLETED_LOCAL_PLANNING_AFTER_REMEDIATION",
+  "scope": "D01 only; four source cases; group-first two train/two dev; three within-source time windows; not a formal benchmark",
+  "model": "deepseek-chat",
+  "dev_samples": 51,
+  "train_samples": 48,
+  "task_counts": {"T1-A": 6, "T1-B": 6, "T1-C": 6, "T2-A": 6, "T2-B": 6, "T2-C": 6, "T3-A": 6, "T3-B": 3, "T3-C": 6},
+  "network_resume": {"initial_attempt_failures": 10, "recovered_predictions": 10, "final_score_missing_predictions": 0},
+  "recorded_provider_usage": {
+    "scored_run_input_tokens": 56678,
+    "scored_run_output_tokens": 4592,
+    "duplicate_checkpoint_input_tokens": 16574,
+    "duplicate_checkpoint_output_tokens": 1525,
+    "total_recorded_input_tokens": 73252,
+    "total_recorded_output_tokens": 6117,
+    "failed_request_server_charge": "UNKNOWN"
+  },
+  "task_metrics": {
+    "T1-A": 0.16666666666666666,
+    "T1-B": 0.5,
+    "T1-C": 0.8250000000000001,
+    "T2-A": 0.8333333333333334,
+    "T2-B": 1.0,
+    "T2-C": 1.0,
+    "T3-A": 0.3333333333333333,
+    "T3-B": 1.0,
+    "T3-C": 1.0
+  },
+  "preliminary_error_counts": {"perception": 8, "uncertainty": 1, "state": 1, "temporal": 4},
+  "artifact_hashes": {
+    "dev_samples": "428ffd5f73d57068e85aba74b641197f275d3520db71a38ef8b76c30abb67fdc",
+    "train_samples": "ea864396c6e11567969f496503d569b16cc88145f2b65bb82d38d9e2eadf45f9",
+    "recovered_predictions": "252fb8d34101ae0058be8758bb97993b95883d3d9e85ac6611196f02d2b4d9b0",
+    "score": "b6e0bdd73d08742a3b4b33f3acb6dbd6f9c56b2a063ff4423e42caf46453c419",
+    "statistics": "c7098f3750328de5ddefd6a563d3a3648e1010bbb3c4f0336d7d204128e4a7b2",
+    "error_analysis": "9ec5cde34f8d30e332b053b236815b5deeb19d48f978646423132dd53019de90"
+  },
+  "raw_files_modified": false,
+  "test_private_assets_accessed": false,
+  "formal_benchmark_eligible": false,
+  "publication_claim_allowed": false,
+  "scale_up_readiness": "ENGINEERING_READY_DATA_AND_SCIENCE_LIMITED",
+  "remaining_requirements": [
+    "broaden sources beyond D01 and replace planning-rule labels with reviewed or directly measured gold",
+    "add non-fire/negative cases and a balanced task distribution",
+    "resolve early/middle-window T1 perception errors before relying on fire-warning performance",
+    "resolve T3-A temporal errors before relying on evolution claims",
+    "use a resumable request ledger to avoid duplicate checkpoint calls"
+  ]
+}

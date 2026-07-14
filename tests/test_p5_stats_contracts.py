@@ -48,8 +48,8 @@ def test_planning_statistics_scores_local_samples_without_opening_formal_gate(tm
     prediction = {"schema_version": "2.0", "sample_id": sample["sample_id"], "task": "T1-A", "answer": {"label": "fire_forming"}, "evidence": ["obs_1"], "uncertainty": {"level": "low", "reason": "fixture"}, "missing_information": []}
     samples_path = tmp_path / "samples.json"
     predictions_path = tmp_path / "predictions.json"
-    samples_path.write_text(json.dumps({"samples": [sample]}), encoding="utf-8")
-    predictions_path.write_text(json.dumps({"predictions": [prediction]}), encoding="utf-8")
+    samples_path.write_text(json.dumps({"samples": [sample]}), encoding="utf-8-sig")
+    predictions_path.write_text(json.dumps({"predictions": [prediction]}), encoding="utf-8-sig")
 
     result = assess_statistics(predictions_path, samples_path=samples_path, planning_mode=True)
 

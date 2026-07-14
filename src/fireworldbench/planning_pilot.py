@@ -21,7 +21,7 @@ def _number(value: str) -> float | str:
         return value
 
 
-def _records_from_file(path: Path, root: Path, max_rows: int) -> list[dict[str, Any]]:
+def _records_from_file(path: Path, root: Path, max_rows: int, *, sample_strategy: str = "uniform") -> list[dict[str, Any]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.reader(handle)
         units = next(reader, [])
@@ -68,6 +68,14 @@ def _records_from_file(path: Path, root: Path, max_rows: int) -> list[dict[str, 
         return raw_records
     if max_rows == 1:
         return [raw_records[-1]]
+    if sample_strategy == "early_mid_late":
+        if max_rows != 6:
+            raise ValueError("early_mid_late sampling requires six rows")
+        middle = len(raw_records) // 2
+        indices = [0, 1, middle - 1, middle, len(raw_records) - 2, len(raw_records) - 1]
+        return [raw_records[index] for index in indices]
+    if sample_strategy != "uniform":
+        raise ValueError(f"unknown sample strategy: {sample_strategy}")
     indices = sorted({round(index * (len(raw_records) - 1) / (max_rows - 1)) for index in range(max_rows)})
     return [raw_records[index] for index in indices]
 
