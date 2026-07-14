@@ -1,0 +1,9 @@
+{
+  "task_id": "P7-REPRO-001",
+  "reproduction_version": "P7-REPRO-001",
+  "required_targets": ["benchmark", "representative_baseline", "paper_number_registry"],
+  "clean_environment_required": true,
+  "downloads_allowed": false,
+  "deviations_required": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}
