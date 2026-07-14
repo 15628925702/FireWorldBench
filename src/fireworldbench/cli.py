@@ -39,6 +39,7 @@ from fireworldbench.paper_audit import write_paper_audit
 from fireworldbench.paper_export import write_paper_export_decision
 from fireworldbench.anonymization import write_anonymization_decision
 from fireworldbench.reproduction import write_reproduction_decision
+from fireworldbench.release_audit import write_release_audit
 
 
 def doctor(root: Path) -> int:
@@ -170,6 +171,8 @@ def build_parser() -> argparse.ArgumentParser:
     repro_parser = subparsers.add_parser("repro-assess", help="audit clean-room reproduction readiness")
     repro_parser.add_argument("--output", type=Path, required=True)
     repro_parser.add_argument("--release-root", type=Path)
+    release_parser = subparsers.add_parser("release-assess", help="audit final release freeze without publishing")
+    release_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -439,6 +442,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "blocker_count": len(result["blockers"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "release-assess":
+        try:
+            result = write_release_audit(args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "critical_risk_count": len(result["critical_risks"]), "output": str(args.output)}, ensure_ascii=False))
         return 0
     raise AssertionError(f"Unhandled command: {args.command}")
 

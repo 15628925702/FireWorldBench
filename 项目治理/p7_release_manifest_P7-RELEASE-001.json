@@ -1,0 +1,16 @@
+{
+  "release_version": "P7-RELEASE-001",
+  "kind": "local_final_freeze_audit",
+  "status": "BLOCKED_CRITICAL_RISKS",
+  "critical_risks": [
+    "frozen_results_missing",
+    "paper_export_missing",
+    "anonymous_package_missing",
+    "clean_room_reproduction_missing",
+    "external_release_approval_missing",
+    "github_history_sync_blocked"
+  ],
+  "manifest_self_hash_excluded": true,
+  "external_release_performed": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}

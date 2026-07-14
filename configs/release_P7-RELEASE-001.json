@@ -1,0 +1,11 @@
+{
+  "task_id": "P7-RELEASE-001",
+  "release_version": "P7-RELEASE-001",
+  "local_freeze_only": true,
+  "external_release_requires_explicit_user_approval": true,
+  "required_audits": ["stage_gates", "versions", "checksums", "paper_data", "anonymization", "reproduction"],
+  "critical_risks_block_release": true,
+  "tag_created": false,
+  "github_release_created": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}

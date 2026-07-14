@@ -1,0 +1,12 @@
+{
+  "release_version": "P7-RELEASE-001",
+  "checklist": [
+    {"item": "stage gates", "status": "BLOCKED"},
+    {"item": "version and environment lock", "status": "BLOCKED"},
+    {"item": "public/private checksums", "status": "BLOCKED_NO_EXPORT"},
+    {"item": "paper tables figures text", "status": "BLOCKED_NO_FROZEN_RESULTS"},
+    {"item": "anonymous package", "status": "BLOCKED_NO_EXPORT"},
+    {"item": "clean-room reproduction", "status": "BLOCKED_NO_RELEASE_INPUT"},
+    {"item": "external user approval", "status": "REQUIRED"}
+  ]
+}
