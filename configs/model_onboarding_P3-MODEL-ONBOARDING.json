@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "P3-MODEL-ONBOARDING",
+  "status": "BLOCKED_NO_APPROVED_MODEL_RUNTIME",
+  "model_ids": [],
+  "checkpoint_manifest": [],
+  "api_provider": null,
+  "runtime": null,
+  "prompt_hash": null,
+  "budget": null,
+  "train_dev_input_manifest": null,
+  "blockers": [
+    "approved_model_id_missing",
+    "checkpoint_or_api_runtime_missing",
+    "budget_and_rate_limit_approval_missing",
+    "frozen_prompt_hash_missing",
+    "formal_train_dev_manifest_missing"
+  ],
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "test_private_assets_accessed": false,
+  "formal_results_written": false,
+  "next_gate": "user-approved model/runtime/budget plus frozen train/dev manifest"
+}

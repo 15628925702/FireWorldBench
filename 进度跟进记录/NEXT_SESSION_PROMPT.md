@@ -1,14 +1,14 @@
 ---
-handoff_id: H-20260714-S050-001
+handoff_id: H-20260714-S051-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S050_P3-REAL-BENCHMARK-BUILD真实benchmark构建.md
-current_task: P3-MODEL-ONBOARDING
+source_session: 2026-07-14_S051_P3-MODEL-ONBOARDING模型接入前置审计.md
+current_task: P4-PILOT-RUN
 ---
 
-## Next window: P3-MODEL-ONBOARDING
+## Next window: P4-PILOT-RUN
 
-上一任务已生成 D01/D03 的 11 个 planning candidate cases，但正式状态为 `CANDIDATE_CASES_BUILT_FORMAL_USE_BLOCKED`。下一窗口只做模型接入前置审计：盘点本地已有模型配置/运行器契约，记录缺失模型 ID、checkpoint、API/runtime 和预算；不得下载模型、安装依赖、运行正式 benchmark，不得读取 test/private，不得把候选 case 标成 train/dev/test。
+上一任务已完成模型接入前置审计，正式状态为 `BLOCKED_NO_APPROVED_MODEL_RUNTIME`。下一窗口只评估 train/dev pilot 是否具备启动条件；没有用户批准的模型/runtime/预算时，记录 blocked，不下载模型、不安装依赖、不调用 API、不读取 test/private，不生成任何结果数字。
 
 先读取 `AGENTS.md`、`CURRENT_STATUS.md`、本文件、source session 和可用任务包；创建新的 IN_PROGRESS 会话草稿。完成后运行测试、mypy，提交并尝试 push；push 失败则记录 `BLOCKED_PUSH` 并保留本地提交继续推进。
 

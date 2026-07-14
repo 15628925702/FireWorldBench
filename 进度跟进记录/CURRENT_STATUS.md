@@ -1,12 +1,19 @@
 ---
-handoff_id: H-20260714-S050-001
+handoff_id: H-20260714-S051-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S050_P3-REAL-BENCHMARK-BUILD真实benchmark构建.md
-current_task: P3-MODEL-ONBOARDING
+source_session: 2026-07-14_S051_P3-MODEL-ONBOARDING模型接入前置审计.md
+current_task: P4-PILOT-RUN
 ---
 
 # Current Status
+
+## P3-MODEL-ONBOARDING completion
+
+- 已审计现有模型配置和运行器契约；没有批准模型 ID、checkpoint、API/provider、runtime、预算、prompt hash 或正式 train/dev manifest。
+- 机器结果为 `configs/model_onboarding_P3-MODEL-ONBOARDING.json`，状态为 `BLOCKED_NO_APPROVED_MODEL_RUNTIME`。
+- 未下载模型、未安装依赖、未调用外部 API、未读取 test/private；未生成模型结果。
+- 下一步需要用户批准模型/runtime/预算并提供合法 train/dev manifest；下一任务：`P4-PILOT-RUN`。
 
 ## P3-REAL-BENCHMARK-BUILD completion
 
