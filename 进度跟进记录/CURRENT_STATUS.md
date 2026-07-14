@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S054-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED
 source_session: 2026-07-14_S054_P3-PLANNING-MODE-ENABLEMENT方案阶段解除许可证门禁.md
 current_task: P4-PILOT-RUN
 ---
@@ -14,6 +14,7 @@ current_task: P4-PILOT-RUN
 - D01/D02/D03/D04/D05/D10 已标为 `planning_eligible=true`；本地 train/dev 使用为 `LOCAL_PLANNING_ALLOWED`，正式 benchmark、公开发布、再分发和 test/private 仍关闭。
 - 机器报告已按 planning mode 重建，审计记录为 `项目治理/p3_planning_mode_audit_P3-PLANNING-MODE-ENABLEMENT.md`。
 - 下一任务：`P4-PILOT-RUN` 本地 train/dev 原型。
+- 本地提交为 `83a8218`；GitHub push 因 443 不可达失败，当前标记 `BLOCKED_PUSH`。
 
 ## P5-MAIN-RUN completion
 
