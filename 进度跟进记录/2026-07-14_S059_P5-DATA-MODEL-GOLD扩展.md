@@ -57,3 +57,13 @@ started_at: 2026-07-14 Asia/Shanghai
 ## 下一窗口
 
 先读取本记录、`CURRENT_STATUS.md`、`NEXT_SESSION_PROMPT.md`，确认 handoff 一致；随后处理 D01 可持续下载/断点校验或用户提供的本地完整数据，完成后才进入受控主跑。
+
+## 收口快照
+
+- 最终 staged: none
+- 最终 unstaged: none
+- 最终 untracked: none
+- commit: `34f46d2` (`Expand planning data chain and model gold registry`)
+- push: 功能提交 `34f46d2` 已成功进入 `origin/main`；随后会话收口提交因 GitHub 443/连接重置暂未推送，远端当前停在 `34f46d2`，本地保留后续提交。
+- 最终验证: `pytest` 130 passed；`mypy src/fireworldbench` passed；ruff 未运行（环境未安装且未安装依赖）
+- 任务状态: `BLOCKED`，原因是 D01 仅 8/192 个 CSV 已安全落盘、D02 legacy XLS 未解析；代码侧规划链已可复用。
