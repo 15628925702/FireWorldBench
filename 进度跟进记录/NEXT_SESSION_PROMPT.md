@@ -1,14 +1,14 @@
 ---
-handoff_id: H-20260714-S051-001
+handoff_id: H-20260714-S052-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S051_P3-MODEL-ONBOARDING模型接入前置审计.md
-current_task: P4-PILOT-RUN
+source_session: 2026-07-14_S052_P4-PILOT-RUN试运行门禁审计.md
+current_task: P5-MAIN-RUN
 ---
 
-## Next window: P4-PILOT-RUN
+## Next window: P5-MAIN-RUN
 
-上一任务已完成模型接入前置审计，正式状态为 `BLOCKED_NO_APPROVED_MODEL_RUNTIME`。下一窗口只评估 train/dev pilot 是否具备启动条件；没有用户批准的模型/runtime/预算时，记录 blocked，不下载模型、不安装依赖、不调用 API、不读取 test/private，不生成任何结果数字。
+上一任务已完成 train/dev-only pilot 门禁审计，正式状态为 `BLOCKED_NO_PILOT_INPUT_OR_RUNTIME`。下一窗口只评估主实验启动条件；没有冻结 train/dev 结果、批准模型矩阵和运行时，不启动 main run，不读取 test/private，不生成结果数字。
 
 先读取 `AGENTS.md`、`CURRENT_STATUS.md`、本文件、source session 和可用任务包；创建新的 IN_PROGRESS 会话草稿。完成后运行测试、mypy，提交并尝试 push；push 失败则记录 `BLOCKED_PUSH` 并保留本地提交继续推进。
 

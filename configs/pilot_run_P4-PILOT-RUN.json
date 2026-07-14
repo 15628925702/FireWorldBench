@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "P4-PILOT-RUN",
+  "status": "BLOCKED_NO_PILOT_INPUT_OR_RUNTIME",
+  "pilot_scope": "train_dev_only",
+  "model_ids": [],
+  "runtime": null,
+  "budget": null,
+  "train_manifest": null,
+  "dev_manifest": null,
+  "candidate_case_manifest_is_formal_input": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "models_run": false,
+  "results_written": false,
+  "blockers": [
+    "approved_model_runtime_missing",
+    "train_manifest_missing",
+    "dev_manifest_missing",
+    "formal_source_eligibility_missing"
+  ]
+}
