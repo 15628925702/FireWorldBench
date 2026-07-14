@@ -1,0 +1,59 @@
+﻿{
+    "dataset_id":  "D05",
+    "dataset_name":  "D-Fire",
+    "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D05_D-Fire",
+    "source_url":  "https://github.com/gaia-solutions-on-demand/DFireDataset",
+    "acquisition_date":  "2026-07-14",
+    "upstream_version_or_commit":  "UNKNOWN (planning-stage source inventory)",
+    "download_status":  "DOWNLOADED",
+    "license_status":  "UNKNOWN",
+    "redistribution_status":  "UNKNOWN",
+    "intended_role":  "Visual auxiliary pre-research only; not a formal benchmark source",
+    "file_count":  8,
+    "total_bytes":  643012,
+    "files":  [
+                  {
+                      "relative_path":  "data.yaml",
+                      "size_bytes":  399,
+                      "sha256":  "cf0ef58ab837152ed4482a05327da76e5d2006f316d1f19e317f1568f7c9ee7f"
+                  },
+                  {
+                      "relative_path":  "example_preview.png",
+                      "size_bytes":  285437,
+                      "sha256":  "12a014d8c05ff6af08cb57ad3dde5a484a525a2191650101158f3b92b40ca0f9"
+                  },
+                  {
+                      "relative_path":  "sample/test/images/AoF06723.jpg",
+                      "size_bytes":  227556,
+                      "sha256":  "3eb16b635a007bdd6353e7219cae149a7da2f05153b2bbae4dbaae2ac360fa46"
+                  },
+                  {
+                      "relative_path":  "sample/train/images/AoF00001.jpg",
+                      "size_bytes":  43550,
+                      "sha256":  "06a9d6b8354dd23e9a19f123454208719be71ca8205e831df89fdcb7199b6379"
+                  },
+                  {
+                      "relative_path":  "sample/train/images/AoF00002.jpg",
+                      "size_bytes":  85421,
+                      "sha256":  "eb4ade628978f83194cfb1fec4416ff1b162dc1446bec3612444fdc1a955f5f2"
+                  },
+                  {
+                      "relative_path":  "sample/train/labels/AoF00001.txt",
+                      "size_bytes":  81,
+                      "sha256":  "805a1eaaa582a225bb695f702a3d0d5b753fb92f19668b216524442d2c057779"
+                  },
+                  {
+                      "relative_path":  "sample/train/labels/AoF00002.txt",
+                      "size_bytes":  82,
+                      "sha256":  "9342ba004d97304aee4f08c72a190411b6ba15964f1b63b181960f0dd9b6535d"
+                  },
+                  {
+                      "relative_path":  "sample_card.md",
+                      "size_bytes":  486,
+                      "sha256":  "7cd821b07ca94603bf64cdc4770a27f7812a0a11177daa09895fa58564ab380d"
+                  }
+              ],
+    "raw_files_unchanged":  true,
+    "formal_benchmark_eligible":  false,
+    "note":  "planning-stage staging only"
+}

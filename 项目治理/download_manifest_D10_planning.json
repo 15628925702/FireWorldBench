@@ -1,0 +1,64 @@
+﻿{
+    "dataset_id":  "D10",
+    "dataset_name":  "FIgLib-SmokeyNet",
+    "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D10_FIgLib-SmokeyNet",
+    "source_url":  "https://github.com/SmartWildfire/SmokeyNet",
+    "acquisition_date":  "2026-07-14",
+    "upstream_version_or_commit":  "UNKNOWN (planning-stage source inventory)",
+    "download_status":  "DOWNLOADED",
+    "license_status":  "UNKNOWN",
+    "redistribution_status":  "UNKNOWN",
+    "intended_role":  "Wildfire visual OOD auxiliary data only",
+    "file_count":  9,
+    "total_bytes":  8327056,
+    "files":  [
+                  {
+                      "relative_path":  "example_preview.png",
+                      "size_bytes":  3987289,
+                      "sha256":  "d1388323a1b97cc08d5514562a5ee46f2c0cd0dc128e25ec93d05570209dce61"
+                  },
+                  {
+                      "relative_path":  "labels_csv/20160604_FIRE_rm-n-mobo-c.csv",
+                      "size_bytes":  3432,
+                      "sha256":  "daa384b5ce7c013fa40e0962324bff8ba8abd4d7e3973418bf45e5fe708352d0"
+                  },
+                  {
+                      "relative_path":  "sample_card.md",
+                      "size_bytes":  357,
+                      "sha256":  "bb00a2dc59da6ce32fe3b5b0e5fc8a6565fe9c90a2210679002ad4a2a3b69b4b"
+                  },
+                  {
+                      "relative_path":  "sequences/20160604_FIRE_rm-n-mobo-c/1465063200_-02400.jpg",
+                      "size_bytes":  715720,
+                      "sha256":  "fd26d648025fe00ea3a307c4cbae79b086749588b353ef3bc8acc4ca09d8f67c"
+                  },
+                  {
+                      "relative_path":  "sequences/20160604_FIRE_rm-n-mobo-c/1465065000_-00600.jpg",
+                      "size_bytes":  727663,
+                      "sha256":  "d35953494ef44584b8f1aea0d46a9670e9f9dfba8813426ffcba1b625dd35775"
+                  },
+                  {
+                      "relative_path":  "sequences/20160604_FIRE_rm-n-mobo-c/1465065600_+00000.jpg",
+                      "size_bytes":  722987,
+                      "sha256":  "de03d160c20218036ea1962ebdee240fcad97695fbbe1c9f72adccbe2c595697"
+                  },
+                  {
+                      "relative_path":  "sequences/20160604_FIRE_rm-n-mobo-c/1465066200_+00600.jpg",
+                      "size_bytes":  726723,
+                      "sha256":  "5f9ea882497fb4c7422dd9e1639ffaf37ed975c165067ad9234da4282f52626f"
+                  },
+                  {
+                      "relative_path":  "sequences/20160604_FIRE_rm-n-mobo-c/1465066800_+01200.jpg",
+                      "size_bytes":  734806,
+                      "sha256":  "9cd6ecd0d1b836e0b3b138726e82986aad9f1d7de366e53924371ff96806b67a"
+                  },
+                  {
+                      "relative_path":  "sequences/20160604_FIRE_rm-n-mobo-c/1465068000_+02400.jpg",
+                      "size_bytes":  708079,
+                      "sha256":  "5721a15be7dea58d97f1568449a04133262a72f8a2d80a7c394598149f8fd530"
+                  }
+              ],
+    "raw_files_unchanged":  true,
+    "formal_benchmark_eligible":  false,
+    "note":  "planning-stage staging only"
+}

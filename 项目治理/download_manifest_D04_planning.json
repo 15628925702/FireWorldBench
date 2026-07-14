@@ -1,0 +1,269 @@
+﻿{
+    "dataset_id":  "D04",
+    "dataset_name":  "FD-Gen",
+    "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D04_FD-Gen",
+    "source_url":  "https://github.com/usnistgov/FD-Gen",
+    "acquisition_date":  "2026-07-14",
+    "upstream_version_or_commit":  "UNKNOWN (planning-stage source inventory)",
+    "download_status":  "DOWNLOADED",
+    "license_status":  "UNKNOWN",
+    "redistribution_status":  "UNKNOWN",
+    "intended_role":  "T3/OOD scenario generation preparation",
+    "file_count":  50,
+    "total_bytes":  85736781,
+    "files":  [
+                  {
+                      "relative_path":  "example_preview.png",
+                      "size_bytes":  38764,
+                      "sha256":  "4ed8a2103ba3ec33bd00b1e7a36c9723a3bb1c61cf813f4d7eeb370550980236"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/CODEMETA.yaml",
+                      "size_bytes":  1192,
+                      "sha256":  "c34983d13b5481df98b67f2f983423492614d4d6841f0c17aebf5d4a6f8b555c"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/CODEOWNERS",
+                      "size_bytes":  323,
+                      "sha256":  "d2dcc1701e3f90585438cceefa69fd7f888a9a78bca323abc087ffef7a984915"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/example/example_commercial.fds",
+                      "size_bytes":  58509,
+                      "sha256":  "b66d3b6954991bb53814462193b5718e41e388f13ecbb2b80d10975bbd422c67"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/example/example_CSTB_Tunnel_Test_2.fds",
+                      "size_bytes":  49288,
+                      "sha256":  "c2b2b0697c4f0e4801f0fc573e14c3ba348bba4ccaf98142762085fc7ce759cd"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/example/example_NIST_Smoke_Alarms_SDC02.fds",
+                      "size_bytes":  16604,
+                      "sha256":  "e4c4eab226d5d2fd008f1611afcbb7a02c458a89f955cae97d1b8661c2fc9e69"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/example/example_Single_Story_Gas_1.fds",
+                      "size_bytes":  12984,
+                      "sha256":  "e17f1c31b6228b992c848d7c79af28d12bddfcf223148110f20528426d10e25c"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/example/example_wind_test2.fds",
+                      "size_bytes":  8155,
+                      "sha256":  "5a38b0c1b83f54310773498ce1c7ff00931a23bdbea2514f0d14cf57a0e7ad0e"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/FD-Gen.exe",
+                      "size_bytes":  84995454,
+                      "sha256":  "f80651cd2fea4e86c9b4bca3d4bc91a01d8a28ee3f0fe4f08fc3ab8434e03a62"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/images/Picture1.png",
+                      "size_bytes":  38764,
+                      "sha256":  "4ed8a2103ba3ec33bd00b1e7a36c9723a3bb1c61cf813f4d7eeb370550980236"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/images/Picture2.png",
+                      "size_bytes":  25159,
+                      "sha256":  "5f914af479c6c4f822e111c3b08e6df3ddb11aa687ab789c530e300e3f8db1f5"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/images/Picture3.png",
+                      "size_bytes":  12418,
+                      "sha256":  "d788aebef3bf3bda4e0ec9301a2a7919d3f470ac0ba18f026e41806aa2f26bf4"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/images/Picture4.png",
+                      "size_bytes":  6526,
+                      "sha256":  "a17ee70c33bf9d5887fa9970eac2d676e518b8aa0cc2583f2d844cd2d82cec8c"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/images/Picture5.png",
+                      "size_bytes":  2503,
+                      "sha256":  "01d9d6ad6916a3ea7e5f9c5cc4afe63859c6b09cd43fe882e579b9c8b2f56b30"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/LICENSE.md",
+                      "size_bytes":  1866,
+                      "sha256":  "777060f35baa90ababb6d4336f7e96c6a9d78f8c23fd136cb7b0bf1cd7e8cf9f"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/global_parm.cpython-311.pyc",
+                      "size_bytes":  746,
+                      "sha256":  "75e5c8ac3d27dc9561fb5b7383819c15ff585e7acfdbcf9a2d7fe0b347b0770c"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/MFIR.cpython-311.pyc",
+                      "size_bytes":  44112,
+                      "sha256":  "65d69ee25fd46e42a0ecc961341ae0680c5f21e306ebb19bca135f7083e01f16"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/MFLD.cpython-311.pyc",
+                      "size_bytes":  51068,
+                      "sha256":  "d2e9171b9a1b27e3ec5cca13d4ab280b45501d681140b687c6cb0cfb8959f012"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/MHDR.cpython-311.pyc",
+                      "size_bytes":  7308,
+                      "sha256":  "c8d9597d367cfdfa4f5a4c6955d2134ac5cc0a38ecaf6cb747e761b9d8e655dc"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/MRND.cpython-311.pyc",
+                      "size_bytes":  20393,
+                      "sha256":  "bab44e2eb83126640fbcf5c6b4976a84f91142dc2408aee5dbc1716e87b80a3c"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/MSTT.cpython-311.pyc",
+                      "size_bytes":  16445,
+                      "sha256":  "fb24c97927fcdb1e2dd6e30e40313fe1a9135486a11bc6785fc5754730fe97e1"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/parse_syntax.cpython-311.pyc",
+                      "size_bytes":  8588,
+                      "sha256":  "79f9ddeed3faec40ae47f12ca19b62ecd0b4201e340f0ed701dfa512abd9820c"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/QUTP.cpython-311.pyc",
+                      "size_bytes":  20360,
+                      "sha256":  "57986de03dc487cf19ab5aa2c9659888244df8b753b47de17ff7d1f836cb23a6"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/script_engine_checking.cpython-311.pyc",
+                      "size_bytes":  13427,
+                      "sha256":  "338cdaba99041c56bb7cbf73d99db97b52b0fbbc8c0e1a0d1786bb9cc267a752"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/script_engine_main.cpython-311.pyc",
+                      "size_bytes":  4304,
+                      "sha256":  "60209f4854b6cc6eb43405cee86f20f5db97d966674b0b0857ee7a7b6228bee0"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/script_engine_sampling.cpython-311.pyc",
+                      "size_bytes":  20023,
+                      "sha256":  "996ef9a6aeefbcaf0e12aee6f9af8988dcbd782cf475206205168012aecba91b"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/__pycache__/script_engine_wrapper.cpython-311.pyc",
+                      "size_bytes":  28776,
+                      "sha256":  "f4a23162a99bd4613a9ddf58e044ebf7ad76118bf64eef9b33d0edc97577129b"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/FDSdata.py",
+                      "size_bytes":  2317,
+                      "sha256":  "626115e2e7c5a72d26927ad4863df5cfc86a6bce34bd84bfd2536963a9fef852"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/global_parm.py",
+                      "size_bytes":  273,
+                      "sha256":  "c7e763b1061ec0da1474b4413c151e7ef8ed724556c1c56268fcfd5f78a810b3"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/MFIR.py",
+                      "size_bytes":  40186,
+                      "sha256":  "b58d805c3a7addfc39d3bf11573b958c4793813ad2dd941748e8d2baddf9209f"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/MFLD.py",
+                      "size_bytes":  47706,
+                      "sha256":  "91f5ed931e69c38f57a0d9e22f0cf8c17658257fb8d57ddbe12be73509e622ee"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/MHDR.py",
+                      "size_bytes":  5181,
+                      "sha256":  "7d69da377bc148eae84e345e4720c16743b2e1a80677872eaaba58d480bfaae6"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/MRND.py",
+                      "size_bytes":  19991,
+                      "sha256":  "cfe04596b6f46ca19e44dc59f8df42ba84b26a431370406d8d9034910ec7a3ac"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/MSTT.py",
+                      "size_bytes":  12143,
+                      "sha256":  "46fa5dcbf2ef7c7ade9cef466a5f07c35de0f2f4fdf258ba0c39a9682ac7b8af"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/parse_syntax.py",
+                      "size_bytes":  6090,
+                      "sha256":  "3c0fd438041d76ee0ae7fbdf849fdc629ad1c1cb313fe327a2ea66cf7a4e693d"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/QUTP.py",
+                      "size_bytes":  16406,
+                      "sha256":  "0d5b0b5c3cd28e49b61bf7134eddf19b98c6b4fcb07ccbeb5888a8b68d54f84e"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/script_engine_checking.py",
+                      "size_bytes":  14824,
+                      "sha256":  "811854209dcfdbe183787639f744862709c44e719bd75d9affdf70a953861024"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/script_engine_main.py",
+                      "size_bytes":  2973,
+                      "sha256":  "d1f59e83517172c0f58bf66c2ea73b6d04a0f1dde66280136534a4d6dcb4ea01"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/script_engine_sampling.py",
+                      "size_bytes":  19074,
+                      "sha256":  "ff0baa35ac6879f82689208a7d23f2ff50f7e3943a89872e84e3119f56168c9a"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/main_code/script_engine_wrapper.py",
+                      "size_bytes":  27036,
+                      "sha256":  "6086238190a91336ef6001f3163470f799dde625e0fcf9287f8ba4a7c987e8d6"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/README.md",
+                      "size_bytes":  9329,
+                      "sha256":  "2865d93241fdba76ff403ee13cdf490a91c5a3b9802dc9b7808a4aceea1736c2"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/requirements.txt",
+                      "size_bytes":  75,
+                      "sha256":  "c364e8ab26077cc5a334379382f6c0e9a74fd28105c3bc20143ff6141b0092c8"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_DWT.txt",
+                      "size_bytes":  1332,
+                      "sha256":  "3f745c0317236670dd1d3cb7f60308b32b301619c0712607aa8e5ddde3b17545"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_FSL.txt",
+                      "size_bytes":  970,
+                      "sha256":  "356f84030c4d9d3c9ece3bf3b2ab43793dfcace6d9e651fd606c249eaf4d2983"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_HRC.txt",
+                      "size_bytes":  1585,
+                      "sha256":  "d2842cc09220600d73f56476a41c01cd49c0b32cb1966b23bce931ae849a25d6"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_MAIN_MRND.txt",
+                      "size_bytes":  2084,
+                      "sha256":  "37bf689909eee90669a280ca9e02221ba586a49bb8f6163fd1de2f74d14544db"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_OTH.txt",
+                      "size_bytes":  725,
+                      "sha256":  "eca2934f507a14fa3dbaea01ef6e49f101eebf8ba12c54b09cfdf323f5bbed0e"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_RXB.txt",
+                      "size_bytes":  1114,
+                      "sha256":  "3a61d2470f3b664c9b1c5b1967cf995ddf61774fc71c8e6a7918c08fc6cf9e88"
+                  },
+                  {
+                      "relative_path":  "FD-Gen-main/test_cases/test_script_VTP.txt",
+                      "size_bytes":  911,
+                      "sha256":  "2ed09d561430e04817f47e4cb5c518251abb21c9d76e6e117eaaec5dedf2ee7e"
+                  },
+                  {
+                      "relative_path":  "sample_card.md",
+                      "size_bytes":  397,
+                      "sha256":  "97eca3674280a3b85ae6165c5b7083532db7cd2d1538a6fb3a6c3b520e9f9741"
+                  }
+              ],
+    "raw_files_unchanged":  true,
+    "formal_benchmark_eligible":  false,
+    "note":  "planning-stage staging only"
+}

@@ -1,0 +1,79 @@
+﻿{
+    "dataset_id":  "D01",
+    "dataset_name":  "Immersed-Tunnel-CFD",
+    "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D01_Immersed-Tunnel-CFD",
+    "source_url":  "https://github.com/babeteax/Immersed-Tunnel-Fire-Location-Detection-Data",
+    "acquisition_date":  "2026-07-14",
+    "upstream_version_or_commit":  "UNKNOWN (planning-stage source inventory)",
+    "download_status":  "DOWNLOADED",
+    "license_status":  "UNKNOWN",
+    "redistribution_status":  "UNKNOWN",
+    "intended_role":  "T1/T2 main data and T3 pair prototype",
+    "file_count":  12,
+    "total_bytes":  71158490,
+    "files":  [
+                  {
+                      "relative_path":  "CFD-Data/100U16_devc.csv",
+                      "size_bytes":  8875476,
+                      "sha256":  "5c3001d5d88692e72483a3558881d548c452868b046c6713e8cd0a4b2f1abe4d"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/130M01_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "8612355f7c44388e57e902bb2f8b3670b6b3daf5a8741869d18b61ad16c10fde"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/130M08_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "9275d81cf32c58ddbfcd6c3b320216253e9407827b4c5edebbd83b7758ba45c4"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/130U16_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "4182e6a2a9fa78a6ced21144cad45c364fec15cabcd9051e0727eca7644a015e"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/70M01_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "308acb91bd3bd4cca7cb32162ce0aa9e448fb6e9289086272b42ecdd25ac343f"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/70U01_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "62cd14d5b258341f644d64af6f73bc8bf0a10ac8e3d83e01d1a551e87814d331"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/70U08_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "ec8e13c2781333771f14231ade39a4e2cb1fdd3bf5b27bba9bd2b5e9e8a696e0"
+                  },
+                  {
+                      "relative_path":  "CFD-Data/70U16_devc.csv",
+                      "size_bytes":  8874873,
+                      "sha256":  "c2013f6cdffe70d1b38022e043564abfcba60f07559fbe712fa3af612da900ed"
+                  },
+                  {
+                      "relative_path":  "example_preview.png",
+                      "size_bytes":  154524,
+                      "sha256":  "9900facf520c268c87b92d0f05dc96a04127ac93e7978524a9c21ebbc9d62479"
+                  },
+                  {
+                      "relative_path":  "ReadDataSet.py",
+                      "size_bytes":  2779,
+                      "sha256":  "0aa38e8ffe03d544eeb16f483cf5d05999a26102aeda0a9b5c38e35086360fc0"
+                  },
+                  {
+                      "relative_path":  "README.md",
+                      "size_bytes":  1197,
+                      "sha256":  "8dc853b0d51a16d7b93f1e85c08256c53b88a0d63cd22af2cff3a304725996c3"
+                  },
+                  {
+                      "relative_path":  "sample_card.md",
+                      "size_bytes":  403,
+                      "sha256":  "e77be5bfdce1044253db394e088ec982896b66acf84b3839c48bdcbd16199f96"
+                  }
+              ],
+    "raw_files_unchanged":  true,
+    "formal_benchmark_eligible":  false,
+    "note":  "planning-stage staging only"
+}

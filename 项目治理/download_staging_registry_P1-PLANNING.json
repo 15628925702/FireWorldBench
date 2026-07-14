@@ -1,0 +1,83 @@
+﻿{
+    "registry_id":  "P1-PLANNING",
+    "generated_at":  "2026-07-14T00:00:00+08:00",
+    "scope":  "planning-stage local staging only",
+    "formal_benchmark_eligible":  false,
+    "license_status":  "UNKNOWN",
+    "redistribution_status":  "UNKNOWN",
+    "datasets":  [
+                     {
+                         "dataset_id":  "D01",
+                         "dataset_name":  "Immersed-Tunnel-CFD",
+                         "status":  "DOWNLOADED",
+                         "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D01_Immersed-Tunnel-CFD",
+                         "file_count":  12,
+                         "total_bytes":  71158490,
+                         "manifest_path":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\项目治理\\download_manifest_D01_planning.json",
+                         "license_status":  "UNKNOWN",
+                         "redistribution_status":  "UNKNOWN",
+                         "formal_benchmark_eligible":  false
+                     },
+                     {
+                         "dataset_id":  "D02",
+                         "dataset_name":  "PolyUFire",
+                         "status":  "DOWNLOADED",
+                         "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D02_PolyUFire",
+                         "file_count":  110,
+                         "total_bytes":  70833300,
+                         "manifest_path":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\项目治理\\download_manifest_D02_planning.json",
+                         "license_status":  "UNKNOWN",
+                         "redistribution_status":  "UNKNOWN",
+                         "formal_benchmark_eligible":  false
+                     },
+                     {
+                         "dataset_id":  "D03",
+                         "dataset_name":  "FDS-exp",
+                         "status":  "DOWNLOADED",
+                         "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D03_FDS-exp",
+                         "file_count":  7,
+                         "total_bytes":  181287,
+                         "manifest_path":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\项目治理\\download_manifest_D03_planning.json",
+                         "license_status":  "UNKNOWN",
+                         "redistribution_status":  "UNKNOWN",
+                         "formal_benchmark_eligible":  false
+                     },
+                     {
+                         "dataset_id":  "D04",
+                         "dataset_name":  "FD-Gen",
+                         "status":  "DOWNLOADED",
+                         "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D04_FD-Gen",
+                         "file_count":  50,
+                         "total_bytes":  85736781,
+                         "manifest_path":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\项目治理\\download_manifest_D04_planning.json",
+                         "license_status":  "UNKNOWN",
+                         "redistribution_status":  "UNKNOWN",
+                         "formal_benchmark_eligible":  false
+                     },
+                     {
+                         "dataset_id":  "D05",
+                         "dataset_name":  "D-Fire",
+                         "status":  "DOWNLOADED",
+                         "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D05_D-Fire",
+                         "file_count":  8,
+                         "total_bytes":  643012,
+                         "manifest_path":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\项目治理\\download_manifest_D05_planning.json",
+                         "license_status":  "UNKNOWN",
+                         "redistribution_status":  "UNKNOWN",
+                         "formal_benchmark_eligible":  false
+                     },
+                     {
+                         "dataset_id":  "D10",
+                         "dataset_name":  "FIgLib-SmokeyNet",
+                         "status":  "DOWNLOADED",
+                         "target_root":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\data\\raw\\D10_FIgLib-SmokeyNet",
+                         "file_count":  9,
+                         "total_bytes":  8327056,
+                         "manifest_path":  "G:\\0-newResearch\\2\\5.项目实现\\v1\\项目治理\\download_manifest_D10_planning.json",
+                         "license_status":  "UNKNOWN",
+                         "redistribution_status":  "UNKNOWN",
+                         "formal_benchmark_eligible":  false
+                     }
+                 ],
+    "note":  "No dataset is approved for formal training, testing, publication, or redistribution."
+}
