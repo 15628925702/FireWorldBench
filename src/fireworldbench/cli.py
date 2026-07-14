@@ -11,6 +11,7 @@ from fireworldbench import __version__
 from fireworldbench.project_checks import discover_project_root, validate_project
 from fireworldbench.pipeline import build_canonical, inventory, write_json
 from fireworldbench.staging_integration import write_staging_assessment
+from fireworldbench.real_benchmark import write_candidate_manifest
 from fireworldbench.t1_builder import build_t1
 from fireworldbench.t2_builder import build_t2
 from fireworldbench.t3_builder import build_t3
@@ -73,6 +74,9 @@ def build_parser() -> argparse.ArgumentParser:
     staging_parser = subparsers.add_parser("staging-integrate-assess", help="assess read-only planning data staging integration")
     staging_parser.add_argument("--root", type=Path, required=True, help="project root containing data/raw")
     staging_parser.add_argument("--output", type=Path, required=True)
+    real_parser = subparsers.add_parser("real-benchmark-build", help="build non-formal candidate cases from observed staging formats")
+    real_parser.add_argument("--root", type=Path, required=True, help="project root containing data/raw")
+    real_parser.add_argument("--output", type=Path, required=True)
     t1_parser = subparsers.add_parser("build-t1", help="build T1-A/B/C train or dev samples")
     t1_parser.add_argument("--input", type=Path, required=True, help="canonical pipeline JSON")
     t1_parser.add_argument("--split", choices=("train_id", "dev_id"), default="dev_id")
@@ -214,6 +218,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"status": result["status"], "dataset_count": len(result["datasets"]), "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "real-benchmark-build":
+        try:
+            result = write_candidate_manifest(args.root, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"status": result["status"], "candidate_case_count": result["candidate_case_count"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     if args.command == "build-t1":
         try:

@@ -1,12 +1,21 @@
 ---
-handoff_id: H-20260714-S049-001
+handoff_id: H-20260714-S050-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S049_P3-PIPELINE-STAGING-INTEGRATION真实staging接入.md
-current_task: P3-REAL-BENCHMARK-BUILD
+source_session: 2026-07-14_S050_P3-REAL-BENCHMARK-BUILD真实benchmark构建.md
+current_task: P3-MODEL-ONBOARDING
 ---
 
 # Current Status
+
+## P3-REAL-BENCHMARK-BUILD completion
+
+- 已新增 FDS 两行表头 CSV 的显式候选 case 构建器和 `real-benchmark-build` CLI。
+- D01 生成 8 个候选 case，D03 生成 3 个候选 case，D02 保持格式阻塞；总计 11 个候选 case。
+- 机器结果为 `项目治理/p3_real_benchmark_build_P3-REAL-BENCHMARK-BUILD.json`，状态为 `CANDIDATE_CASES_BUILT_FORMAL_USE_BLOCKED`。
+- 候选结果不是正式 train/dev/test；所有资格仍为 `BLOCKED`，`data/raw` 未修改。
+- 验证：定向 pytest 2 passed，mypy 通过；未安装任何包。
+- 下一任务：`P3-MODEL-ONBOARDING`。
 
 ## P3-PIPELINE-STAGING-INTEGRATION completion
 

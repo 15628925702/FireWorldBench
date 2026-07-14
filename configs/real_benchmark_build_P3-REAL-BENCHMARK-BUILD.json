@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "P3-REAL-BENCHMARK-BUILD",
+  "builder_version": "P3-REAL-BENCHMARK-BUILD",
+  "sources": ["D01", "D02", "D03"],
+  "adapter": "FDS_CSV_TWO_ROW_HEADER",
+  "case_key": "dataset_id + source_relative_path",
+  "sequence_key": "case_id",
+  "time_mapping": "Time column with source unit retained; no guessed conversion",
+  "output_kind": "planning_candidate_only",
+  "formal_benchmark_eligible": false,
+  "training_eligible": "BLOCKED",
+  "development_eligible": "BLOCKED",
+  "testing_eligible": "BLOCKED",
+  "derived_release_eligible": "BLOCKED",
+  "redistribution_eligible": "BLOCKED",
+  "do_not_modify_raw": true,
+  "do_not_read_test_private": true
+}
