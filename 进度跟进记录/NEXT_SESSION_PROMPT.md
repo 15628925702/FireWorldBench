@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260714-S042-001
+handoff_id: H-20260714-S043-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S042_P6-AUDIT-001论文数字独立追踪无结果决策.md
-current_task: P6-EXPORT-001
+source_session: 2026-07-14_S043_P6-EXPORT-001冻结论文数据包无结果决策.md
+current_task: P7-ANON-001
 ---
+
+## P6-EXPORT-001 completed
+
+论文导出契约已冻结：public/private 是两个独立根，各自拥有 manifest/checksum；manifest 不自哈希但 checksums 覆盖 manifest 和其他文件；public 严禁 private、test gold、身份映射、restricted ref、secret 和绝对路径。当前无冻结结果和完整 provenance，正式状态为 `BLOCKED_NO_FROZEN_RESULTS`，没有生成空包或伪造论文包。
+
+## Next window: one task only
+
+`P7-ANON-001`: 按顺序读取 handoff 文件和任务包，扫描作者名、用户名、绝对路径、私有 URL、密钥、Git 元数据、测试 gold 和不允许再分发的第三方数据；当前没有论文导出包时记录正式 no-input/block 决策，不生成匿名包。完成检查、commit，并尝试 push `origin/main`。
 
 ## P6-AUDIT-001 completed
 

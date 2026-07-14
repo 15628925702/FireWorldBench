@@ -1,0 +1,11 @@
+{
+  "task_id": "P6-EXPORT-001",
+  "export_version": "P6-EXPORT-001",
+  "public_root": "paper_exports_public/<release_id>/",
+  "private_root": "paper_exports_private/<release_id>/",
+  "manifest_self_hash_excluded": true,
+  "checksums_cover_manifest": true,
+  "public_must_exclude": ["private roots", "test gold", "identity", "restricted refs", "secrets", "absolute paths"],
+  "reconstruction_required": true,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}

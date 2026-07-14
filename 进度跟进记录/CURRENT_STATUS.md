@@ -1,12 +1,21 @@
 ---
-handoff_id: H-20260714-S042-001
+handoff_id: H-20260714-S043-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S042_P6-AUDIT-001论文数字独立追踪无结果决策.md
-current_task: P6-EXPORT-001
+source_session: 2026-07-14_S043_P6-EXPORT-001冻结论文数据包无结果决策.md
+current_task: P7-ANON-001
 ---
 
 # Current Status
+
+## P6-EXPORT-001 completion
+
+- 已建立 public/private 两个独立根的论文导出契约，各自 manifest/checksum；manifest 不自哈希，但 checksums 必须覆盖 manifest 和根内其他文件。
+- 已冻结 public 泄漏门禁：private root、test gold、私有身份映射、restricted ref、secret、绝对路径均禁止进入 public；修复只能生成新 release_id，不能覆盖旧包。
+- 当前没有冻结结果和完整正文/表/图 provenance，正式状态为 `BLOCKED_NO_FROZEN_RESULTS`；没有创建导出根、manifest、checksum、论文包或重建结果。
+- test access ledger 为 `NO_ACCESS_CONFIRMED`；未读取测试/私有资产，未修改 `../../3.数据集`。
+- 验证：`python -m pytest -q`（`PYTHONPATH=.;src`）112 passed；`mypy src` 通过；CLI 返回 `BLOCKED_NO_FROZEN_RESULTS`；doctor 通过。
+- 下一唯一任务：`P7-ANON-001`。
 
 ## P6-AUDIT-001 completion
 
