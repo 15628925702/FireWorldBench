@@ -1,7 +1,7 @@
 ---
 handoff_id: H-20260714-S047-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S047_GOV能力数据源任务矩阵变更.md
 current_task: P1-DATA-001
 ---
@@ -16,6 +16,7 @@ current_task: P1-DATA-001
 - 已新增 `详细设计规划/06_能力-数据源-任务矩阵.md` 和 P1/P2 变更附录；旧 freeze manifest/hash 保持不变，但 paper-ready 执行前必须重新冻结受影响内容。
 - 之前 P3-P7 的 fixture、门禁和 no-input 决策只证明工程框架，不代表真实 benchmark、正式实验或论文数据完成。
 - 当前恢复点为 `P1-DATA-001` 第二轮：按新矩阵重新核验真实数据准入、来源角色和许可；未闭合前不得跳回 P5-P7 或发布。
+- 本次设计变更实现提交为 `67db92a`；连续三次 `git push origin main` 因连接重置或 `github.com:443` 不可达失败。推送成功前保持 `BLOCKED_PUSH`，下一窗口先重试推送再执行 P1-DATA-001 第二轮。
 
 ## P7-RELEASE-001 completion
 

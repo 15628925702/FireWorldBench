@@ -1,12 +1,14 @@
 ---
 handoff_id: H-20260714-S047-001
 handoff_state: READY
-task_status: READY
+task_status: BLOCKED_PUSH
 source_session: 2026-07-14_S047_GOV能力数据源任务矩阵变更.md
 current_task: P1-DATA-001
 ---
 
 ## Next window: P1-DATA-001 second pass
+
+第一动作：执行 `git push origin main` 并核验 `origin/main` 包含本次能力—数据源矩阵变更。实现提交 `67db92a` 连续三次因 GitHub 连接重置/443 不可达而未推送；成功前保持 `BLOCKED_PUSH`。
 
 先读 `AGENTS.md`、`CURRENT_STATUS.md`、本文件、source session、任务库中 `P1-DATA-001`，再读 `详细设计规划/06_能力-数据源-任务矩阵.md` 和 `项目治理/P1_P2_能力数据源任务矩阵变更附录.md`。
 
