@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "P4-FORMAL-STRUCTURE-PLANNING-SMOKE-001",
+  "status": "COMPLETED_WITH_FAILURES_LOCAL_PLANNING",
+  "scope": "D01 only; four source cases group-first split into two train and two dev; not a formal benchmark",
+  "model": "deepseek-chat",
+  "dev_requests": 17,
+  "dev_predictions_parsed": 16,
+  "retained_failures": 1,
+  "provider_usage": {"input_tokens": 42964, "output_tokens": 2019},
+  "task_metrics": {
+    "T1-A": {"primary_metric": 1.0, "n_samples": 2},
+    "T1-B": {"primary_metric": 1.0, "n_samples": 2},
+    "T1-C": {"primary_metric": 0.0, "n_samples": 2},
+    "T2-A": {"primary_metric": 0.0, "n_samples": 2},
+    "T2-B": {"primary_metric": 0.0, "n_samples": 2},
+    "T2-C": {"primary_metric": 1.0, "n_samples": 2},
+    "T3-A": {"primary_metric": 1.0, "n_samples": 2},
+    "T3-B": {"primary_metric": 0.0, "n_samples": 1},
+    "T3-C": {"primary_metric": 0.0, "n_samples": 2}
+  },
+  "baseline": {"strategy": "majority", "train_only": true, "retained_missing_prediction": 1},
+  "preliminary_error_counts": {"uncertainty": 2, "state": 2, "mechanism": 2, "causal": 2, "format": 1},
+  "artifact_hashes": {
+    "dev_samples": "60f8956c4f120a9734ce80474699a9d52101c942864b5d11f70f0aafb09b6f23",
+    "train_samples": "ad25f0ebeaf099bf5e911240edbc91b8490af026e4e86bd084e92e5ce51741d3",
+    "predictions": "1988f73da8d60f3e0e8e4ce179945f40a7b12e593e37a11c1f609fe048c27f52",
+    "score": "d69c169d570312419e5739b2ac16c4e134bd974ed8c155019115001ce654be99",
+    "statistics": "9f5ebf393d7b2ffa5c871624ec439c25e7aecaf67efce403833071b67db80798",
+    "baseline_score": "80f5d94d2a9cc545603e7172d3609c63545eafb3970989226eb69dd032116fd1",
+    "error_analysis": "8edda04dc26545dc29ae5f9e2ed0194b4e45c7bcaf4369900848f64a17a301d0"
+  },
+  "raw_files_modified": false,
+  "test_private_assets_accessed": false,
+  "formal_benchmark_eligible": false,
+  "publication_claim_allowed": false,
+  "scale_up_blockers": [
+    "T1-C needs an interactive next-observation interface",
+    "T2-A state labels require a documented physical state rule",
+    "T2-B mechanism gold requires discriminating evidence or an explicit unknown protocol",
+    "T3-C trace interface needs output-schema and gold-trace alignment",
+    "T3-B needs valid single-variable pairs and a larger output allowance or repair parser"
+  ]
+}

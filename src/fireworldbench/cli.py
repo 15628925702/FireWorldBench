@@ -14,6 +14,7 @@ from fireworldbench.staging_integration import write_staging_assessment
 from fireworldbench.real_benchmark import write_candidate_manifest
 from fireworldbench.deepseek import run_deepseek_pilot_file
 from fireworldbench.planning_pilot import write_planning_t1_pilot
+from fireworldbench.full_planning_pilot import write_full_planning_pilot
 from fireworldbench.t1_builder import build_t1
 from fireworldbench.t2_builder import build_t2
 from fireworldbench.t3_builder import build_t3
@@ -84,6 +85,12 @@ def build_parser() -> argparse.ArgumentParser:
     planning_pilot_parser.add_argument("--output", type=Path, required=True)
     planning_pilot_parser.add_argument("--max-cases", type=int, default=2)
     planning_pilot_parser.add_argument("--rows-per-case", type=int, default=6)
+    full_pilot_parser = subparsers.add_parser("full-planning-pilot-build", help="build a small formal-structure local pilot across all tasks")
+    full_pilot_parser.add_argument("--root", type=Path, required=True)
+    full_pilot_parser.add_argument("--output", type=Path, required=True, help="dev sample manifest")
+    full_pilot_parser.add_argument("--train-output", type=Path, required=True)
+    full_pilot_parser.add_argument("--max-cases", type=int, default=4)
+    full_pilot_parser.add_argument("--rows-per-case", type=int, default=6)
     deepseek_parser = subparsers.add_parser("deepseek-pilot", help="run a capped DeepSeek local planning pilot")
     deepseek_parser.add_argument("--samples", type=Path, required=True)
     deepseek_parser.add_argument("--config", type=Path, required=True)
@@ -165,6 +172,8 @@ def build_parser() -> argparse.ArgumentParser:
     error_parser = subparsers.add_parser("error-assess", help="audit blind error-analysis readiness")
     error_parser.add_argument("--output", type=Path, required=True)
     error_parser.add_argument("--raw-predictions", type=Path)
+    error_parser.add_argument("--samples", type=Path)
+    error_parser.add_argument("--planning-mode", action="store_true")
     claims_parser = subparsers.add_parser("claims-freeze", help="write the claims-evidence freeze matrix")
     claims_parser.add_argument("--output", type=Path, required=True)
     tables_parser = subparsers.add_parser("paper-tables-assess", help="audit paper-table export readiness")
@@ -247,6 +256,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         print(json.dumps({"sample_count": result["sample_count"], "record_count": result["record_count"], "output": str(args.output)}, ensure_ascii=False))
+        return 0
+    if args.command == "full-planning-pilot-build":
+        try:
+            result = write_full_planning_pilot(args.root, args.output, args.train_output, args.max_cases, args.rows_per_case)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(json.dumps({"sample_count": result["sample_count"], "train_sample_count": result["train_sample_count"], "task_counts": result["task_counts"], "output": str(args.output)}, ensure_ascii=False))
         return 0
     if args.command == "deepseek-pilot":
         try:
@@ -426,7 +443,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
     if args.command == "error-assess":
         try:
-            result = write_error_decision(args.output, args.raw_predictions)
+            result = write_error_decision(args.output, args.raw_predictions, samples_path=args.samples, planning_mode=args.planning_mode)
         except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
             print(f"ERROR: {exc}")
             return 2

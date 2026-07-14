@@ -55,7 +55,7 @@ def run_baseline(samples: Sequence[Mapping[str, Any]], *, strategy: str, seed: i
         if label is None:
             failures.append({"sample_id": sample.get("sample_id"), "code": "NO_TRAIN_CALIBRATION_SUPPORT"})
             continue
-        predictions.append({"sample_id": sample.get("sample_id"), "task": sample.get("task"), "answer": {"label": label}, "evidence": [], "uncertainty": {"level": "unknown", "reason": f"{strategy} baseline"}, "missing_information": []})
+        predictions.append({"schema_version": "2.0", "sample_id": sample.get("sample_id"), "task": sample.get("task"), "answer": {"label": label}, "evidence": [], "uncertainty": {"level": "unknown", "reason": f"{strategy} baseline"}, "missing_information": []})
     return {"baseline_version": BASELINE_VERSION, "strategy": strategy, "seed": seed, "config_sha256": _hash(config), "sample_count": len(predictions), "failure_count": len(failures), "predictions": predictions, "failures": failures, "test_tuning": False}
 
 

@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "task_id": "P4-PILOT-RUN",
-  "status": "COMPLETED_LOCAL_PLANNING_SMOKE_TEST",
+  "status": "COMPLETED_WITH_FAILURES_LOCAL_PLANNING",
   "pilot_scope": "train_dev_only",
   "model_ids": ["deepseek-chat"],
   "runtime": "DeepSeek OpenAI-compatible chat completions",
-  "budget": "four requests; 180 max output tokens per request",
+  "budget": "formal-structure smoke: 17 dev requests; 180 max output tokens per request",
   "train_manifest": null,
-  "dev_manifest": "artifacts/planning_pilot/samples_final.json",
+  "dev_manifest": "artifacts/formal_structure_pilot/dev_samples.json",
   "candidate_case_manifest_is_formal_input": false,
   "test_access_ledger": "NO_ACCESS_CONFIRMED",
   "models_run": true,
@@ -16,5 +16,5 @@
     "formal_source_eligibility_missing",
     "formal_train_manifest_missing"
   ],
-  "smoke_test_report": "项目治理/p4_deepseek_smoke_test_P4-PILOT-RUN.json"
+  "smoke_test_report": "项目治理/p4_formal_structure_planning_pilot.json"
 }

@@ -1,14 +1,14 @@
 ---
-handoff_id: H-20260714-S056-001
+handoff_id: H-20260714-S057-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S056_P5-STATISTICS-PLANNING-SMOKE本地统计闭环.md
-current_task: P5-ERROR-ANALYSIS
+source_session: 2026-07-14_S057_P5-ERROR-ANALYSIS-PLANNING-SMOKE全任务错误分析.md
+current_task: P4-PILOT-REMEDIATION
 ---
 
-## Next window: P5-ERROR-ANALYSIS
+## Next window: P4-PILOT-REMEDIATION
 
-上一任务已完成 DeepSeek local planning 统计：两个 D01 case、四个 `dev_id` T1-A/T1-B 样本均完成、评分和统计。下一窗口只对现有 4 条 prediction 做错误分析；不得扩展样本、不得读 test/private、不得将 smoke test 写成正式 benchmark 或论文结论。
+上一任务已完成全九任务 formal-structure local smoke test。下一窗口先修复 T1-C 交互、T2-A/B 标签语义、T3-C trace 契约和 T3-B pair/解析问题，再重跑同一小样本；在复跑通过前不得扩大样本或把结果称为正式 benchmark。
 
 交付提示：本地统计提交为 `98f985c`，GitHub 443 当前不可达。先重试 `git push origin main`；失败则保留 `BLOCKED_PUSH` 并继续本地任务。
 

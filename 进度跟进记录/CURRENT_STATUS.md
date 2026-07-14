@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S056-001
+handoff_id: H-20260714-S057-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S056_P5-STATISTICS-PLANNING-SMOKE本地统计闭环.md
-current_task: P5-ERROR-ANALYSIS
+source_session: 2026-07-14_S057_P5-ERROR-ANALYSIS-PLANNING-SMOKE全任务错误分析.md
+current_task: P4-PILOT-REMEDIATION
 ---
 
 # Current Status
+
+## Full Formal-Structure Planning Smoke Completion
+
+- 已完成四个 D01 case 的 group-first 2 train/2 dev 小样本全任务执行：T1/T2/T3、train-only majority baseline、DeepSeek dev 推理、scorer、统计和错误分析均已实际运行。
+- DeepSeek 共发起 17 条 dev 请求，16 条解析成功，保留 1 条 T3-B 输出截断失败；总用量为 42,964 输入 token、2,019 输出 token。
+- 正确任务：T1-A、T1-B、T2-C、T3-A；待修复边界：T1-C 交互、T2-A 状态规则、T2-B 机制 gold、T3-C trace 对齐、T3-B 有效 pair/输出解析。
+- 运行摘要和哈希：`项目治理/p4_formal_structure_planning_pilot.json`。这证明完整执行链可运行，但上述五项未修复前不应直接放大到大规模实验。
+- 下一任务：`P4-PILOT-REMEDIATION`。
 
 ## P5-STATISTICS local planning smoke completion
 

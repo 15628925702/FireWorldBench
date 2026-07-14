@@ -17,6 +17,7 @@ def test_chance_is_seeded_and_majority_uses_train_only() -> None:
 
     assert chance_a == chance_b
     assert majority["predictions"][0]["answer"]["label"] == "not_fire_forming"
+    assert majority["predictions"][0]["schema_version"] == "2.0"
 
 
 def test_temporal_and_test_split_boundaries() -> None:
