@@ -1,12 +1,19 @@
 ---
-handoff_id: H-20260714-S052-001
+handoff_id: H-20260714-S053-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S052_P4-PILOT-RUN试运行门禁审计.md
-current_task: P5-MAIN-RUN
+source_session: 2026-07-14_S053_P5-MAIN-RUN主实验门禁审计.md
+current_task: P5-STATISTICS
 ---
 
 # Current Status
+
+## P5-MAIN-RUN completion
+
+- 主实验门禁状态为 `BLOCKED_NO_APPROVED_MAIN_INPUTS`。
+- 缺少批准模型矩阵、冻结校准 manifest、runtime、paper-ready 输入 manifest 和 run index。
+- 未启动模型、未读取 test/private、未下载/安装依赖、未生成结果或论文数字。
+- 下一任务：`P5-STATISTICS`。
 
 ## P4-PILOT-RUN completion
 

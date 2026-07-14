@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "P5-MAIN-RUN",
+  "status": "BLOCKED_NO_APPROVED_MAIN_INPUTS",
+  "model_matrix": [],
+  "calibration_manifest": null,
+  "runtime": null,
+  "paper_ready_input_manifest": null,
+  "run_index": null,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED",
+  "models_run": false,
+  "results_written": false,
+  "blockers": ["approved_model_matrix_missing", "calibration_manifest_missing", "approved_main_runtime_missing", "paper_ready_input_manifest_missing"]
+}

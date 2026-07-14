@@ -1,14 +1,14 @@
 ---
-handoff_id: H-20260714-S052-001
+handoff_id: H-20260714-S053-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S052_P4-PILOT-RUN试运行门禁审计.md
-current_task: P5-MAIN-RUN
+source_session: 2026-07-14_S053_P5-MAIN-RUN主实验门禁审计.md
+current_task: P5-STATISTICS
 ---
 
-## Next window: P5-MAIN-RUN
+## Next window: P5-STATISTICS
 
-上一任务已完成 train/dev-only pilot 门禁审计，正式状态为 `BLOCKED_NO_PILOT_INPUT_OR_RUNTIME`。下一窗口只评估主实验启动条件；没有冻结 train/dev 结果、批准模型矩阵和运行时，不启动 main run，不读取 test/private，不生成结果数字。
+上一任务已完成主实验门禁审计，正式状态为 `BLOCKED_NO_APPROVED_MAIN_INPUTS`。下一窗口只评估统计重算门禁；没有 immutable raw predictions 时记录 no-input，不读取 test/private，不手工填写指标，不生成论文数字。
 
 交付提示：P4-PILOT-RUN 本地提交为 `102ca3d`，首次 push 因 GitHub HTTPS 连接重置失败，重试 `git push origin main`；失败则继续记录 `BLOCKED_PUSH` 并保留本地提交。
 
