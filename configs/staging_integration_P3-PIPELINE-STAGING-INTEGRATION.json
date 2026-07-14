@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "task_id": "P3-PIPELINE-STAGING-INTEGRATION",
+  "assessment_version": "P3-PIPELINE-STAGING-INTEGRATION",
+  "scope": "D01,D02,D03,D04,D05,D10 local planning staging only",
+  "raw_root": "data/raw",
+  "read_only": true,
+  "formal_benchmark_eligible": false,
+  "do_not_execute_generator_assets": true,
+  "do_not_read_test_or_private_assets": true
+}

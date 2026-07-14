@@ -1,12 +1,21 @@
 ---
-handoff_id: H-20260714-S048-001
+handoff_id: H-20260714-S049-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S048_增量接入路线修正.md
-current_task: P3-PIPELINE-STAGING-INTEGRATION
+source_session: 2026-07-14_S049_P3-PIPELINE-STAGING-INTEGRATION真实staging接入.md
+current_task: P3-REAL-BENCHMARK-BUILD
 ---
 
 # Current Status
+
+## P3-PIPELINE-STAGING-INTEGRATION completion
+
+- 已完成 D01/D02/D03/D04/D05/D10 staging 的只读 inventory、格式/字段候选探针和 canonical builder 试探。
+- 机器结果为 `项目治理/p3_staging_integration_P3-PIPELINE-STAGING-INTEGRATION.json`，正式状态为 `BLOCKED_STAGING_INTEGRATION`。
+- D01/D03 需要显式 adapter；D02 的表格格式未接入；D04 不执行生成器；D05/D10 仅保留视觉辅助定位。
+- 所有训练、开发、测试、派生发布、再分发资格仍为 `BLOCKED`，原始 staging 文件未修改。
+- 验证：定向 pytest 通过，mypy 通过；ruff 未安装且未安装任何包。
+- 下一任务：`P3-REAL-BENCHMARK-BUILD`。
 
 ## P1-PLANNING-STAGING completion
 

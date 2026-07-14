@@ -1,10 +1,16 @@
 ---
-handoff_id: H-20260714-S048-001
+handoff_id: H-20260714-S049-001
 handoff_state: READY
 task_status: READY
-source_session: 2026-07-14_S048_增量接入路线修正.md
-current_task: P3-PIPELINE-STAGING-INTEGRATION
+source_session: 2026-07-14_S049_P3-PIPELINE-STAGING-INTEGRATION真实staging接入.md
+current_task: P3-REAL-BENCHMARK-BUILD
 ---
+
+## Next window: P3-REAL-BENCHMARK-BUILD
+
+上一任务已完成 staging 只读接入评估，但正式状态为 `BLOCKED_STAGING_INTEGRATION`。下一窗口只做真实 benchmark case 构建方案：基于 D01/D02/D03 的已观察格式，定义显式 adapter、case/sequence/time/units 映射和最小可验证 canonical fixture；不得把 staging 直接标成 train/dev/test，不得读取 test/private，不得执行 D04 生成器，不得修改 `data/raw`。
+
+先读取 `AGENTS.md`、`CURRENT_STATUS.md`、本文件、source session 和任务包中 `P3-REAL-BENCHMARK-BUILD`，创建新的 IN_PROGRESS 会话草稿。完成后运行测试、mypy，提交并尝试 push；push 失败则记录 `BLOCKED_PUSH` 并保留本地提交继续推进。
 
 ## Next window: P3-PIPELINE-STAGING-INTEGRATION
 
