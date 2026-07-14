@@ -8,7 +8,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from fireworldbench.pipeline import SUPPORTED_SUFFIXES, build_canonical, inventory, sha256_bytes, write_json
+from fireworldbench.pipeline import SUPPORTED_SUFFIXES, _read_records, build_canonical, inventory, sha256_bytes, write_json
 
 STAGING_VERSION = "P3-PIPELINE-STAGING-INTEGRATION"
 STAGED_DATASETS = ("D01", "D02", "D03", "D04", "D05", "D10")
@@ -67,6 +67,13 @@ def _structured_probe(root: Path, files: list[dict[str, Any]]) -> dict[str, Any]
         try:
             if item["suffix"] == ".csv":
                 probe = _csv_probe(path)
+            elif item["suffix"] == ".xlsx":
+                xlsx_rows = [row for _, row in _read_records(path)][:2]
+                probe = {
+                    "fields": sorted({str(key) for row in xlsx_rows for key in row}),
+                    "sample_row_count": len(xlsx_rows),
+                    "adapter": "stdlib_xlsx",
+                }
             else:
                 rows: list[dict[str, Any]] = []
                 if item["suffix"] == ".jsonl":
@@ -94,10 +101,16 @@ def _structured_probe(root: Path, files: list[dict[str, Any]]) -> dict[str, Any]
 def _blocker(dataset_id: str, suffix_counts: Counter[str], canonical: dict[str, Any]) -> tuple[str, str]:
     if dataset_id in {"D05", "D10"}:
         return "AUX_ONLY_BLOCKED", "visual auxiliary labels do not expose canonical case/time records"
-    if dataset_id == "D02" and not (set(suffix_counts) & SUPPORTED_SUFFIXES):
-        return "UNSUPPORTED_FORMAT_BLOCKED", "staging contains XLS/XLSX; safe adapter has no spreadsheet reader"
+    if dataset_id == "D02":
+        if canonical["record_count"] == 0:
+            return "UNSUPPORTED_FORMAT_BLOCKED", "no tabular records were readable from the spreadsheet staging"
+        if ".xls" in suffix_counts:
+            return "PARTIAL_FORMAT_BLOCKED", "XLSX is readable with stdlib; legacy XLS files still require conversion"
+        return "PLANNING_ADAPTER_READY", "XLSX records entered the canonical planning chain"
     if dataset_id == "D04":
         return "GENERATOR_RUNTIME_BLOCKED", "generator assets are not executable during staging integration"
+    if dataset_id in {"D01", "D03"} and canonical["record_count"]:
+        return "PLANNING_ADAPTER_READY", "tabular records entered the canonical planning chain"
     return "SEMANTIC_SCHEMA_BLOCKED", (
         f"canonical probe produced {canonical['record_count']} records and "
         f"{canonical['failure_count']} failures; case/time semantics require an explicit adapter"

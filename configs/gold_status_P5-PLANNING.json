@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "gold_id": "P5-PLANNING-AUTO-GOLD",
+  "status": "AUTO_RULES_COMPLETE_EXPERT_REVIEW_PENDING",
+  "scope": "D01/D02-readable-XLSX/D03 planning chain",
+  "expert_review": "BLOCKED_PENDING_EXPERT_REVIEW",
+  "direct_measurement_closure": "available only where source exposes the required measurement; otherwise explicit unknown",
+  "tasks": {
+    "T1-A": {"status": "AUTO_RULE_COMPLETE", "rule": "temperature <=25 -> not_fire_forming; temperature >=60 -> fire_forming; otherwise insufficient_information"},
+    "T1-B": {"status": "AUTO_RULE_COMPLETE", "rule": "temperature <=25 -> non_fire; temperature >=60 -> fire; otherwise insufficient_information"},
+    "T1-C": {"status": "AUTO_RULE_COMPLETE", "rule": "query the available next observation when it can reduce the current uncertainty; otherwise stop"},
+    "T2-A": {"status": "AUTO_RULE_COMPLETE", "rule": "temperature <=25 -> baseline_or_no_fire; temperature >=60 -> developed_or_peak; otherwise forming_or_early"},
+    "T2-B": {"status": "AUTO_ABSTENTION_COMPLETE", "rule": "without discriminating flow or geometry evidence, emit mechanism_unknown"},
+    "T2-C": {"status": "AUTO_RULE_COMPLETE", "rule": "compare paired observations and emit consistent, inconsistent, or insufficient_information"},
+    "T3-A": {"status": "AUTO_RULE_COMPLETE", "rule": "derive trend from ordered numeric observations and abstain when the trend is not identifiable"},
+    "T3-B": {"status": "AUTO_PAIR_RULE_COMPLETE", "rule": "pair only same smoke configuration with ignition position as the single changed variable"},
+    "T3-C": {"status": "AUTO_ABSTENTION_COMPLETE", "rule": "emit trace_unknown when no source trace can be reconstructed; never invent a causal trace"}
+  },
+  "known_gaps": [
+    "Expert adjudication has not been performed.",
+    "D02 legacy XLS remains unreadable without an external converter.",
+    "Mechanism and causal labels are abstention labels when the source has no discriminating evidence."
+  ]
+}

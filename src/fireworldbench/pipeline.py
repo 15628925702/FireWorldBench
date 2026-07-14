@@ -7,12 +7,15 @@ import hashlib
 import json
 import math
 import os
+import re
+import zipfile
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable, Mapping
+from xml.etree import ElementTree
 
 PIPELINE_VERSION = "P3-PIPELINE-001"
-SUPPORTED_SUFFIXES = {".csv", ".json", ".jsonl"}
+SUPPORTED_SUFFIXES = {".csv", ".json", ".jsonl", ".xlsx"}
 PROTECTED_PATH_PARTS = {"test_gold", "private_id_mapping", "private_scoring_metadata", "restricted_test_inputs"}
 TIME_TO_SECONDS = {"s": 1.0, "sec": 1.0, "ms": 0.001, "min": 60.0}
 
@@ -74,6 +77,76 @@ def _as_float(value: Any) -> float | None:
     return number if math.isfinite(number) else None
 
 
+def _xlsx_column_index(reference: str) -> int:
+    letters = re.match(r"[A-Za-z]+", reference or "")
+    if not letters:
+        return 0
+    index = 0
+    for char in letters.group(0).upper():
+        index = index * 26 + ord(char) - ord("A") + 1
+    return index - 1
+
+
+def _read_xlsx_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
+    """Read simple tabular XLSX sheets with stdlib XML support only."""
+    namespace = {"main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+    with zipfile.ZipFile(path) as archive:
+        shared: list[str] = []
+        if "xl/sharedStrings.xml" in archive.namelist():
+            root = ElementTree.fromstring(archive.read("xl/sharedStrings.xml"))
+            for item in root.findall("main:si", namespace):
+                shared.append("".join(item.itertext()))
+        sheets = sorted(
+            name for name in archive.namelist()
+            if name.startswith("xl/worksheets/sheet") and name.endswith(".xml")
+        )
+        for sheet_name in sheets:
+            root = ElementTree.fromstring(archive.read(sheet_name))
+            sheet_rows: list[list[str]] = []
+            for row in root.findall(".//main:sheetData/main:row", namespace):
+                cells: dict[int, str] = {}
+                for cell in row.findall("main:c", namespace):
+                    column = _xlsx_column_index(cell.attrib.get("r", ""))
+                    value = cell.find("main:v", namespace)
+                    inline = cell.find("main:is", namespace)
+                    text = "" if value is None else (value.text or "")
+                    if cell.attrib.get("t") == "s" and text.isdigit():
+                        text = shared[int(text)] if int(text) < len(shared) else ""
+                    elif inline is not None:
+                        text = "".join(inline.itertext())
+                    cells[column] = text
+                if cells:
+                    width = max(cells) + 1
+                    sheet_rows.append([cells.get(index, "") for index in range(width)])
+            if not sheet_rows:
+                continue
+            header_index = next((index for index, row in enumerate(sheet_rows) if any(row)), None)
+            if header_index is None:
+                continue
+            headers = [value.strip() or f"column_{index + 1}" for index, value in enumerate(sheet_rows[header_index])]
+            for row_number, data_row in enumerate(sheet_rows[header_index + 1:], start=header_index + 2):
+                if any(value.strip() for value in data_row):
+                    yield row_number, dict(zip(headers, data_row))
+
+
+def _read_csv_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.reader(handle)
+        first = next(reader, [])
+        second = next(reader, [])
+        if any(value.strip().lower() == "time" for value in second):
+            headers = second
+            first_data_row = 3
+        else:
+            headers = first
+            first_data_row = 2
+            if second and any(value.strip() for value in second):
+                yield first_data_row, dict(zip(headers, second))
+                first_data_row += 1
+        for row_index, row in enumerate(reader, start=first_data_row):
+            yield row_index, dict(zip(headers, row))
+
+
 def _read_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
     suffix = path.suffix.lower()
     if suffix == ".jsonl":
@@ -100,9 +173,10 @@ def _read_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
             raise ValueError("JSON input must be an object or array")
         return
     if suffix == ".csv":
-        with path.open(encoding="utf-8-sig", newline="") as handle:
-            for index, row in enumerate(csv.DictReader(handle), start=2):
-                yield index, dict(row)
+        yield from _read_csv_records(path)
+        return
+    if suffix == ".xlsx":
+        yield from _read_xlsx_records(path)
         return
     raise ValueError(f"unsupported adapter suffix: {suffix or '<none>'}")
 
@@ -130,10 +204,10 @@ def adapt_row(
     source_sha256: str, source_row_index: int,
 ) -> dict[str, Any]:
     """Map common CSV/JSON keys into the explicit L0 contract."""
-    case_id = _first(row, "case_id", "case", "scenario_id")
+    case_id = _first(row, "case_id", "case", "scenario_id", "scenario")
     if case_id is None:
         raise ValueError("missing case_id")
-    time_value = _first(row, "time_value_l0", "time_s", "time")
+    time_value = _first(row, "time_value_l0", "time_s", "time", "RecordTime", "record_time")
     time_unit = _first(row, "time_unit_l0", "time_unit", "unit_time") or "UNKNOWN"
     units = row.get("units", {})
     if not isinstance(units, Mapping):
@@ -205,6 +279,14 @@ def build_canonical(
             rows = _read_records(path)
             for row_number, row in rows:
                 try:
+                    if path.suffix.lower() in {".csv", ".xlsx"} and _first(
+                        row, "case_id", "case", "scenario_id", "scenario"
+                    ) is None:
+                        row = dict(row)
+                        row["case_id"] = f"{source_dataset_id}:{item['relative_path']}"
+                    if path.suffix.lower() in {".csv", ".xlsx"} and _first(row, "sequence_id") is None:
+                        row = dict(row)
+                        row["sequence_id"] = row["case_id"]
                     adapted = adapt_row(
                         row, source_dataset_id=source_dataset_id,
                         source_relative_path=item["relative_path"],

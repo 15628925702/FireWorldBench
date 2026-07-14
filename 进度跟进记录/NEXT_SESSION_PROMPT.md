@@ -1,12 +1,16 @@
 ---
-handoff_id: H-20260714-S058-001
+handoff_id: H-20260714-S059-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S058_P4-PILOT-REMEDIATION全任务语义修复.md
-current_task: P5-MAIN-RUN
+source_session: 2026-07-14_S059_P5-DATA-MODEL-GOLD扩展.md
+current_task: P6-MAIN-RUN
 ---
 
-## Next window: P5-MAIN-RUN
+## Next window: P6-MAIN-RUN
+
+本轮已完成 D01/D02-readable-XLSX/D03 的规划链适配、模型矩阵登记、自动 Gold 规则登记和 DeepSeek 低分单独分析。D01 官方完整源已核验为 192 个 CSV，但当前本地仍只有 8 个；GitHub 大文件下载在当前网络下约 15 KB/s，未完整下载的文件不得纳入 staging。D02 的 8 个 XLSX 已可读，80 个 legacy XLS 仍为 BLOCKED。
+
+下一窗口先复用 `项目治理/dataset_chain_expansion_P5-PLANNING.json`、`configs/model_matrix_P5-PLANNING.json`、`configs/gold_status_P5-PLANNING.json` 和 `项目治理/P5-deepseek-smoke-error-analysis.md`，确认这些阻塞项后再决定是否用当前可用规划样本做受控主跑。不得把当前结果称为全量 benchmark 或论文结果，不得消耗 DeepSeek 预算做重复验证。
 
 上一任务已完成全九任务 remediation pilot。下一窗口只做 planning-scale main-run readiness decision：允许规划 D01 扩展，但必须保留 D01-only/自动标签限制、失败恢复 ledger 和所有任务分数；不得读 test/private，不得把 planning 结果称为正式 benchmark 或论文结论。
 
