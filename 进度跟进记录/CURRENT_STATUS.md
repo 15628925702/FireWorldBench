@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S059-001
+handoff_id: H-20260714-S060-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S059_P5-DATA-MODEL-GOLD扩展.md
-current_task: P6-MAIN-RUN
+source_session: 2026-07-14_S060_P5-MAIN-001前置链继续.md
+current_task: P5-MAIN-001
 ---
 
 # Current Status
+
+## 2026-07-15 P5-MAIN-001 continued planning chain
+
+- 已完成 planning-only 主跑前置：D01 canonical 4,808 records、D02 XLSX canonical 9,413 records、D03 canonical 932 records；D01 canonical 已改为流式 JSON 哈希/写盘，避免大文件 `MemoryError`。
+- 已生成 51 个 dev / 48 个 train 的九任务 planning manifest；已运行 `domain_threshold` 和 `majority` 两个 deterministic baseline，各 48 samples、3 failures。
+- 正式主跑仍为 `BLOCKED`：preregistration、approved model matrix、calibration 和 approved runtime 未闭合；当前只登记 `deepseek-chat`，本轮没有再次调用 API。
+- 数据阻塞仍明确存在：D01 官方 192 个 CSV 中本地只有 8 个；D02 80 个 legacy `.xls` 尚未进入 canonical chain；专家审核未完成。
+- 证据登记：`configs/main_run_P5-PLANNING-001.json`、`artifacts/p5_main_gate_current.json`、`artifacts/p5_main_staging_assessment.json`。
 
 ## P4-PILOT-REMEDIATION completion
 

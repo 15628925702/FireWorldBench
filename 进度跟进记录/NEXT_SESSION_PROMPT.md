@@ -1,12 +1,14 @@
 ---
-handoff_id: H-20260714-S059-001
+handoff_id: H-20260714-S060-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S059_P5-DATA-MODEL-GOLD扩展.md
-current_task: P6-MAIN-RUN
+source_session: 2026-07-14_S060_P5-MAIN-001前置链继续.md
+current_task: P5-MAIN-001
 ---
 
-## Next window: P6-MAIN-RUN
+## Next window: P5-MAIN-001
+
+本轮已把 planning-only 主跑前置链实际跑通：D01/D02-readable-XLSX/D03 canonical、51 dev/48 train 九任务样本、domain-threshold/majority baseline 和正式 gate 审计均有产物。下一窗口继续处理 P5-MAIN-001 的未完成项：优先解决 D01 剩余 184 个 CSV 的完整下载或校验可用本地副本，再处理 D02 legacy XLS；不得调用 DeepSeek 全量，不得把 planning 结果称为正式 benchmark。复用 `configs/main_run_P5-PLANNING-001.json` 和现有 artifacts，先检查 Git 状态与数据文件完整性。
 
 本轮已完成 D01/D02-readable-XLSX/D03 的规划链适配、模型矩阵登记、自动 Gold 规则登记和 DeepSeek 低分单独分析。D01 官方完整源已核验为 192 个 CSV，但当前本地仍只有 8 个；GitHub 大文件下载在当前网络下约 15 KB/s，未完整下载的文件不得纳入 staging。D02 的 8 个 XLSX 已可读，80 个 legacy XLS 仍为 BLOCKED。
 

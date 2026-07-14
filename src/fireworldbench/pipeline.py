@@ -24,6 +24,14 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def sha256_json(value: Any) -> str:
+    digest = hashlib.sha256()
+    encoder = json.JSONEncoder(sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    for chunk in encoder.iterencode(value):
+        digest.update(chunk.encode("utf-8"))
+    return digest.hexdigest()
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -310,7 +318,7 @@ def build_canonical(
         case = cases[case_id]
         graph_cases.append({"case_id": case_id, "sequences": [case["sequences"][key] for key in sorted(case["sequences"])]})
     config = {"pipeline_version": PIPELINE_VERSION, "source_dataset_id": source_dataset_id, "builder_version": builder_version}
-    config_sha256 = sha256_bytes(json.dumps(config, sort_keys=True, separators=(",", ":")).encode())
+    config_sha256 = sha256_json(config)
     for record in records:
         record["config_sha256"] = config_sha256
     manifest = {
@@ -331,11 +339,12 @@ def build_canonical(
         "config": config,
         "config_sha256": config_sha256,
     }
-    encoded = json.dumps(manifest, sort_keys=True, separators=(",", ":")).encode()
-    manifest["manifest_sha256"] = sha256_bytes(encoded)
+    manifest["manifest_sha256"] = sha256_json(manifest)
     return manifest
 
 
 def write_json(value: Mapping[str, Any], output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    with output.open("w", encoding="utf-8", newline="\n") as handle:
+        json.dump(value, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")

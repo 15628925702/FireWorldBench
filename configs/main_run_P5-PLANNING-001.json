@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "task_id": "P5-MAIN-001",
+  "run_id": "P5-PLANNING-001",
+  "status": "READY_FOR_PLANNING_ONLY",
+  "formal_main_status": "BLOCKED",
+  "meeting_target": "ICLR2027",
+  "api_run_this_session": false,
+  "deepseek_budget_spent_this_session_usd": 0,
+  "planning_inputs": {
+    "dev_manifest": "artifacts/p5_main_planning_dev.json",
+    "train_manifest": "artifacts/p5_main_planning_train.json",
+    "dev_sample_count": 51,
+    "train_sample_count": 48,
+    "task_coverage": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"],
+    "source_case_split": "D01 group-first 2 train / 2 dev; planning pilot only"
+  },
+  "canonical_chain": {
+    "D01": {"local_csv_count": 8, "official_declared_csv_count": 192, "record_count": 4808, "failure_count": 4, "status": "PARTIAL_SOURCE_BLOCKED"},
+    "D02": {"xlsx_readable": 8, "legacy_xls_blocked": 80, "record_count": 9413, "failure_count": 97, "status": "PARTIAL_FORMAT_BLOCKED"},
+    "D03": {"csv_count": 5, "record_count": 932, "failure_count": 2, "status": "PLANNING_ADAPTER_READY"}
+  },
+  "deterministic_baselines": [
+    {"strategy": "domain_threshold", "output": "artifacts/p5_main_domain_threshold.json", "sample_count": 48, "failure_count": 3},
+    {"strategy": "majority", "output": "artifacts/p5_main_majority.json", "sample_count": 48, "failure_count": 3}
+  ],
+  "formal_gate_evidence": "artifacts/p5_main_gate_current.json",
+  "formal_blockers": [
+    "preregistration_not_ready",
+    "approved_model_matrix_missing",
+    "calibration_not_ready",
+    "approved_main_runtime_missing"
+  ],
+  "prohibitions": [
+    "not a formal benchmark result",
+    "not a paper result",
+    "no test/private assets accessed",
+    "no raw external source files modified"
+  ]
+}
