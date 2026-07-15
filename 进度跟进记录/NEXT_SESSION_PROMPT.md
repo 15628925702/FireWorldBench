@@ -1,25 +1,27 @@
 ---
-handoff_id: H-20260716-S065-001
+handoff_id: H-20260716-S066-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-16_S065_P5-MAIN-001正式runner与DeepSeek探测.md
+source_session: 2026-07-16_S066_P5-MAIN-001_DeepSeek双模型formal探测.md
 current_task: P5-MAIN-001
 ---
 
 ## Authoritative next window: P5-MAIN-001
 
-The formal execution chain is no longer just a blocker report. A guarded CLI path now exists:
+The formal execution chain is now materially stronger than before:
 
-- `formal-main-probe`
-- `formal-main-run`
+- a guarded `formal-main-probe` command exists
+- a guarded `formal-main-run` command exists
+- `deepseek-chat` has passed the real formal probe chain
+- `deepseek-reasoner` has failed the same probe due repeated non-JSON / malformed-JSON outputs
 
-and `deepseek-chat` has already passed the real guarded probe path on 18 visible dev samples via `artifacts/p5_formal_main_probe_deepseek_S066.json`.
+This means the next window must treat `deepseek-chat` as the currently validated API-backed formal probe candidate, and treat `deepseek-reasoner` as still unstable until a stronger JSON-enforcement / parser / provider-side strategy is proven.
 
-The next window must continue `P5-MAIN-001` by closing or precisely reconfirming the remaining formal preflight blockers, not by rerunning old research scripts. Read, in order:
+Read, in order:
 
 1. `AGENTS.md`
 2. `进度跟进记录/CURRENT_STATUS.md`
-3. `进度跟进记录/2026-07-16_S065_P5-MAIN-001正式runner与DeepSeek探测.md`
+3. `进度跟进记录/2026-07-16_S066_P5-MAIN-001_DeepSeek双模型formal探测.md`
 4. `项目治理/p5_formal_input_audit_P5-MAIN-001.json`
 5. `项目治理/p5_formal_readiness_P5-MAIN-001.json`
 6. `configs/model_matrix_P5-MAIN-001.json`
@@ -28,27 +30,22 @@ The next window must continue `P5-MAIN-001` by closing or precisely reconfirming
 9. `configs/prereg_P5-MAIN-001.json`
 10. `configs/formal_run_P5-MAIN-001.json`
 
-The current engineering state is:
+Next priority order:
 
-- real formal probe path exists and DeepSeek has passed it
-- real formal full-run command exists in code, but must not be executed before readiness reaches `READY_FOR_FORMAL_MULTI_MODEL_FULL_RUN`
-- remaining blockers are mainly external evidence/approval blockers, plus incomplete approved-model coverage and calibration closure
-
-Do not rerun:
-
-- `scripts/run_research_deepseek.ps1`
-- the old research DeepSeek artifacts
+1. Retry `git push origin main` until the already-validated local delivery is on remote.
+2. Continue `P5-MAIN-001` by closing or reconfirming the remaining formal preflight blockers.
+3. If a second paid model slot is still desired, either:
+   - harden `deepseek-reasoner` further until probe passes, or
+   - switch the second slot to another model that can satisfy the same guarded probe contract.
 
 Do not:
 
-- download new data or models without explicit authorization
-- install new packages
-- access hidden test/private assets
+- rerun `scripts/run_research_deepseek.ps1`
 - start `formal-main-run` while readiness is still blocked
+- access hidden test/private assets
+- download new data/models or install new packages without explicit authorization
 
-When readiness is eventually closed, the intended command shape is:
+Current future full-run command shape:
 
 `python -m fireworldbench.cli formal-main-run --root <repo_root> --samples <paper_ready_inputs.json> --model-matrix configs/model_matrix_P5-MAIN-001.json --readiness 项目治理/p5_formal_readiness_P5-MAIN-001.json --model-id <approved_model_id> --output-root artifacts/formal_runs/<run_id>`
-
-Until then, the only valid objective is to improve or verify the frozen evidence chain so that the future formal run is safe, reproducible, and unlikely to waste paid API budget.
 

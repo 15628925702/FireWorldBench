@@ -55,6 +55,37 @@ def _call_openai_compatible_json(
     return dict(raw)
 
 
+def _parse_json_object_text(content: str) -> dict[str, Any]:
+    text = content.strip()
+    candidates = [text]
+    if text.startswith("```"):
+        stripped = text.strip("`").strip()
+        if stripped.lower().startswith("json"):
+            stripped = stripped[4:].strip()
+        candidates.append(stripped)
+    first_brace = text.find("{")
+    last_brace = text.rfind("}")
+    if first_brace != -1 and last_brace != -1 and first_brace < last_brace:
+        candidates.append(text[first_brace:last_brace + 1])
+    seen: set[str] = set()
+    last_error: Exception | None = None
+    for candidate in candidates:
+        if candidate in seen or not candidate:
+            continue
+        seen.add(candidate)
+        try:
+            value = json.loads(candidate)
+        except json.JSONDecodeError as exc:
+            last_error = exc
+            continue
+        if isinstance(value, dict):
+            return value
+        last_error = RuntimeError("provider JSON content is not an object")
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError("provider response has no JSON object content")
+
+
 def openai_compatible_adapter(sample: Mapping[str, Any], prompt: str, config: Mapping[str, Any]) -> dict[str, Any]:
     """Call a frozen OpenAI-compatible JSON endpoint without persisting credentials."""
 
@@ -89,9 +120,7 @@ def openai_compatible_adapter(sample: Mapping[str, Any], prompt: str, config: Ma
     content = choices[0].get("message", {}).get("content")
     if not isinstance(content, str):
         raise RuntimeError("provider response has no JSON content")
-    prediction = json.loads(content)
-    if not isinstance(prediction, dict):
-        raise RuntimeError("provider JSON content is not an object")
+    prediction = _parse_json_object_text(content)
     usage = raw.get("usage", {})
     prediction["_provider_usage"] = {
         "prompt_tokens": usage.get("prompt_tokens"),
@@ -125,9 +154,7 @@ def deepseek_adapter(sample: Mapping[str, Any], prompt: str, config: Mapping[str
     content = choices[0].get("message", {}).get("content")
     if not isinstance(content, str):
         raise RuntimeError("DeepSeek response has no JSON content")
-    prediction = json.loads(content)
-    if not isinstance(prediction, dict):
-        raise RuntimeError("DeepSeek JSON content is not an object")
+    prediction = _parse_json_object_text(content)
     usage = raw.get("usage", {})
     prediction["_provider_usage"] = {
         "prompt_tokens": usage.get("prompt_tokens"),

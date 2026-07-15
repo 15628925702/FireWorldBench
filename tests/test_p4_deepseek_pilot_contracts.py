@@ -1,7 +1,8 @@
 from pathlib import Path
 
 from fireworldbench.llm_baseline import LLMConfig, run_llm_pilot
-from fireworldbench.deepseek import run_deepseek_pilot_file
+from fireworldbench import deepseek
+from fireworldbench.deepseek import openai_compatible_adapter, run_deepseek_pilot_file
 from fireworldbench.planning_pilot import build_planning_t1_pilot
 
 
@@ -72,3 +73,35 @@ def test_deepseek_file_runner_accepts_utf8_bom_input(tmp_path: Path, monkeypatch
     result = run_deepseek_pilot_file(samples, config, tmp_path / "output.json")
     assert result["status"] == "COMPLETED_WITH_FAILURES"
     assert "DEEPSEEK_API_KEY" in result["failures"][0]["error"]
+
+
+def test_openai_compatible_adapter_recovers_json_from_fenced_content(monkeypatch) -> None:
+    def fake_call(**kwargs):
+        return {
+            "choices": [
+                {
+                    "message": {
+                        "content": "```json\n{\"answer\":{\"label\":\"fire_forming\"},\"evidence\":[\"obs_1\"],\"uncertainty\":{\"level\":\"low\",\"reason\":\"fixture\"},\"missing_information\":[]}\n```"
+                    }
+                }
+            ],
+            "usage": {"prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30},
+        }
+
+    monkeypatch.setattr(deepseek, "_call_openai_compatible_json", fake_call)
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "fixture")
+    result = openai_compatible_adapter(
+        {"sample_id": "x"},
+        "prompt",
+        {
+            "model_id": "deepseek-chat",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_output_tokens": 64,
+            "timeout_s": 1.0,
+            "endpoint_or_checkpoint": "https://api.deepseek.com/chat/completions",
+            "credential_env": "DEEPSEEK_API_KEY",
+        },
+    )
+    assert result["answer"]["label"] == "fire_forming"
+    assert result["_provider_usage"]["total_tokens"] == 30
