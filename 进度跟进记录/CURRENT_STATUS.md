@@ -1,12 +1,24 @@
 ---
-handoff_id: H-20260715-S061-001
+handoff_id: H-20260716-S062-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-15_S061_P5-MAIN-001继续.md
+source_session: 2026-07-16_S062_P5-MAIN-001正式运行前冻结.md
 current_task: P5-MAIN-001
 ---
 
 # Current Status
+
+## 2026-07-16 P5-MAIN-001 formal preflight freeze
+
+- 已实现 evidence-based `formal-input-audit` 与 `formal-preflight`，冻结 data/model/calibration/prereg/runtime/run contract 六类声明和 hash/provenance chain。
+- 当前状态为 `BLOCKED_FORMAL_PREFLIGHT`，不是 `READY_FOR_FORMAL_MULTI_MODEL_FULL_RUN`；formal input files 为 0，preflight 有 33 个逐字段 blocker。
+- D01 现有 9/192 CSV、缺 183；D02 的 8 XLSX + 80 legacy XLS 均已进入 canonical probe，格式工程缺口已关闭；D03 正常。
+- fresh canonical：D01 5,409 records / 4 failures，D02 82,444 / 17，D03 932 / 2；这些是真实数据处理结果，不是模型 benchmark 结果。
+- 模型/runtime/calibration 仍缺外部证据：无至少两个批准模型、无 API key/本地候选 checkpoint、formal Conda 环境为空、无 calibration results、无批准 cost ceiling。
+- 本轮未调用 API、未消耗预算、未访问 test/private、未修改仓库外原始数据、未安装或下载。
+- 实现 commit `9c157a5a163f94f1732445b318a2ffd8189588de` 已 push；`origin/main` 已核验同 SHA。clean commit 重建治理产物后无 diff。
+- readiness manifest：`项目治理/p5_formal_readiness_P5-MAIN-001.json`，hash `2dbdb7c35890c36c9bbd32c64596ebda9181fa05647e88a3aaa7fa1681e22fbf`。
+- 下一唯一任务仍为 `P5-MAIN-001`：取得数据资格、模型/runtime/预算证据后重跑 preflight；在 READY 前不得启动正式全量实验。
 
 ## 2026-07-15 P5-MAIN-001 streaming XLS adapter verification
 

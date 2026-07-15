@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260715-S061-001
+handoff_id: H-20260716-S062-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-15_S061_P5-MAIN-001继续.md
+source_session: 2026-07-16_S062_P5-MAIN-001正式运行前冻结.md
 current_task: P5-MAIN-001
 ---
+
+## Authoritative next window: P5-MAIN-001
+
+当前工程 preflight 已完备，但正式主跑状态是 `BLOCKED_FORMAL_PREFLIGHT`。先读取 source session、`项目治理/p5_formal_input_audit_P5-MAIN-001.json`、`项目治理/p5_formal_readiness_P5-MAIN-001.json` 及六类 `configs/*P5-MAIN-001.json`。
+
+唯一目标是取得并验证当前缺失的外部证据：formal data eligibility/paper-ready case manifest、至少两个 exact approved model/runtime、pricing/cost ceiling、环境锁和 train/dev calibration results。未经明确批准，不下载 D01/模型、不安装包、不调用正式 API、不访问 test/private。证据到位后依次重跑 `formal-input-audit` 与 `formal-preflight`；只有输出 `READY_FOR_FORMAL_MULTI_MODEL_FULL_RUN` 才可给出并执行正式 full-run 命令。
+
+本节为当前权威交接；下方内容是历史累计记录，不得覆盖本节状态。
 
 ## Next window: P5-MAIN-001
 
