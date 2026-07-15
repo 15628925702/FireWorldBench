@@ -1,12 +1,12 @@
 {
   "main_version": "P5-MAIN-001",
-  "status": "BLOCKED",
+  "status": "BLOCKED_FORMAL_PREFLIGHT",
   "blockers": [
-    "preregistration_not_ready",
-    "approved_model_matrix_missing",
-    "calibration_gate_missing",
-    "paper_ready_input_manifest_missing",
-    "approved_main_runtime_missing"
+    "paper_ready_formal_inputs_missing",
+    "approved_multi_model_matrix_missing",
+    "calibration_not_completed",
+    "approved_main_runtime_missing",
+    "formal_cost_ceiling_missing"
   ],
   "input_count": 0,
   "run_index": [],
@@ -17,5 +17,9 @@
   "overwrite_existing_runs": false,
   "runner_reads_gold": false,
   "test_access_ledger": "NO_ACCESS_CONFIRMED",
-  "test_asset_read": false
+  "test_asset_read": false,
+  "formal_run_started": false,
+  "formal_results_written": false,
+  "formal_run_command": null,
+  "readiness_evidence": "项目治理/p5_formal_readiness_P5-MAIN-001.json"
 }

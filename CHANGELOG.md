@@ -12,6 +12,8 @@
 - 最小 Python 包、项目检查脚本和契约测试。
 - 空 Conda 环境规格与本地 `fireworldbench-v1` 环境（暂不安装包）。
 - 独立 Git `main` 仓库和 GitHub `origin` 连接（未提交、未推送）。
+- 正式多模型全数据集运行的证据化 preflight、逐文件输入审计、模型矩阵、
+  calibration/preregistration/runtime/run contract 冻结声明与不可覆盖哈希链。
 
 ## [0.1.0] - 2026-07-14
 

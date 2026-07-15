@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "calibration_id": "P5-MAIN-001-FORMAL-CALIBRATION",
+  "status": "BLOCKED_NOT_EXECUTED",
+  "allowed_splits": ["train_id", "dev_id"],
+  "output_format": "structured_json",
+  "output_schema": "schemas/prediction.v2.schema.json",
+  "parser_version": "fireworldbench.llm_baseline._normalise_prediction@0.1.0",
+  "threshold_policy": "fit_on_train_then_freeze_on_dev_without_test_access",
+  "task_rules": "configs/evaluation_P2-EVAL-001.json",
+  "unknown_policy": "emit_task_specific_unknown_or_insufficient_information_when_evidence_is_not_identifiable",
+  "failure_policy": {
+    "timeout": "retain_and_score_as_failure",
+    "invalid_json": "retain_and_score_as_failure",
+    "schema_error": "retain_and_score_as_failure",
+    "provider_error": "retry_only_within_frozen_limit_then_retain_failure"
+  },
+  "sample_manifest": null,
+  "sample_manifest_sha256": null,
+  "results": [],
+  "config_sha256": null,
+  "test_contaminated": false,
+  "test_asset_read": false,
+  "test_tuning": false,
+  "blockers": [
+    "paper_ready_train_dev_manifest_missing",
+    "approved_model_matrix_missing",
+    "approved_calibration_runtime_missing",
+    "calibration_results_missing"
+  ]
+}

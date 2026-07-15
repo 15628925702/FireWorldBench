@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "preregistration_id": "P5-MAIN-001-FORMAL-PREREGISTRATION-v1",
+  "status": "FROZEN",
+  "hypotheses": {
+    "H1": "Fire-state reasoning performance differs across frozen model and information-budget tracks.",
+    "H2": "Retrieval changes predictions only when the frozen knowledge base supplies relevant approved evidence.",
+    "H3": "Physical-violation reporting remains distinct from task-label performance."
+  },
+  "primary_metrics": {
+    "T1-A": "auprc",
+    "T1-B": "macro_f1",
+    "T1-C": "budgeted_decision_utility",
+    "T2-A": "hierarchical_macro_f1",
+    "T2-B": "mechanism_macro_f1",
+    "T2-C": "macro_f1_after_frozen_calibration",
+    "T3-A": "trend_direction_macro_accuracy",
+    "T3-B": "pair_ranking_accuracy",
+    "T3-C": "state_trace_score"
+  },
+  "secondary_metrics": [
+    "case_level_accuracy",
+    "pair_validity_rate",
+    "physical_violation_rate",
+    "refusal_rate",
+    "invalid_json_rate",
+    "failure_rate",
+    "latency_ms",
+    "cost_usd"
+  ],
+  "model_track_matrix": {
+    "main": ["text_only", "table", "retrieval"],
+    "exploratory": ["multimodal", "plot", "formula_fds_proxy", "tool_use"],
+    "joint_ranking_across_information_budgets": false
+  },
+  "repetitions": {
+    "main": 1,
+    "exploratory": 1,
+    "variance_repetitions": 3
+  },
+  "seeds": {
+    "global": 20260716,
+    "bootstrap": 20260717,
+    "per_case_derivation": "sha256(global_seed || case_id || repetition)"
+  },
+  "aggregation_rules": {
+    "primary_unit": "case_or_registered_counterfactual_pair",
+    "sample_to_case": "mean_with_all_failures_retained",
+    "pair": "both_members_required_else_pair_failure",
+    "confidence_interval": "case_or_pair_bootstrap_95pct_10000_replicates",
+    "multiple_comparison": "report_by_task_family_no_unregistered_composite"
+  },
+  "exclusions": [
+    "test_performance_model_prompt_or_threshold_selection",
+    "manual_answer_repair",
+    "success_only_case_selection",
+    "unregistered_composite_score",
+    "mixing_information_budgets",
+    "planning_only_inputs_or_results"
+  ],
+  "stopping_rules": {
+    "stop_before_start_on_any_preflight_blocker": true,
+    "stop_on_cost_ceiling": true,
+    "stop_on_manifest_hash_mismatch": true,
+    "stop_on_test_embargo_violation": true,
+    "no_mid_run_prompt_model_parser_or_threshold_change": true
+  },
+  "cost_ceiling_usd": null,
+  "failure_rules": {
+    "timeout_http_provider_parse_schema_oom_tool": "retain_as_failure",
+    "retry": "only_frozen_retry_count",
+    "missing_prediction": "never_impute",
+    "partial_run": "report_and_do_not_silently_rerun_successes"
+  },
+  "robustness_plan": [
+    "sensor_noise",
+    "missing_observation",
+    "sensor_fault",
+    "visual_degradation",
+    "wording_variation",
+    "tool_failure"
+  ],
+  "ablation_plan": [
+    "information_budget",
+    "evidence_visibility",
+    "uncertainty_reporting"
+  ],
+  "test_embargo": {
+    "ledger": "NO_ACCESS_CONFIRMED",
+    "test_input_read": false,
+    "test_gold_read": false,
+    "private_mapping_read": false,
+    "runner_reads_gold": false,
+    "isolated_custodian_required_for_scoring": true
+  },
+  "run_directory_rule": "artifacts/formal_runs/<run_id>; immutable; refuse_existing_directory",
+  "raw_response_manifest": "one immutable entry per model/sample/repetition/attempt with status and content hash",
+  "cost_latency_failure_manifest": "separate usage latency retry failure and estimated_or_billed_cost fields",
+  "paper_number_provenance": "paper number -> frozen statistics -> run index -> raw response hash -> input/model/prompt/runtime hashes",
+  "post_freeze_change_policy": "new preregistration version and exploratory label required"
+}

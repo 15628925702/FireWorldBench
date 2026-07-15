@@ -16,8 +16,8 @@
     "source_case_split": "D01 group-first 2 train / 2 dev; planning pilot only"
   },
   "canonical_chain": {
-    "D01": {"local_csv_count": 8, "official_declared_csv_count": 192, "record_count": 4808, "failure_count": 4, "status": "PARTIAL_SOURCE_BLOCKED"},
-    "D02": {"xlsx_readable": 8, "legacy_xls_blocked": 80, "record_count": 9413, "failure_count": 97, "status": "PARTIAL_FORMAT_BLOCKED"},
+    "D01": {"local_csv_count": 9, "official_declared_csv_count": 192, "record_count": 5409, "failure_count": 4, "status": "PARTIAL_SOURCE_BLOCKED"},
+    "D02": {"xlsx_readable": 8, "legacy_xls_readable": 80, "record_count": 82444, "failure_count": 17, "status": "PLANNING_ADAPTER_READY"},
     "D03": {"csv_count": 5, "record_count": 932, "failure_count": 2, "status": "PLANNING_ADAPTER_READY"}
   },
   "deterministic_baselines": [
@@ -26,10 +26,11 @@
   ],
   "formal_gate_evidence": "artifacts/p5_main_gate_current.json",
   "formal_blockers": [
-    "preregistration_not_ready",
-    "approved_model_matrix_missing",
-    "calibration_not_ready",
-    "approved_main_runtime_missing"
+    "paper_ready_formal_inputs_missing",
+    "approved_multi_model_matrix_missing",
+    "calibration_not_completed",
+    "approved_main_runtime_missing",
+    "formal_cost_ceiling_missing"
   ],
   "prohibitions": [
     "not a formal benchmark result",

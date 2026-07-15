@@ -1,0 +1,2528 @@
+{
+  "schema_version": 1,
+  "manifest_id": "P5-MAIN-001-FORMAL-INPUT-AUDIT",
+  "status": "BLOCKED_NO_PAPER_READY_FORMAL_INPUTS",
+  "datasets": [
+    {
+      "dataset_id": "D01",
+      "name": "Immersed-Tunnel-CFD",
+      "source_url": "https://github.com/babeteax/Immersed-Tunnel-Fire-Location-Detection-Data",
+      "acquisition_date": "2026-07-14",
+      "source_version": "UNKNOWN_existing_local_staging; upstream commit not verified this round",
+      "registered_local_dirs": [
+        "01_Immersed-Tunnel-CFD"
+      ],
+      "planning_download_status": "ALREADY_PRESENT",
+      "roles": [
+        "t1_primary",
+        "t2_primary",
+        "t3_pair_prototype"
+      ],
+      "planning_manifest": "项目治理/download_manifest_D01_planning.json",
+      "planning_manifest_sha256": "038fc83633566f0561f526f0c2a40cd33ba2e65cd6ff1765c2294c5741ea2ff8",
+      "staging_root": "data/raw/D01_Immersed-Tunnel-CFD",
+      "file_count": 13,
+      "total_bytes": 80033363,
+      "files": [
+        {
+          "relative_path": "CFD-Data/100M01_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "3c5f1759006a8c8c72067616d756af90de0d532f5dc4812b140c95625442f625"
+        },
+        {
+          "relative_path": "CFD-Data/100U16_devc.csv",
+          "size_bytes": 8875476,
+          "sha256": "5c3001d5d88692e72483a3558881d548c452868b046c6713e8cd0a4b2f1abe4d"
+        },
+        {
+          "relative_path": "CFD-Data/130M01_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "8612355f7c44388e57e902bb2f8b3670b6b3daf5a8741869d18b61ad16c10fde"
+        },
+        {
+          "relative_path": "CFD-Data/130M08_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "9275d81cf32c58ddbfcd6c3b320216253e9407827b4c5edebbd83b7758ba45c4"
+        },
+        {
+          "relative_path": "CFD-Data/130U16_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "4182e6a2a9fa78a6ced21144cad45c364fec15cabcd9051e0727eca7644a015e"
+        },
+        {
+          "relative_path": "CFD-Data/70M01_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "308acb91bd3bd4cca7cb32162ce0aa9e448fb6e9289086272b42ecdd25ac343f"
+        },
+        {
+          "relative_path": "CFD-Data/70U01_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "62cd14d5b258341f644d64af6f73bc8bf0a10ac8e3d83e01d1a551e87814d331"
+        },
+        {
+          "relative_path": "CFD-Data/70U08_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "ec8e13c2781333771f14231ade39a4e2cb1fdd3bf5b27bba9bd2b5e9e8a696e0"
+        },
+        {
+          "relative_path": "CFD-Data/70U16_devc.csv",
+          "size_bytes": 8874873,
+          "sha256": "c2013f6cdffe70d1b38022e043564abfcba60f07559fbe712fa3af612da900ed"
+        },
+        {
+          "relative_path": "example_preview.png",
+          "size_bytes": 154524,
+          "sha256": "9900facf520c268c87b92d0f05dc96a04127ac93e7978524a9c21ebbc9d62479"
+        },
+        {
+          "relative_path": "ReadDataSet.py",
+          "size_bytes": 2779,
+          "sha256": "0aa38e8ffe03d544eeb16f483cf5d05999a26102aeda0a9b5c38e35086360fc0"
+        },
+        {
+          "relative_path": "README.md",
+          "size_bytes": 1197,
+          "sha256": "8dc853b0d51a16d7b93f1e85c08256c53b88a0d63cd22af2cff3a304725996c3"
+        },
+        {
+          "relative_path": "sample_card.md",
+          "size_bytes": 403,
+          "sha256": "e77be5bfdce1044253db394e088ec982896b66acf84b3839c48bdcbd16199f96"
+        }
+      ],
+      "inventory_sha256": "9ec31b82647795592d4ff96cce601055695cb33b64f74e3f5b1d6740a28d443e",
+      "canonical_status": "PLANNING_ADAPTER_READY",
+      "canonical_record_count": 5409,
+      "canonical_case_count": 9,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "source_version_evidence_blocked",
+        "official_files_missing"
+      ],
+      "official_inventory": {
+        "declared_csv_count": 192,
+        "declared_bytes": 1703976822,
+        "local_csv_count": 9,
+        "missing_csv_count": 183,
+        "missing_files": [
+          {
+            "relative_path": "CFD-Data/100M02_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b9f9d78ab699a4cabdb54066095bc798905922ec",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M03_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "43c58e02038347f9ab699141c7c4c77958f66b41",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M04_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "ed60aa44556c4338d953b1cacd626814e0c1fef7",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M05_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6edc460eae2a7035608ec7809b7b82c76f103d14",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M06_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "26e5898bcf37647edc5c81e8c9159e2a350befce",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M07_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1b84dd260b23725aa3fee8b66ce1444f0942df2a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M08_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "63d067f32c0ac4fc8f27674f2eef0d5997d01d86",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M09_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "97c99c396caf8d95bd7955b3fe02ee461add518e",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M10_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "d3424a8720b73680e10e66bf914f1d3674dfa6a6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M11_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "29eb7c8e2dcd63274978068e69f31d7ce9901b12",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M12_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4b572775fa9b731a94099833c841ea83302910c5",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M13_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "8834d98cb6350564938448dbcd861672dc53de49",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M14_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6eb138097a75ed3cc744432da4bccacd46d2ef70",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M15_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "073fc53328d88056c0437493ae61400eb7ac8c35",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M16_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "3433605abc60ddbb01667ea044cbf404d08ca50a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M17_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "26a69dcf88907030e608d68caf5113dec6865095",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M18_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f0a6d6e742952343753793b087477d990131fdbd",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M19_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "3e0ff060d07d4f82af5482544e31e56a403f1888",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M20_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b2908c160fe0c7b333f4657f759520d600224293",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M21_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f424815550ec811714b894fd6eeec84c056aad80",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M22_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "5e50cac4b323bbbdfa5a341b075e44f8cd18c229",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M23_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f9e286c32a5799b07cd121184263090d9a61c878",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M24_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "05e806a28fb484048df633c22f4a940ebf98517e",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M25_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7f9ba9be02230b69c2e9f180818dedf2526238b9",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M26_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "bf457063e4ff741fae6bcdc664d29d747f1dfe56",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M27_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "5cf73fc4740a8c54fa7fda497b55bcc777eaf3a6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M28_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "32853c7458146b7b27221711cc62807a86b8766f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M29_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "991a77bf22afa242fbe434c92b0ebec9cf3e977a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M30_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "5a611e0494f8420c488ce24965f0b5287dcaa83e",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M31_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7df2aad2ac24f576ecf9db2db095b07559c53f0d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100M32_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b01dd6f22cf95df0fcb0dbbef65b4b09a9c3d71d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U01_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "735018927ef797195fd7760243b5166754fb19c4",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U02_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "52badeb30cd138de7938b38db34ee28b6211e452",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U03_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f719a0ae195e55ed8130f686aaab472daedba2cb",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U04_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9d102d14c6d88bd9fce49bdbf085f9e951e12cb3",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U05_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "8fc0ed9e8659d6fff0d995e7d95055b30b0ca371",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U06_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "d0b5997c4efb4c811c8a23966eb7422fb030e381",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U07_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "8f42aa8b62ba488cb4a8cdbc67044762b5ad0f5f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U08_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "762687d150885e9fb066ca652f9d363df1d4b836",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U09_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "24391aaefeff2d3115d1159436aa22efdbf3d534",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U10_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "425c753f02b8fd4d16e9585979fc6abf0eecbdc0",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U11_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f83ac5654e7753793fc3f30a68e9c81645bfe92a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U12_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "44cf0c1a276b9dca0169e5732bc261cfc4f0ba4c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U13_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "94bf30df66b1c1717741a2ac4d7d42340af9ac5b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U14_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "cc8af7c5a4722ee4979e8480cc6547eda7e0b019",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U15_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "3b5dbc492c81234d1edb1093cb326d658feee8f8",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U17_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "84e258c009195e19c9f480a4523025cf9295a59c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U18_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "088afa592d2e3dd1c056eee0cb2e575d6307b8f2",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U19_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6cb6e427a31b818df3d50c53954c58580ec07c59",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U20_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "0ccc555f0f650874858998f0035ff50d3e5f8eff",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U21_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "94784ffa9d7660273b521569e6e14bc6c2c12dd3",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U22_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "ae759ba59283db0cd5d1027117e295fed87132f2",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U23_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "93ca365dffe209fdf01c199c56487b6aa3dbd9f9",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U24_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4032330587d7c210ddc4de9f1a86b49284f38e93",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U25_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6dbc034cfa2aec7b9c934ce0fa8d6cd5b626a504",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U26_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "770959ac7b98238dac23d3197a5d04813fe38fe6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U27_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "02e8a8d8110744b8b0e9ad76eb657d854b0a2d4a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U28_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "c9aa054e4cbb96d09a893b5c5230ef15f8bd0ca0",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U29_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "04750e274382d1a6cdae8b163ae63424b3bc7920",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U30_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "92f6731276c6d69a273a9c60ecee07b2b5ccfb7b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U31_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "8bdf9e9e9a69a6c17c9c40ff8cb3234fdbc1d8ef",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/100U32_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "3c3d9e163379fff2b4de9b9b3d60f424eac240d3",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M02_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "264715b79a71a9767ebcdea08fda02c9925f1a4c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M03_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b304f8b5b57e9614df0dd310dff636b721a86263",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M04_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "2ec24a40b681922e8e3c4a032a9dc9df978511a0",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M05_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "974da0adc8610be66f364e48e13bbc2346e692c4",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M06_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "eec03c32a4ef7194de6459d3fda913512d61e8e0",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M07_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b4f33445a4228a5a1762678537d018573fff45e7",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M09_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "57a053648d5f06012c165376e551001d2f9060ca",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M10_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9b373f76df2a5813c5ca53827f94b1acb450a6eb",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M11_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "d962fa4c426384c97d52335028a4916b51409e6f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M12_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7a4dd44412fb83e915deb5cdd07a8eabe83b2d23",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M13_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "68aa98b6066167fd7f8b49d91705eeff5dab983b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M14_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "c27cbd0387df15087e45818e40c7584e6ec46d76",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M15_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "5748860bd833512058d93c1b1e1a4a06ef805c84",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M16_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "70aab60131dda09b30b67ca06eb3a28821aa71f0",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M17_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "bb2c02ff9971e09201b3cf28fe93c16ef0890082",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M18_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "3c723b41aa7b9537b2992549fd84563bdc73b628",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M19_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "79b3de3bf464e8fa0f2fbfb770fde8da724a38c2",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M20_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "2b63cc696bc081e79c77b83c969d824ad0dfc0c7",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M21_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fc51bfd31c9ea0a912a5284778e6f48583167fe6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M22_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "2da938d7f7c1b4adacfa6a9f2e1286597829340f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M23_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "677ae409a436ec895508f3183aa43016642683dd",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M24_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6371f310ee13b8e84892ebcb4c8d825e4e60c11b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M25_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "5076c10e6500ca9798629442f3f073ff2de06d80",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M26_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "32260241bfe42d0185ac26ae2bff049b66f08e6c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M27_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f2b2b707af2cf6913aafe4f315e839de6591e192",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M28_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "2995c0a23cf3ac79281af48bb57dfcff6a27f771",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M29_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b8eac1e0f3edcb6fd440b4823aff82f3443a3b0d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M30_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b0bd3fdff08991e470c03acf523cc0a28ece574b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M31_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4350daa169870c725c7f07cc0565b845ad40d54a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130M32_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "90a3c1b5960d6dd789f5cf904040f14175f84c9b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U01_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b0f10f76af3758c3b6c8401f12d82760b8d78bcc",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U02_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "49ab8208b8de9b144156bcd4039e521d438d232a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U03_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "25723da486fca90b72a4a94135b28754e3659e0d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U04_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "79d74fcbfe226926ae307ceed98c4ffb2eff9ef1",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U05_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "d2d0342c164ccdc1ca0e49304b64ec2554c2fe4b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U06_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "86edce623ab4fbfd317fe3b5fc2d9aa38589613a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U07_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6652ebaeb7ae3bc894705651945cdc117bb6fb19",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U08_devc.csv",
+            "size_bytes": 8875476,
+            "upstream_git_blob_sha": "08c93a1f113a5b778151b353ccc3548423a2fad3",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U09_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9d7d6cd2c729df09d67e088819c66b2f0fc57b0d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U10_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "45cefef0d9a47601e557f2d8d94318ed527a7894",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U11_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f47da7ebf3be0f8a5c3dce372b57020e9392c241",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U12_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fd2a0f0709f1c1c5dc6ffa499157218056c32891",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U13_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "e6228a8c9b7770c04d5eba8407c2acc7437f6e1c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U14_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9deb07ec04514a4a2955f7f998bcc3a37ab21682",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U15_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "14aacc771e5d74ae99e93f411c25a94337baf2b0",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U17_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "02b49a5f7f8d3430516f5a4104ce2e960ae1c6c6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U18_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1adf33311cd3d434da37bffb1bba71c653ec6756",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U19_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "46a287313f08d382705ca158566b70a1e0405882",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U20_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "273749757b9a4b3419ac167da8b2dd8202c08ad7",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U21_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9b0eb13e617f8117b6901d16b9aa6edd1be128ec",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U22_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7827b0beb56c836034ca6696bd19e6f60616a8dc",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U23_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "85cd71545d0ca0675d4a8d3fc589de709da2ca59",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U24_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9375794f5c68e3419dfd6f89cc61815b25ebe295",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U25_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "07969eafe348d0756adca3ea7c040178cb873648",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U26_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1392c71c78af1424d1a53fb1deb167f8cd7e90d4",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U27_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "e9635988964634e8ebeb8011c8385895c5ec923d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U28_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9a63015914ee1d375ad4b2c539e3b7a083f97f3a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U29_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "6cbfc1046715209fc2310106f0ded5dbf760dd9f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U30_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4ebfb9a76001c0faf963af38e3d5599f57dddcc1",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U31_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fd2bc65ff1cb25e1d7b3d4d40882b521a8c1cda6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/130U32_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fcff41d50b888165e60eecd2b2457f1d4072dc0a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M02_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "38faca6e2ea6df71d67ee6eeca7c14c6322dac22",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M03_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "23b0d9cdfeb4a5c2cfd8c0b8c0564ce70d7f6f4e",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M04_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fd51701ecf362502e96c97a8a7d61e2ca8d2714d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M05_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "c2d07149bcc89e7798643d9c3acfcfa03079b713",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M06_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1da8d7ed0745e16d265b1a97df6c215372a41edb",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M07_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fc11ca196d9d80dc33b4952ef49c53e2cb002b81",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M08_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "32e82f9e0ca865d3c12071538a74f8b65e3c8e4f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M09_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "d863159f14a5a5daa072ef003852de11941e329b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M10_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4a66a36b3dc012615bba064f9ef9e0ee6c45ea11",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M11_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "e04c1b620b88d9c48d5461ea8c662f6721027c8b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M12_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7b40573ac5663a2b0eb12b299adcb58fd95fc320",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M13_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "8ad06d321face7754d46f791c90540f498633b32",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M14_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "d44514cfe0e29b44d4e20322fcfb3e86698566b6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M15_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "63f83c91870add4013a4342e6236d3180c9ee05c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M16_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "649cffcf59bf4d2d14e850f1c4e13355bb69463c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M17_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "85c4450c121c73450cd38ebff887ab2b6b1c4a80",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M18_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "cbc89f1aabd3709cdb8a0ec4d1488fa5f84e4421",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M19_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "ce670988b761ef74d13fb8b19e6e99bf18eec9c1",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M20_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "a35f36d48fbcfd5543560024d3702aff537d714b",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M21_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "aa0cdcda323ce7cdd91f55fe7bfe1a1c70ba7da4",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M22_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "fc5c5e7e4b6d1dc8ac05511bc894843b98bfbb96",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M23_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "c0a7dd4583045db0aa8090fca160beba2e23c78e",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M24_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "0f5da757557c1f50698d19c166e8abe2f71cc335",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M25_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "ba3109fb9da5f5e6b81551d3af4e159d78b04da1",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M26_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "cbc0189fa8c8ce38aa00f6b6bac4c4a690f2c63c",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M27_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "ba9e8e2de3639ef80d807d472b38d8de29fa18cb",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M28_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "8dc9c979503ebeb5ac3cfdfdb64132347c76e5c9",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M29_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f5fe59f8acfd870fbcc68b6c94655b90d7835e7f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M30_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "9724570236b68e2c200a2603f21c0e0f367459f4",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M31_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "de84db093b9913cda1bbf1f40290a3b4acade605",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70M32_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "88a23f2f723c47a0ca9ee39fc49672a373240659",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U02_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "119bef6b0475ca8133652851c4a1c092fc6a00e2",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U03_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "010f2052ea7189c7252b117af9fbf456b1a0b166",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U04_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7f6d43f944a31e0a88517ff60d34493419863150",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U05_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f006bc67d4cceb80eccba05d3bd1681e33050cb8",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U06_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4937212f1f42041db1b18893da908271917d0dcd",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U07_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "549a02b187e70bc5f724c178a1827a71a83dddb9",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U09_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7ec5c0d165e7ddf521576d7c1a7cf1fe91fb4d8f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U10_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "58b49b61ea40c79019bc508e2f7323ce83fbb750",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U11_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f8e2a4915b9f3f7c83bd814070c30d2e6614c459",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U12_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "cf1ef535ff7472a340503747710d43e2f9155502",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U13_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7f7464495ca1588f0076ce1b47080f6f17540839",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U14_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1e51195b74c5fe59a5a445ea59eb046c651be9da",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U15_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "5ccde58db4aa9b608acbc0ba75cac78940f1e614",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U17_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1bb98b86e8be0c4440bf1266f68c40b24b21840d",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U18_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "f1e16d7e80079d73c069d3e4b14c07b3ecac94de",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U19_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "968be5fa12f539373285ed22f2f67aa05e07d5e2",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U20_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "1fdb7c4b46df10d15b1a0a3e89a26cb48a4aa509",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U21_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "16ae273ca8671db4155879de2d48ea58791ff728",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U22_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "34fb9f94947f68d0f624e7a0d48e42101fb888cb",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U23_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "a6934696330366c41cbe8d3cb355909b8326b66f",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U24_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "0910ef82abbeed2b3f515984abcd56b7dd7fca19",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U25_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "94ac96f2fe9fcf15dbea72a3f629043fe87e36cb",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U26_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "4f73e37632dce5fff38e6620c5d58e6c111cf921",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U27_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "496a69181594fe396c8ab866251dcf60859ffcd8",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U28_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "7abc8845650654c6fb4d8f287d4e1683dc3bc300",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U29_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "2609b60e808ddc1a9371d6bb42c5be00187f28e6",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U30_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "443969d9148783fa235702552f546c390985355a",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U31_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "2f5770c96d51c08462d2e82135072ebcdc65fb12",
+            "sha256": null
+          },
+          {
+            "relative_path": "CFD-Data/70U32_devc.csv",
+            "size_bytes": 8874873,
+            "upstream_git_blob_sha": "b0a9889e58307da8a56e9d14ab49dfd3007dd9e6",
+            "sha256": null
+          }
+        ],
+        "tree_source": "artifacts/downloads/D01-tree.json"
+      }
+    },
+    {
+      "dataset_id": "D02",
+      "name": "PolyUFire",
+      "source_url": "https://github.com/PolyUFire/Tunnel_Fire_Database",
+      "acquisition_date": "2026-07-14",
+      "source_version": "UNKNOWN_existing_local_staging; upstream commit not verified this round",
+      "registered_local_dirs": [
+        "02_PolyUFire"
+      ],
+      "planning_download_status": "ALREADY_PRESENT",
+      "roles": [
+        "external_experiment",
+        "mechanism_knowledge"
+      ],
+      "planning_manifest": "项目治理/download_manifest_D02_planning.json",
+      "planning_manifest_sha256": "4fbfa7aec235df2cc8d932c3cda0913ae401697804b5c7c561e75554d038f07e",
+      "staging_root": "data/raw/D02_PolyUFire",
+      "file_count": 110,
+      "total_bytes": 70833300,
+      "files": [
+        {
+          "relative_path": "example_preview.png",
+          "size_bytes": 122440,
+          "sha256": "af0a8be9126e9bedb7fe2c41dc0cb346655e90d53dbcca59d622494c60db2fb4"
+        },
+        {
+          "relative_path": "sample_card.md",
+          "size_bytes": 370,
+          "sha256": "437ac86bbfca278f0940846609f7dcc27d6b287bded4afdbe25f0a734c99ddd3"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.1. Heat release rate.xlsx",
+          "size_bytes": 11850,
+          "sha256": "7625bb4d87da8dfadd0ce7bf94923448d93d5cc3507c0b67bbd63d3270552013"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.2. Flame length.xlsx",
+          "size_bytes": 522858,
+          "sha256": "056d63ced23d8e46449acbc2a589da7cf2e2220f81f02a99cc3f9ba556a2135d"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.3. Maximum ceiling gas temperature.xlsx",
+          "size_bytes": 1835602,
+          "sha256": "d0ddc22112828059390f575fa70b568844ae54eabd3f5f2d00170a385869cbfd"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.4. Critical velocity.xlsx",
+          "size_bytes": 6270747,
+          "sha256": "d125b6eb730995db9a47754a0cfb73e9deb09c56360e9427308929b819fa17b4"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.5. Back-layering length.xlsx",
+          "size_bytes": 3998308,
+          "sha256": "6fd071386a3521cfaa0d7189205abf49b851b5944c25648327137504edc9c676"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.6. Smoke layer thickness.xlsx",
+          "size_bytes": 1046420,
+          "sha256": "db6e9f76f216e80e0e9256a4cd1ab280f244549472d4beffb98b4e5718d32017"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/3.7. Plug-holing.xlsx",
+          "size_bytes": 1986142,
+          "sha256": "24478fff3c74ed41fed993df6f46c77eea09f203d120c0555464d96e091b51cf"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Accident_list/Tunnel_Fire_Accidents_List.CSV",
+          "size_bytes": 13849,
+          "sha256": "26bbc41c040ef39f828b10449a900f49306b5473ffbac3a6f07815b51c61ea6e"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/ANN.py",
+          "size_bytes": 2820,
+          "sha256": "ced660559c97dccb299f2334860f3b8809c59e327a3d050b9180b4b80e760038"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database.xlsx",
+          "size_bytes": 164915,
+          "sha256": "f173a9159b650a7e3193ea9509d47846e6cf03e3c415e909719d61136c75ffe2"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Li_2010.csv",
+          "size_bytes": 32095,
+          "sha256": "6b803b30adcaf6af9acc14df30526e23ab1d83bfce3bc23fb76e3959f585e06e"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Tang_2018.csv",
+          "size_bytes": 24349,
+          "sha256": "4cbb5c5f30049a3ddfa1766187ef8b0de275b59bac736007eb4dfa9262d704ad"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Weng_2015.csv",
+          "size_bytes": 9992,
+          "sha256": "af209d7556730a51a6effac22a997b181b624fa3b3344978f8f2504d068b81be"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/Database_Wu_2000.csv",
+          "size_bytes": 97322,
+          "sha256": "ef7d4344eeac40ba747dfb9209dcd2f9888e9d758bd95b433595a934265ca9bc"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/Demonstration/README.md",
+          "size_bytes": 126,
+          "sha256": "16d75dd3222fc85eafdd5eac3e92eb648d61f2c2e50d512f31b75df8f0f2f1b6"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/new file",
+          "size_bytes": 1,
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/2020_TUST_paper/README.md",
+          "size_bytes": 781,
+          "sha256": "27a327c1c7249257bac61e0a6e0950190a2d8534ffaf98c6c071e5a15a70e5a5"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/README.md",
+          "size_bytes": 825,
+          "sha256": "842ef4820119b63287fefdcc2209cde8b626d8b0ce506f4ee96568e49bb195f4"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/New file",
+          "size_bytes": 11,
+          "sha256": "286f93b7f4db9d7e2ef0825d6099f89b5e7f7aa4b6e2fd904855df4ff3761209"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Read me.txt",
+          "size_bytes": 717,
+          "sha256": "543f89357c57985dc59d14d5db5bb6d5c5be4e42eaff28e388659a55ceecc3f7"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/read me.txt",
+          "size_bytes": 104,
+          "sha256": "660c29e7cd432b2751891729ce5dec4597e4de113528c7653d18c5c958fbc304"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T1.xls",
+          "size_bytes": 1081856,
+          "sha256": "903e39555a6a79885fc9c27cb58d7ffcd9f9999cc4e1fc901cdb32f4b7c2d061"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T2.xls",
+          "size_bytes": 1080320,
+          "sha256": "55e6a4eae49fe318af25a144bd3f1de9f28b5777f6d7d1e774b58247b4848998"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T3.xls",
+          "size_bytes": 1080320,
+          "sha256": "748f0e4ef9189d17e11e9332632640973e2fd0a34ba5f3b57cfb99de5a94991e"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T4.xls",
+          "size_bytes": 1078784,
+          "sha256": "e375650e0486c4cedb17118ba4f891d79a3da86a1f609a1db499597b9c6d85cc"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T5.xls",
+          "size_bytes": 1240576,
+          "sha256": "d41c978a3fbc6f8250dbc9d95c15fc8d66cbc29368262167e2320d5860127b52"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T6.xls",
+          "size_bytes": 1094144,
+          "sha256": "3eca0d7abe9670d084f24ecb72126c485ecf0abb5edec2a3fce01eb1f4db7e4a"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T7.xls",
+          "size_bytes": 1238016,
+          "sha256": "ef850fb204588cb47db7f777a1f87a654b2af4fc6fb18d4a68b04397c7619524"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T8.xls",
+          "size_bytes": 1076224,
+          "sha256": "2378049a008c1b7fafc20cc58f84342bda95311db57b0bb16ce2c80a4bd85d70"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/T9.xls",
+          "size_bytes": 1083904,
+          "sha256": "ca53c8dd84eb71ee22e06292881516fd01cc94c0c069f086889da97687827f08"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test1/Vent temperature profile.xls",
+          "size_bytes": 645120,
+          "sha256": "46100ab5e2b1f9f86441c581604ad3fbe2e0814e1327d5408767323a79e1d060"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/read me.txt",
+          "size_bytes": 99,
+          "sha256": "c94fce7200a2a9325d60ce5c35210a08eb9f8748043c41d1c6fff34ab6b45115"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T1.xls",
+          "size_bytes": 809984,
+          "sha256": "9cbf2eb173b36466b3ad8cd56e1ea669de6a42dc45045e7e3e810a0b35350307"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T2.xls",
+          "size_bytes": 812032,
+          "sha256": "4fa83b5d34e4ed3fd0753fe39435fb588f998e41e350411eb0bccd8cb24eb58f"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T3.xls",
+          "size_bytes": 814080,
+          "sha256": "4083fe8c58952b4d36aa7298a4813b89886a956dcade90504d4d07bb169c475c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T4.xls",
+          "size_bytes": 813568,
+          "sha256": "946976bd341b94e39fa247fd782b14cb5dc7240d80618102f8b47e9541dd52c0"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T5.xls",
+          "size_bytes": 934912,
+          "sha256": "4004b7107babcd45639f7bd9dd8adda1735b32a6aa5db93f65aded1c6fd4aa6c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T6.xls",
+          "size_bytes": 825856,
+          "sha256": "07ffa30c7937db4d6206d0f79d863658d5b7011cef0abad009843c76a846a340"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T7.xls",
+          "size_bytes": 934400,
+          "sha256": "62c6fb1fe463aca23f050e2a686e6dd14af8fc59bd84710136511db890e2fa29"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T8.xls",
+          "size_bytes": 811008,
+          "sha256": "b0837fa648ceecd04d33b4b9aec1b2087fabb7858a8d2dc2594e0ede881913f8"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/T9.xls",
+          "size_bytes": 815616,
+          "sha256": "c5307ba64119a956bb9617eecb12055059148276d9acad45f4687bb4c483d702"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test2/Vent temperature profile.xls",
+          "size_bytes": 488960,
+          "sha256": "254fe8c704aec9e61e35f02a31a98aad80647d992de533a573b12ac0451fe218"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/read me.txt",
+          "size_bytes": 122,
+          "sha256": "bc30e3f21b48ba58166575384f0112fc941554fc16439d46cbc63dd572403d71"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T1.xls",
+          "size_bytes": 504832,
+          "sha256": "29e8a2908c14ab1ca4cabb82932564b1f7de1590d2fea0899fc80e81c34cd40c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T2.xls",
+          "size_bytes": 505344,
+          "sha256": "96a11b3fb1c0b8a549466f0ade987717a2742f27c6081242f8ff95f98672cd43"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T3.xls",
+          "size_bytes": 507904,
+          "sha256": "bfb73bb302aa821db148508d225e580774df924ca303b2c049917b6425cc955c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T4.xls",
+          "size_bytes": 506880,
+          "sha256": "b1af39422fb7ecec6b315cb9aa8c0d4c16eaefb2bd1ef433adafd477ee89cf43"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T5.xls",
+          "size_bytes": 580608,
+          "sha256": "f8126c3bdf8a2ea26d246ecab0ce0378872ade90db9d037babeba40cc0fbb83d"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T6.xls",
+          "size_bytes": 513536,
+          "sha256": "d758626ed55a9315a22afb9c8b9860cd923b6f4f2cf75e7050e534dbc03ec043"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T7.xls",
+          "size_bytes": 580096,
+          "sha256": "86d1550bbda8b50b4e70e0ba3f982fdf4a6d869eed018408e3f882bbf80ead75"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T8.xls",
+          "size_bytes": 504832,
+          "sha256": "5de570dbdfd78147862621170aa8c53071ae7722558d001be58b2e66c38c40f8"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/T9.xls",
+          "size_bytes": 508928,
+          "sha256": "9d90ce2e5e3ab98fa23741c5e3472f7799d4933d1cf6f39e036d233da67c5c97"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test3/Vent temperature profile.xls",
+          "size_bytes": 307712,
+          "sha256": "80b93a0ec10ec7a4b3fc692351c691916fb9a1ec7d1a30db79555a944c747017"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/read me.txt",
+          "size_bytes": 141,
+          "sha256": "254db527a1364f9f9d895e807f7735ff3edea55934a0fc5830f836e33700b072"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T1.xls",
+          "size_bytes": 739840,
+          "sha256": "099f07f9b754ca6c51c66a41f3d72ffc798f2662ff4ac75c4f95283186586aa3"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T2.xls",
+          "size_bytes": 738816,
+          "sha256": "4e45c04906fc00c196672361b193a40d654ffbd1d5042bcfed69b3ba0146bc92"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T3.xls",
+          "size_bytes": 741888,
+          "sha256": "b9bd01790447d5af37fc8ed3209b2c58f39469f03a8dc281cccf80433bc618b4"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T4.xls",
+          "size_bytes": 741376,
+          "sha256": "6ddca8fe1ea049b9e36a106e6b587967d2ce760268a032cd115e3fff001cb687"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T5.xls",
+          "size_bytes": 850432,
+          "sha256": "385507eeb36db0d3acd713bc8803251e88f066994551735c13460453f834deca"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T6.xls",
+          "size_bytes": 750080,
+          "sha256": "38e68f3255912add5f1913385aa93df18eaf3f10d551392bf04d0d239b4e23ce"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T7.xls",
+          "size_bytes": 849920,
+          "sha256": "fbdf4f1cf735f76632af5ca76c969427eb6e5b75a08a656f38e061de4463aeee"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T8.xls",
+          "size_bytes": 736768,
+          "sha256": "a828979ffcb65a677f3e0d66cff8c0de6c018bb4263214bc7ced89887a4b3887"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/T9.xls",
+          "size_bytes": 743936,
+          "sha256": "dc315907f4a097e21eea11d1fde26a6674b0479ca08dc643efedbc6af66926dc"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test4/Vent temperature profile.xls",
+          "size_bytes": 444928,
+          "sha256": "0d11db7ed749192c8af2a6bd85b2f7b3aadbdc8eb21f23ebd113af3128b90208"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/read me.txt",
+          "size_bytes": 112,
+          "sha256": "7302b1959a2abae90bf727bf10fc2df13838817a082c70a22db60293eab72f5e"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T1.xls",
+          "size_bytes": 425472,
+          "sha256": "a4c12e1569a1345470a0dd4cc54cbf6d2c79350addf2ee2f35efd2a3fbdf6c1d"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T2.xls",
+          "size_bytes": 424448,
+          "sha256": "0a47f537f99cdf2bcfc4590a281640f91743a57ca3cbfa5660d941571225ef9e"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T3.xls",
+          "size_bytes": 424960,
+          "sha256": "f9a7490f7ef16187f23e55ac3fce314ebbf53954be56379c6986aafbaef148dd"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T4.xls",
+          "size_bytes": 424960,
+          "sha256": "cd56125a27a28ac9f9d16b5c08203453a95851d7ca583cdd8df37db24feca140"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T5.xls",
+          "size_bytes": 485888,
+          "sha256": "3a3faae390d97fdefee2ff1528a3b06fb4792ba3794f4c7e80521b7c6069cd42"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T6.xls",
+          "size_bytes": 427008,
+          "sha256": "6cd5ba2e7e7e28fe0d5dd0fe66dfbde45282144059cc681dda42872b63beda8e"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T7.xls",
+          "size_bytes": 482304,
+          "sha256": "67e3bedb29c95f8e8a5df0950936cbbc6bd7979ff84be1117faa0911746cc363"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T8.xls",
+          "size_bytes": 419840,
+          "sha256": "faf646daf36a569542583f60618864fecb67282a9f0e0ba0a9e6d59985f010c0"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/T9.xls",
+          "size_bytes": 424448,
+          "sha256": "e198198ed7adccbe648bb738e3ed5a3fc1a668e030ba6af97777600704f5c9ea"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test5/Vent temperature profile.xls",
+          "size_bytes": 258048,
+          "sha256": "87cc23b9121b29d6c43835199e0d485e4486f4b8cb63b8034b8033fa130cee1d"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/read me.txt",
+          "size_bytes": 154,
+          "sha256": "6edeb7306752d8e435edbdfec253343d7e2847783cf50f5ba7036943065f4368"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T1.xls",
+          "size_bytes": 668160,
+          "sha256": "1b47f516de8b7e17e3e93191fa7868cd24190258e56e6ee7a3a7f30cf6056ffb"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T2.xls",
+          "size_bytes": 666624,
+          "sha256": "25a9dbca5c8b8d90107a63ed32a2d0ce4dafede2f4a1a588246078c46a27adf7"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T3.xls",
+          "size_bytes": 669184,
+          "sha256": "ff28c6141ea33b5fa2e4480f56b2b1d1741a8947b42b1ff466f7f062af5c3ce5"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T4.xls",
+          "size_bytes": 668672,
+          "sha256": "8cb0f99832c525dcbcf81a7c61f15862614fb11ec410e909fd3fcf5c14705e3f"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T5.xls",
+          "size_bytes": 765440,
+          "sha256": "7b8785949153c8730822430906c6e4fe4768fcf6ba7ff0afc6b436bacf59ffbe"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T6.xls",
+          "size_bytes": 676864,
+          "sha256": "f9f1cf20e2f96e85129951aef7f1e1856ad6b26d2a91b682d5bd8befc80d2e2c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T7.xls",
+          "size_bytes": 765440,
+          "sha256": "196fe570678cec8f4bc8f4a2032e6eba7e2fbbca59dfdde8c7a91975a52fc204"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T8.xls",
+          "size_bytes": 665088,
+          "sha256": "8007f927765911fd41d22b24f841017fe5d7e44816ddcbad5797fd737632be17"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/T9.xls",
+          "size_bytes": 671744,
+          "sha256": "881e4896921f230bc0932833aed78f6944f51b59e672b584dffb52d1727f556d"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test6/Vent temperature profile.xls",
+          "size_bytes": 403456,
+          "sha256": "736f8ccadc97114cd81d6532695a0320c18e7b52f99eae76b842e48500af0a37"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/read me.txt",
+          "size_bytes": 121,
+          "sha256": "9c735093d24ce7e48e6582437f7888d58dfa557203c0856e3dc735da8be7e115"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T1.xls",
+          "size_bytes": 779776,
+          "sha256": "acfeb905f10097c741b7e85462c527f4518bfce59254f5a9a14b4e641598fe7a"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T2.xls",
+          "size_bytes": 776192,
+          "sha256": "75ea256684869388bba57f8b4aeaa3ea58d4978e4e582b97a3d28eb104806e5b"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T3.xls",
+          "size_bytes": 778752,
+          "sha256": "b4043daadb17c810368ae74799a1c69dee5afe985eaf4fd9eb2f4929c0138aed"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T4.xls",
+          "size_bytes": 778240,
+          "sha256": "68417823f0cd5416136c423f5989991cac62ca720ae57b71f6b21135e6a6deb8"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T5.xls",
+          "size_bytes": 893952,
+          "sha256": "c9834fcb134115580beb7c5d316c6104b14e95220a7a6d94cbf6faf5fc30065c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T6.xls",
+          "size_bytes": 791040,
+          "sha256": "431afba4594094ee35f0d057ba56f0f71c79073d27c36836f767ebe304fd1a04"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T7.xls",
+          "size_bytes": 894464,
+          "sha256": "e4e4753d88bea0730a218ddc8698cfa3a02cb564cf2a3bf90adb66eb76bfd98f"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T8.xls",
+          "size_bytes": 776192,
+          "sha256": "3c670f8940305550dcfcbfaa6a8bdf700b2c699de9f2f51317831ce935d824e1"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/T9.xls",
+          "size_bytes": 784384,
+          "sha256": "fc7e4a8de565c8a64f2c40f5bc2b08e9b963bb6e913d79dca298702463b56734"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test7/Vent temperature profile.xls",
+          "size_bytes": 468992,
+          "sha256": "1c55e78496fa34f3a4552c65943f49d89636b247455c59b9cd049e98d7849cca"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/read me.txt",
+          "size_bytes": 115,
+          "sha256": "c08bcce8ee070c63aa31a65e9c78454292d42c4dc12a5643e8b5cb6ca52716e2"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T1.xls",
+          "size_bytes": 507904,
+          "sha256": "ad4333a57742e8bb8a51db6b51c098725db891377d242ccbb0d32841aff6dfb9"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T2.xls",
+          "size_bytes": 506368,
+          "sha256": "55dd9951e6f746030b0271353d1245088d556afa6de12e297c694346ba2f83c7"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T3.xls",
+          "size_bytes": 508928,
+          "sha256": "49d9825f5d5d01a6a88c9dccba7e25df7437bdd7e87759b469b2e206f8869f7d"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T4.xls",
+          "size_bytes": 508416,
+          "sha256": "a3673a3b70c46cb13bea098c8a9d8e7d63b5bcfa1528db3b5835ebb7ce688429"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T5.xls",
+          "size_bytes": 581632,
+          "sha256": "698775a3e38bc5e501bbd98a21ed296614faee3f86f3e409f5555c5b9e4a1a4b"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T6.xls",
+          "size_bytes": 513024,
+          "sha256": "ab4c3c23743ca2669206d9115d0379030bc4e8747986ad6557598c47c04efb83"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T7.xls",
+          "size_bytes": 581120,
+          "sha256": "ab57dcaf1af581c9c66c687fcca590760555df960c463a0d916d07399491579c"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T8.xls",
+          "size_bytes": 504832,
+          "sha256": "1ca41171cc0d2a94a3efcce8908996259cd0abf1a4d2da79706b0d6459e42a6f"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/T9.xls",
+          "size_bytes": 510464,
+          "sha256": "078d634887319107364775770718f11aa206c104eb7b592b3939777c4f9ff4bb"
+        },
+        {
+          "relative_path": "Tunnel_Fire_Database-master/Tunnel_sidewall_vent/Test8/Vent temperature profile.xls",
+          "size_bytes": 308736,
+          "sha256": "25df7f9f2e6572811934ec418348f1719a2b5966403941f7255f03fe0e39be1a"
+        }
+      ],
+      "inventory_sha256": "7f6a7574fb28fcc641da3da5826e28659619ff887f6f0d3c4ad0e8f3c03d9f3b",
+      "canonical_status": "PLANNING_ADAPTER_READY",
+      "canonical_record_count": 82444,
+      "canonical_case_count": 93,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D03",
+      "name": "FDS-exp",
+      "source_url": "https://github.com/firemodels/exp",
+      "acquisition_date": "2026-07-14",
+      "source_version": "UNKNOWN_existing_local_staging; upstream commit not verified this round",
+      "registered_local_dirs": [
+        "03_FDS-exp"
+      ],
+      "planning_download_status": "ALREADY_PRESENT",
+      "roles": [
+        "external_experiment",
+        "physics_sanity"
+      ],
+      "planning_manifest": "项目治理/download_manifest_D03_planning.json",
+      "planning_manifest_sha256": "6fb0858fccd431223390bda34329a9549a1064236f709384cd96aaa80307ea03",
+      "staging_root": "data/raw/D03_FDS-exp",
+      "file_count": 7,
+      "total_bytes": 181287,
+      "files": [
+        {
+          "relative_path": "Aalto_Woods/pine_flaming_25kW.csv",
+          "size_bytes": 2167,
+          "sha256": "4721a9741e7feb66ad332701d8249317854e10c12c0b315c4db09d9c31fa06f7"
+        },
+        {
+          "relative_path": "Aalto_Woods/pine_smolder_20kW.csv",
+          "size_bytes": 4937,
+          "sha256": "d9bddc3795c965b3ce0f2938f50b9862b831b57a2ec40e4434e6d4c5f2d122a2"
+        },
+        {
+          "relative_path": "Aalto_Woods/spruce_flaming_25kW.csv",
+          "size_bytes": 2105,
+          "sha256": "cc1855c68b872e1f1948c7c109c13bd4c67932b2ba5561c81b6f331f4a3bfcf8"
+        },
+        {
+          "relative_path": "ATF_Corridors/ATF_Corridors_048kW_avg.csv",
+          "size_bytes": 52043,
+          "sha256": "fc50158d230cd9706db4d6963bdf542e682718655e0a47cfde151d9a50a0f5f3"
+        },
+        {
+          "relative_path": "ATF_Corridors/ATF_Corridors_485kW_avg.csv",
+          "size_bytes": 44411,
+          "sha256": "b9562d21361091684252c4b7e33949150463a0dd2a5d02f3356619a1f6518b45"
+        },
+        {
+          "relative_path": "example_preview.png",
+          "size_bytes": 75285,
+          "sha256": "cf2b2a0e54be3edf1822463af21e12c1583952c40c59a9f5076c8861dce112af"
+        },
+        {
+          "relative_path": "sample_card.md",
+          "size_bytes": 339,
+          "sha256": "859a67a296d0ce42474206e9824a080028a442e7753dbb53aab7c65f8e2ab077"
+        }
+      ],
+      "inventory_sha256": "c104ac8ee02c3a4ba9c055f4cefaec8f597f8f12f8e51cee54e9652ef345c4ec",
+      "canonical_status": "PLANNING_ADAPTER_READY",
+      "canonical_record_count": 932,
+      "canonical_case_count": 5,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D04",
+      "name": "FD-Gen",
+      "source_url": "https://github.com/usnistgov/FD-Gen",
+      "acquisition_date": "2026-07-14",
+      "source_version": "UNKNOWN_existing_local_staging; upstream commit not verified this round",
+      "registered_local_dirs": [
+        "04_FD-Gen"
+      ],
+      "planning_download_status": "ALREADY_PRESENT",
+      "roles": [
+        "t3_generator",
+        "ood_generator"
+      ],
+      "planning_manifest": "项目治理/download_manifest_D04_planning.json",
+      "planning_manifest_sha256": "2d44e8288ce4ce3c75822e8725645f4e1ff4b773ee34de9473519f0b41b74169",
+      "staging_root": "data/raw/D04_FD-Gen",
+      "file_count": 50,
+      "total_bytes": 85736781,
+      "files": [
+        {
+          "relative_path": "example_preview.png",
+          "size_bytes": 38764,
+          "sha256": "4ed8a2103ba3ec33bd00b1e7a36c9723a3bb1c61cf813f4d7eeb370550980236"
+        },
+        {
+          "relative_path": "FD-Gen-main/CODEMETA.yaml",
+          "size_bytes": 1192,
+          "sha256": "c34983d13b5481df98b67f2f983423492614d4d6841f0c17aebf5d4a6f8b555c"
+        },
+        {
+          "relative_path": "FD-Gen-main/CODEOWNERS",
+          "size_bytes": 323,
+          "sha256": "d2dcc1701e3f90585438cceefa69fd7f888a9a78bca323abc087ffef7a984915"
+        },
+        {
+          "relative_path": "FD-Gen-main/example/example_commercial.fds",
+          "size_bytes": 58509,
+          "sha256": "b66d3b6954991bb53814462193b5718e41e388f13ecbb2b80d10975bbd422c67"
+        },
+        {
+          "relative_path": "FD-Gen-main/example/example_CSTB_Tunnel_Test_2.fds",
+          "size_bytes": 49288,
+          "sha256": "c2b2b0697c4f0e4801f0fc573e14c3ba348bba4ccaf98142762085fc7ce759cd"
+        },
+        {
+          "relative_path": "FD-Gen-main/example/example_NIST_Smoke_Alarms_SDC02.fds",
+          "size_bytes": 16604,
+          "sha256": "e4c4eab226d5d2fd008f1611afcbb7a02c458a89f955cae97d1b8661c2fc9e69"
+        },
+        {
+          "relative_path": "FD-Gen-main/example/example_Single_Story_Gas_1.fds",
+          "size_bytes": 12984,
+          "sha256": "e17f1c31b6228b992c848d7c79af28d12bddfcf223148110f20528426d10e25c"
+        },
+        {
+          "relative_path": "FD-Gen-main/example/example_wind_test2.fds",
+          "size_bytes": 8155,
+          "sha256": "5a38b0c1b83f54310773498ce1c7ff00931a23bdbea2514f0d14cf57a0e7ad0e"
+        },
+        {
+          "relative_path": "FD-Gen-main/FD-Gen.exe",
+          "size_bytes": 84995454,
+          "sha256": "f80651cd2fea4e86c9b4bca3d4bc91a01d8a28ee3f0fe4f08fc3ab8434e03a62"
+        },
+        {
+          "relative_path": "FD-Gen-main/images/Picture1.png",
+          "size_bytes": 38764,
+          "sha256": "4ed8a2103ba3ec33bd00b1e7a36c9723a3bb1c61cf813f4d7eeb370550980236"
+        },
+        {
+          "relative_path": "FD-Gen-main/images/Picture2.png",
+          "size_bytes": 25159,
+          "sha256": "5f914af479c6c4f822e111c3b08e6df3ddb11aa687ab789c530e300e3f8db1f5"
+        },
+        {
+          "relative_path": "FD-Gen-main/images/Picture3.png",
+          "size_bytes": 12418,
+          "sha256": "d788aebef3bf3bda4e0ec9301a2a7919d3f470ac0ba18f026e41806aa2f26bf4"
+        },
+        {
+          "relative_path": "FD-Gen-main/images/Picture4.png",
+          "size_bytes": 6526,
+          "sha256": "a17ee70c33bf9d5887fa9970eac2d676e518b8aa0cc2583f2d844cd2d82cec8c"
+        },
+        {
+          "relative_path": "FD-Gen-main/images/Picture5.png",
+          "size_bytes": 2503,
+          "sha256": "01d9d6ad6916a3ea7e5f9c5cc4afe63859c6b09cd43fe882e579b9c8b2f56b30"
+        },
+        {
+          "relative_path": "FD-Gen-main/LICENSE.md",
+          "size_bytes": 1866,
+          "sha256": "777060f35baa90ababb6d4336f7e96c6a9d78f8c23fd136cb7b0bf1cd7e8cf9f"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/global_parm.cpython-311.pyc",
+          "size_bytes": 746,
+          "sha256": "75e5c8ac3d27dc9561fb5b7383819c15ff585e7acfdbcf9a2d7fe0b347b0770c"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/MFIR.cpython-311.pyc",
+          "size_bytes": 44112,
+          "sha256": "65d69ee25fd46e42a0ecc961341ae0680c5f21e306ebb19bca135f7083e01f16"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/MFLD.cpython-311.pyc",
+          "size_bytes": 51068,
+          "sha256": "d2e9171b9a1b27e3ec5cca13d4ab280b45501d681140b687c6cb0cfb8959f012"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/MHDR.cpython-311.pyc",
+          "size_bytes": 7308,
+          "sha256": "c8d9597d367cfdfa4f5a4c6955d2134ac5cc0a38ecaf6cb747e761b9d8e655dc"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/MRND.cpython-311.pyc",
+          "size_bytes": 20393,
+          "sha256": "bab44e2eb83126640fbcf5c6b4976a84f91142dc2408aee5dbc1716e87b80a3c"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/MSTT.cpython-311.pyc",
+          "size_bytes": 16445,
+          "sha256": "fb24c97927fcdb1e2dd6e30e40313fe1a9135486a11bc6785fc5754730fe97e1"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/parse_syntax.cpython-311.pyc",
+          "size_bytes": 8588,
+          "sha256": "79f9ddeed3faec40ae47f12ca19b62ecd0b4201e340f0ed701dfa512abd9820c"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/QUTP.cpython-311.pyc",
+          "size_bytes": 20360,
+          "sha256": "57986de03dc487cf19ab5aa2c9659888244df8b753b47de17ff7d1f836cb23a6"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/script_engine_checking.cpython-311.pyc",
+          "size_bytes": 13427,
+          "sha256": "338cdaba99041c56bb7cbf73d99db97b52b0fbbc8c0e1a0d1786bb9cc267a752"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/script_engine_main.cpython-311.pyc",
+          "size_bytes": 4304,
+          "sha256": "60209f4854b6cc6eb43405cee86f20f5db97d966674b0b0857ee7a7b6228bee0"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/script_engine_sampling.cpython-311.pyc",
+          "size_bytes": 20023,
+          "sha256": "996ef9a6aeefbcaf0e12aee6f9af8988dcbd782cf475206205168012aecba91b"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/__pycache__/script_engine_wrapper.cpython-311.pyc",
+          "size_bytes": 28776,
+          "sha256": "f4a23162a99bd4613a9ddf58e044ebf7ad76118bf64eef9b33d0edc97577129b"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/FDSdata.py",
+          "size_bytes": 2317,
+          "sha256": "626115e2e7c5a72d26927ad4863df5cfc86a6bce34bd84bfd2536963a9fef852"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/global_parm.py",
+          "size_bytes": 273,
+          "sha256": "c7e763b1061ec0da1474b4413c151e7ef8ed724556c1c56268fcfd5f78a810b3"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/MFIR.py",
+          "size_bytes": 40186,
+          "sha256": "b58d805c3a7addfc39d3bf11573b958c4793813ad2dd941748e8d2baddf9209f"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/MFLD.py",
+          "size_bytes": 47706,
+          "sha256": "91f5ed931e69c38f57a0d9e22f0cf8c17658257fb8d57ddbe12be73509e622ee"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/MHDR.py",
+          "size_bytes": 5181,
+          "sha256": "7d69da377bc148eae84e345e4720c16743b2e1a80677872eaaba58d480bfaae6"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/MRND.py",
+          "size_bytes": 19991,
+          "sha256": "cfe04596b6f46ca19e44dc59f8df42ba84b26a431370406d8d9034910ec7a3ac"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/MSTT.py",
+          "size_bytes": 12143,
+          "sha256": "46fa5dcbf2ef7c7ade9cef466a5f07c35de0f2f4fdf258ba0c39a9682ac7b8af"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/parse_syntax.py",
+          "size_bytes": 6090,
+          "sha256": "3c0fd438041d76ee0ae7fbdf849fdc629ad1c1cb313fe327a2ea66cf7a4e693d"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/QUTP.py",
+          "size_bytes": 16406,
+          "sha256": "0d5b0b5c3cd28e49b61bf7134eddf19b98c6b4fcb07ccbeb5888a8b68d54f84e"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/script_engine_checking.py",
+          "size_bytes": 14824,
+          "sha256": "811854209dcfdbe183787639f744862709c44e719bd75d9affdf70a953861024"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/script_engine_main.py",
+          "size_bytes": 2973,
+          "sha256": "d1f59e83517172c0f58bf66c2ea73b6d04a0f1dde66280136534a4d6dcb4ea01"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/script_engine_sampling.py",
+          "size_bytes": 19074,
+          "sha256": "ff0baa35ac6879f82689208a7d23f2ff50f7e3943a89872e84e3119f56168c9a"
+        },
+        {
+          "relative_path": "FD-Gen-main/main_code/script_engine_wrapper.py",
+          "size_bytes": 27036,
+          "sha256": "6086238190a91336ef6001f3163470f799dde625e0fcf9287f8ba4a7c987e8d6"
+        },
+        {
+          "relative_path": "FD-Gen-main/README.md",
+          "size_bytes": 9329,
+          "sha256": "2865d93241fdba76ff403ee13cdf490a91c5a3b9802dc9b7808a4aceea1736c2"
+        },
+        {
+          "relative_path": "FD-Gen-main/requirements.txt",
+          "size_bytes": 75,
+          "sha256": "c364e8ab26077cc5a334379382f6c0e9a74fd28105c3bc20143ff6141b0092c8"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_DWT.txt",
+          "size_bytes": 1332,
+          "sha256": "3f745c0317236670dd1d3cb7f60308b32b301619c0712607aa8e5ddde3b17545"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_FSL.txt",
+          "size_bytes": 970,
+          "sha256": "356f84030c4d9d3c9ece3bf3b2ab43793dfcace6d9e651fd606c249eaf4d2983"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_HRC.txt",
+          "size_bytes": 1585,
+          "sha256": "d2842cc09220600d73f56476a41c01cd49c0b32cb1966b23bce931ae849a25d6"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_MAIN_MRND.txt",
+          "size_bytes": 2084,
+          "sha256": "37bf689909eee90669a280ca9e02221ba586a49bb8f6163fd1de2f74d14544db"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_OTH.txt",
+          "size_bytes": 725,
+          "sha256": "eca2934f507a14fa3dbaea01ef6e49f101eebf8ba12c54b09cfdf323f5bbed0e"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_RXB.txt",
+          "size_bytes": 1114,
+          "sha256": "3a61d2470f3b664c9b1c5b1967cf995ddf61774fc71c8e6a7918c08fc6cf9e88"
+        },
+        {
+          "relative_path": "FD-Gen-main/test_cases/test_script_VTP.txt",
+          "size_bytes": 911,
+          "sha256": "2ed09d561430e04817f47e4cb5c518251abb21c9d76e6e117eaaec5dedf2ee7e"
+        },
+        {
+          "relative_path": "sample_card.md",
+          "size_bytes": 397,
+          "sha256": "97eca3674280a3b85ae6165c5b7083532db7cd2d1538a6fb3a6c3b520e9f9741"
+        }
+      ],
+      "inventory_sha256": "ae383e93e71d507602b4f5f9a192f43b704dab257a5457355e5bc8622cb9bfdb",
+      "canonical_status": "GENERATOR_RUNTIME_BLOCKED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_license_scope_incomplete",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D05",
+      "name": "D-Fire",
+      "source_url": "https://github.com/gaia-solutions-on-demand/DFireDataset",
+      "acquisition_date": "2026-07-14",
+      "source_version": "Kaggle metadata version 1 noted in prior audit; local staging version not independently verified this round",
+      "registered_local_dirs": [
+        "05_D-Fire",
+        "05_D-Fire-sample"
+      ],
+      "planning_download_status": "ALREADY_PRESENT",
+      "roles": [
+        "t1_visual_aux",
+        "t2_visual_aux"
+      ],
+      "planning_manifest": "项目治理/download_manifest_D05_planning.json",
+      "planning_manifest_sha256": "e80d06796ce626024c9705966bdb84bef7e2b75004202ac21082d612c8ca3365",
+      "staging_root": "data/raw/D05_D-Fire",
+      "file_count": 8,
+      "total_bytes": 643012,
+      "files": [
+        {
+          "relative_path": "data.yaml",
+          "size_bytes": 399,
+          "sha256": "cf0ef58ab837152ed4482a05327da76e5d2006f316d1f19e317f1568f7c9ee7f"
+        },
+        {
+          "relative_path": "example_preview.png",
+          "size_bytes": 285437,
+          "sha256": "12a014d8c05ff6af08cb57ad3dde5a484a525a2191650101158f3b92b40ca0f9"
+        },
+        {
+          "relative_path": "sample/test/images/AoF06723.jpg",
+          "size_bytes": 227556,
+          "sha256": "3eb16b635a007bdd6353e7219cae149a7da2f05153b2bbae4dbaae2ac360fa46"
+        },
+        {
+          "relative_path": "sample/train/images/AoF00001.jpg",
+          "size_bytes": 43550,
+          "sha256": "06a9d6b8354dd23e9a19f123454208719be71ca8205e831df89fdcb7199b6379"
+        },
+        {
+          "relative_path": "sample/train/images/AoF00002.jpg",
+          "size_bytes": 85421,
+          "sha256": "eb4ade628978f83194cfb1fec4416ff1b162dc1446bec3612444fdc1a955f5f2"
+        },
+        {
+          "relative_path": "sample/train/labels/AoF00001.txt",
+          "size_bytes": 81,
+          "sha256": "805a1eaaa582a225bb695f702a3d0d5b753fb92f19668b216524442d2c057779"
+        },
+        {
+          "relative_path": "sample/train/labels/AoF00002.txt",
+          "size_bytes": 82,
+          "sha256": "9342ba004d97304aee4f08c72a190411b6ba15964f1b63b181960f0dd9b6535d"
+        },
+        {
+          "relative_path": "sample_card.md",
+          "size_bytes": 486,
+          "sha256": "7cd821b07ca94603bf64cdc4770a27f7812a0a11177daa09895fa58564ab380d"
+        }
+      ],
+      "inventory_sha256": "11cdf6eb40b45badbbaa8fc796c5fc562e85144279947dd71c472e2874ee1fc6",
+      "canonical_status": "AUX_ONLY_BLOCKED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_provenance_chain_incomplete",
+      "version_status": "blocked_missing_local_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D06",
+      "name": "DetectiumFire",
+      "source_url": null,
+      "acquisition_date": null,
+      "source_version": null,
+      "registered_local_dirs": [
+        "06_DetectiumFire-sample"
+      ],
+      "planning_download_status": "NOT_DOWNLOADED_BY_INSTRUCTION",
+      "roles": [
+        "t1_visual_aux",
+        "t2_visual_aux",
+        "grounding_aux"
+      ],
+      "planning_manifest": null,
+      "planning_manifest_sha256": null,
+      "staging_root": null,
+      "file_count": 0,
+      "total_bytes": 0,
+      "files": [],
+      "inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "canonical_status": "NOT_ASSESSED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_nc_nd_and_provenance_scope",
+      "version_status": "blocked_missing_local_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "no_staged_files",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D07",
+      "name": "Fire360",
+      "source_url": null,
+      "acquisition_date": null,
+      "source_version": null,
+      "registered_local_dirs": [
+        "07_Fire360-sample"
+      ],
+      "planning_download_status": "NOT_DOWNLOADED_BY_INSTRUCTION",
+      "roles": [
+        "research_placeholder"
+      ],
+      "planning_manifest": null,
+      "planning_manifest_sha256": null,
+      "staging_root": null,
+      "file_count": 0,
+      "total_bytes": 0,
+      "files": [],
+      "inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "canonical_status": "NOT_ASSESSED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "no_staged_files",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D08",
+      "name": "MS-FSDB",
+      "source_url": null,
+      "acquisition_date": null,
+      "source_version": null,
+      "registered_local_dirs": [
+        "08_MS-FSDB-sample"
+      ],
+      "planning_download_status": "NOT_DOWNLOADED_BY_INSTRUCTION",
+      "roles": [
+        "research_placeholder"
+      ],
+      "planning_manifest": null,
+      "planning_manifest_sha256": null,
+      "staging_root": null,
+      "file_count": 0,
+      "total_bytes": 0,
+      "files": [],
+      "inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "canonical_status": "NOT_ASSESSED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "no_staged_files",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D09",
+      "name": "DFS",
+      "source_url": null,
+      "acquisition_date": null,
+      "source_version": null,
+      "registered_local_dirs": [
+        "09_DFS-sample"
+      ],
+      "planning_download_status": "NOT_DOWNLOADED_BY_INSTRUCTION",
+      "roles": [
+        "research_placeholder"
+      ],
+      "planning_manifest": null,
+      "planning_manifest_sha256": null,
+      "staging_root": null,
+      "file_count": 0,
+      "total_bytes": 0,
+      "files": [],
+      "inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "canonical_status": "NOT_ASSESSED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "no_staged_files",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D10",
+      "name": "FIgLib-SmokeyNet",
+      "source_url": "UNKNOWN_OFFICIAL_SOURCE_NOT_REVERIFIED",
+      "acquisition_date": "2026-07-14",
+      "source_version": "UNKNOWN_existing_local_staging; upstream version not verified this round",
+      "registered_local_dirs": [
+        "10_FIgLib-SmokeyNet-sample"
+      ],
+      "planning_download_status": "ALREADY_PRESENT",
+      "roles": [
+        "t1_visual_aux",
+        "wildfire_ood_aux"
+      ],
+      "planning_manifest": "项目治理/download_manifest_D10_planning.json",
+      "planning_manifest_sha256": "b6767e48f0435b8abc39945668f456ade6c1395f9d37bce271607a7dd03cfb62",
+      "staging_root": "data/raw/D10_FIgLib-SmokeyNet",
+      "file_count": 9,
+      "total_bytes": 8327056,
+      "files": [
+        {
+          "relative_path": "example_preview.png",
+          "size_bytes": 3987289,
+          "sha256": "d1388323a1b97cc08d5514562a5ee46f2c0cd0dc128e25ec93d05570209dce61"
+        },
+        {
+          "relative_path": "labels_csv/20160604_FIRE_rm-n-mobo-c.csv",
+          "size_bytes": 3432,
+          "sha256": "daa384b5ce7c013fa40e0962324bff8ba8abd4d7e3973418bf45e5fe708352d0"
+        },
+        {
+          "relative_path": "sample_card.md",
+          "size_bytes": 357,
+          "sha256": "bb00a2dc59da6ce32fe3b5b0e5fc8a6565fe9c90a2210679002ad4a2a3b69b4b"
+        },
+        {
+          "relative_path": "sequences/20160604_FIRE_rm-n-mobo-c/1465063200_-02400.jpg",
+          "size_bytes": 715720,
+          "sha256": "fd26d648025fe00ea3a307c4cbae79b086749588b353ef3bc8acc4ca09d8f67c"
+        },
+        {
+          "relative_path": "sequences/20160604_FIRE_rm-n-mobo-c/1465065000_-00600.jpg",
+          "size_bytes": 727663,
+          "sha256": "d35953494ef44584b8f1aea0d46a9670e9f9dfba8813426ffcba1b625dd35775"
+        },
+        {
+          "relative_path": "sequences/20160604_FIRE_rm-n-mobo-c/1465065600_+00000.jpg",
+          "size_bytes": 722987,
+          "sha256": "de03d160c20218036ea1962ebdee240fcad97695fbbe1c9f72adccbe2c595697"
+        },
+        {
+          "relative_path": "sequences/20160604_FIRE_rm-n-mobo-c/1465066200_+00600.jpg",
+          "size_bytes": 726723,
+          "sha256": "5f9ea882497fb4c7422dd9e1639ffaf37ed975c165067ad9234da4282f52626f"
+        },
+        {
+          "relative_path": "sequences/20160604_FIRE_rm-n-mobo-c/1465066800_+01200.jpg",
+          "size_bytes": 734806,
+          "sha256": "9cd6ecd0d1b836e0b3b138726e82986aad9f1d7de366e53924371ff96806b67a"
+        },
+        {
+          "relative_path": "sequences/20160604_FIRE_rm-n-mobo-c/1465068000_+02400.jpg",
+          "size_bytes": 708079,
+          "sha256": "5721a15be7dea58d97f1568449a04133262a72f8a2d80a7c394598149f8fd530"
+        }
+      ],
+      "inventory_sha256": "a767626b86e02fa9e040755790abb31b89e11578fd45f1ecb6be44167433d189",
+      "canonical_status": "AUX_ONLY_BLOCKED",
+      "canonical_record_count": 41,
+      "canonical_case_count": 1,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "source_version_evidence_blocked"
+      ]
+    },
+    {
+      "dataset_id": "D11",
+      "name": "Boreal-Forest-Fire",
+      "source_url": null,
+      "acquisition_date": null,
+      "source_version": null,
+      "registered_local_dirs": [
+        "11_Boreal-Forest-Fire-sample"
+      ],
+      "planning_download_status": "NOT_DOWNLOADED_BY_INSTRUCTION",
+      "roles": [
+        "research_placeholder"
+      ],
+      "planning_manifest": null,
+      "planning_manifest_sha256": null,
+      "staging_root": null,
+      "file_count": 0,
+      "total_bytes": 0,
+      "files": [],
+      "inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "canonical_status": "NOT_ASSESSED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
+      "formal_benchmark_eligible": false,
+      "license_status": "blocked_missing_authoritative_evidence",
+      "version_status": "blocked_missing_version_and_acquisition_date",
+      "blockers": [
+        "formal_benchmark_eligible_false",
+        "license_evidence_blocked",
+        "no_staged_files",
+        "source_version_evidence_blocked"
+      ]
+    }
+  ],
+  "formal_input_files": [],
+  "formal_input_file_count": 0,
+  "split_audit": "BLOCKED_NO_FORMAL_CASE_MANIFEST",
+  "leak_audit": "BLOCKED_NO_FORMAL_CASE_MANIFEST",
+  "uniqueness_audit": "BLOCKED_NO_FORMAL_CASE_MANIFEST",
+  "staging_assessment_sha256": "c3f9996b0559cd9dd978367fc67bac93fa04a9931c693d1f8a99378967be24f5",
+  "raw_files_modified": false,
+  "test_private_assets_accessed": false,
+  "planning_inputs_promoted_to_formal": false,
+  "blockers": [
+    "D01:formal_benchmark_eligible_false",
+    "D01:license_evidence_blocked",
+    "D01:official_files_missing:183",
+    "D01:source_version_evidence_blocked",
+    "D02:formal_benchmark_eligible_false",
+    "D02:license_evidence_blocked",
+    "D02:source_version_evidence_blocked",
+    "D03:formal_benchmark_eligible_false",
+    "D03:license_evidence_blocked",
+    "D03:source_version_evidence_blocked",
+    "D04:formal_benchmark_eligible_false",
+    "D04:license_evidence_blocked",
+    "D04:source_version_evidence_blocked",
+    "D05:formal_benchmark_eligible_false",
+    "D05:license_evidence_blocked",
+    "D05:source_version_evidence_blocked",
+    "D06:formal_benchmark_eligible_false",
+    "D06:license_evidence_blocked",
+    "D06:no_staged_files",
+    "D06:source_version_evidence_blocked",
+    "D07:formal_benchmark_eligible_false",
+    "D07:license_evidence_blocked",
+    "D07:no_staged_files",
+    "D07:source_version_evidence_blocked",
+    "D08:formal_benchmark_eligible_false",
+    "D08:license_evidence_blocked",
+    "D08:no_staged_files",
+    "D08:source_version_evidence_blocked",
+    "D09:formal_benchmark_eligible_false",
+    "D09:license_evidence_blocked",
+    "D09:no_staged_files",
+    "D09:source_version_evidence_blocked",
+    "D10:formal_benchmark_eligible_false",
+    "D10:license_evidence_blocked",
+    "D10:source_version_evidence_blocked",
+    "D11:formal_benchmark_eligible_false",
+    "D11:license_evidence_blocked",
+    "D11:no_staged_files",
+    "D11:source_version_evidence_blocked",
+    "case_scenario_family_sequence_uniqueness_missing",
+    "group_first_split_audit_missing",
+    "leak_audit_missing_for_formal_inputs",
+    "paper_ready_formal_input_files_missing"
+  ],
+  "canonical_manifest_sha256": "aaf86dba8465ff8878cf948a453873120b1a428c6f2482b2446784a99b8c4d11"
+}

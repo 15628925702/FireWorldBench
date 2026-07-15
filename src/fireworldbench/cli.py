@@ -45,6 +45,7 @@ from fireworldbench.paper_export import write_paper_export_decision
 from fireworldbench.anonymization import write_anonymization_decision
 from fireworldbench.reproduction import write_reproduction_decision
 from fireworldbench.release_audit import write_release_audit
+from fireworldbench.formal_readiness import write_formal_input_audit, write_formal_readiness
 
 
 def doctor(root: Path) -> int:
@@ -205,6 +206,26 @@ def build_parser() -> argparse.ArgumentParser:
     repro_parser.add_argument("--release-root", type=Path)
     release_parser = subparsers.add_parser("release-assess", help="audit final release freeze without publishing")
     release_parser.add_argument("--output", type=Path, required=True)
+    formal_input_parser = subparsers.add_parser(
+        "formal-input-audit",
+        help="hash staged data and record formal-input blockers without promoting planning data",
+    )
+    formal_input_parser.add_argument("--root", type=Path, required=True)
+    formal_input_parser.add_argument("--data-sources", type=Path, required=True)
+    formal_input_parser.add_argument("--staging-assessment", type=Path, required=True)
+    formal_input_parser.add_argument("--d01-tree", type=Path, required=True)
+    formal_input_parser.add_argument("--output", type=Path, required=True)
+    formal_parser = subparsers.add_parser(
+        "formal-preflight",
+        help="verify the complete frozen evidence chain before a formal full run",
+    )
+    formal_parser.add_argument("--data", type=Path, required=True)
+    formal_parser.add_argument("--model-matrix", type=Path, required=True)
+    formal_parser.add_argument("--calibration", type=Path, required=True)
+    formal_parser.add_argument("--prereg", type=Path, required=True)
+    formal_parser.add_argument("--runtime", type=Path, required=True)
+    formal_parser.add_argument("--run-contract", type=Path, required=True)
+    formal_parser.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -217,6 +238,56 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(f"ERROR: {exc}")
             return 2
         return doctor(root)
+    if args.command == "formal-input-audit":
+        try:
+            result = write_formal_input_audit(
+                args.output,
+                args.data_sources,
+                args.staging_assessment,
+                args.d01_tree,
+                repository_root=args.root,
+            )
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "formal_input_file_count": result["formal_input_file_count"],
+                    "blocker_count": len(result["blockers"]),
+                    "output": str(args.output),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    if args.command == "formal-preflight":
+        try:
+            result = write_formal_readiness(
+                args.output,
+                args.data,
+                args.model_matrix,
+                args.calibration,
+                args.prereg,
+                args.runtime,
+                args.run_contract,
+            )
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "blocker_count": len(result["blockers"]),
+                    "readiness_manifest_sha256": result["readiness_manifest_sha256"],
+                    "output": str(args.output),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
     if args.command == "pipeline-inventory":
         try:
             result = inventory(args.root)

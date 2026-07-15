@@ -1,0 +1,85 @@
+{
+  "readiness_version": "P5-MAIN-001-FORMAL-PREFLIGHT-v1",
+  "status": "BLOCKED_FORMAL_PREFLIGHT",
+  "blockers": [
+    "calibration:approved_model_results_incomplete",
+    "calibration:config_hash_missing",
+    "calibration:not_frozen_complete",
+    "data:formal_input_files_missing",
+    "data:leak_audit_not_passed",
+    "data:not_frozen_for_formal_run",
+    "data:split_audit_not_passed",
+    "data:uniqueness_audit_not_passed",
+    "models:0:not_approved",
+    "models:0:prompt_hash_invalid",
+    "models:0:required_value_missing",
+    "models:0:task_coverage_incomplete",
+    "models:1:not_approved",
+    "models:1:prompt_hash_invalid",
+    "models:1:required_value_missing",
+    "models:1:task_coverage_incomplete",
+    "models:2:not_approved",
+    "models:2:prompt_hash_invalid",
+    "models:2:required_value_missing",
+    "models:2:task_coverage_incomplete",
+    "models:3:not_approved",
+    "models:3:prompt_hash_invalid",
+    "models:3:required_value_missing",
+    "models:3:task_coverage_incomplete",
+    "models:4:not_approved",
+    "models:4:prompt_hash_invalid",
+    "models:4:required_value_missing",
+    "models:4:task_coverage_incomplete",
+    "models:matrix_not_approved_frozen",
+    "preregistration:cost_ceiling_not_approved",
+    "runtime:approved_model_runtime_incomplete",
+    "runtime:environment_lock_missing",
+    "runtime:not_approved_frozen"
+  ],
+  "artifact_chain": {
+    "data": {
+      "path": "项目治理/p5_formal_input_audit_P5-MAIN-001.json",
+      "sha256": "a93028ac8f1729244d2c4b03832cd8cdf648d0f9f5b94e04356c408a0261d67e"
+    },
+    "model_matrix": {
+      "path": "configs/model_matrix_P5-MAIN-001.json",
+      "sha256": "71a65e93f2cf9e5b2c4c44b0ff1c3a05a4f6eeb77e851ff9e9240d05d111230f"
+    },
+    "calibration": {
+      "path": "configs/calibration_P5-MAIN-001.json",
+      "sha256": "67eeb278592669967de4a780f390e4281fbc5af1d2638f982f3d429847ad5fd6"
+    },
+    "preregistration": {
+      "path": "configs/prereg_P5-MAIN-001.json",
+      "sha256": "a56972d41541c213e1238157ab79a5c9a0c76c9b59cc7671ce621c40bf09a6d7"
+    },
+    "runtime": {
+      "path": "configs/runtime_P5-MAIN-001.json",
+      "sha256": "cfbf417decc0a599c24ca2f247a8ae3ac102cb58230c631da8ab3b0bcb4040bd"
+    },
+    "run_contract": {
+      "path": "configs/formal_run_P5-MAIN-001.json",
+      "sha256": "aa2c0dfb1e53b7fd87af29b0ed96e7dc31d88dcd06b0b82c4f4acfbe7729dab3"
+    }
+  },
+  "frozen_input_manifest_hash": "a93028ac8f1729244d2c4b03832cd8cdf648d0f9f5b94e04356c408a0261d67e",
+  "model_matrix_hash": "71a65e93f2cf9e5b2c4c44b0ff1c3a05a4f6eeb77e851ff9e9240d05d111230f",
+  "calibration_hash": "67eeb278592669967de4a780f390e4281fbc5af1d2638f982f3d429847ad5fd6",
+  "preregistration_hash": "a56972d41541c213e1238157ab79a5c9a0c76c9b59cc7671ce621c40bf09a6d7",
+  "runtime_hash": "cfbf417decc0a599c24ca2f247a8ae3ac102cb58230c631da8ab3b0bcb4040bd",
+  "run_contract_hash": "aa2c0dfb1e53b7fd87af29b0ed96e7dc31d88dcd06b0b82c4f4acfbe7729dab3",
+  "prompt_hashes": [],
+  "environment_observation": {
+    "python_version": "3.13.5",
+    "python_implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "conda_default_env": "base",
+    "formal_environment_active": false,
+    "executable_name": "python.exe"
+  },
+  "formal_run_started": false,
+  "formal_model_results_generated": false,
+  "paper_numbers_generated": false,
+  "test_private_assets_accessed": false,
+  "readiness_manifest_sha256": "2dbdb7c35890c36c9bbd32c64596ebda9181fa05647e88a3aaa7fa1681e22fbf"
+}

@@ -6,13 +6,13 @@
       "source_url": "https://github.com/babeteax/Immersed-Tunnel-Fire-Location-Detection-Data",
       "declared_csv_count": 192,
       "declared_bytes": 1703976822,
-      "local_complete_csv_count": 8,
-      "download_status": "BLOCKED_NETWORK_TRANSFER_TRUNCATES_LARGE_RESPONSES"
+      "local_complete_csv_count": 9,
+      "download_status": "PARTIAL_9_OF_192_BLOCKED_NO_DOWNLOAD_APPROVAL"
     }
   },
   "planning_chain": {
     "D01": "PLANNING_ADAPTER_READY_FOR_LOCAL_FILES",
-    "D02": "XLSX_ADAPTER_READY_XLS_BLOCKED",
+    "D02": "XLS_AND_XLSX_PLANNING_ADAPTER_READY_80_LEGACY_XLS_INCLUDED",
     "D03": "PLANNING_ADAPTER_READY",
     "D04": "GENERATOR_RUNTIME_BLOCKED",
     "D05": "AUXILIARY_ONLY",
@@ -21,8 +21,8 @@
   "raw_data_policy": "raw source files remain outside the repository; data/raw is local ignored staging only",
   "formal_benchmark_status": "BLOCKED",
   "blocking_items": [
-    "D01 remaining 184 CSV files have not been safely downloaded in this environment.",
-    "D02 legacy XLS files need a user-approved converter or an environment with spreadsheet support.",
+    "D01 remaining 183 CSV files are absent; no download was authorized in this session.",
+    "D02 format integration is closed, but license/version/formal split and expert-review evidence remain blocked.",
     "D04 generator execution and D05/D10 visual label semantics are not part of this planning chain."
   ]
 }

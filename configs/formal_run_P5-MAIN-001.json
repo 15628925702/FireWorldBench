@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "run_contract_id": "P5-MAIN-001-FORMAL-RUN-CONTRACT-v1",
+  "status": "FROZEN",
+  "formal_run_started": false,
+  "formal_results_written": false,
+  "paper_numbers_written": false,
+  "command_status": "BLOCKED_DO_NOT_EXECUTE",
+  "formal_run_command": null,
+  "run_directory_rule": "artifacts/formal_runs/<run_id>; immutable; refuse_existing_directory",
+  "run_index_schema": {
+    "required": [
+      "run_id",
+      "git_commit",
+      "input_manifest_hash",
+      "model_matrix_hash",
+      "calibration_hash",
+      "preregistration_hash",
+      "runtime_hash",
+      "prompt_hashes",
+      "model_id",
+      "sample_id",
+      "repetition",
+      "status",
+      "raw_response_sha256"
+    ]
+  },
+  "output_schema": "schemas/prediction.v2.schema.json",
+  "raw_response_manifest": "private/raw_responses.jsonl plus immutable per-line SHA-256 index",
+  "cost_latency_failure_manifest": "public/cost_latency_failures.json with provider usage and failures separated from scores",
+  "provenance_chain": [
+    "clean_git_commit",
+    "formal_input_manifest_sha256",
+    "model_matrix_sha256",
+    "calibration_sha256",
+    "preregistration_sha256",
+    "runtime_environment_sha256",
+    "prompt_sha256",
+    "raw_response_sha256",
+    "prediction_sha256",
+    "statistics_sha256",
+    "paper_number_registry_entry"
+  ],
+  "overwrite_existing_runs": false,
+  "runner_reads_gold": false,
+  "test_access_ledger": "NO_ACCESS_CONFIRMED"
+}
