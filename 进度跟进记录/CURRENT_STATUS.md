@@ -1,12 +1,20 @@
 ---
-handoff_id: H-20260714-S060-001
+handoff_id: H-20260715-S061-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S060_P5-MAIN-001前置链继续.md
+source_session: 2026-07-15_S061_P5-MAIN-001继续.md
 current_task: P5-MAIN-001
 ---
 
 # Current Status
+
+## 2026-07-15 P5-MAIN-001 streaming XLS adapter verification
+
+- 已修复 `.xls` 适配器的内存峰值：从整表缓存改为逐行读取；D02 `.xls` 已可进入 canonical planning chain，完整 staging assessment 正常生成。
+- staging assessment：`artifacts/p5_main_staging_assessment_S061.json`，状态仍为 `BLOCKED_STAGING_INTEGRATION`；D01/D02/D03 为 planning adapter ready，D04 generator runtime blocked，D05/D10 auxiliary-only blocked。
+- 正式主实验复核：`artifacts/p5_main_gate_S061.json`，状态 `BLOCKED`；阻塞项为 preregistration、approved model matrix、calibration 和 approved main runtime。
+- 本轮未调用 DeepSeek、未访问 test/private、未修改 `../../3.数据集` 原始文件、未安装或下载包。
+- 验证：project check PASS；相关 pytest 5 passed；mypy 42 files PASS；doctor PASS。
 
 ## 2026-07-15 P5-MAIN-001 continued planning chain
 

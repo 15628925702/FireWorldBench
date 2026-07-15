@@ -1,10 +1,14 @@
 ---
-handoff_id: H-20260714-S060-001
+handoff_id: H-20260715-S061-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-14_S060_P5-MAIN-001前置链继续.md
+source_session: 2026-07-15_S061_P5-MAIN-001继续.md
 current_task: P5-MAIN-001
 ---
+
+## Next window: P5-MAIN-001
+
+本轮已修复 `.xls` 适配器的整表内存问题，并成功生成 `artifacts/p5_main_staging_assessment_S061.json`；正式主实验仍因 preregistration、approved model matrix、calibration、approved runtime 四项门禁保持 `BLOCKED`。下一窗口先读取本会话和该 assessment，继续处理真实 train/dev 输入与主实验准备；不要调用 DeepSeek 全量、不要读取 test/private、不要修改 `../../3.数据集` 原始文件、不要安装或下载包。
 
 ## Next window: P5-MAIN-001
 

@@ -74,6 +74,13 @@ def _structured_probe(root: Path, files: list[dict[str, Any]]) -> dict[str, Any]
                     "sample_row_count": len(xlsx_rows),
                     "adapter": "stdlib_xlsx",
                 }
+            elif item["suffix"] == ".xls":
+                xls_rows = [row for _, row in _read_records(path)][:2]
+                probe = {
+                    "fields": sorted({str(key) for row in xls_rows for key in row}),
+                    "sample_row_count": len(xls_rows),
+                    "adapter": "xlrd_existing_runtime",
+                }
             else:
                 rows: list[dict[str, Any]] = []
                 if item["suffix"] == ".jsonl":
@@ -104,8 +111,8 @@ def _blocker(dataset_id: str, suffix_counts: Counter[str], canonical: dict[str, 
     if dataset_id == "D02":
         if canonical["record_count"] == 0:
             return "UNSUPPORTED_FORMAT_BLOCKED", "no tabular records were readable from the spreadsheet staging"
-        if ".xls" in suffix_counts:
-            return "PARTIAL_FORMAT_BLOCKED", "XLSX is readable with stdlib; legacy XLS files still require conversion"
+        if ".xls" in suffix_counts and canonical["record_count"]:
+            return "PLANNING_ADAPTER_READY", "XLS and XLSX records entered the canonical planning chain"
         return "PLANNING_ADAPTER_READY", "XLSX records entered the canonical planning chain"
     if dataset_id == "D04":
         return "GENERATOR_RUNTIME_BLOCKED", "generator assets are not executable during staging integration"

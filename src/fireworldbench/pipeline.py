@@ -15,7 +15,7 @@ from typing import Any, Iterable, Mapping
 from xml.etree import ElementTree
 
 PIPELINE_VERSION = "P3-PIPELINE-001"
-SUPPORTED_SUFFIXES = {".csv", ".json", ".jsonl", ".xlsx"}
+SUPPORTED_SUFFIXES = {".csv", ".json", ".jsonl", ".xls", ".xlsx"}
 PROTECTED_PATH_PARTS = {"test_gold", "private_id_mapping", "private_scoring_metadata", "restricted_test_inputs"}
 TIME_TO_SECONDS = {"s": 1.0, "sec": 1.0, "ms": 0.001, "min": 60.0}
 
@@ -137,6 +137,42 @@ def _read_xlsx_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
                     yield row_number, dict(zip(headers, data_row))
 
 
+def _read_xls_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
+    """Read legacy XLS sheets through an already-installed xlrd runtime."""
+    try:
+        import xlrd  # type: ignore[import-untyped]
+    except ImportError as exc:
+        raise ValueError("XLS adapter requires the already-installed xlrd runtime") from exc
+    workbook = xlrd.open_workbook(str(path), on_demand=True)
+    try:
+        for sheet in workbook.sheets():
+            header_index: int | None = None
+            headers: list[str] = []
+            for row_index in range(sheet.nrows):
+                row = [
+                    None if isinstance(value, float) and not math.isfinite(value) else value
+                    for value in sheet.row_values(row_index)
+                ]
+                if any(row):
+                    header_index = row_index
+                    headers = [
+                        str(value).strip() or f"column_{index + 1}"
+                        for index, value in enumerate(row)
+                    ]
+                    break
+            if header_index is None:
+                continue
+            for row_number in range(header_index + 1, sheet.nrows):
+                data_row = [
+                    None if isinstance(value, float) and not math.isfinite(value) else value
+                    for value in sheet.row_values(row_number)
+                ]
+                if any(value not in (None, "") for value in data_row):
+                    yield row_number, dict(zip(headers, data_row))
+    finally:
+        workbook.release_resources()
+
+
 def _read_csv_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.reader(handle)
@@ -185,6 +221,9 @@ def _read_records(path: Path) -> Iterable[tuple[int, dict[str, Any]]]:
         return
     if suffix == ".xlsx":
         yield from _read_xlsx_records(path)
+        return
+    if suffix == ".xls":
+        yield from _read_xls_records(path)
         return
     raise ValueError(f"unsupported adapter suffix: {suffix or '<none>'}")
 
@@ -287,12 +326,12 @@ def build_canonical(
             rows = _read_records(path)
             for row_number, row in rows:
                 try:
-                    if path.suffix.lower() in {".csv", ".xlsx"} and _first(
+                    if path.suffix.lower() in {".csv", ".xls", ".xlsx"} and _first(
                         row, "case_id", "case", "scenario_id", "scenario"
                     ) is None:
                         row = dict(row)
                         row["case_id"] = f"{source_dataset_id}:{item['relative_path']}"
-                    if path.suffix.lower() in {".csv", ".xlsx"} and _first(row, "sequence_id") is None:
+                    if path.suffix.lower() in {".csv", ".xls", ".xlsx"} and _first(row, "sequence_id") is None:
                         row = dict(row)
                         row["sequence_id"] = row["case_id"]
                     adapted = adapt_row(
@@ -346,5 +385,5 @@ def build_canonical(
 def write_json(value: Mapping[str, Any], output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", encoding="utf-8", newline="\n") as handle:
-        json.dump(value, handle, ensure_ascii=False, indent=2)
+        json.dump(value, handle, ensure_ascii=False, indent=2, allow_nan=False)
         handle.write("\n")
