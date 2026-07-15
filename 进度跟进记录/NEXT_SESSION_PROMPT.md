@@ -1,10 +1,19 @@
 ---
-handoff_id: H-20260716-S063-001
+handoff_id: H-20260716-S064-001
 handoff_state: READY
 task_status: BLOCKED
 source_session: 2026-07-16_S063_P5-RESEARCH-RUN-001个人研究结果.md
-current_task: P5-RESEARCH-DEEPSEEK-001
+current_task: P5-MAIN-001
+source_session: 2026-07-16_S064_P5-RESEARCH-DEEPSEEK-001运行完成.md
 ---
+
+## Authoritative next window: P5-MAIN-001
+
+The personal-research DeepSeek task is finished. The 18-sample balanced subset was run successfully with `deepseek-chat`, 18/18 executions completed, scorer failures were `{}`, and the governance summary/brief were updated. Do not rerun `scripts/run_research_deepseek.ps1`: it now has existing paid-run outputs and is expected to refuse duplicates.
+
+Read the latest source session `2026-07-16_S064_P5-RESEARCH-DEEPSEEK-001运行完成.md`, then `项目治理/p5_formal_input_audit_P5-MAIN-001.json`, `项目治理/p5_formal_readiness_P5-MAIN-001.json`, and the relevant `configs/*P5-MAIN-001.json` files. The only valid objective is to close or reconfirm the formal preflight blockers. Unless the missing evidence is actually present and verified, keep the status at `BLOCKED_FORMAL_PREFLIGHT`.
+
+Do not download new data or models, do not install packages, do not call formal paid APIs, and do not access hidden test/private assets. Only if preflight eventually returns `READY_FOR_FORMAL_MULTI_MODEL_FULL_RUN` may the next window issue a formal full-run command.
 
 ## Authoritative next window: P5-RESEARCH-DEEPSEEK-001
 

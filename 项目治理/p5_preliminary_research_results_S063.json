@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "research_id": "P5-RESEARCH-RUN-001",
-  "status": "PRELIMINARY_RESULTS_AVAILABLE",
+  "status": "PRELIMINARY_DEEPSEEK_RESEARCH_COMPLETED",
   "scope": "personal_learning_research_only_not_for_publication",
   "data": {
     "dataset_id": "D01",
@@ -70,17 +70,36 @@
     }
   },
   "deepseek": {
+    "model_id": "deepseek-chat",
     "balanced_sample_count": 18,
     "samples_per_task": 2,
-    "status": "NOT_RUN_KEY_NOT_IN_PROCESS_ENVIRONMENT",
-    "api_calls_this_session": 0
+    "status": "COMPLETED",
+    "api_calls_this_session": 18,
+    "executed_count": 18,
+    "estimated_usd": 0.0,
+    "input_tokens": 12539,
+    "output_tokens": 1532,
+    "failure_counts": {},
+    "task_metrics": {
+      "T1-A": 1.0,
+      "T1-B": 1.0,
+      "T1-C": 0.99,
+      "T2-A": 1.0,
+      "T2-B": 1.0,
+      "T2-C": 1.0,
+      "T3-A": 1.0,
+      "T3-B": 1.0,
+      "T3-C": 1.0
+    },
+    "predictions_artifact": "artifacts/p5_research_deepseek_predictions_S063.json",
+    "scores_artifact": "artifacts/p5_research_deepseek_scores_S063.json"
   },
   "limitations": [
     "automatic rule labels have no expert review",
     "D01-only evidence",
     "visible holdout is not a hidden benchmark test",
     "license is not cleared for publication",
-    "baseline results are preliminary and not paper claims"
+    "baseline and DeepSeek results are preliminary and not paper claims"
   ],
   "artifact_sha256": {
     "summary": "efe81949c82a41278451384e649aec86c2a755a9c6f2d7cfbbfdaacc47bd4d2f",
@@ -88,6 +107,8 @@
     "dev": "2e5c459d2f4cd9451926f0d1f3267bfddddd50974db06601bcffc2d9d23b15b0",
     "holdout": "e54280933feee6a6d44b3e1d6b3b303770fafb0153409c1a23bef2439cf8bd59",
     "deepseek_18": "047b008966aca329c529d48d2716b0b10d81e44f65ce844a7c68cfd78a639d85",
+    "deepseek_predictions": "a9a2a00527c613c4e888a938419ab57c4f03d5ca59b8bd4ac69e7b3d447b35aa",
+    "deepseek_scores": "a9e181bd401b441e6647c706c915b2a65d390c6e44973e2bdd8ec3843ab8e0d4",
     "majority_dev_scores": "cafcbdd73bfcf90c6c66fbdb27c71f8cc5435ae2431eedd726d24e91a19fa9f6",
     "majority_holdout_scores": "440fcd4351427194eb05df9e378dc7a2414c07b098f78f14def57c76d8be4572",
     "chance_dev_scores": "31a03879c89c41a24bacb79bbc2360e994a2bd1e08dea33c90212d60829adc05",
