@@ -37,17 +37,17 @@
       "probe_artifact": "artifacts/p5_formal_main_probe_deepseek_S066.json",
       "parser_version": "fireworldbench.llm_baseline._normalise_prediction@0.1.0",
       "failure_policy": "retain_timeout_http_parse_schema_and_budget_failures",
-      "tasks": [],
+      "tasks": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"],
       "task_support": {
-        "T1-A": "UNVERIFIED_FORMAL_RUNTIME",
-        "T1-B": "UNVERIFIED_FORMAL_RUNTIME",
-        "T1-C": "UNVERIFIED_FORMAL_RUNTIME",
-        "T2-A": "UNVERIFIED_FORMAL_RUNTIME",
-        "T2-B": "UNVERIFIED_FORMAL_RUNTIME",
-        "T2-C": "UNVERIFIED_FORMAL_RUNTIME",
-        "T3-A": "UNVERIFIED_FORMAL_RUNTIME",
-        "T3-B": "UNVERIFIED_FORMAL_RUNTIME",
-        "T3-C": "UNVERIFIED_FORMAL_RUNTIME"
+        "T1-A": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T1-B": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T1-C": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T2-A": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T2-B": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T2-C": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T3-A": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T3-B": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T3-C": "VISIBLE_DEV_18_PROBE_PASSED"
       },
       "tracks": ["text_only", "table"],
       "modality_support": {
@@ -56,23 +56,23 @@
         "multimodal": "NOT_SUPPORTED_BY_CURRENT_ADAPTER",
         "tool": "NOT_SUPPORTED_BY_CURRENT_ADAPTER"
       },
-      "approval_status": "BLOCKED_NO_CURRENT_CREDENTIAL_VERSION_PRICING_OR_BUDGET"
+      "approval_status": "BLOCKED_PENDING_APPROVAL_DESPITE_SUCCESSFUL_VISIBLE_DEV_PROBE"
     },
     {
-      "model_id": "deepseek-reasoner",
+      "model_id": "deepseek-v4-pro",
       "provider": "DeepSeek",
-      "exact_model_version": "deepseek-reasoner",
+      "exact_model_version": "deepseek-v4-pro",
       "endpoint_or_checkpoint": "https://api.deepseek.com/chat/completions",
       "adapter_kind": "openai_compatible_json",
       "credential_env": "DEEPSEEK_API_KEY",
-      "runtime": "OpenAI-compatible HTTPS adapter_not_verified_for_reasoner",
+      "runtime": "OpenAI-compatible HTTPS adapter_with_thinking_disabled",
       "tokenizer_version": "provider-default",
       "temperature": 0.0,
       "top_p": 1.0,
       "max_input_tokens": 2048,
-      "max_tokens": 240,
+      "max_tokens": 512,
       "retry": 1,
-      "timeout_s": 60,
+      "timeout_s": 120,
       "concurrency": 1,
       "pricing": "NOT_FROZEN",
       "budget_usd": 0.5,
@@ -80,21 +80,26 @@
       "output_usd_per_1k_tokens": 0.0,
       "prompt_id": "text_table_v1",
       "prompt_hash": "1c359cb6a07da890e80c602284fbd2de987e1499335e8404d4b783c88514b111",
-      "probe_status": "PROBE_FAILED",
-      "probe_artifact": "artifacts/p5_formal_main_probe_deepseek_reasoner_S069.json",
+      "probe_status": "PROBE_PASSED",
+      "probe_artifact": "artifacts/p5_formal_main_probe_deepseek_v4pro_S070.json",
+      "extra_request_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
       "parser_version": "fireworldbench.llm_baseline._normalise_prediction@0.1.0",
       "failure_policy": "retain_timeout_http_parse_schema_and_budget_failures",
-      "tasks": [],
+      "tasks": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"],
       "task_support": {
-        "T1-A": "UNVERIFIED",
-        "T1-B": "UNVERIFIED",
-        "T1-C": "UNVERIFIED",
-        "T2-A": "UNVERIFIED",
-        "T2-B": "UNVERIFIED",
-        "T2-C": "UNVERIFIED",
-        "T3-A": "UNVERIFIED",
-        "T3-B": "UNVERIFIED",
-        "T3-C": "UNVERIFIED"
+        "T1-A": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T1-B": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T1-C": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T2-A": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T2-B": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T2-C": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T3-A": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T3-B": "VISIBLE_DEV_18_PROBE_PASSED",
+        "T3-C": "VISIBLE_DEV_18_PROBE_PASSED"
       },
       "tracks": ["text_only", "table"],
       "modality_support": {
@@ -103,7 +108,7 @@
         "multimodal": "NOT_SUPPORTED_BY_CURRENT_ADAPTER",
         "tool": "NOT_SUPPORTED_BY_CURRENT_ADAPTER"
       },
-      "approval_status": "BLOCKED_NO_RUNTIME_CREDENTIAL_VERSION_PRICING_OR_BUDGET"
+      "approval_status": "BLOCKED_PENDING_APPROVAL_DESPITE_SUCCESSFUL_VISIBLE_DEV_PROBE"
     },
     {
       "model_id": "Qwen2.5-7B-Instruct",

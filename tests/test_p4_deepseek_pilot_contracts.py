@@ -105,3 +105,39 @@ def test_openai_compatible_adapter_recovers_json_from_fenced_content(monkeypatch
     )
     assert result["answer"]["label"] == "fire_forming"
     assert result["_provider_usage"]["total_tokens"] == 30
+
+
+def test_openai_compatible_adapter_merges_extra_request_body(monkeypatch) -> None:
+    seen: dict[str, object] = {}
+
+    def fake_call(**kwargs):
+        seen.update(kwargs)
+        return {
+            "choices": [
+                {
+                    "message": {
+                        "content": "{\"answer\":{\"label\":\"fire_forming\"},\"evidence\":[\"obs_1\"],\"uncertainty\":{\"level\":\"low\",\"reason\":\"fixture\"},\"missing_information\":[]}"
+                    },
+                    "finish_reason": "stop",
+                }
+            ],
+            "usage": {"prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30},
+        }
+
+    monkeypatch.setattr(deepseek, "_call_openai_compatible_json", fake_call)
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "fixture")
+    openai_compatible_adapter(
+        {"sample_id": "x"},
+        "prompt",
+        {
+            "model_id": "deepseek-v4-pro",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_output_tokens": 64,
+            "timeout_s": 1.0,
+            "endpoint_or_checkpoint": "https://api.deepseek.com/chat/completions",
+            "credential_env": "DEEPSEEK_API_KEY",
+            "extra_request_body": {"thinking": {"type": "disabled"}},
+        },
+    )
+    assert seen["extra_request_body"] == {"thinking": {"type": "disabled"}}

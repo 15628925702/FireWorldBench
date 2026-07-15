@@ -97,6 +97,7 @@ class ExecutableModelSpec:
     adapter_kind: str
     credential_env: str
     approval_status: str
+    extra_request_body: dict[str, Any] | None = None
 
     def llm_config(self) -> LLMConfig:
         return LLMConfig(
@@ -157,6 +158,7 @@ def resolve_model_spec(
         adapter_kind=str(match["adapter_kind"]),
         credential_env=str(match["credential_env"]),
         approval_status=approval_status,
+        extra_request_body=dict(match["extra_request_body"]) if isinstance(match.get("extra_request_body"), Mapping) else None,
     )
     spec.llm_config().validate()
     if spec.prompt_id not in PROMPT_REGISTRY:
@@ -200,6 +202,7 @@ def run_formal_probe(
             {
                 "endpoint_or_checkpoint": spec.endpoint_or_checkpoint,
                 "credential_env": spec.credential_env,
+                "extra_request_body": spec.extra_request_body,
             }
         )
         return selected_adapter(sample, prompt, merged)
@@ -333,6 +336,7 @@ def write_formal_run(
                 "timeout_s": spec.timeout_s,
                 "endpoint_or_checkpoint": spec.endpoint_or_checkpoint,
                 "credential_env": spec.credential_env,
+                "extra_request_body": spec.extra_request_body,
             },
         )
         latency_ms = round((time.perf_counter() - started) * 1000, 3)

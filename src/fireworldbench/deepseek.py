@@ -25,6 +25,7 @@ def _call_openai_compatible_json(
     max_output_tokens: int,
     timeout_s: float,
     system_prompt: str,
+    extra_request_body: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     payload = {
         "model": model_id,
@@ -37,6 +38,8 @@ def _call_openai_compatible_json(
             {"role": "user", "content": prompt},
         ],
     }
+    if extra_request_body:
+        payload.update(dict(extra_request_body))
     request = Request(
         endpoint,
         data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
@@ -113,6 +116,7 @@ def openai_compatible_adapter(sample: Mapping[str, Any], prompt: str, config: Ma
         max_output_tokens=int(config.get("max_output_tokens", config.get("max_tokens", 240))),
         timeout_s=float(config.get("timeout_s", 60.0)),
         system_prompt=system_prompt,
+        extra_request_body=config.get("extra_request_body") if isinstance(config.get("extra_request_body"), Mapping) else None,
     )
     choices = raw.get("choices", [])
     if not isinstance(choices, list) or not choices:
@@ -150,6 +154,7 @@ def deepseek_adapter(sample: Mapping[str, Any], prompt: str, config: Mapping[str
         max_output_tokens=int(config["max_output_tokens"]),
         timeout_s=float(config["timeout_s"]),
         system_prompt="Return only a valid JSON prediction. Never include hidden labels, gold, or scoring metadata.",
+        extra_request_body=config.get("extra_request_body") if isinstance(config.get("extra_request_body"), Mapping) else None,
     )
     choices = raw.get("choices", [])
     if not isinstance(choices, list) or not choices:

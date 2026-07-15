@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "readiness_id": "P5-MAIN-001-QUASI-EXPERIMENT-READINESS",
+  "status": "READY_PENDING_EXTERNAL_FORMAL_APPROVALS",
+  "scope": "engineering_and_probe_ready_not_formal_publication_ready",
+  "validated_api_slots": [
+    {
+      "slot_id": "api_slot_1",
+      "model_id": "deepseek-chat",
+      "exact_model_version": "deepseek-chat",
+      "probe_status": "PROBE_PASSED",
+      "probe_artifact": "artifacts/p5_formal_main_probe_deepseek_S066.json",
+      "notes": "visible dev 18-sample guarded formal probe passed"
+    },
+    {
+      "slot_id": "api_slot_2",
+      "model_id": "deepseek-v4-pro",
+      "exact_model_version": "deepseek-v4-pro",
+      "request_mode": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "probe_status": "PROBE_PASSED",
+      "probe_artifact": "artifacts/p5_formal_main_probe_deepseek_v4pro_S070.json",
+      "notes": "visible dev 18-sample guarded formal probe passed; default thinking mode was rejected due output truncation risk"
+    }
+  ],
+  "rejected_or_unstable_candidates": [
+    {
+      "model_id": "deepseek-reasoner",
+      "status": "DO_NOT_USE_FOR_FORMAL_PAID_RUN_YET",
+      "reason": "repeated finish_reason=length and malformed/incomplete JSON under guarded probe",
+      "artifacts": [
+        "artifacts/p5_formal_main_probe_deepseek_reasoner_S067.json",
+        "artifacts/p5_formal_main_probe_deepseek_reasoner_S068.json",
+        "artifacts/p5_formal_main_probe_deepseek_reasoner_S069.json"
+      ]
+    }
+  ],
+  "runner_state": {
+    "formal_main_probe_command_available": true,
+    "formal_main_run_command_available": true,
+    "duplicate_output_guard": true,
+    "budget_precheck_guard": true,
+    "schema_validation_guard": true,
+    "raw_response_hashing": true,
+    "runner_reads_gold": false
+  },
+  "latest_formal_readiness": {
+    "status": "BLOCKED_FORMAL_PREFLIGHT",
+    "artifact": "项目治理/p5_formal_readiness_P5-MAIN-001.json",
+    "readiness_manifest_sha256": "cd62e51f6b75fddc4745d5937ab3abd7802d3bacbaee58357aac3f8f39c2faed",
+    "remaining_blocker_count": 26
+  },
+  "remaining_external_or_governance_blockers": [
+    "paper_ready_formal_input_manifest_missing",
+    "formal_input_split_audit_missing",
+    "formal_input_leak_audit_missing",
+    "formal_input_uniqueness_audit_missing",
+    "approved_frozen_multi_model_matrix_missing",
+    "formal_calibration_not_completed",
+    "formal_runtime_not_approved_frozen",
+    "formal_cost_ceiling_not_approved"
+  ],
+  "do_not_run_formal_yet": true,
+  "future_formal_run_shape": "python -m fireworldbench.cli formal-main-run --root <repo_root> --samples <paper_ready_inputs.json> --model-matrix configs/model_matrix_P5-MAIN-001.json --readiness 项目治理/p5_formal_readiness_P5-MAIN-001.json --model-id <approved_model_id> --output-root artifacts/formal_runs/<run_id>"
+}
