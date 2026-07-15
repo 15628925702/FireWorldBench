@@ -1,43 +1,31 @@
 ---
-handoff_id: H-20260716-S069-001
+handoff_id: H-20260716-S071-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-16_S069_P5-MAIN-001_准实验交付固化.md
+source_session: 2026-07-16_S071_P5-MAIN-001_准实验小闭环完成.md
 current_task: P5-MAIN-001
 ---
 
 ## Authoritative next window: P5-MAIN-001
 
-The project has crossed into quasi-experiment readiness, but formal full-run is still blocked.
+The project now has a complete quasi-experiment mini-loop:
 
-Validated API slots:
+- `artifacts/p5_quasi_experiment_pack_S071.json`
+- `artifacts/p5_quasi_probe_deepseek_chat_S071.json`
+- `artifacts/p5_quasi_probe_deepseek_v4pro_S071.json`
+- `项目治理/p5_quasi_calibration_readiness_S071.json`
+- `项目治理/p5_quasi_experiment_bundle_S071.json`
 
-- `deepseek-chat`
-- `deepseek-v4-pro` with `thinking.type=disabled`
-
-Rejected current slot:
-
-- `deepseek-reasoner`
-
-Read:
-
-1. `AGENTS.md`
-2. `进度跟进记录/CURRENT_STATUS.md`
-3. `进度跟进记录/2026-07-16_S069_P5-MAIN-001_准实验交付固化.md`
-4. `项目治理/p5_quasi_experiment_readiness_P5-MAIN-001.json`
-5. `项目治理/p5_formal_readiness_P5-MAIN-001.json`
-6. `configs/model_matrix_P5-MAIN-001.json`
+This should now be treated as the stable small-scale engineering validation bundle.
 
 Next priorities:
 
-1. Continue formal input freeze and paper-ready input closure.
-2. Continue calibration closure.
-3. Continue runtime / cost-ceiling approval-pack preparation.
-4. Continue shrinking model-matrix blockers until only explicit external approvals remain.
+1. Commit and push this quasi mini-loop consolidation.
+2. Continue formal blocker work:
+   - formal input freeze
+   - paper-ready formal manifest
+   - calibration complete
+   - runtime / cost-ceiling approval pack
 
-Do not:
-
-- start `formal-main-run` while readiness is blocked
-- reintroduce `deepseek-reasoner` without a future passing probe
-- go back to research-script validation instead of formal blockers
+Do not regress into old research-only validation.
 

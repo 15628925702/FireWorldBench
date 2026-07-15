@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "bundle_id": "P5-MAIN-001-QUASI-EXPERIMENT-BUNDLE-S071",
+  "status": "READY",
+  "pack": {
+    "path": "artifacts/p5_quasi_experiment_pack_S071.json",
+    "sample_count": 18,
+    "train_count": 9,
+    "dev_count": 9,
+    "task_coverage": "one_sample_per_task_per_split",
+    "manifest_sha256": "7ad29f72377136d72d14afd8e0c560e2e35097525b0696e4f770ede5aa8fdb54"
+  },
+  "validated_models": [
+    {
+      "model_id": "deepseek-chat",
+      "probe_path": "artifacts/p5_quasi_probe_deepseek_chat_S071.json",
+      "probe_status": "PROBE_PASSED"
+    },
+    {
+      "model_id": "deepseek-v4-pro",
+      "request_mode": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "probe_path": "artifacts/p5_quasi_probe_deepseek_v4pro_S071.json",
+      "probe_status": "PROBE_PASSED"
+    }
+  ],
+  "quasi_calibration": {
+    "path": "项目治理/p5_quasi_calibration_readiness_S071.json",
+    "status": "READY",
+    "manifest_sha256": "1b67e89004583c02e1c0faf81996960a91ae16e87a5b90746c4a720a6f568a15"
+  },
+  "notes": [
+    "This is a quasi-experiment bundle only, not a formal paper-ready full-run bundle.",
+    "The validated pair is suitable for guarded small-scale train/dev experimentation under the current repository constraints.",
+    "Formal preflight remains blocked on paper-ready formal inputs, calibration completion, runtime approval, and approved frozen matrix."
+  ]
+}

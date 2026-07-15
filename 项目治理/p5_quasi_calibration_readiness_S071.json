@@ -1,0 +1,22 @@
+{
+  "quasi_version": "P5-MAIN-001-QUASI-EXPERIMENT-v1",
+  "status": "READY",
+  "pack_path": "artifacts/p5_quasi_experiment_pack_S071.json",
+  "pack_sha256": "7ad29f72377136d72d14afd8e0c560e2e35097525b0696e4f770ede5aa8fdb54",
+  "train_count": 9,
+  "dev_count": 9,
+  "models": [
+    {
+      "model_id": "deepseek-chat",
+      "probe_status": "PROBE_PASSED",
+      "probe_path": "artifacts/p5_quasi_probe_deepseek_chat_S071.json"
+    },
+    {
+      "model_id": "deepseek-v4-pro",
+      "probe_status": "PROBE_PASSED",
+      "probe_path": "artifacts/p5_quasi_probe_deepseek_v4pro_S071.json"
+    }
+  ],
+  "blockers": [],
+  "manifest_sha256": "1b67e89004583c02e1c0faf81996960a91ae16e87a5b90746c4a720a6f568a15"
+}

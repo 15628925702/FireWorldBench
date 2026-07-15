@@ -49,6 +49,7 @@ from fireworldbench.release_audit import write_release_audit
 from fireworldbench.formal_readiness import write_formal_input_audit, write_formal_readiness
 from fireworldbench.research_run import write_research_dataset
 from fireworldbench.formal_runner import write_formal_probe, write_formal_run
+from fireworldbench.quasi_experiment import write_quasi_experiment_pack, write_quasi_calibration
 
 
 def doctor(root: Path) -> int:
@@ -252,6 +253,21 @@ def build_parser() -> argparse.ArgumentParser:
     formal_run_parser.add_argument("--output-root", type=Path, required=True)
     formal_run_parser.add_argument("--start-index", type=int, default=0)
     formal_run_parser.add_argument("--max-samples", type=int)
+    quasi_pack_parser = subparsers.add_parser(
+        "quasi-experiment-pack",
+        help="build a small balanced train/dev quasi-experiment bundle from visible research manifests",
+    )
+    quasi_pack_parser.add_argument("--train", type=Path, required=True)
+    quasi_pack_parser.add_argument("--dev", type=Path, required=True)
+    quasi_pack_parser.add_argument("--output", type=Path, required=True)
+    quasi_pack_parser.add_argument("--per-task-per-split", type=int, default=1)
+    quasi_calibration_parser = subparsers.add_parser(
+        "quasi-calibration-pack",
+        help="record a quasi-experiment calibration-ready bundle from passed guarded probes",
+    )
+    quasi_calibration_parser.add_argument("--pack", type=Path, required=True)
+    quasi_calibration_parser.add_argument("--probe", type=Path, action="append", required=True)
+    quasi_calibration_parser.add_argument("--output", type=Path, required=True)
     research_parser = subparsers.add_parser(
         "research-build",
         help="build visible train/dev/holdout inputs for preliminary personal research",
@@ -374,6 +390,46 @@ def main(argv: Sequence[str] | None = None) -> int:
                     "run_id": result["run_id"],
                     "executed_count": result["executed_count"],
                     "output": str(args.output_root),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    if args.command == "quasi-experiment-pack":
+        try:
+            result = write_quasi_experiment_pack(
+                args.train,
+                args.dev,
+                args.output,
+                per_task_per_split=args.per_task_per_split,
+            )
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "sample_count": result["sample_count"],
+                    "output": str(args.output),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    if args.command == "quasi-calibration-pack":
+        try:
+            result = write_quasi_calibration(args.pack, args.probe, args.output)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "train_count": result["train_count"],
+                    "dev_count": result["dev_count"],
+                    "output": str(args.output),
                 },
                 ensure_ascii=False,
             )
