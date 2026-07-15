@@ -117,6 +117,9 @@ def openai_compatible_adapter(sample: Mapping[str, Any], prompt: str, config: Ma
     choices = raw.get("choices", [])
     if not isinstance(choices, list) or not choices:
         raise RuntimeError("provider response has no choices")
+    finish_reason = choices[0].get("finish_reason")
+    if finish_reason not in {None, "stop"}:
+        raise RuntimeError(f"provider finish_reason is not safe for formal execution: {finish_reason}")
     content = choices[0].get("message", {}).get("content")
     if not isinstance(content, str):
         raise RuntimeError("provider response has no JSON content")
@@ -151,6 +154,9 @@ def deepseek_adapter(sample: Mapping[str, Any], prompt: str, config: Mapping[str
     choices = raw.get("choices", [])
     if not isinstance(choices, list) or not choices:
         raise RuntimeError("DeepSeek response has no choices")
+    finish_reason = choices[0].get("finish_reason")
+    if finish_reason not in {None, "stop"}:
+        raise RuntimeError(f"DeepSeek finish_reason is not safe for execution: {finish_reason}")
     content = choices[0].get("message", {}).get("content")
     if not isinstance(content, str):
         raise RuntimeError("DeepSeek response has no JSON content")

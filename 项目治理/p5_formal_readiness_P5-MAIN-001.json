@@ -38,7 +38,7 @@
     },
     "model_matrix": {
       "path": "configs/model_matrix_P5-MAIN-001.json",
-      "sha256": "ead173fceb0c7f1e22e14a3031c93c62e987445b05e47a560d5b02f8f924fa9f"
+      "sha256": "360ecc2be07766d690f0672d5ff7d1a2f991d73ab0503f07be785cc42b1f47c4"
     },
     "calibration": {
       "path": "configs/calibration_P5-MAIN-001.json",
@@ -58,7 +58,7 @@
     }
   },
   "frozen_input_manifest_hash": "b42302c7a3c7aac3d2e95cbe4bb9a0adcc98c92c7a24847b0db86dbdb31d228c",
-  "model_matrix_hash": "ead173fceb0c7f1e22e14a3031c93c62e987445b05e47a560d5b02f8f924fa9f",
+  "model_matrix_hash": "360ecc2be07766d690f0672d5ff7d1a2f991d73ab0503f07be785cc42b1f47c4",
   "calibration_hash": "67eeb278592669967de4a780f390e4281fbc5af1d2638f982f3d429847ad5fd6",
   "preregistration_hash": "a56972d41541c213e1238157ab79a5c9a0c76c9b59cc7671ce621c40bf09a6d7",
   "runtime_hash": "1436ebc9d2f84c03d16e7e1d1aa5ee9e3e13632ab357da886c6abb1a976ff99b",
@@ -78,5 +78,5 @@
   "formal_model_results_generated": false,
   "paper_numbers_generated": false,
   "test_private_assets_accessed": false,
-  "readiness_manifest_sha256": "ed6182883a34b150d2e43145cf3946f9e531a43566fedb9cd7e6eded818098d3"
+  "readiness_manifest_sha256": "f0315c6573905b35568d6842698e0b07d2aedd932d8b2a89ce85e481a7eecb8a"
 }

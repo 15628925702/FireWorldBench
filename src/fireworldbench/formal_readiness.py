@@ -324,6 +324,13 @@ def _validate_models(matrix: Mapping[str, Any]) -> list[str]:
         tasks = set(raw_model.get("tasks", []))
         if not REQUIRED_TASKS <= tasks:
             blockers.append(f"{label}:task_coverage_incomplete")
+        if raw_model.get("adapter_kind") == "openai_compatible_json" and raw_model.get("approval_status") == "APPROVED":
+            probe_status = raw_model.get("probe_status")
+            probe_artifact = raw_model.get("probe_artifact")
+            if probe_status != "PROBE_PASSED":
+                blockers.append(f"{label}:probe_not_passed")
+            if not isinstance(probe_artifact, str) or not probe_artifact.strip():
+                blockers.append(f"{label}:probe_artifact_missing")
     return blockers
 
 
