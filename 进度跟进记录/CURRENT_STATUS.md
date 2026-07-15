@@ -1,12 +1,24 @@
 ---
-handoff_id: H-20260716-S062-001
+handoff_id: H-20260716-S063-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-16_S062_P5-MAIN-001正式运行前冻结.md
-current_task: P5-MAIN-001
+source_session: 2026-07-16_S063_P5-RESEARCH-RUN-001个人研究结果.md
+current_task: P5-RESEARCH-DEEPSEEK-001
 ---
 
 # Current Status
+
+## 2026-07-16 P5-RESEARCH-RUN-001 preliminary results
+
+- 当前工作目标已切换为个人研究可跑，不以许可证、专家、隐藏 test 或多模型 formal gate 阻断本地初步成果。
+- `fireworldbench-v1` 已安装并验证：Python 3.11.15，项目/jsonschema/xlrd/pytest/mypy/Ruff 可用，`pip check` PASS。
+- D01 已补齐为 192/192 CSV、1,703,976,822 bytes；逐文件官方大小与 Git blob SHA 全部匹配。
+- 普通可见 group-first split：64 families，train/dev/holdout 无 overlap；样本数 3,300/750/750，九任务覆盖，4,800 Schema errors=0。
+- majority/chance × dev/holdout 四组零成本结果已生成且无 scorer failure；简报为 `项目治理/P5-个人研究初步结果简报.md`。
+- T3-A/T3-B 较弱、T3-C 为 0，是当前最清晰的方法研究空间；结果仅为自动标签下 preliminary research。
+- 18 条 DeepSeek 平衡代表集已生成，但当前进程无 `DEEPSEEK_API_KEY`，本轮 API calls=0、budget=0。
+- 实现 commit `5820c18bdbddf904f36d0f59caabff03f063851f` 已 push 到 `origin/main`。
+- 下一唯一任务：本地设置 key 后运行 `scripts/run_research_deepseek.ps1`，只跑 18 条并评分，不扩大付费规模。
 
 ## 2026-07-16 P5-MAIN-001 formal preflight freeze
 

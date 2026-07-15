@@ -1,10 +1,18 @@
 ---
-handoff_id: H-20260716-S062-001
+handoff_id: H-20260716-S063-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-16_S062_P5-MAIN-001正式运行前冻结.md
-current_task: P5-MAIN-001
+source_session: 2026-07-16_S063_P5-RESEARCH-RUN-001个人研究结果.md
+current_task: P5-RESEARCH-DEEPSEEK-001
 ---
+
+## Authoritative next window: P5-RESEARCH-DEEPSEEK-001
+
+个人研究全量链已经可用：D01 192/192，train/dev/visible-holdout 为 3,300/750/750，零成本 baseline 和导师简报已完成。下一窗口不要重建数据，不要回到 formal 多模型/专家/隐藏 test 流程。
+
+唯一任务是运行 18 条 DeepSeek 平衡代表集。先在用户本地 PowerShell 将可用 key 设置为当前进程的 `DEEPSEEK_API_KEY`，然后执行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_research_deepseek.ps1`。脚本会拒绝重复输出，成功后自动评分。只跑 18 条，不扩大到 750 条；完成后更新 `项目治理/p5_preliminary_research_results_S063.json` 和中文简报、测试、commit、push。
+
+本节为当前权威交接；下方均为历史记录。
 
 ## Authoritative next window: P5-MAIN-001
 
