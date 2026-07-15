@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 from pathlib import Path
 from typing import Sequence
 
@@ -47,6 +48,7 @@ from fireworldbench.reproduction import write_reproduction_decision
 from fireworldbench.release_audit import write_release_audit
 from fireworldbench.formal_readiness import write_formal_input_audit, write_formal_readiness
 from fireworldbench.research_run import write_research_dataset
+from fireworldbench.formal_runner import write_formal_probe, write_formal_run
 
 
 def doctor(root: Path) -> int:
@@ -227,6 +229,29 @@ def build_parser() -> argparse.ArgumentParser:
     formal_parser.add_argument("--runtime", type=Path, required=True)
     formal_parser.add_argument("--run-contract", type=Path, required=True)
     formal_parser.add_argument("--output", type=Path, required=True)
+    probe_parser = subparsers.add_parser(
+        "formal-main-probe",
+        help="run a small guarded probe through the real formal-model adapter chain",
+    )
+    probe_parser.add_argument("--samples", type=Path, required=True)
+    probe_parser.add_argument("--model-matrix", type=Path, required=True)
+    probe_parser.add_argument("--model-id", required=True)
+    probe_parser.add_argument("--output", type=Path, required=True)
+    probe_parser.add_argument("--start-index", type=int, default=0)
+    probe_parser.add_argument("--max-samples", type=int)
+    probe_parser.add_argument("--allow-unapproved", action="store_true")
+    formal_run_parser = subparsers.add_parser(
+        "formal-main-run",
+        help="execute the guarded formal main-matrix runner after readiness is READY",
+    )
+    formal_run_parser.add_argument("--root", type=Path, required=True)
+    formal_run_parser.add_argument("--samples", type=Path, required=True)
+    formal_run_parser.add_argument("--model-matrix", type=Path, required=True)
+    formal_run_parser.add_argument("--readiness", type=Path, required=True)
+    formal_run_parser.add_argument("--model-id", required=True)
+    formal_run_parser.add_argument("--output-root", type=Path, required=True)
+    formal_run_parser.add_argument("--start-index", type=int, default=0)
+    formal_run_parser.add_argument("--max-samples", type=int)
     research_parser = subparsers.add_parser(
         "research-build",
         help="build visible train/dev/holdout inputs for preliminary personal research",
@@ -296,6 +321,59 @@ def main(argv: Sequence[str] | None = None) -> int:
                     "blocker_count": len(result["blockers"]),
                     "readiness_manifest_sha256": result["readiness_manifest_sha256"],
                     "output": str(args.output),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    if args.command == "formal-main-probe":
+        try:
+            result = write_formal_probe(
+                args.samples,
+                args.model_matrix,
+                args.output,
+                args.model_id,
+                start_index=args.start_index,
+                max_samples=args.max_samples,
+                allow_unapproved=args.allow_unapproved,
+            )
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError, KeyError, NotImplementedError, RuntimeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "sample_count": result["sample_count"],
+                    "executed_count": result["executed_count"],
+                    "output": str(args.output),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    if args.command == "formal-main-run":
+        try:
+            result = write_formal_run(
+                args.samples,
+                args.model_matrix,
+                args.readiness,
+                args.output_root,
+                args.model_id,
+                repository_root=args.root,
+                start_index=args.start_index,
+                max_samples=args.max_samples,
+            )
+        except (OSError, ValueError, TypeError, json.JSONDecodeError, PermissionError, KeyError, NotImplementedError, RuntimeError, subprocess.CalledProcessError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "run_id": result["run_id"],
+                    "executed_count": result["executed_count"],
+                    "output": str(args.output_root),
                 },
                 ensure_ascii=False,
             )
