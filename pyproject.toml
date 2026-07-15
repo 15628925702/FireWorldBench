@@ -9,7 +9,10 @@ description = "A benchmark for fire-physics world understanding in LLMs and mult
 readme = "README.md"
 requires-python = ">=3.11"
 authors = []
-dependencies = ["jsonschema>=4.22"]
+dependencies = [
+  "jsonschema>=4.22",
+  "xlrd>=2.0",
+]
 
 [project.optional-dependencies]
 dev = [

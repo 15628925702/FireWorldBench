@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "research_id": "P5-RESEARCH-RUN-001",
+  "status": "READY_WHEN_DEEPSEEK_API_KEY_IS_IN_PROCESS_ENVIRONMENT",
+  "max_samples": 18,
+  "default_config": {
+    "track": "text_only_table",
+    "prompt_id": "text_table_v1",
+    "model_id": "deepseek-chat",
+    "approved": true,
+    "repeats": 1,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_input_tokens": 2048,
+    "max_output_tokens": 240,
+    "max_retries": 1,
+    "timeout_s": 60.0,
+    "max_cost_usd": 0.5,
+    "input_usd_per_1k_tokens": 0.0,
+    "output_usd_per_1k_tokens": 0.0
+  },
+  "scope": "18 visible dev samples, two per task, preliminary personal research only",
+  "credential_env": "DEEPSEEK_API_KEY",
+  "credential_value_recorded": false,
+  "hidden_test": false,
+  "expert_review_required": false
+}

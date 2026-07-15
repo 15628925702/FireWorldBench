@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "research_id": "P5-RESEARCH-RUN-001",
+  "status": "READY",
+  "conda_environment": "fireworldbench-v1",
+  "python": "3.11.15",
+  "packages": {
+    "fireworldbench": "0.1.0 editable",
+    "jsonschema": "4.26.0",
+    "xlrd": "2.0.2",
+    "pytest": "9.1.1",
+    "pytest-cov": "7.1.0",
+    "mypy": "2.3.0",
+    "ruff": "0.15.21"
+  },
+  "definition": "environment.yml",
+  "pip_check": "PASS",
+  "gpu_required": false
+}

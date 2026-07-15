@@ -11,9 +11,10 @@ and no planning result was promoted to formal evidence.
 
 ## Data evidence
 
-- D01 upstream tree declares 192 CSV files (1,703,976,822 bytes); 9 are locally
-  staged and 183 are missing. Every staged file has a relative path, byte size,
-  and SHA-256 in `p5_formal_input_audit_P5-MAIN-001.json`.
+- D01 upstream tree declares 192 CSV files (1,703,976,822 bytes); all 192 are
+  locally staged and verified by byte size plus upstream Git blob SHA. Every
+  staged file has a relative path, byte size, and SHA-256 in
+  `p5_formal_input_audit_P5-MAIN-001.json`.
 - D02 format integration is closed: 8 XLSX and all 80 legacy XLS files enter the
   canonical probe. The fresh build produced 82,444 records and retained 17
   unsupported-file failures.
@@ -32,9 +33,9 @@ and no planning result was promoted to formal evidence.
   budgets, prompt hashes, and verified nine-task support are absent.
 - No supported API credential environment variable is present. No candidate
   Qwen/Llama checkpoint is present in the local model cache.
-- The observed GPU is an RTX 4050 Laptop GPU with 6,141 MiB. The formal
-  `fireworldbench-v1` Conda environment exists but is empty; verification used
-  base Python 3.13.5 and is not formal runtime acceptance.
+- The observed GPU is an RTX 4050 Laptop GPU with 6,141 MiB. The
+  `fireworldbench-v1` Conda environment now has Python 3.11.15, the project,
+  jsonschema, xlrd, pytest, mypy, and Ruff installed; `pip check` passes.
 
 ## Calibration and preregistration
 
@@ -52,9 +53,9 @@ and no planning result was promoted to formal evidence.
 ## Hash chain
 
 - Formal input audit canonical hash:
-  `aaf86dba8465ff8878cf948a453873120b1a428c6f2482b2446784a99b8c4d11`.
+  `e8fcd69b45bd9e8c53d4d4689dd577053a18442304ac58929a32bd691772296d`.
 - Frozen input audit file hash:
-  `a93028ac8f1729244d2c4b03832cd8cdf648d0f9f5b94e04356c408a0261d67e`.
+  `b42302c7a3c7aac3d2e95cbe4bb9a0adcc98c92c7a24847b0db86dbdb31d228c`.
 - Model matrix hash:
   `71a65e93f2cf9e5b2c4c44b0ff1c3a05a4f6eeb77e851ff9e9240d05d111230f`.
 - Calibration declaration hash:
@@ -62,11 +63,11 @@ and no planning result was promoted to formal evidence.
 - Preregistration hash:
   `a56972d41541c213e1238157ab79a5c9a0c76c9b59cc7671ce621c40bf09a6d7`.
 - Runtime declaration hash:
-  `cfbf417decc0a599c24ca2f247a8ae3ac102cb58230c631da8ab3b0bcb4040bd`.
+  `1436ebc9d2f84c03d16e7e1d1aa5ee9e3e13632ab357da886c6abb1a976ff99b`.
 - Run contract hash:
   `aa2c0dfb1e53b7fd87af29b0ed96e7dc31d88dcd06b0b82c4f4acfbe7729dab3`.
 - Readiness manifest hash:
-  `2dbdb7c35890c36c9bbd32c64596ebda9181fa05647e88a3aaa7fa1681e22fbf`.
+  `2dfbed0111f5d8e99114cad7700e3acbba1e8b61e6338232b76747bbc474c136`.
 
 ## Safety boundary
 

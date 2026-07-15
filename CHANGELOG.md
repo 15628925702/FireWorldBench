@@ -14,6 +14,8 @@
 - 独立 Git `main` 仓库和 GitHub `origin` 连接（未提交、未推送）。
 - 正式多模型全数据集运行的证据化 preflight、逐文件输入审计、模型矩阵、
   calibration/preregistration/runtime/run contract 冻结声明与不可覆盖哈希链。
+- 个人研究模式：D01 全量可见 group-first train/dev/holdout、九任务自动标签、
+  18 条平衡 DeepSeek 样本、零成本 majority/chance baseline 与初步结果简报。
 
 ## [0.1.0] - 2026-07-14
 

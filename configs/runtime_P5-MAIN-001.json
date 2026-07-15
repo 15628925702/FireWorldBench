@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "runtime_id": "P5-MAIN-001-FORMAL-RUNTIME",
-  "status": "BLOCKED_RUNTIME_NOT_PROVISIONED",
+  "status": "BLOCKED_MULTI_MODEL_RUNTIME_NOT_PROVISIONED",
   "required_environment": "fireworldbench-v1",
-  "environment_lock": null,
-  "environment_lock_sha256": null,
+  "environment_lock": "environment.yml",
+  "environment_lock_sha256": "3234022a385e467c9ec622079e5d55f0458cdbeb6282f741c4c635309dbd334f",
   "observed_environment": {
-    "active_environment": "base",
-    "python_version": "3.13.5",
-    "formal_environment_exists_but_is_empty": true,
+    "active_environment": "fireworldbench-v1 via explicit interpreter",
+    "python_version": "3.11.15",
+    "formal_environment_exists_but_is_empty": false,
     "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
     "gpu_memory_mib": 6141,
     "gpu_driver": "566.26"
@@ -33,8 +33,6 @@
     {"model_id": "Llama-3.1-8B-Instruct", "available": false, "reason": "checkpoint_and_runtime_absent"}
   ],
   "blockers": [
-    "formal_environment_lock_missing",
-    "formal_environment_not_active",
     "api_credentials_absent",
     "local_candidate_checkpoints_absent",
     "multi_model_runtime_not_executable"

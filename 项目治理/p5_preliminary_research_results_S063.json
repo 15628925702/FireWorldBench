@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "research_id": "P5-RESEARCH-RUN-001",
+  "status": "PRELIMINARY_RESULTS_AVAILABLE",
+  "scope": "personal_learning_research_only_not_for_publication",
+  "data": {
+    "dataset_id": "D01",
+    "official_csv_count": 192,
+    "verified_csv_count": 192,
+    "verified_bytes": 1703976822,
+    "git_blob_mismatch_count": 0,
+    "family_count": 64,
+    "manifest_sha256": "e623a6c1aa3784aa4d52e07aaa986beb17f0769cc3acae97c8a9fe2fb7333790"
+  },
+  "split": {
+    "strategy": "visible_group_first_by_M_or_U_case_number",
+    "seed": 20260716,
+    "train_samples": 3300,
+    "dev_samples": 750,
+    "holdout_samples": 750,
+    "group_overlap": false,
+    "hidden_test": false
+  },
+  "majority": {
+    "dev": {
+      "T1-A": 0.6666666667,
+      "T1-B": 0.6666666667,
+      "T1-C": 0.99,
+      "T2-A": 0.6666666667,
+      "T2-B": 1.0,
+      "T2-C": 1.0,
+      "T3-A": 0.3555555556,
+      "T3-B": 0.3333333333,
+      "T3-C": 0.0
+    },
+    "holdout": {
+      "T1-A": 0.6666666667,
+      "T1-B": 0.6666666667,
+      "T1-C": 0.99,
+      "T2-A": 0.6666666667,
+      "T2-B": 1.0,
+      "T2-C": 1.0,
+      "T3-A": 0.3444444444,
+      "T3-B": 0.3666666667,
+      "T3-C": 0.0
+    }
+  },
+  "chance": {
+    "dev": {
+      "T1-A": 0.3111111111,
+      "T1-B": 0.2,
+      "T1-C": 0.308,
+      "T2-A": 0.2111111111,
+      "T2-B": 0.0666666667,
+      "T2-C": 0.2555555556,
+      "T3-A": 0.2333333333,
+      "T3-B": 0.2,
+      "T3-C": 0.0
+    },
+    "holdout": {
+      "T1-A": 0.2888888889,
+      "T1-B": 0.2555555556,
+      "T1-C": 0.308,
+      "T2-A": 0.1222222222,
+      "T2-B": 0.1,
+      "T2-C": 0.3888888889,
+      "T3-A": 0.2111111111,
+      "T3-B": 0.2,
+      "T3-C": 0.0
+    }
+  },
+  "deepseek": {
+    "balanced_sample_count": 18,
+    "samples_per_task": 2,
+    "status": "NOT_RUN_KEY_NOT_IN_PROCESS_ENVIRONMENT",
+    "api_calls_this_session": 0
+  },
+  "limitations": [
+    "automatic rule labels have no expert review",
+    "D01-only evidence",
+    "visible holdout is not a hidden benchmark test",
+    "license is not cleared for publication",
+    "baseline results are preliminary and not paper claims"
+  ],
+  "artifact_sha256": {
+    "summary": "efe81949c82a41278451384e649aec86c2a755a9c6f2d7cfbbfdaacc47bd4d2f",
+    "train": "a0272129669ca96729e4a4ebf7165465da82c37708471079507a3137c3cde7e5",
+    "dev": "2e5c459d2f4cd9451926f0d1f3267bfddddd50974db06601bcffc2d9d23b15b0",
+    "holdout": "e54280933feee6a6d44b3e1d6b3b303770fafb0153409c1a23bef2439cf8bd59",
+    "deepseek_18": "047b008966aca329c529d48d2716b0b10d81e44f65ce844a7c68cfd78a639d85",
+    "majority_dev_scores": "cafcbdd73bfcf90c6c66fbdb27c71f8cc5435ae2431eedd726d24e91a19fa9f6",
+    "majority_holdout_scores": "440fcd4351427194eb05df9e378dc7a2414c07b098f78f14def57c76d8be4572",
+    "chance_dev_scores": "31a03879c89c41a24bacb79bbc2360e994a2bd1e08dea33c90212d60829adc05",
+    "chance_holdout_scores": "5218aefe6409a5aff96b64afc746110a05cf90494a98186c8ac3cde048228e36"
+  }
+}

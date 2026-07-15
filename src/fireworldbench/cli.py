@@ -46,6 +46,7 @@ from fireworldbench.anonymization import write_anonymization_decision
 from fireworldbench.reproduction import write_reproduction_decision
 from fireworldbench.release_audit import write_release_audit
 from fireworldbench.formal_readiness import write_formal_input_audit, write_formal_readiness
+from fireworldbench.research_run import write_research_dataset
 
 
 def doctor(root: Path) -> int:
@@ -226,6 +227,18 @@ def build_parser() -> argparse.ArgumentParser:
     formal_parser.add_argument("--runtime", type=Path, required=True)
     formal_parser.add_argument("--run-contract", type=Path, required=True)
     formal_parser.add_argument("--output", type=Path, required=True)
+    research_parser = subparsers.add_parser(
+        "research-build",
+        help="build visible train/dev/holdout inputs for preliminary personal research",
+    )
+    research_parser.add_argument("--root", type=Path, required=True)
+    research_parser.add_argument("--output", type=Path, required=True)
+    research_parser.add_argument("--train-output", type=Path, required=True)
+    research_parser.add_argument("--dev-output", type=Path, required=True)
+    research_parser.add_argument("--holdout-output", type=Path, required=True)
+    research_parser.add_argument("--deepseek-output", type=Path, required=True)
+    research_parser.add_argument("--seed", type=int, default=20260716)
+    research_parser.add_argument("--deepseek-per-task", type=int, default=2)
     return parser
 
 
@@ -282,6 +295,34 @@ def main(argv: Sequence[str] | None = None) -> int:
                     "status": result["status"],
                     "blocker_count": len(result["blockers"]),
                     "readiness_manifest_sha256": result["readiness_manifest_sha256"],
+                    "output": str(args.output),
+                },
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    if args.command == "research-build":
+        try:
+            result = write_research_dataset(
+                args.root,
+                args.output,
+                args.train_output,
+                args.dev_output,
+                args.holdout_output,
+                args.deepseek_output,
+                seed=args.seed,
+                deepseek_per_task=args.deepseek_per_task,
+            )
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"ERROR: {exc}")
+            return 2
+        print(
+            json.dumps(
+                {
+                    "status": result["status"],
+                    "source_csv_count": result["source_csv_count"],
+                    "sample_counts": result["sample_counts"],
+                    "deepseek_sample_count": result["deepseek_sample_count"],
                     "output": str(args.output),
                 },
                 ensure_ascii=False,
