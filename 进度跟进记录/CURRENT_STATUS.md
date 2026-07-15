@@ -1,31 +1,31 @@
 ---
-handoff_id: H-20260716-S068-001
+handoff_id: H-20260716-S069-001
 handoff_state: READY
 task_status: BLOCKED
-source_session: 2026-07-16_S068_P5-MAIN-001_准实验就绪判定.md
+source_session: 2026-07-16_S069_P5-MAIN-001_准实验交付固化.md
 current_task: P5-MAIN-001
 ---
 
 # Current Status
 
-## 2026-07-16 quasi-experiment readiness
+## 2026-07-16 quasi-experiment delivery hardened
 
-- The project has reached quasi-experimental engineering readiness for the formal main path.
-- Two API-backed candidate slots have now passed the real guarded formal probe path:
+- The project is now treated as quasi-experiment ready for the formal main path.
+- Validated guarded API slots:
   - `deepseek-chat`
   - `deepseek-v4-pro` with `thinking.type=disabled`
-- The unstable candidate remains:
-  - `deepseek-reasoner` (do not use for formal paid execution yet)
-- Governance artifact: `项目治理/p5_quasi_experiment_readiness_P5-MAIN-001.json`
+- Rejected candidate for current paid formal use:
+  - `deepseek-reasoner`
+- Governance artifacts:
+  - `项目治理/p5_quasi_experiment_readiness_P5-MAIN-001.json`
+  - `项目治理/p5_formal_readiness_P5-MAIN-001.json`
 
-## 2026-07-16 formal readiness
+## 2026-07-16 formal readiness snapshot
 
-- Latest formal readiness file: `项目治理/p5_formal_readiness_P5-MAIN-001.json`
 - Status remains `BLOCKED_FORMAL_PREFLIGHT`
-- Latest blocker count: `26`
-- Remaining blockers are now concentrated in formal inputs, approvals, calibration, runtime, and cost ceiling rather than missing execution plumbing.
+- Remaining blocker count: `26`
+- Remaining blocker classes are now mainly formal-input, calibration, runtime, budget, and frozen-approval issues.
 
 ## 2026-07-16 delivery state
 
-- The latest remote commit confirmed before this turn was `00d76d5d0be3c62fc497d494c01bc48851d955a7`.
-- This newest quasi-readiness consolidation step is not yet committed/pushed.
+- This handoff supersedes earlier S068 as the authoritative next-window entrypoint.
