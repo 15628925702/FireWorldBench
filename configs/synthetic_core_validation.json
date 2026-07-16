@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "case_count": 6,
+  "errors": [],
+  "pair_audit": [
+    {
+      "pair_id": "FWB_PAIR_000001",
+      "pair_type": "counterfactual",
+      "changed_axes": [
+        "extraction"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "formal_eligible": false,
+  "reason": "FDS outputs and license/approval gates are not closed"
+}

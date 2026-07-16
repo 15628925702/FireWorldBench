@@ -1,0 +1,21 @@
+{
+  "schema_version": "FWB-SYNTHETIC-CORE-1",
+  "status": "fixture_only_fds_runtime_blocked",
+  "generator": {"name": "FD-Gen", "version": "1.0.0", "source": "D04 local staging", "license": "NIST software licensing statement"},
+  "fds": {"version": "UNFROZEN", "required_for_execution": true},
+  "master_seed": 20260716,
+  "geometry": {"geometry_id": "tunnel_small_v1", "coordinate_system": "cartesian_m", "bounds_m": [0, 60, 0, 6, 0, 4], "mesh_m": [1, 1, 1]},
+  "time": {"t0_s": 0.0, "duration_s": 30.0, "output_interval_s": 1.0},
+  "sensor_layouts": {
+    "layout_centerline_v1": [[10, 3, 1.5], [20, 3, 1.5], [30, 3, 1.5], [40, 3, 1.5]],
+    "layout_cross_section_v1": [[10, 1.5, 1.5], [10, 3, 1.5], [10, 4.5, 1.5], [30, 3, 2.5]]
+  },
+  "cases": [
+    {"case_uid": "FWB_SYN_TUNNEL_000001", "family": "baseline", "split": "train_id", "fire": true, "source_xyz_m": [20, 3, 0.5], "hrr_peak_kw": 500, "hrr_curve": "t2_medium", "ventilation_velocity_mps": 2.0, "extraction": false, "sensor_layout_id": "layout_centerline_v1", "seed": 101, "pair_id": "FWB_PAIR_000001"},
+    {"case_uid": "FWB_SYN_TUNNEL_000002", "family": "baseline", "split": "dev_id", "fire": true, "source_xyz_m": [30, 3, 0.5], "hrr_peak_kw": 1000, "hrr_curve": "t2_medium", "ventilation_velocity_mps": 2.0, "extraction": false, "sensor_layout_id": "layout_cross_section_v1", "seed": 102},
+    {"case_uid": "FWB_SYN_TUNNEL_000003", "family": "baseline", "split": "ood_id", "fire": true, "source_xyz_m": [40, 3, 0.5], "hrr_peak_kw": 2000, "hrr_curve": "t2_medium", "ventilation_velocity_mps": 3.0, "extraction": true, "sensor_layout_id": "layout_centerline_v1", "seed": 103},
+    {"case_uid": "FWB_SYN_TUNNEL_000004", "family": "control_no_fire", "split": "train_id", "fire": false, "source_xyz_m": null, "hrr_peak_kw": 0, "hrr_curve": "none", "ventilation_velocity_mps": 2.0, "extraction": false, "sensor_layout_id": "layout_centerline_v1", "seed": 104},
+    {"case_uid": "FWB_SYN_TUNNEL_000005", "family": "sensor_degraded", "split": "dev_id", "fire": true, "source_xyz_m": [20, 3, 0.5], "hrr_peak_kw": 500, "hrr_curve": "t2_medium", "ventilation_velocity_mps": 2.0, "extraction": false, "sensor_layout_id": "layout_centerline_v1", "sensor_fault": "missing_25_percent", "seed": 105},
+    {"case_uid": "FWB_SYN_TUNNEL_000006", "family": "counterfactual_extraction", "split": "train_id", "fire": true, "source_xyz_m": [20, 3, 0.5], "hrr_peak_kw": 500, "hrr_curve": "t2_medium", "ventilation_velocity_mps": 2.0, "extraction": true, "sensor_layout_id": "layout_centerline_v1", "seed": 101, "pair_id": "FWB_PAIR_000001", "pair_type": "configuration_comparison"}
+  ]
+}
