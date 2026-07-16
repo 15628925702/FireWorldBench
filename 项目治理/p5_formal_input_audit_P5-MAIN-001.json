@@ -1006,12 +1006,12 @@
         }
       ],
       "inventory_sha256": "cc97d1f0a2a191c671b25e47cac36f11882e3b5b6c61762b573d1bc769fe3445",
-      "canonical_status": "PLANNING_ADAPTER_READY",
-      "canonical_record_count": 5409,
-      "canonical_case_count": 9,
+      "canonical_status": "SEMANTIC_SCHEMA_BLOCKED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
       "formal_benchmark_eligible": false,
       "license_status": "blocked_missing_authoritative_evidence",
-      "version_status": "blocked_missing_version_and_acquisition_date",
+      "version_status": "blocked_local_snapshot_exact_match_pending_official_remote_head_verified",
       "blockers": [
         "formal_benchmark_eligible_false",
         "license_evidence_blocked",
@@ -1598,12 +1598,12 @@
         }
       ],
       "inventory_sha256": "7f6a7574fb28fcc641da3da5826e28659619ff887f6f0d3c4ad0e8f3c03d9f3b",
-      "canonical_status": "PLANNING_ADAPTER_READY",
-      "canonical_record_count": 82444,
-      "canonical_case_count": 93,
+      "canonical_status": "SEMANTIC_SCHEMA_BLOCKED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
       "formal_benchmark_eligible": false,
       "license_status": "blocked_missing_authoritative_evidence",
-      "version_status": "blocked_missing_version_and_acquisition_date",
+      "version_status": "blocked_local_snapshot_exact_match_pending_official_remote_head_verified",
       "blockers": [
         "formal_benchmark_eligible_false",
         "license_evidence_blocked",
@@ -1667,12 +1667,12 @@
         }
       ],
       "inventory_sha256": "c104ac8ee02c3a4ba9c055f4cefaec8f597f8f12f8e51cee54e9652ef345c4ec",
-      "canonical_status": "PLANNING_ADAPTER_READY",
-      "canonical_record_count": 932,
-      "canonical_case_count": 5,
+      "canonical_status": "SEMANTIC_SCHEMA_BLOCKED",
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
       "formal_benchmark_eligible": false,
-      "license_status": "blocked_missing_authoritative_evidence",
-      "version_status": "blocked_missing_version_and_acquisition_date",
+      "license_status": "blocked_official_nist_software_license_data_scope_unresolved",
+      "version_status": "blocked_local_snapshot_exact_match_pending_official_remote_head_verified",
       "blockers": [
         "formal_benchmark_eligible_false",
         "license_evidence_blocked",
@@ -1955,11 +1955,10 @@
       "canonical_record_count": 0,
       "canonical_case_count": 0,
       "formal_benchmark_eligible": false,
-      "license_status": "blocked_license_scope_incomplete",
-      "version_status": "blocked_missing_version_and_acquisition_date",
+      "license_status": "verified_nist_software_license_generated_output_scope_pending",
+      "version_status": "blocked_local_snapshot_exact_match_pending_official_remote_head_verified",
       "blockers": [
         "formal_benchmark_eligible_false",
-        "license_evidence_blocked",
         "source_version_evidence_blocked"
       ]
     },
@@ -2030,11 +2029,10 @@
       "canonical_record_count": 0,
       "canonical_case_count": 0,
       "formal_benchmark_eligible": false,
-      "license_status": "blocked_provenance_chain_incomplete",
-      "version_status": "blocked_missing_local_acquisition_date",
+      "license_status": "verified_official_cc0_collection_notice_third_party_rights_disclaimer",
+      "version_status": "blocked_local_snapshot_exact_match_pending_official_remote_head_verified",
       "blockers": [
         "formal_benchmark_eligible_false",
-        "license_evidence_blocked",
         "source_version_evidence_blocked"
       ]
     },
@@ -2175,7 +2173,7 @@
     {
       "dataset_id": "D10",
       "name": "FIgLib-SmokeyNet",
-      "source_url": "UNKNOWN_OFFICIAL_SOURCE_NOT_REVERIFIED",
+      "source_url": "https://www.hpwren.ucsd.edu/FIgLib/",
       "acquisition_date": "2026-07-14",
       "source_version": "UNKNOWN_existing_local_staging; upstream version not verified this round",
       "registered_local_dirs": [
@@ -2240,14 +2238,13 @@
       ],
       "inventory_sha256": "a767626b86e02fa9e040755790abb31b89e11578fd45f1ecb6be44167433d189",
       "canonical_status": "AUX_ONLY_BLOCKED",
-      "canonical_record_count": 41,
-      "canonical_case_count": 1,
+      "canonical_record_count": 0,
+      "canonical_case_count": 0,
       "formal_benchmark_eligible": false,
-      "license_status": "blocked_missing_authoritative_evidence",
-      "version_status": "blocked_missing_version_and_acquisition_date",
+      "license_status": "public_use_with_attribution_terms_verified_redistribution_scope_unspecified",
+      "version_status": "blocked_local_sequence_exact_version_unverified_official_page_updated_2024-12-18",
       "blockers": [
         "formal_benchmark_eligible_false",
-        "license_evidence_blocked",
         "source_version_evidence_blocked"
       ]
     },
@@ -2290,7 +2287,7 @@
   "split_audit": "BLOCKED_NO_FORMAL_CASE_MANIFEST",
   "leak_audit": "BLOCKED_NO_FORMAL_CASE_MANIFEST",
   "uniqueness_audit": "BLOCKED_NO_FORMAL_CASE_MANIFEST",
-  "staging_assessment_sha256": "c3f9996b0559cd9dd978367fc67bac93fa04a9931c693d1f8a99378967be24f5",
+  "staging_assessment_sha256": "2585e33a5c95f3ec9a9f2faa8089de051ea2131432acb48eb6f1e4dd00082ae9",
   "raw_files_modified": false,
   "test_private_assets_accessed": false,
   "planning_inputs_promoted_to_formal": false,
@@ -2305,10 +2302,8 @@
     "D03:license_evidence_blocked",
     "D03:source_version_evidence_blocked",
     "D04:formal_benchmark_eligible_false",
-    "D04:license_evidence_blocked",
     "D04:source_version_evidence_blocked",
     "D05:formal_benchmark_eligible_false",
-    "D05:license_evidence_blocked",
     "D05:source_version_evidence_blocked",
     "D06:formal_benchmark_eligible_false",
     "D06:license_evidence_blocked",
@@ -2327,7 +2322,6 @@
     "D09:no_staged_files",
     "D09:source_version_evidence_blocked",
     "D10:formal_benchmark_eligible_false",
-    "D10:license_evidence_blocked",
     "D10:source_version_evidence_blocked",
     "D11:formal_benchmark_eligible_false",
     "D11:license_evidence_blocked",
@@ -2338,5 +2332,5 @@
     "leak_audit_missing_for_formal_inputs",
     "paper_ready_formal_input_files_missing"
   ],
-  "canonical_manifest_sha256": "e8fcd69b45bd9e8c53d4d4689dd577053a18442304ac58929a32bd691772296d"
+  "canonical_manifest_sha256": "42c9952b29d179524d356b9812e4a7af10b577f984c2f18c57e7699765719912"
 }

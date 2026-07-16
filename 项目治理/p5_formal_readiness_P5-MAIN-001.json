@@ -32,7 +32,7 @@
   "artifact_chain": {
     "data": {
       "path": "项目治理/p5_formal_input_audit_P5-MAIN-001.json",
-      "sha256": "b42302c7a3c7aac3d2e95cbe4bb9a0adcc98c92c7a24847b0db86dbdb31d228c"
+      "sha256": "8ae6484d599d4fdd2e37738b902892962aaccd6a2d66daccbd2952ea82f02573"
     },
     "model_matrix": {
       "path": "configs/model_matrix_P5-MAIN-001.json",
@@ -55,7 +55,7 @@
       "sha256": "aa2c0dfb1e53b7fd87af29b0ed96e7dc31d88dcd06b0b82c4f4acfbe7729dab3"
     }
   },
-  "frozen_input_manifest_hash": "b42302c7a3c7aac3d2e95cbe4bb9a0adcc98c92c7a24847b0db86dbdb31d228c",
+  "frozen_input_manifest_hash": "8ae6484d599d4fdd2e37738b902892962aaccd6a2d66daccbd2952ea82f02573",
   "model_matrix_hash": "69b9751d466b26e309d6de61d5b37999b15cc1ca98c64240db8f2e79cce4c7bf",
   "calibration_hash": "67eeb278592669967de4a780f390e4281fbc5af1d2638f982f3d429847ad5fd6",
   "preregistration_hash": "a56972d41541c213e1238157ab79a5c9a0c76c9b59cc7671ce621c40bf09a6d7",
@@ -65,9 +65,9 @@
     "1c359cb6a07da890e80c602284fbd2de987e1499335e8404d4b783c88514b111"
   ],
   "environment_observation": {
-    "python_version": "3.11.15",
+    "python_version": "3.13.5",
     "python_implementation": "CPython",
-    "platform": "Windows-10-10.0.26200-SP0",
+    "platform": "Windows-11-10.0.26200-SP0",
     "conda_default_env": "base",
     "formal_environment_active": false,
     "executable_name": "python.exe"
@@ -76,5 +76,5 @@
   "formal_model_results_generated": false,
   "paper_numbers_generated": false,
   "test_private_assets_accessed": false,
-  "readiness_manifest_sha256": "cd62e51f6b75fddc4745d5937ab3abd7802d3bacbaee58357aac3f8f39c2faed"
+  "readiness_manifest_sha256": "5a05ff3465788249fef17ec6045ce46a967952172549d68bcc7e5116539ced73"
 }

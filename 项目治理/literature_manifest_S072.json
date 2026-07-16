@@ -1,0 +1,833 @@
+{
+  "schema_version": 1,
+  "manifest_id": "FIREWORLDBENCH-LITERATURE-S072",
+  "generated_on": "2026-07-16",
+  "literature_root": "../../1.参考文献",
+  "downloaded_pdf_count": 44,
+  "downloaded_pdf_bytes": 394630350,
+  "entries": [
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "2309.02561v4.pdf",
+      "bytes": 13836412,
+      "pages": 25,
+      "sha256": "ebff09bcc377fac600fd3e9de87564dbe3a4304c6c7bab8e7f1547a2e6ed3cae",
+      "title": "Physically Grounded Vision-Language Models for Robotic Manipulation",
+      "authors": [
+        "Jensen Gao",
+        "Bidipta Sarkar",
+        "Fei Xia",
+        "Ted Xiao",
+        "Jiajun Wu",
+        "Brian Ichter",
+        "Anirudha Majumdar",
+        "Dorsa Sadigh"
+      ],
+      "year": 2023,
+      "source_url": "https://arxiv.org/pdf/2309.02561",
+      "arxiv_id": "2309.02561"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "AI能看但不会转化到文字.pdf",
+      "bytes": 9434312,
+      "pages": 14,
+      "sha256": "225df8b48848c463a136bc2f0788ad643e4b1a42fb903393d773f071b89a1b16",
+      "title": "Pixels to Principles: Probing Intuitive Physics Understanding in Multimodal Language Models",
+      "authors": [
+        "Mohamad Ballout",
+        "Serwan Jassim",
+        "Elia Bruni"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2507.16572",
+      "arxiv_id": "2507.16572"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "EndoGSim；高斯建模内窥镜力学场景.pdf",
+      "bytes": 1384241,
+      "pages": 11,
+      "sha256": "6d8d41f6ac312d5d0b98718834b220ee700308b5f455c8f7a83df4b1b1b0ef33",
+      "title": "EndoGSim: Physics-Aware 4D Dynamic Endoscopic Scene Simulations via MLLM-Guided Gaussian Splatting",
+      "authors": [
+        "Changjing Liu",
+        "Yiming Huang",
+        "Long Bai",
+        "Beilei Cui",
+        "Hongliang Ren"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2605.16022",
+      "arxiv_id": "2605.16022"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/01_通用物理推理Benchmark/2018_Riochet_IntPhys_arXiv1803.07616.pdf",
+      "bytes": 1602751,
+      "pages": 24,
+      "sha256": "71100ec3eb9459ecac9c3046f65553fdf2a02a3c1971627f205348c6623cac7a",
+      "title": "IntPhys: A Framework and Benchmark for Visual Intuitive Physics Reasoning",
+      "authors": [
+        "Ronan Riochet",
+        "Mario Ynocente Castro",
+        "Mathieu Bernard",
+        "Adam Lerer",
+        "Rob Fergus",
+        "Véronique Izard",
+        "Emmanuel Dupoux"
+      ],
+      "year": 2018,
+      "source_url": "https://arxiv.org/pdf/1803.07616",
+      "arxiv_id": "1803.07616"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/01_通用物理推理Benchmark/2019_Bakhtin_PHYRE_arXiv1908.05656.pdf",
+      "bytes": 1554065,
+      "pages": 20,
+      "sha256": "1e9b2dc045f447079515d1aad751a829aa53e370df449fb73770ad1c494ad970",
+      "title": "PHYRE: A New Benchmark for Physical Reasoning",
+      "authors": [
+        "Anton Bakhtin",
+        "Laurens van der Maaten",
+        "Justin Johnson",
+        "Laura Gustafson",
+        "Ross Girshick"
+      ],
+      "year": 2019,
+      "source_url": "https://arxiv.org/pdf/1908.05656",
+      "arxiv_id": "1908.05656"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/01_通用物理推理Benchmark/2019_Bisk_PIQA_arXiv1911.11641.pdf",
+      "bytes": 1065406,
+      "pages": 9,
+      "sha256": "64e679066032304ebc8b2787492d77c88d5d70d66184daefec123ae312974a4b",
+      "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+      "authors": [
+        "Yonatan Bisk",
+        "Rowan Zellers",
+        "Ronan Le Bras",
+        "Jianfeng Gao",
+        "Yejin Choi"
+      ],
+      "year": 2019,
+      "source_url": "https://arxiv.org/pdf/1911.11641",
+      "arxiv_id": "1911.11641"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/01_通用物理推理Benchmark/2019_Yi_CLEVRER_arXiv1910.01442.pdf",
+      "bytes": 5343720,
+      "pages": 19,
+      "sha256": "a2975a41eb74f53c45df706202e4b173e482a46a1c36dc30fc848eaed3054e31",
+      "title": "CLEVRER: CoLlision Events for Video REpresentation and Reasoning",
+      "authors": [
+        "Kexin Yi",
+        "Chuang Gan",
+        "Yunzhu Li",
+        "Pushmeet Kohli",
+        "Jiajun Wu",
+        "Antonio Torralba",
+        "Joshua B. Tenenbaum"
+      ],
+      "year": 2019,
+      "source_url": "https://arxiv.org/pdf/1910.01442",
+      "arxiv_id": "1910.01442"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/01_通用物理推理Benchmark/2021_Bear_Physion_arXiv2106.08261.pdf",
+      "bytes": 17787185,
+      "pages": 28,
+      "sha256": "1f9675a0ed72abde581f7da52c6f491ab692b2fb4845ae28cca930ea892e7d17",
+      "title": "Physion: Evaluating Physical Prediction from Vision in Humans and Machines",
+      "authors": [
+        "Daniel M. Bear",
+        "Elias Wang",
+        "Damian Mrowca",
+        "Felix J. Binder",
+        "Hsiao-Yu Fish Tung",
+        "R. T. Pramod",
+        "Cameron Holdaway",
+        "Sirui Tao",
+        "Kevin Smith",
+        "Fan-Yun Sun",
+        "Li Fei-Fei",
+        "Nancy Kanwisher",
+        "Joshua B. Tenenbaum",
+        "Daniel L. K. Yamins",
+        "Judith E. Fan"
+      ],
+      "year": 2021,
+      "source_url": "https://arxiv.org/pdf/2106.08261",
+      "arxiv_id": "2106.08261"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2020_Zhang_PolyU_Tunnel_Fire_Database.pdf",
+      "bytes": 3806210,
+      "pages": 40,
+      "sha256": "3d0def5815b90da4691c36756aefbef0425f095306a331ba78e222b0c450dcac",
+      "title": "Perspectives of big experimental database and artificial intelligence in tunnel fire research",
+      "year": 2021,
+      "doi": "10.1016/j.tust.2020.103691",
+      "source_url": "https://ira.lib.polyu.edu.hk/bitstream/10397/89580/1/TUST_2020_Tunnel_fire_database.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2022_FIgLib_SmokeyNet_RemoteSensing14_1007.pdf",
+      "bytes": 1251582,
+      "pages": 15,
+      "sha256": "7cd7d99c6c80ae7e65e70827854edcf5aff8acd3af03288540b6a1e2395a4b7b",
+      "title": "FIgLib & SmokeyNet: Dataset and Deep Learning Model for Real-Time Wildland Fire Smoke Detection",
+      "year": 2022,
+      "doi": "10.3390/rs14041007",
+      "source_url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-14-01007/article_deploy/remotesensing-14-01007-v2.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2023_FireRisk_arXiv2303.07035.pdf",
+      "bytes": 4509972,
+      "pages": 8,
+      "sha256": "92da971ad19ce985be6971fb97e337cff1af9feeffbef02470bc33ce2f56db2a",
+      "title": "FireRisk: A Remote Sensing Dataset for Fire Risk Assessment with Benchmarks Using Supervised and Self-supervised Learning",
+      "authors": [
+        "Shuchang Shen",
+        "Sachith Seneviratne",
+        "Xinye Wanyan",
+        "Michael Kirley"
+      ],
+      "year": 2023,
+      "source_url": "https://arxiv.org/pdf/2303.07035",
+      "arxiv_id": "2303.07035"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2024_Benchmarking_MultiScene_FireSmoke_arXiv2410.16631.pdf",
+      "bytes": 1322937,
+      "pages": 11,
+      "sha256": "28396cafadbb9e261e1fd29dee090688656798845dbb279ebef4a4ea884029e7",
+      "title": "Benchmarking Multi-Scene Fire and Smoke Detection",
+      "authors": [
+        "Xiaoyi Han",
+        "Nan Pu",
+        "Zunlei Feng",
+        "Yijun Bei",
+        "Qifei Zhang",
+        "Lechao Cheng",
+        "Liang Xue"
+      ],
+      "year": 2024,
+      "source_url": "https://arxiv.org/pdf/2410.16631",
+      "arxiv_id": "2410.16631"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2024_FIRE_Bench_arXiv2407.11522.pdf",
+      "bytes": 13160679,
+      "pages": 22,
+      "sha256": "b2bca6f5618017ee9a4047c393077159b6b05a7455bece93b5bf65ae3e767fba",
+      "title": "FIRE: A Dataset for Feedback Integration and Refinement Evaluation of Multimodal Models",
+      "authors": [
+        "Pengxiang Li",
+        "Zhi Gao",
+        "Bofei Zhang",
+        "Tao Yuan",
+        "Yuwei Wu",
+        "Mehrtash Harandi",
+        "Yunde Jia",
+        "Song-Chun Zhu",
+        "Qing Li"
+      ],
+      "year": 2024,
+      "source_url": "https://arxiv.org/pdf/2407.11522",
+      "arxiv_id": "2407.11522"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2024_Sen2Fire_arXiv2403.17884.pdf",
+      "bytes": 3447804,
+      "pages": 5,
+      "sha256": "c1e3f81de4279c0002dc34b558a22a39b1d292cac75236639c5cc7c7c100acd8",
+      "title": "Sen2Fire: A Challenging Benchmark Dataset for Wildfire Detection using Sentinel Data",
+      "authors": [
+        "Yonghao Xu",
+        "Amanda Berg",
+        "Leif Haglund"
+      ],
+      "year": 2024,
+      "source_url": "https://arxiv.org/pdf/2403.17884",
+      "arxiv_id": "2403.17884"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2025_Boreal_Forest_Fire_Dataset.pdf",
+      "bytes": 2780686,
+      "pages": 11,
+      "sha256": "f00ec9c0790771b411c31c1057b0efe73461228e8a9f96e025eb3a06b3c662f2",
+      "title": "Boreal Forest Fire: UAV-collected Wildfire Detection and Smoke Segmentation Dataset",
+      "year": 2025,
+      "doi": "10.1038/s41597-025-05634-0",
+      "source_url": "https://www.nature.com/articles/s41597-025-05634-0.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2025_DetectiumFire_arXiv2511.02495.pdf",
+      "bytes": 7789444,
+      "pages": 40,
+      "sha256": "99bd532f72f1e76eb88067aa478537d37aecb55b3555ea7e55e2de744a2216b9",
+      "title": "DetectiumFire: A Comprehensive Multi-modal Dataset Bridging Vision and Language for Fire Understanding",
+      "authors": [
+        "Zixuan Liu",
+        "Siavash H. Khajavi",
+        "Guangkai Jiang"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2511.02495",
+      "arxiv_id": "2511.02495"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2025_Fire360_arXiv2506.02167.pdf",
+      "bytes": 8731835,
+      "pages": 20,
+      "sha256": "1051b6522fcdab35b747c782076c0d8f7beed6366475d8b516c04c0275531e24",
+      "title": "Fire360: A Benchmark for Robust Perception and Episodic Memory in Degraded 360-Degree Firefighting Videos",
+      "authors": [
+        "Aditi Tiwari",
+        "Farzaneh Masoud",
+        "Dac Trong Nguyen",
+        "Jill Kraft",
+        "Heng Ji",
+        "Klara Nahrstedt"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2506.02167",
+      "arxiv_id": "2506.02167"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2025_QuantiPhy_arXiv2512.19526.pdf",
+      "bytes": 23035663,
+      "pages": 50,
+      "sha256": "bf80d110c59702360c656cdb49eb1ab5e6993125e9a9842d7c1c11de33c58786",
+      "title": "QuantiPhy: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models",
+      "authors": [
+        "Li Puyin",
+        "Tiange Xiang",
+        "Ella Mao",
+        "Shirley Wei",
+        "Xinye Chen",
+        "Adnan Masood",
+        "Li Fei-fei",
+        "Ehsan Adeli"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2512.19526",
+      "arxiv_id": "2512.19526"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2026_CausalPhys_arXiv2606.05966.pdf",
+      "bytes": 9538059,
+      "pages": 25,
+      "sha256": "8e1baad36528acd4ca14a01b38951f438527e873f638a983222ddf5039a3ac28",
+      "title": "Causal Scaffolding for Physical Reasoning: A Benchmark for Causally-Informed Physical World Understanding in VLMs",
+      "authors": [
+        "Tianyi Tang",
+        "Zhuoyi Lin",
+        "Zeyu Feng",
+        "Tianyi Ma",
+        "Yew-Soon Ong",
+        "Ivor Tsang",
+        "Haiyan Yin"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2606.05966",
+      "arxiv_id": "2606.05966"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2026_GWFP_Wildfire_Dataset_arXiv2606.10174.pdf",
+      "bytes": 2399865,
+      "pages": 6,
+      "sha256": "45c61c8b0ba9aca07271cb00227889678c1bfbd07e1cc8526147eada6062a9f4",
+      "title": "A Large Scale Open-Source Image and Video Dataset for Robust Wildfire Detection and Classification",
+      "authors": [
+        "Emadeldeen Hamdan",
+        "Yingyi Luo",
+        "B. Ugur Toreyin",
+        "Erdem Koyuncu",
+        "Adam J. Watts",
+        "Ugur Gudukbay",
+        "Ahmet Enis Cetin"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2606.10174",
+      "arxiv_id": "2606.10174"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2026_Robust_Wildfire_Forecasting_arXiv2603.09042.pdf",
+      "bytes": 5265158,
+      "pages": 14,
+      "sha256": "b582d2b0ead7754fe321abeb832189612d7bd22dfa06fad708cd50bc50cc5446",
+      "title": "Robust Wildfire Forecasting under Partial Observability: From Reconstruction to Prediction",
+      "authors": [
+        "Chen Yang",
+        "Mehdi Zafari",
+        "Ziheng Duan",
+        "A. Lee Swindlehurst"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2603.09042",
+      "arxiv_id": "2603.09042"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/02_火灾数据与Benchmark/2026_World_Models_in_Words_arXiv2605.29585.pdf",
+      "bytes": 435419,
+      "pages": 17,
+      "sha256": "a8164246d02211c1ddd88094a78e396c0a3bf0b4d038e1396b8bace7b06e5049",
+      "title": "World Models in Words: Auditing Physical State-Transition Commitments in Vision-Language Models",
+      "authors": [
+        "Emmanuelle Bourigault"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2605.29585",
+      "arxiv_id": "2605.29585"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/03_火灾仿真与生成/2025_Fang_Tam_FDGen_NIST_TN2332.pdf",
+      "bytes": 2642122,
+      "pages": 98,
+      "sha256": "e5f79bf280733121b3c99574afb326bba6e01606b855d69e5a7dc4054cab772c",
+      "title": "Fire Data Generator (FD-Gen) v1.0.0",
+      "year": 2025,
+      "doi": "10.6028/NIST.TN.2332",
+      "source_url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2332.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/03_火灾仿真与生成/FDS_6.11.1_Technical_Reference_Guide.pdf",
+      "bytes": 1492169,
+      "pages": 260,
+      "sha256": "c6b4f9d20ad6bed7e90f24519fdfb4415e58b2afb97bd237b3dc1d655234630d",
+      "title": "Fire Dynamics Simulator Technical Reference Guide",
+      "year": 2026,
+      "source_url": "https://github.com/firemodels/fds/releases/download/FDS-6.11.1/FDS_Technical_Reference_Guide.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/03_火灾仿真与生成/FDS_6.11.1_User_Guide.pdf",
+      "bytes": 10239700,
+      "pages": 526,
+      "sha256": "a80702e4b53821be8e379cca96248bbd30c25ac7e2d2d01eb207bf5b07317f70",
+      "title": "Fire Dynamics Simulator User's Guide",
+      "year": 2026,
+      "source_url": "https://github.com/firemodels/fds/releases/download/FDS-6.11.1/FDS_User_Guide.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/03_火灾仿真与生成/FDS_6.11.1_Validation_Guide.pdf",
+      "bytes": 51422037,
+      "pages": 1316,
+      "sha256": "b4f59998af249494dc49ada6e3c0e5d8a12e59c9e2baf51c8d5730682dfb71d0",
+      "title": "Fire Dynamics Simulator Validation Guide",
+      "year": 2026,
+      "source_url": "https://github.com/firemodels/fds/releases/download/FDS-6.11.1/FDS_Validation_Guide.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/03_火灾仿真与生成/FDS_6.11.1_Verification_Guide.pdf",
+      "bytes": 9172028,
+      "pages": 384,
+      "sha256": "cb7756d5c2f69661ee6263f0a4da2183a5a0ffd99930e52150780ae438b3f1bc",
+      "title": "Fire Dynamics Simulator Verification Guide",
+      "year": 2026,
+      "source_url": "https://github.com/firemodels/fds/releases/download/FDS-6.11.1/FDS_Verification_Guide.pdf"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/04_评测与数据治理/2018_Gebru_Datasheets_for_Datasets_arXiv1803.09010.pdf",
+      "bytes": 554802,
+      "pages": 18,
+      "sha256": "c7f595988ee2c109631d5173fdae37ff1774c68ec17add51bd012f2a6e8792d0",
+      "title": "Datasheets for Datasets",
+      "authors": [
+        "Timnit Gebru",
+        "Jamie Morgenstern",
+        "Briana Vecchione",
+        "Jennifer Wortman Vaughan",
+        "Hanna Wallach",
+        "Hal Daumé",
+        "Kate Crawford"
+      ],
+      "year": 2018,
+      "source_url": "https://arxiv.org/pdf/1803.09010",
+      "arxiv_id": "1803.09010"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/04_评测与数据治理/2018_Mitchell_Model_Cards_arXiv1810.03993.pdf",
+      "bytes": 995470,
+      "pages": 10,
+      "sha256": "a4049cdc78c3d635bdfb5165e495b0672d85690d66ccd6f149079d6e11e64aa1",
+      "title": "Model Cards for Model Reporting",
+      "authors": [
+        "Margaret Mitchell",
+        "Simone Wu",
+        "Andrew Zaldivar",
+        "Parker Barnes",
+        "Lucy Vasserman",
+        "Ben Hutchinson",
+        "Elena Spitzer",
+        "Inioluwa Deborah Raji",
+        "Timnit Gebru"
+      ],
+      "year": 2018,
+      "source_url": "https://arxiv.org/pdf/1810.03993",
+      "arxiv_id": "1810.03993"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/04_评测与数据治理/2023_Rethinking_Benchmark_Contamination_arXiv2311.04850.pdf",
+      "bytes": 858004,
+      "pages": 16,
+      "sha256": "359611112e3d1966c18c49450d21ae9872e38d805916b6321771e30a900b3f8e",
+      "title": "Rethinking Benchmark and Contamination for Language Models with Rephrased Samples",
+      "authors": [
+        "Shuo Yang",
+        "Wei-Lin Chiang",
+        "Lianmin Zheng",
+        "Joseph E. Gonzalez",
+        "Ion Stoica"
+      ],
+      "year": 2023,
+      "source_url": "https://arxiv.org/pdf/2311.04850",
+      "arxiv_id": "2311.04850"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "FireWorldBench_补充文献_2026-07-16/04_评测与数据治理/2024_Benchmark_Data_Contamination_Survey_arXiv2406.04244.pdf",
+      "bytes": 6399563,
+      "pages": 31,
+      "sha256": "07c1ddbf839631ad31a27686ed93ade2b0b8874076f81f845e112e97f337e794",
+      "title": "Benchmark Data Contamination of Large Language Models: A Survey",
+      "authors": [
+        "Cheng Xu",
+        "Shuhao Guan",
+        "Derek Greene",
+        "M-Tahar Kechadi"
+      ],
+      "year": 2024,
+      "source_url": "https://arxiv.org/pdf/2406.04244",
+      "arxiv_id": "2406.04244"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "MVPBench：图CoT评估物理与视觉信息不齐.pdf",
+      "bytes": 5984021,
+      "pages": 43,
+      "sha256": "f77652edcf4da2174eb1ed08ce434b10d2d07868e3e3a23064064c599b43b417",
+      "title": "Seeing is Not Reasoning: MVPBench for Graph-based Evaluation of Multi-path Visual Physical CoT",
+      "authors": [
+        "Zhuobai Dong",
+        "Junchao Yi",
+        "Ziyuan Zheng",
+        "Haochen Han",
+        "Xiangxi Zheng",
+        "Alex Jinpeng Wang",
+        "Fangming Liu",
+        "Linjie Li"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2505.24182",
+      "arxiv_id": "2505.24182"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "OmniFysics：构建动静双枢新模型.pdf",
+      "bytes": 8768755,
+      "pages": 13,
+      "sha256": "53b895c3f613d0394cbd45cc032ed20dd17e0a08e28069db8233fdc7582ce5c6",
+      "title": "OmniFysics: Towards Physical Intelligence Evolution via Omni-Modal Signal Processing and Network Optimization",
+      "authors": [
+        "Minghao Han",
+        "Dingkang Yang",
+        "Yue Jiang",
+        "Yizhou Liu",
+        "Lihua Zhang"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2602.07064",
+      "arxiv_id": "2602.07064"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "P1-VL：RL+由浅入深+三agent联合.pdf",
+      "bytes": 2138162,
+      "pages": 31,
+      "sha256": "4096c5c119c934d78753e767e7b4a8e443968d7c61c2a4cc108e6c1275ae68a8",
+      "title": "P1-VL: Bridging Visual Perception and Scientific Reasoning in Physics Olympiads",
+      "authors": [
+        "Yun Luo",
+        "Futing Wang",
+        "Qianjia Cheng",
+        "Fangchen Yu",
+        "Haodi Lei",
+        "Jianhao Yan",
+        "Chenxi Li",
+        "Jiacheng Chen",
+        "Yufeng Zhao",
+        "Haiyuan Wan",
+        "Yuchen Zhang",
+        "Shenghe Zheng",
+        "Junchi Yao",
+        "Qingyang Zhang",
+        "Haonan He",
+        "Wenxuan Zeng",
+        "Li Sheng",
+        "Chengxing Xie",
+        "Yuxin Zuo",
+        "Yizhuo Li",
+        "Yulun Wu",
+        "Rui Huang",
+        "Dongzhan Zhou",
+        "Kai Chen",
+        "Yu Qiao",
+        "Lei Bai",
+        "Yu Cheng",
+        "Ning Ding",
+        "Bowen Zhou",
+        "Peng Ye",
+        "Ganqu Cui"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2602.09443",
+      "arxiv_id": "2602.09443"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "PhysBench：评测并用PhsAgent改进.pdf",
+      "bytes": 40332432,
+      "pages": 150,
+      "sha256": "0ad58867a2880bfa94883f482895b5bb4ddf4979fb0f22361047060a7d39a6cb",
+      "title": "PhysBench: Benchmarking and Enhancing Vision-Language Models for Physical World Understanding",
+      "authors": [
+        "Wei Chow",
+        "Jiageng Mao",
+        "Boyi Li",
+        "Daniel Seita",
+        "Vitor Guizilini",
+        "Yue Wang"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2501.16411",
+      "arxiv_id": "2501.16411"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "PhysicsMind基准-三个力学问题.pdf",
+      "bytes": 43372520,
+      "pages": 40,
+      "sha256": "275fb8d9b6c4e8c80d1da79b413ba3099dd92acd8c499c71619cc8c21d5a5fca",
+      "title": "PhysicsMind: Sim and Real Mechanics Benchmarking for Physical Reasoning and Prediction in Foundational VLMs and World Models",
+      "authors": [
+        "Chak-Wing Mak",
+        "Guanyu Zhu",
+        "Boyi Zhang",
+        "Hongji Li",
+        "Xiaowei Chi",
+        "Kevin Zhang",
+        "Yichen Wu",
+        "Yangfan He",
+        "Chun-Kai Fan",
+        "Wentao Lu",
+        "Kuangzhi Ge",
+        "Xinyu Fang",
+        "Hongyang He",
+        "Kuan Lu",
+        "Tianxiang Xu",
+        "Li Zhang",
+        "Yongxin Ni",
+        "Youhua Li",
+        "Shanghang Zhang"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2601.16007",
+      "arxiv_id": "2601.16007"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "ProPhy：视频模型的两插件被VLM训得物理能力.pdf",
+      "bytes": 5562897,
+      "pages": 10,
+      "sha256": "0e95cf615fc69342ba47fea05ca68d65526ca2a17b0ce5261289c3b029825662",
+      "title": "ProPhy: Progressive Physical Alignment for Dynamic World Simulation",
+      "authors": [
+        "Zijun Wang",
+        "Panwen Hu",
+        "Jing Wang",
+        "Terry Jingchen Zhang",
+        "Yuhao Cheng",
+        "Long Chen",
+        "Yiqiang Yan",
+        "Zutao Jiang",
+        "Hanhui Li",
+        "Xiaodan Liang"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2512.05564",
+      "arxiv_id": "2512.05564"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "RL训ai学物理的奖励方式.pdf",
+      "bytes": 1955159,
+      "pages": 21,
+      "sha256": "f5cb0321ca1dabe4ac010b9619b447da13e4e469983fa9c220686eaf1d6d18b1",
+      "title": "Reward Design for Physical Reasoning in Vision-Language Models",
+      "authors": [
+        "Derek Lilienthal",
+        "Manisha Mukherjee",
+        "Sameera Horawalavithana"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2604.13993",
+      "arxiv_id": "2604.13993"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "SDF：流体速度变颜色训视觉模型.pdf",
+      "bytes": 7259862,
+      "pages": 27,
+      "sha256": "a0ddde4b908ca59f19a7a6d6b0d97ddbf876849ae7cdaa1e4994ea4f392f264f",
+      "title": "Beyond Static Vision: Scene Dynamic Field Unlocks Intuitive Physics Understanding in Multi-modal Large Language Models",
+      "authors": [
+        "Nanxi Li",
+        "Xiang Wang",
+        "Yuanjie Chen",
+        "Haode Zhang",
+        "Hong Li",
+        "Yong-Lu Li"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2604.03302",
+      "arxiv_id": "2604.03302"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "Sim2Reason：出题做题学物理的框架.pdf",
+      "bytes": 6131555,
+      "pages": 38,
+      "sha256": "dcb61f4b98b55ddc6938a0cc9e1f5e600b054e9bc6093150cd1e116e81c5719e",
+      "title": "Solving Physics Olympiad via Reinforcement Learning on Physics Simulators",
+      "authors": [
+        "Mihir Prabhudesai",
+        "Aryan Satpathy",
+        "Yangmin Li",
+        "Zheyang Qin",
+        "Nikash Bhardwaj",
+        "Amir Zadeh",
+        "Chuan Li",
+        "Katerina Fragkiadaki",
+        "Deepak Pathak"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2604.11805",
+      "arxiv_id": "2604.11805"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "VChain：图文临时微调训练提示.pdf",
+      "bytes": 23801129,
+      "pages": 25,
+      "sha256": "e00dfe4d742977b7bd0035b40dfed0b986db553db1dce5747b2bdc2fe866f905",
+      "title": "VChain: Chain-of-Visual-Thought for Reasoning in Video Generation",
+      "authors": [
+        "Ziqi Huang",
+        "Ning Yu",
+        "Gordon Chen",
+        "Haonan Qiu",
+        "Paul Debevec",
+        "Ziwei Liu"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2510.05094",
+      "arxiv_id": "2510.05094"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "VisPhyWorld基准：验物理代码.pdf",
+      "bytes": 4293275,
+      "pages": 34,
+      "sha256": "1b3a9374ec61ae93a2a9f313272c12f65e6a6641c2c45ee8c985ade4fa4e23d1",
+      "title": "VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction",
+      "authors": [
+        "Jiarong Liang",
+        "Max Ku",
+        "Ka-Hei Hui",
+        "Ping Nie",
+        "Wenhu Chen"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2602.13294",
+      "arxiv_id": "2602.13294"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "哈密顿约束使视频合理.pdf",
+      "bytes": 15990092,
+      "pages": 14,
+      "sha256": "1e1b5d8d0dea7bbd1c2accae2b5cf2c0becff23bfd5667a62001c339301007e9",
+      "title": "Neural Hamiltonian Deformation Fields for Dynamic Scene Rendering",
+      "authors": [
+        "Hai-Long Qin",
+        "Sixian Wang",
+        "Guo Lu",
+        "Jincheng Dai"
+      ],
+      "year": 2025,
+      "source_url": "https://arxiv.org/pdf/2512.10424",
+      "arxiv_id": "2512.10424"
+    },
+    {
+      "status": "DOWNLOADED_VERIFIED",
+      "relative_path": "让ai交互式学习物理-失败.pdf",
+      "bytes": 5781191,
+      "pages": 30,
+      "sha256": "a6ddef4a4f5b5bb65cceb23c237ef1661d2d91ce21a303f4b70b55ffd9593afa",
+      "title": "Can Vision Language Models Learn Intuitive Physics from Interaction?",
+      "authors": [
+        "Luca M. Schulze Buschoff",
+        "Konstantinos Voudouris",
+        "Can Demircan",
+        "Eric Schulz"
+      ],
+      "year": 2026,
+      "source_url": "https://arxiv.org/pdf/2602.06033",
+      "arxiv_id": "2602.06033"
+    }
+  ],
+  "missing_full_text": [
+    {
+      "title": "Intelligent fire location detection approach for extrawide immersed tunnels",
+      "doi": "10.1016/j.eswa.2023.122251",
+      "reason": "Publisher version is paywalled and no legal open-access manuscript was located."
+    },
+    {
+      "title": "An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices",
+      "doi": "10.1007/s00521-022-07467-z",
+      "reason": "Publisher version is paywalled and the official institutional manuscript host was unreachable."
+    }
+  ],
+  "notes": [
+    "PDF files remain outside Git; only this manifest and bibliography are tracked.",
+    "A downloaded paper is citation evidence, not dataset-license evidence."
+  ]
+}

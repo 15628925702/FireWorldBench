@@ -10,6 +10,9 @@ name = "Immersed-Tunnel-CFD"
 local_dirs = ["01_Immersed-Tunnel-CFD"]
 staging_dir = "data/raw/D01_Immersed-Tunnel-CFD"
 source_url = "https://github.com/babeteax/Immersed-Tunnel-Fire-Location-Detection-Data"
+upstream_head_sha = "00a81959b792fe013e2ac0468758b5fbedf3e68f"
+upstream_head_verified_at = "2026-07-16"
+literature_doi = "10.1016/j.eswa.2023.122251"
 planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D01_planning.json"
 state = "candidate"
@@ -18,7 +21,7 @@ planning_eligible = true
 planning_use = "local_research_only"
 roles = ["t1_primary", "t2_primary", "t3_pair_prototype"]
 license_status = "blocked_missing_authoritative_evidence"
-version_status = "blocked_missing_version_and_acquisition_date"
+version_status = "blocked_local_snapshot_exact_match_pending_official_remote_head_verified"
 
 [[sources]]
 id = "D02"
@@ -26,6 +29,9 @@ name = "PolyUFire"
 local_dirs = ["02_PolyUFire"]
 staging_dir = "data/raw/D02_PolyUFire"
 source_url = "https://github.com/PolyUFire/Tunnel_Fire_Database"
+upstream_head_sha = "07a70c1540a7b797c049541209bb9120ea45d8bb"
+upstream_head_verified_at = "2026-07-16"
+literature_doi = "10.1016/j.tust.2020.103691"
 planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D02_planning.json"
 state = "candidate"
@@ -34,7 +40,7 @@ planning_eligible = true
 planning_use = "local_research_only"
 roles = ["external_experiment", "mechanism_knowledge"]
 license_status = "blocked_missing_authoritative_evidence"
-version_status = "blocked_missing_version_and_acquisition_date"
+version_status = "blocked_local_snapshot_exact_match_pending_official_remote_head_verified"
 
 [[sources]]
 id = "D03"
@@ -42,6 +48,9 @@ name = "FDS-exp"
 local_dirs = ["03_FDS-exp"]
 staging_dir = "data/raw/D03_FDS-exp"
 source_url = "https://github.com/firemodels/exp"
+upstream_head_sha = "39d8b735870826430a69cfb95681db67cfd36bbf"
+upstream_head_verified_at = "2026-07-16"
+license_evidence_url = "https://raw.githubusercontent.com/firemodels/exp/39d8b735870826430a69cfb95681db67cfd36bbf/LICENSE.md"
 planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D03_planning.json"
 state = "candidate"
@@ -49,8 +58,8 @@ eligible = false
 planning_eligible = true
 planning_use = "local_research_only"
 roles = ["external_experiment", "physics_sanity"]
-license_status = "blocked_missing_authoritative_evidence"
-version_status = "blocked_missing_version_and_acquisition_date"
+license_status = "blocked_official_nist_software_license_data_scope_unresolved"
+version_status = "blocked_local_snapshot_exact_match_pending_official_remote_head_verified"
 
 [[sources]]
 id = "D04"
@@ -58,6 +67,10 @@ name = "FD-Gen"
 local_dirs = ["04_FD-Gen"]
 staging_dir = "data/raw/D04_FD-Gen"
 source_url = "https://github.com/usnistgov/FD-Gen"
+upstream_head_sha = "428a4153239efa9c4c4b6b20670990c52eaf926a"
+upstream_head_verified_at = "2026-07-16"
+license_evidence_url = "https://raw.githubusercontent.com/usnistgov/FD-Gen/428a4153239efa9c4c4b6b20670990c52eaf926a/LICENSE.md"
+literature_doi = "10.6028/NIST.TN.2332"
 planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D04_planning.json"
 state = "generator_candidate"
@@ -65,8 +78,8 @@ eligible = false
 planning_eligible = true
 planning_use = "local_research_only"
 roles = ["t3_generator", "ood_generator"]
-license_status = "blocked_license_scope_incomplete"
-version_status = "blocked_missing_version_and_acquisition_date"
+license_status = "verified_nist_software_license_generated_output_scope_pending"
+version_status = "blocked_local_snapshot_exact_match_pending_official_remote_head_verified"
 
 [[sources]]
 id = "D05"
@@ -74,6 +87,10 @@ name = "D-Fire"
 local_dirs = ["05_D-Fire", "05_D-Fire-sample"]
 staging_dir = "data/raw/D05_D-Fire"
 source_url = "https://github.com/gaia-solutions-on-demand/DFireDataset"
+upstream_head_sha = "4bf9c31b18fadcd44d5f0b6d66f82bc56fa5e328"
+upstream_head_verified_at = "2026-07-16"
+license_evidence_url = "https://raw.githubusercontent.com/gaia-solutions-on-demand/DFireDataset/4bf9c31b18fadcd44d5f0b6d66f82bc56fa5e328/LICENSE"
+literature_doi = "10.1007/s00521-022-07467-z"
 planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D05_planning.json"
 state = "candidate_aux_only"
@@ -81,8 +98,8 @@ eligible = false
 planning_eligible = true
 planning_use = "local_research_only"
 roles = ["t1_visual_aux", "t2_visual_aux"]
-license_status = "blocked_provenance_chain_incomplete"
-version_status = "blocked_missing_local_acquisition_date"
+license_status = "verified_official_cc0_collection_notice_third_party_rights_disclaimer"
+version_status = "blocked_local_snapshot_exact_match_pending_official_remote_head_verified"
 
 [[sources]]
 id = "D06"
@@ -133,7 +150,9 @@ id = "D10"
 name = "FIgLib-SmokeyNet"
 local_dirs = ["10_FIgLib-SmokeyNet-sample"]
 staging_dir = "data/raw/D10_FIgLib-SmokeyNet"
-source_url = "UNKNOWN_OFFICIAL_SOURCE_NOT_REVERIFIED"
+source_url = "https://www.hpwren.ucsd.edu/FIgLib/"
+source_terms_snapshot_date = "2026-07-16"
+literature_doi = "10.3390/rs14041007"
 planning_download_status = "ALREADY_PRESENT"
 planning_manifest = "项目治理/download_manifest_D10_planning.json"
 state = "candidate_aux_only"
@@ -141,8 +160,8 @@ eligible = false
 planning_eligible = true
 planning_use = "local_research_only"
 roles = ["t1_visual_aux", "wildfire_ood_aux"]
-license_status = "blocked_missing_authoritative_evidence"
-version_status = "blocked_missing_version_and_acquisition_date"
+license_status = "public_use_with_attribution_terms_verified_redistribution_scope_unspecified"
+version_status = "blocked_local_sequence_exact_version_unverified_official_page_updated_2024-12-18"
 
 [[sources]]
 id = "D11"
