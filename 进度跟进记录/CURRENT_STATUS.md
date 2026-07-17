@@ -19,7 +19,7 @@ Completed in this session:
 - Added architecture freeze, conflict audit, nine-task protocol, source role matrix, and 20-event pilot plan.
 - Added strict Fire Event and QA schemas, v2 task/source/split/evaluation/pilot configs, fixtures, semantic validation, deterministic scoring, and 8 required `python -m fireworld.*` interfaces.
 - Rewrote active detailed-design and governance entry points; historical files remain preserved.
-- Full legacy + v2 test suite: `153 passed in 88.74s`.
+- Full legacy + v2 test suite: `154 passed in 54.27s`.
 - v2 focused validation: `11 passed`; Ruff passed; strict mypy passed; schema CLI passed.
 
 Current state is architecture/pilot preparation, not a completed data pilot. No FDS event, model inference, API call, data download, or formal result was produced.
