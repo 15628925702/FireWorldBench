@@ -4,7 +4,7 @@
 
 ## 1. 唯一设计依据
 
-`G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf` 是唯一核心设计来源。用户最新明确指令优先于该 PDF；除这两者外，任何旧章程、详细设计、冻结记录、Schema、配置、代码或实验产物都不能改变核心方案。
+工作区根目录下 `2.方案研究/FireWorldBenchv2(1).pdf` 是唯一核心设计来源。原 Windows 路径为 `G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf`，仅作 provenance。用户最新明确指令优先于该 PDF；除这两者外，任何旧章程、详细设计、冻结记录、Schema、配置、代码或实验产物都不能改变核心方案。
 
 旧 `FireWorldBench_Benchmark_Design_v2.pdf`、T1/T2/T3 方案、v3/融合方案、部分可观测状态诊断收缩方案、DPO、额外 Fire State Representation、tool-use/Agent 主线及旧 P0-P7 冻结链均为历史材料。只有经新协议逐项验证后才能复用实现；“已经实现”不是保留理由。
 

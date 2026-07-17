@@ -41,6 +41,8 @@ L3 Evolution Reasoning
 | `docs/CONFLICT_AUDIT_2026-07-17.md` | 旧项目冲突、保留与迁移清单 |
 | `schemas/fire_event.schema.json` | Fire Event 机器契约 |
 | `schemas/qa.schema.json` | QA 机器契约 |
+| `migration/README_SERVER_MIGRATION.md` | 服务器迁移、传输、重建和验收 |
+| `migration/SERVER_HANDOFF_PROMPT.md` | 新服务器接手项目的首轮提示词 |
 
 ## 新工程入口
 
@@ -67,3 +69,5 @@ data/splits/   # event_group-first split 清单
 ```
 
 论文和数据报告必须同时列出独立 Fire Event、QA、各任务、各轨道、各来源和各 split 数量。
+
+迁移服务器时只执行 `git clone` 不够：`data/raw/` 与 `artifacts/` 未被 Git 跟踪，核心 PDF 和参考文献也位于仓库外。应按迁移说明传输包含 `1.参考文献/`、`2.方案研究/`、`3.数据集/` 和 `5.项目实现/` 的整个工作区，并在服务器验证 `migration/transfer_manifest.json`。

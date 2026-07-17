@@ -10,7 +10,7 @@ current_task: V2-A2-PILOT-PREP
 
 ## 2026-07-17 v2 architecture reset
 
-`G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf` is now the only core design source. The old T1/T2/T3 ontology, old schemas/configs, `src/fireworldbench/`, P0-P7 freeze chain, formal/quasi experiments, and old results are `LEGACY-NONCOMPARABLE`.
+Workspace-relative `2.方案研究/FireWorldBenchv2(1).pdf` is now the only core design source. The old T1/T2/T3 ontology, old schemas/configs, `src/fireworldbench/`, P0-P7 freeze chain, formal/quasi experiments, and old results are `LEGACY-NONCOMPARABLE`.
 
 Completed in this session:
 
@@ -38,6 +38,17 @@ Blocked pending evidence or confirmation:
 - expert-approved stage/risk/dead-band/tie/same thresholds;
 - external source access/license/label scope, especially Fire360 and Detectium;
 - non-author annotators/domain reviewer and later model/API budget.
+
+## Server migration readiness
+
+- Transfer the entire workspace root, not only this Git repository. Current transferable content is approximately 5.25 GB before compression and cache exclusions.
+- Core PDF SHA-256 is `ba63ab8428d1f759629a89864af7f623589d023dd6d5a29e4940fc6d629a19a6`.
+- `migration/README_SERVER_MIGRATION.md` and `migration/SERVER_HANDOFF_PROMPT.md` define Linux reconstruction and project takeover.
+- `scripts/server_preflight.py` checks workspace layout, PDF, Git, Python, disk, data and external tools.
+- `scripts/build_transfer_manifest.py` and `scripts/verify_transfer_manifest.py` provide file-level SHA-256 transfer verification.
+- The frozen manifest currently verifies 3,350 files / 5,525,112,267 bytes; the full repository test baseline is `155 passed`.
+- No `.env`, private-key file or likely literal API-key pattern was found in the migration audit. Credentials remain environment-variable references only.
+- The Windows Conda environment is not transferable. Linux must rebuild from `environment.yml` and install/version FDS, Smokeview and ffmpeg separately.
 
 User-owned untracked files preserved untouched:
 

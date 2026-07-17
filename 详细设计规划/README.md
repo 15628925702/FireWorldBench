@@ -1,6 +1,6 @@
 # FireWorldBench v2 详细设计索引
 
-唯一核心方案：`G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf`。
+唯一核心方案：工作区相对路径 `2.方案研究/FireWorldBenchv2(1).pdf`。
 
 当前可执行规格：
 

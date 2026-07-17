@@ -2,7 +2,7 @@
 
 状态：`FROZEN-FOR-PILOT`
 版本：`2.0.0-dev`
-依据：`G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf`
+依据：工作区相对路径 `2.方案研究/FireWorldBenchv2(1).pdf`
 日期：`2026-07-17`
 
 ## 1. 不可变决策
