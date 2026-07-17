@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0.0",
+  "qa_id": "FWQ-000000000001",
+  "case_id": "FWC-000000000001",
+  "event_id": "FWE-000000000001",
+  "event_group": "FWG-000000000001",
+  "source_domain": "fds",
+  "split": "train",
+  "layer": "L2",
+  "task_id": "L2-1",
+  "track": "S",
+  "observation": {
+    "structured": {"ref": "qa/FWQ-000000000001/table.json", "rows": 20},
+    "images": null,
+    "video": null,
+    "context": "Eight-region tunnel layout.",
+    "time_window_s": [20, 40]
+  },
+  "question": "Recover the source region and current fire stage.",
+  "options": null,
+  "answer": {"choice": null, "fields": {"source_region": "R1", "stage": "growth"}},
+  "scoring": {"primary": "component_accuracy", "components": ["source_region", "stage"], "secondary": ["joint_exact_match"]},
+  "confidence_target": 1.0,
+  "evidence_metadata": {"required": false, "gold_refs": []},
+  "provenance": {
+    "event_manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "builder_version": "l2-1-0.1.0",
+    "task_config_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "source_license_ref": "governance/licenses/fds.md"
+  },
+  "quality": {
+    "status": "eligible",
+    "ambiguity_reason": null,
+    "shortcut_checks": {"opaque_paths": true, "time_matched": true, "option_style_matched": null, "appearance_matched": null}
+  }
+}

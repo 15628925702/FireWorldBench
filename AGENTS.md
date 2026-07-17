@@ -1,50 +1,52 @@
-# FireWorldBench v1 协作入口
+# FireWorldBench v2 协作入口
 
-本文件适用于 `5.项目实现/v1` 及其全部子目录。任何新对话、人工开发者或自动化代理开始工作前，必须先阅读本文件。
+本文件适用于本仓库及全部子目录。
 
-## 1. 新窗口最小读取集
+## 1. 唯一设计依据
 
-新窗口只读取以下内容：
+`G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf` 是唯一核心设计来源。用户最新明确指令优先于该 PDF；除这两者外，任何旧章程、详细设计、冻结记录、Schema、配置、代码或实验产物都不能改变核心方案。
 
-1. 本 `AGENTS.md`：稳定背景、范围和硬规则。
-2. `进度跟进记录/CURRENT_STATUS.md`：当前任务、Git/环境状态和 `source_session` 文件名。
-3. `CURRENT_STATUS.md` 的 front matter 指定的唯一 `source_session`：上一窗口实际完成/未完成与证据。
-4. `进度跟进记录/NEXT_SESSION_PROMPT.md`：当前任务的目标、第一动作、交付物和门禁。
-5. `进度跟进记录/任务指令库_从P0到论文数据导出.md` 中当前任务 ID 对应的一个小节。
+旧 `FireWorldBench_Benchmark_Design_v2.pdf`、T1/T2/T3 方案、v3/融合方案、部分可观测状态诊断收缩方案、DPO、额外 Fire State Representation、tool-use/Agent 主线及旧 P0-P7 冻结链均为历史材料。只有经新协议逐项验证后才能复用实现；“已经实现”不是保留理由。
 
-只有第 4/5 项明确引用时，才补读对应的详细设计、约束、决策或数据登记。默认不读根 `README.md`、不遍历全部历史会话、不通读整套详细设计；发现 handoff 矛盾或需要追溯证据时才向前查找。
+## 2. 不可变研究定义
 
-## 2. 当前范围
+- 定位：评估多模态基础模型能否从部分、有限且不同形式的火灾观测中，依次完成动态感知、当前状态恢复与未来演化推理。
+- 能力：L1 Dynamic Perception、L2 State Recovery、L3 Evolution Reasoning。
+- 任务：固定为 `L1-1` 至 `L3-3` 九个任务，不增加、删除或合并。
+- 输入轨道：`S` Structured、`I` Image、`V` Video。轨道是否发布由信息充分性和标签可靠性决定。
+- 中间层：所有来源先转换为 Fire Event，再按 `source_domain` 构建 QA 和报告。
+- 主数据：FDS / Smokeview / FD-Gen。Immersed Tunnel、PolyUFire、D-Fire、Fire360 和可选 DetectiumFire 按核心 PDF 的外部角色使用。
+- 规模：先做 20 个独立 Fire Events pilot，再决定是否扩展到约 180 events 和 4,000-6,000 QA。
+- 评分：固定标签/有限候选优先；Accuracy 系主指标；开放解释和 LLM Judge 不进入主排行榜。
+- 方法：FireState Card 仅为确定性脚本生成的轻量 proof-of-concept，不扩展为复杂模型或 Agent。
 
-- 核心依据：`开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf`，SHA-256 为 `16b4caec881825b8a8d41556a5abe6a428ae77944c98c45e56789add54c8d7ce`。
-- 当前只实现 FireWorldBench v1：T1 火灾预警、T2 火灾状态识别、T3 火灾演化推理。
-- 未经用户明确授权，不读取、不引用、不实现仓库外相邻目录 `../../4.升级拓展` 中的内容。
-- `../../3.数据集` 是外部只读数据资产区，不在本仓库内改名、搬移、清洗或覆盖原文件。
-- 官方演示图、海报、README 截图和无法下载的数据只可用于可行性研究，不得计入训练、验证、测试或论文结果。
+## 3. 当前工作边界
 
-## 3. 工作规则
+在架构、Schema、九任务协议和 20-event pilot 设计通过前：
 
-- 每项工作必须对应任务 ID、输入、输出、验收标准和证据路径；禁止只写“已完成”。
-- 先按 case/scenario 分组划分数据，再做窗口切片、增强或问答派生，防止泄漏。
-- 测试集标签、私有 ID 映射和评分实现不得暴露给被测模型。
-- 从 `P2-FREEZE-001` 激活 test embargo 后，普通开发对话也不得读取隐藏测试输入/gold/私有映射；必须遵循 `开发要求约束/测试集封存与访问控制.md` 和 `configs/test_embargo.toml`。
-- 任何论文数字必须能追溯到：代码提交、数据清单哈希、配置哈希、环境、模型版本、提示词和原始预测。
-- 不得把视觉检测准确率包装成火灾物理世界理解能力。
-- 不得静默改变任务定义、主指标、数据划分或已冻结测试集；变更必须进入 `项目治理/决策记录.md`。
-- 不修改用户已有内容；发现冲突时保留现场并在交接记录中说明。
-- 可变事实优先级：当前文件系统/Git/带退出码的验证证据 > `CURRENT_STATUS.md` > 最近会话记录 > `NEXT_SESSION_PROMPT.md`。需求边界仍遵循 README 中的事实源优先级。
-- 未经用户明确授权，禁止安装/下载包、模型或数据；禁止 pull、merge、rebase、tag、修改 remote、clean、stash、reset 或 checkout 覆盖改动。
-- 自本项目当前约定起，每个任务在“验收标准全部满足”后，必须执行一次任务级 Git 交付：整理提交范围、`git add`、`git commit`，并 `git push origin main` 到既有 GitHub 远端；若 push 失败，任务不得标记为 `DONE`，必须记录失败原因并保持 `BLOCKED` 或 `IN_PROGRESS`。
-- 除“任务验收后的任务级 commit/push”外，其余 Git 写操作仍需谨慎；不得为规避失败验收而拆分、重写或静默跳过提交。
-- 任何正式 benchmark 构建、pilot、主实验和论文导出必须绑定 clean Git commit；在当前 UNBORN/dirty 状态下只能做初始化与预研，不得生成正式结果。无法 commit 时必须先生成经批准的不可变源码归档与 SHA-256，但主实验仍需在 freeze 决策中明确接受。
+- 不批量生成 180 个 FDS 事件，不做大规模下载，不训练正式模型，不运行主实验。
+- 不构建多轮 Agent、复杂新模型或九任务之外的新任务。
+- 可以审计和修改文档、Schema、配置、测试与最小 fixture；可以准备 pilot。
+- `data/raw/` 中已有原始资产保持只读。不得因迁移而移动、重命名、覆盖或删除。
+- 旧代码位于 `src/fireworldbench/`，状态为 `LEGACY-NONCOMPARABLE`；新主线位于 `src/fireworld/`。
+- 旧结果、旧冻结集和准实验不得作为 v2 结果；必须用新 Fire Event/QA Schema 重建后才有资格。
 
-## 4. 每轮结束条件
+## 4. 强制工程规则
 
-1. 运行与本次改动相称的测试或检查，并记录命令、退出码和关键结果。
-2. 若本轮任务已验收通过，执行任务级 Git 交付并记录 commit SHA、push 结果与远端分支；push 失败不得写 `DONE`。
-3. 更新 `进度跟进记录/CURRENT_STATUS.md`。
-4. 新建一份会话记录，使用 `进度跟进记录/SESSION_HANDOFF_TEMPLATE.md`。
-5. 更新 `进度跟进记录/NEXT_SESSION_PROMPT.md`，使下一轮可直接开始唯一任务。
-6. 若修改需求、数据、评测或结论，同时更新相应治理台账。
+- split 必须在切片、增强和 QA 派生前按 `event_group` 完成；跨 split 重叠必须为 0。
+- 公开 ID、文件名、路径、EXIF 和元数据不得包含火源、HRR、通风、答案或 split 线索。
+- 缺失模态显式为 `null`；来源不存在的标签不得人工补造。
+- 每个 FDS event 记录 FDS/Smokeview/FD-Gen 版本、网格、边界、配置哈希、随机种子、输入、日志和失败状态。
+- 所有样本通过 JSON Schema；候选位置均衡；时间位置、选项长度和视觉外观执行 shortcut audit。
+- 许可、引用、获取版本和再发布范围逐来源记录；未确认资产不得进入正式计分或发布。
+- 原始模型输出、解析失败、评分配置和逐样本分数必须可重算。
 
-项目预留 Conda 环境 `fireworldbench-v1`，定义在 `environment.yml`。当前它是按用户要求创建的空环境，不得擅自安装包；进入实现阶段后需经明确确认再依据 `pyproject.toml` 安装依赖。不得把个人 base 环境或临时 `.venv` 的成功结果当作正式验收证据。
+## 5. 新窗口读取顺序
+
+1. 本文件。
+2. `PROJECT_CHARTER.md`、`ROADMAP.md`。
+3. `docs/ARCHITECTURE_FREEZE.md` 与 `docs/CONFLICT_AUDIT_2026-07-17.md`。
+4. `进度跟进记录/CURRENT_STATUS.md`。
+5. 当前任务直接涉及的任务协议、Schema、配置和测试。
+
+若旧 handoff、旧冻结或旧配置与以上内容冲突，按历史证据保留，但不得继续执行其指令。

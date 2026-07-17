@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "score_range": [0, 100],
+  "task_macro_average": true,
+  "layers": {"L1": ["L1-1", "L1-2", "L1-3"], "L2": ["L2-1", "L2-2", "L2-3"], "L3": ["L3-1", "L3-2", "L3-3"]},
+  "overall": ["L1-1", "L1-2", "L1-3", "L2-1", "L2-2", "L2-3", "L3-1", "L3-2", "L3-3"],
+  "excluded_from_overall": ["external_cfd", "experiment", "real_image_ood", "real_video_ood", "external_ood"],
+  "llm_judge_primary": false,
+  "report_counts": ["events", "qa", "tasks", "tracks", "sources", "splits"]
+}

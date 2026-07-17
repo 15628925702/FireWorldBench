@@ -1,0 +1,16 @@
+{
+  "schema_version": "2.0.0",
+  "status": "PLANNED_NOT_GENERATED",
+  "independent_event_target": 20,
+  "simulation_duration_s": [90, 120],
+  "device_output_interval_s": 1,
+  "region_slice_interval_s": 2,
+  "event_classes": {"fire": 14, "no_fire_normal": 2, "ventilation_disturbance": 2, "non_fire_disturbance": 2},
+  "representative_tasks": ["L1-2", "L2-1", "L3-3"],
+  "required_tracks": 2,
+  "preferred_tracks": ["S", "I"],
+  "versions": {"fds": "TBD_PILOT", "smokeview": "TBD_PILOT", "fdgen": "TBD_PILOT"},
+  "mesh": "TBD_PILOT",
+  "boundary_conditions": "TBD_PILOT",
+  "expert_thresholds": ["stage_boundary_buffer", "risk_thresholds", "trend_dead_band", "event_time_tie_tolerance", "counterfactual_same_tolerance"]
+}

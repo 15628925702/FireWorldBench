@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "tasks": [
+    {"task_id": "L1-1", "layer": "L1", "name": "early_signal_attribution", "tracks": ["S", "I", "V"], "primary": "accuracy", "answer_fields": ["class"], "secondary": ["macro_f1", "ece", "brier_score"]},
+    {"task_id": "L1-2", "layer": "L1", "name": "next_state_selection", "tracks": ["S", "I", "V"], "primary": "accuracy", "answer_fields": ["choice"], "secondary": []},
+    {"task_id": "L1-3", "layer": "L1", "name": "temporal_coherence_verification", "tracks": ["S", "I", "V"], "primary": "accuracy", "answer_fields": ["consistency", "violation_type"], "secondary": ["violation_type_accuracy"]},
+    {"task_id": "L2-1", "layer": "L2", "name": "source_and_stage_recovery", "tracks": ["S", "I", "V"], "primary": "component_accuracy", "answer_fields": ["source_region", "stage"], "secondary": ["joint_exact_match"]},
+    {"task_id": "L2-2", "layer": "L2", "name": "current_risk_region_recovery", "tracks": ["S", "I", "V"], "primary": "component_accuracy", "answer_fields": ["risk_region", "risk_level"], "secondary": ["iou"]},
+    {"task_id": "L2-3", "layer": "L2", "name": "dominant_mechanism_recognition", "tracks": ["S", "I", "V"], "primary": "accuracy", "answer_fields": ["mechanism"], "secondary": ["macro_f1"]},
+    {"task_id": "L3-1", "layer": "L3", "name": "future_trend_prediction", "tracks": ["S", "I", "V"], "primary": "mean_accuracy", "answer_fields": ["temperature_trend", "smoke_trend", "visibility_trend"], "secondary": []},
+    {"task_id": "L3-2", "layer": "L3", "name": "future_risk_region_prediction", "tracks": ["S", "I", "V"], "primary": "accuracy", "answer_fields": ["first_high_risk_region"], "secondary": ["event_time_mae"]},
+    {"task_id": "L3-3", "layer": "L3", "name": "counterfactual_comparison", "tracks": ["S", "I", "V"], "primary": "accuracy", "answer_fields": ["comparison"], "secondary": ["counterfactual_consistency"]}
+  ]
+}

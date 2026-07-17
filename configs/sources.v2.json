@@ -1,0 +1,11 @@
+{
+  "schema_version": "2.0.0",
+  "sources": [
+    {"domain": "fds", "role": "core", "report": "main", "tasks": ["L1-1", "L1-2", "L1-3", "L2-1", "L2-2", "L2-3", "L3-1", "L3-2", "L3-3"], "tracks": ["S", "I", "V"]},
+    {"domain": "immersed_tunnel", "role": "external_cfd", "report": "external_cfd", "tasks": ["L1-1", "L2-1", "L3-1", "L3-2", "L3-3"], "tracks": ["S"]},
+    {"domain": "polyu", "role": "experiment_bridge", "report": "experiment", "tasks": ["L2-3", "L3-1", "L3-3"], "tracks": ["S"]},
+    {"domain": "dfire", "role": "real_image_ood", "report": "real_image_ood", "tasks": ["L1-1"], "tracks": ["I"]},
+    {"domain": "fire360", "role": "real_video_ood", "report": "real_video_ood", "tasks": ["L1-3"], "tracks": ["V"]},
+    {"domain": "detectium", "role": "optional_visual_ood", "report": "external_ood", "tasks": [], "tracks": ["I", "V"], "eligibility": "TBD_ACCESS_LICENSE_LABELS"}
+  ]
+}

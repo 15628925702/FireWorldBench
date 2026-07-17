@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fireworldbench"
-version = "0.1.0"
-description = "A benchmark for fire-physics world understanding in LLMs and multimodal agents"
+version = "2.0.0.dev0"
+description = "A simulation-grounded benchmark for multimodal fire world understanding"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = []
@@ -44,7 +44,7 @@ select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
 [tool.mypy]
 python_version = "3.11"
 strict = true
-packages = ["fireworldbench"]
+packages = ["fireworld", "fireworldbench"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]

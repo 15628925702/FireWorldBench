@@ -1,0 +1,1 @@
+"""Fire Event schema namespace."""

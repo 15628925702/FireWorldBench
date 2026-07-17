@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireworldbench.invalid/v2/qa.schema.json",
+  "title": "FireWorldBench v2 QA",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "qa_id", "case_id", "event_id", "event_group", "source_domain",
+    "split", "layer", "task_id", "track", "observation", "question", "options",
+    "answer", "scoring", "confidence_target", "evidence_metadata", "provenance", "quality"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "qa_id": {"type": "string", "pattern": "^FWQ-[A-F0-9]{12}$"},
+    "case_id": {"type": "string", "pattern": "^FWC-[A-F0-9]{12}$"},
+    "event_id": {"type": "string", "pattern": "^FWE-[A-F0-9]{12}$"},
+    "event_group": {"type": "string", "pattern": "^FWG-[A-F0-9]{12}$"},
+    "source_domain": {"enum": ["fds", "immersed_tunnel", "polyu", "dfire", "fire360", "detectium"]},
+    "split": {"enum": ["train", "dev", "test_iid", "test_ood_geometry", "test_ood_condition", "test_ood_view_sensor", "external_cfd", "experiment", "real_image_ood", "real_video_ood"]},
+    "layer": {"enum": ["L1", "L2", "L3"]},
+    "task_id": {"enum": ["L1-1", "L1-2", "L1-3", "L2-1", "L2-2", "L2-3", "L3-1", "L3-2", "L3-3"]},
+    "track": {"enum": ["S", "I", "V"]},
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["structured", "images", "video", "context", "time_window_s"],
+      "properties": {
+        "structured": {"type": ["object", "null"]},
+        "images": {"type": ["array", "null"], "items": {"type": "string"}, "minItems": 1, "maxItems": 4},
+        "video": {"type": ["string", "null"]},
+        "context": {"type": ["string", "null"]},
+        "time_window_s": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+      }
+    },
+    "question": {"type": "string", "minLength": 1},
+    "options": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "content_ref", "text"],
+            "properties": {
+              "id": {"enum": ["A", "B", "C", "D"]},
+              "content_ref": {"type": ["string", "null"]},
+              "text": {"type": ["string", "null"]}
+            }
+          }
+        }
+      ]
+    },
+    "answer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["choice", "fields"],
+      "properties": {
+        "choice": {"type": ["string", "null"]},
+        "fields": {"type": "object"}
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "components", "secondary"],
+      "properties": {
+        "primary": {"enum": ["accuracy", "component_accuracy", "mean_accuracy"]},
+        "components": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "secondary": {"type": "array", "items": {"enum": ["macro_f1", "joint_exact_match", "iou", "event_time_mae", "ece", "brier_score", "evidence_accuracy", "counterfactual_consistency", "violation_type_accuracy"]}, "uniqueItems": true}
+      }
+    },
+    "confidence_target": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "evidence_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "gold_refs"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "gold_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_manifest_sha256", "builder_version", "task_config_sha256", "source_license_ref"],
+      "properties": {
+        "event_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "builder_version": {"type": "string", "minLength": 1},
+        "task_config_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "source_license_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "ambiguity_reason", "shortcut_checks"],
+      "properties": {
+        "status": {"enum": ["eligible", "ambiguous", "excluded"]},
+        "ambiguity_reason": {"type": ["string", "null"]},
+        "shortcut_checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["opaque_paths", "time_matched", "option_style_matched", "appearance_matched"],
+          "properties": {
+            "opaque_paths": {"type": "boolean"},
+            "time_matched": {"type": "boolean"},
+            "option_style_matched": {"type": ["boolean", "null"]},
+            "appearance_matched": {"type": ["boolean", "null"]}
+          }
+        }
+      }
+    }
+  }
+}

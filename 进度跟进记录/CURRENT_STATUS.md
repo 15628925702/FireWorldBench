@@ -1,40 +1,46 @@
 ---
-handoff_id: H-20260716-S072-001
+handoff_id: H-20260717-V2-ALIGN-001
 handoff_state: READY
-task_status: BLOCKED
-source_session: 2026-07-16_S072_P5-MAIN-001文献与来源证据补强.md
-current_task: P5-MAIN-001
+task_status: IN_PROGRESS
+source_session: 2026-07-17_V2方案对齐与第一阶段重构.md
+current_task: V2-A2-PILOT-PREP
 ---
 
 # Current Status
 
-## 2026-07-16 literature and source-evidence supplement complete
+## 2026-07-17 v2 architecture reset
 
-- Added 28 verified open-access papers/official documents outside Git under
-  `../../1.参考文献/FireWorldBench_补充文献_2026-07-16/`; complete collection is
-  44 PDFs / 394,630,350 bytes / 44 unique SHA-256 values.
-- Added tracked `literature_manifest_S072.json` and
-  `references_fireworldbench.bib`.
-- Verified official repository heads and source/license evidence for D01-D05,
-  plus official D10 HPWREN attribution terms.
-- Formal input detailed blockers decreased from 43 to 39 after authoritative
-  license/use evidence improved for D04/D05/D10. Pending exact local snapshot
-  bindings remain blocked; no raw source was promoted and formal input count
-  remains 0.
-- Formal status remains `BLOCKED_FORMAL_PREFLIGHT` with 26 blockers.
-- No API keys are present in this window; no paid call or formal run was made.
+`G:/0-newResearch/2/2.方案研究/FireWorldBenchv2(1).pdf` is now the only core design source. The old T1/T2/T3 ontology, old schemas/configs, `src/fireworldbench/`, P0-P7 freeze chain, formal/quasi experiments, and old results are `LEGACY-NONCOMPARABLE`.
 
-## 2026-07-16 quasi-experiment bundle complete
+Completed in this session:
 
-- The project now has a reusable small quasi-experiment train/dev bundle.
-- Bundle contents:
-  - balanced 18-sample train/dev pack
-  - passed guarded probe for `deepseek-chat`
-  - passed guarded probe for `deepseek-v4-pro` with `thinking.type=disabled`
-  - quasi-calibration readiness artifact
-- Governance artifact: `项目治理/p5_quasi_experiment_bundle_S071.json`
+- Read all 18 PDF pages by text extraction and visually checked key pages covering the task table, source matrix, FDS scale, and CLI.
+- Replaced root charter/README/roadmap/agent instructions.
+- Added architecture freeze, conflict audit, nine-task protocol, source role matrix, and 20-event pilot plan.
+- Added strict Fire Event and QA schemas, v2 task/source/split/evaluation/pilot configs, fixtures, semantic validation, deterministic scoring, and 8 required `python -m fireworld.*` interfaces.
+- Rewrote active detailed-design and governance entry points; historical files remain preserved.
+- Full legacy + v2 test suite: `153 passed in 88.74s`.
+- v2 focused validation: `11 passed`; Ruff passed; strict mypy passed; schema CLI passed.
 
-## 2026-07-16 formal readiness snapshot
+Current state is architecture/pilot preparation, not a completed data pilot. No FDS event, model inference, API call, data download, or formal result was produced.
 
-- Formal status still remains `BLOCKED_FORMAL_PREFLIGHT`
-- The quasi-experiment path is stronger, but the formal blockers are still the main remaining wall.
+Immediate implementation available:
+
+- Fire Event/QA validation and semantic source/task/track checks.
+- event_group cross-split leakage check.
+- primary task/component scoring with external-domain separation.
+- CLI contract and fail-closed FDS/model gates.
+
+Blocked pending evidence or confirmation:
+
+- exact FDS/Smokeview/FD-Gen versions and executable paths;
+- pilot mesh, boundary conditions, exact 20-event matrix and measured cost;
+- expert-approved stage/risk/dead-band/tie/same thresholds;
+- external source access/license/label scope, especially Fire360 and Detectium;
+- non-author annotators/domain reviewer and later model/API budget.
+
+User-owned untracked files preserved untouched:
+
+- `详细设计规划/07_FireWorldBench_Benchmark_Design_v2_转写批注.md`
+- `详细设计规划/07_original_transcription.md`
+- `详细设计规划/08_FireWorldBench_ICLR2027_核心方案_v3.md`

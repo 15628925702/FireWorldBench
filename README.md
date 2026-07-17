@@ -1,65 +1,69 @@
-# FireWorldBench v1
+# FireWorldBench
 
-FireWorldBench 是面向 LLM / multimodal agent 的火灾物理世界理解 benchmark。它不把问题简化为“图中是否有火”或“传感器是否越阈值”，而是评估模型能否依据多模态证据恢复受火灾动力学约束的状态、机制、因果链和干预后果。
-
-v1 以 T1 预警、T2 状态/机制、T3 演化/反事实作为统一能力轴，把仿真、受控实验、传感器时序和视觉数据作为不同证据来源映射到同一协议。它不是“一数据集一个小问答任务”的集合，也不在 v1 扩展到火灾以外的物理领域。
+FireWorldBench 是一个 simulation-grounded 火灾物理世界理解 benchmark，评估多模态基础模型能否从有限观测中依次完成动态感知、当前状态恢复和未来演化推理。
 
 ## 当前状态
 
-- 阶段：P0 文档/治理初始化完成，等待建立首个本地源码 commit 基线；尚未进入 P1。
-- 当前可执行任务：见 `进度跟进记录/CURRENT_STATUS.md`。
-- 当前不做：`4.升级拓展` 中的进阶方向、完整模型训练、论文结果宣称。
-- 研究概念基线：`开发要求约束/FireWorldBench_Benchmark_Design_v2.pdf`。
+项目正在按 `FireWorldBenchv2(1).pdf` 重构。该 PDF 是唯一核心设计来源。2026-07-17 之前的 T1/T2/T3 任务、旧 Schema、旧 P0-P7 冻结链、正式/准实验产物和 `src/fireworldbench/` 实现均为 `LEGACY-NONCOMPARABLE`，不能作为当前 benchmark 或论文结果。
 
-## 文档地图
+当前门禁是架构冻结与 20-event pilot 准备；尚未授权生成 180 个事件、进行正式训练或主实验。
 
-| 入口 | 职责 |
-|---|---|
-| `AGENTS.md` | 新对话/新开发者的强制入口 |
-| `PROJECT_CHARTER.md` | 目标、非目标、成功标准与责任边界 |
-| `ROADMAP.md` | 阶段、依赖与出口门禁 |
-| `详细设计规划/` | 数据、任务、系统、实验和论文的可执行设计 |
-| `开发要求约束/` | MUST/SHOULD 规则、完成定义与变更控制 |
-| `进度跟进记录/` | 当前状态、会话证据、交接模板和下一轮提示词 |
-| `项目治理/` | 决策、风险、开放问题、数据资产和论文证据台账 |
-| `configs/` | 可版本化的项目、数据、划分和评测配置 |
-| `schemas/` | benchmark 样本和预测的机器可检验契约 |
-| `src/`、`tests/`、`scripts/` | 最小实现骨架、测试和项目检查工具 |
-
-长期多窗口推进从 `进度跟进记录/多窗口开发执行手册.md` 开始；全部 43 个剩余任务在 `进度跟进记录/任务指令库_从P0到论文数据导出.md`。
-
-## 数据边界
-
-- 原始/抽样数据：仓库外只读目录 `../../3.数据集`。
-- 仓库内 `data/`：只保存说明、清单、哈希和可再生成的小型派生物，不保存受限原始数据。
-- 运行产物：`artifacts/`，默认不进 Git；需要发布的冻结结果以清单和哈希登记。
-- 当前资产能否进入实验，以 `项目治理/数据资产登记.md` 的 `eligible` 状态为准。
-
-## 最小开发流程
+## 固定能力体系
 
 ```text
-需求/假设 -> 数据许可与完整性门禁 -> 样本契约 -> group split
-         -> benchmark 构建与校验 -> baseline -> 冻结评测
-         -> 统计分析/误差分析 -> 论文证据矩阵 -> 发布审计
+L1 Dynamic Perception
+  L1-1 Early Signal Attribution
+  L1-2 Next-State Selection
+  L1-3 Temporal Coherence Verification
+        |
+L2 State Recovery
+  L2-1 Source and Stage Recovery
+  L2-2 Current Risk Region Recovery
+  L2-3 Dominant Mechanism Recognition
+        |
+L3 Evolution Reasoning
+  L3-1 Future Trend Prediction
+  L3-2 Future Risk Region Prediction
+  L3-3 Counterfactual Comparison
 ```
 
-首次创建项目环境：
+输入轨道为 `S` Structured、`I` Image、`V` Video。来源先标准化为 Fire Event，再构建任务 QA；不同来源不直接随机混合。
+
+## 文档入口
+
+| 文件 | 用途 |
+|---|---|
+| `PROJECT_CHARTER.md` | 当前研究边界和成功标准 |
+| `ROADMAP.md` | pilot-first 实施门禁 |
+| `docs/ARCHITECTURE_FREEZE.md` | 不可变架构、Schema、split、指标和 QC |
+| `docs/TASK_PROTOCOL.md` | 九任务逐项协议 |
+| `docs/SOURCE_ROLE_MATRIX.md` | 数据源准入与报告角色 |
+| `docs/CONFLICT_AUDIT_2026-07-17.md` | 旧项目冲突、保留与迁移清单 |
+| `schemas/fire_event.schema.json` | Fire Event 机器契约 |
+| `schemas/qa.schema.json` | QA 机器契约 |
+
+## 新工程入口
 
 ```powershell
-conda create -n fireworldbench-v1 --offline --no-default-packages -y
+python -m fireworld.ingest --help
+python -m fireworld.generate_fds --help
+python -m fireworld.build_events --help
+python -m fireworld.build_tasks --help
+python -m fireworld.make_splits --help
+python -m fireworld.validate_dataset --help
+python -m fireworld.run_model --help
+python -m fireworld.score --help
 ```
 
-当前按项目初始化要求只创建空 Conda 环境，不安装任何包。`environment.yml` 记录空环境名称；待进入实现阶段后，再依据 `pyproject.toml` 经明确确认安装 Python 和开发依赖。
+新主线代码位于 `src/fireworld/`。旧 `fwb` CLI 保留用于历史产物审计，不代表新架构兼容。
 
-本地检查统一在该环境中执行：
+## 数据目录
 
-```powershell
-conda run -n fireworldbench-v1 python scripts/check_project.py
-conda run -n fireworldbench-v1 python -m pytest
-conda run -n fireworldbench-v1 python -m ruff check .
-conda run -n fireworldbench-v1 python -m mypy src
+```text
+data/raw/      # 原始来源，只读
+data/events/   # 统一 Fire Events
+data/qa/       # 九任务 QA
+data/splits/   # event_group-first split 清单
 ```
 
-## 事实源优先级
-
-用户最新明确指令 > 已批准的决策记录 > 开发约束 > 详细设计 > 核心 PDF > 会话记录。发现冲突不得自行折中，必须登记并请求决策。
+论文和数据报告必须同时列出独立 Fire Event、QA、各任务、各轨道、各来源和各 split 数量。
