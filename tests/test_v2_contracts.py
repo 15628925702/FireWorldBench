@@ -104,6 +104,19 @@ def test_component_accuracy_and_incomplete_overall() -> None:
     assert report["layer_scores"] == {"L2": 50.0}
     assert report["overall"] is None
 
+def test_coverage_matrix_keeps_external_sources_out_of_formal_support() -> None:
+    from fireworld.coverage import coverage_matrix
+
+    rows = coverage_matrix()
+    assert len(rows) == 270
+    assert sum(row["eligibility"] == "supported" for row in rows) == 27
+    assert {
+        row["eligibility"]
+        for row in rows
+        if row["source_domain"] == "furg_fire_substitute"
+    } == {"candidate_substitute", "unsupported"}
+    assert all(row["eligibility"] != "supported" for row in rows if row["source_domain"] != "fds")
+
 def test_score_report_has_required_breakdowns() -> None:
     qa = load("minimal_qa.json")
     prediction = {"qa_id": qa["qa_id"], "fields": {"source_region": "R1", "stage": "growth"}}
