@@ -60,7 +60,10 @@ def validate_sample(sample: dict[str, Any]) -> list[str]:
 
 
 def validate_prediction(prediction: dict[str, Any], sample: dict[str, Any] | None = None) -> list[str]:
-    errors = _errors(_load_validator("prediction.v2.schema.json"), prediction)
+    # This validator serves the benchmark-sample contract.  The independent
+    # Fire Event nine-task scorer validates its FWQ payloads against
+    # prediction.v2.schema.json in fireworld.score.
+    errors = _errors(_load_validator("prediction.schema.json"), prediction)
     forbidden = {"gold", "gold_ref", "physical_trace", "scoring_metadata", "provenance"}
     leaked = forbidden.intersection(prediction)
     if leaked:

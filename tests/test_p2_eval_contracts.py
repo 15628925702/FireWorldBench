@@ -1,6 +1,13 @@
 from __future__ import annotations
 
-from fireworldbench.evaluation import bootstrap_mean_ci, evidence_f1, macro_f1, pair_ranking_accuracy, score_status, trace_score
+from fireworldbench.evaluation import (
+    bootstrap_mean_ci,
+    evidence_f1,
+    macro_f1,
+    pair_ranking_accuracy,
+    score_status,
+    trace_score,
+)
 
 
 def test_classification_and_evidence_scores() -> None:

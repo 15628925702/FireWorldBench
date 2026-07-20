@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from fireworldbench.quasi_experiment import build_quasi_experiment_pack, assess_quasi_calibration
+from fireworldbench.quasi_experiment import assess_quasi_calibration, build_quasi_experiment_pack
 
 
 def _sample(task: str, split: str, suffix: str) -> dict:

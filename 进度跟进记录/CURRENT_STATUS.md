@@ -6,6 +6,47 @@ source_session: 2026-07-17_V2方案对齐与第一阶段重构.md
 current_task: V2-A2-PILOT-PREP
 ---
 
+## 2026-07-20 v2 finalization handoff
+
+The active status is `FDS_CORE_FORMAL_EXTERNAL_OOD_PARTIAL_CANDIDATE`.
+`docs/DATASET_STATUS_2026-07-20.md` is the factual external-data authority and
+`docs/V2_FINALIZATION_HANDOFF_PROMPT.md` is the task handoff for remaining
+non-data benchmark finalization.
+
+- FDS Core v3.3.1 is unchanged and formally accepted: 180/180 strict Events,
+  4,039 QA, isolated main leaderboard release.
+- External formal Events/QA remain zero. Immersed has 192 candidates; FURG has
+  23 candidate video groups; PolyU is audited raw/candidate evidence.
+- FURG no-box XML frames are unknown/unscored, not no-fire.
+- Detectium and the wrong Fire360 mirror are quarantined. DeepQuest is a
+  downloading image substitute; never call it D-Fire.
+- External confirmations/licensing are `deferred_external_confirmation`, not
+  fabricated acceptance. All external packages remain separate from Overall.
+
+## 2026-07-20 external OOD production baseline
+
+The authoritative v2 PDF hash was reverified on the server. FDS Core v3.3.1
+is unchanged and formally accepted: `180/180` strict-qualified Events and
+`4,039` QA in `/root/autodl-tmp/FireWorldBench/2/release/fireworldbench_fds_core_v3_3_1`.
+
+External OOD work is separate from the FDS release. Current factual state:
+
+- Immersed Tunnel: 192 parseable structured CSV candidates; no formal QA.
+- PolyUFire: seven XLSX workbooks and row-level audit; no formal Events/QA.
+- FURG: 23 MP4 + 23 XML, group-first `real_video_ood` split; 14,413 annotated
+  flame-frame records and 13,636 unboxed records, which are unknown/unscored.
+- Kaggle video supplement: three MP4 + markup JSON, not 85 videos.
+- DeepQuest real-image substitute: official 306 MB release found; resumable raw
+  download in progress, not yet validated.
+- Detectium: 96 GB archive integrity passed but content identity is wrong or
+  unverified; quarantined. Fire360, complete D-Fire, MmodalFire, complete
+  FIgLib/SmokeyNet and Fire-D remain gaps.
+
+`docs/DATASET_STATUS_2026-07-20.md` and
+`docs/EXTERNAL_OOD_PRODUCTION_PLAN.md` are the active external-data handoff.
+No raw or substitute source may be renamed as a target dataset or enter FDS
+Overall. Use only `src/fireworld/` for subsequent v2 implementation.
+
 # Current Status
 
 ## 2026-07-17 v2 architecture reset
@@ -40,6 +81,22 @@ Blocked pending evidence or confirmation:
 - non-author annotators/domain reviewer and later model/API budget.
 
 ## Server migration readiness
+
+## 2026-07-17 server pilot-prep continuation
+
+- Verified transfer manifest: `3350 files / 5525112267 bytes`; core PDF SHA-256 matches.
+- Rebuilt isolated `fireworldbench-v1` Conda environment with Python 3.11.15.
+- Server gates: `159 passed`; Ruff and strict mypy pass for the pilot additions.
+- Added dry-run-only 20-event manifest generator and stored an 8,383-byte manifest under the data disk `events/manifests/`; no FDS simulation started.
+- Added fail-closed L1-2, L2-1 and L3-3 pilot builders with provenance and schema/semantic tests.
+- Installed `/usr/bin/ffmpeg` 4.4.2-0ubuntu0.22.04.1; FDS and Smokeview remain uninstalled. Official candidate is FDS-6.11.1 with SMV-6.11.2, pending verified installer transfer and license record.
+- Server quota is 1 vCPU / 2 GiB RAM / no GPU despite larger host visibility; pilot runtime and storage remain measured-cost blockers.
+
+Remaining blockers: exact FDS/Smokeview/FD-Gen binaries and hashes; mesh/boundary freeze; expert stage/risk/dead-band/tie/same thresholds; domain review of difficult negatives; API provider and budget approval.
+
+2026-07-18 continuation: calibration-only geometry catalog, mesh, boundary, output variables, and resource budget were added to `configs/fds_prototype.v2.json`. Mesh and boundary are explicitly frozen only for calibration; full-pilot values remain pending measured calibration. Official FDS installer download is running as a resumable data-disk background job; no executable has been installed or used yet. External sources remain license/access audit items and are not downloaded into the release set.
+
+External-source license screening completed: D-Fire is conditionally usable for internal Real-Image OOD under its repository CC0 collection statement, but underlying-image rights still require review before redistribution. Immersed Tunnel, PolyUFire, Fire360, and DetectiumFire remain held because explicit dataset access/redistribution terms were not verifiable.
 
 - Transfer the entire workspace root, not only this Git repository. Current transferable content is approximately 5.25 GB before compression and cache exclusions.
 - Core PDF SHA-256 is `ba63ab8428d1f759629a89864af7f623589d023dd6d5a29e4940fc6d629a19a6`.

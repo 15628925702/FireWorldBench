@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from fireworldbench.scorer import score_samples
 
-
 LABELS = {
     "T1-A": "fire_forming", "T1-B": "fire", "T1-C": "stop_and_decide",
     "T2-A": "growth", "T2-B": "backlayering", "T2-C": "consistent",

@@ -1,0 +1,49 @@
+{
+  "schema_version": "2.0.0",
+  "status": "BUDGET_TARGET_PENDING_PILOT",
+  "root": "/root/autodl-tmp/FireWorldBench/2",
+  "principle": "raw_and_full_trajectories_are_archival; users_download_derived_track_packages",
+  "packages": {
+    "FWB-Core-Metadata": {
+      "contents": ["manifests", "schemas", "validator", "scorer", "baselines", "reports"],
+      "target_size_gb": [0.01, 0.1],
+      "default": false
+    },
+    "FWB-Core-Lite": {
+      "contents": ["metadata", "representative_S", "representative_I", "representative_V", "pilot_or_small_task_subset"],
+      "target_size_gb": [1, 3],
+      "default": true
+    },
+    "FWB-Core-S": {
+      "contents": ["all_formal_S_inputs", "qa", "splits", "metadata"],
+      "target_size_gb": [0.5, 2],
+      "default": false
+    },
+    "FWB-Core-I": {
+      "contents": ["all_formal_I_inputs", "qa", "splits", "metadata"],
+      "target_size_gb": [2, 8],
+      "default": false
+    },
+    "FWB-Core-V": {
+      "contents": ["eligible_formal_V_inputs", "qa", "splits", "metadata"],
+      "target_size_gb": [8, 25],
+      "default": false
+    },
+    "FWB-Core-All-Tracks": {
+      "contents": ["FWB-Core-S", "FWB-Core-I", "FWB-Core-V", "metadata"],
+      "target_size_gb": [15, 35],
+      "default": false
+    },
+    "FWB-FDS-Archive": {
+      "contents": ["raw_fds_outputs", "smokeview_intermediates", "failed_runs", "logs"],
+      "target_size_gb": null,
+      "default": false,
+      "access": "maintainer_or_controlled_access"
+    }
+  },
+  "size_estimation": {
+    "method": "pilot_p90_per_event_plus_25_percent_headroom",
+    "public_package_sizes_are_targets_not_measurements": true,
+    "must_report": ["bytes_by_track", "bytes_by_split", "bytes_by_task", "compression", "sha256_manifest"]
+  }
+}

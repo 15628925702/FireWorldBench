@@ -3,7 +3,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from fireworldbench.error_analysis import TAXONOMY, assess_error_analysis, build_error_plan, write_error_decision
+from fireworldbench.error_analysis import (
+    TAXONOMY,
+    assess_error_analysis,
+    build_error_plan,
+    write_error_decision,
+)
 
 
 def test_error_analysis_is_blocked_without_raw_and_keeps_negative_result_policy() -> None:

@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-from fireworldbench import schema_validation  # noqa: F401
 from scripts.opaque_id_p2_leak_001 import make_opaque_id, scan_public_payload
+
+from fireworldbench import schema_validation  # noqa: F401
 
 
 def test_opaque_id_is_stable_without_exposing_private_key() -> None:

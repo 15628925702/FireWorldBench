@@ -4,13 +4,13 @@ import json
 from pathlib import Path
 from typing import Any
 
+from fireworldbench import formal_readiness
 from fireworldbench.formal_readiness import (
     READY_STATUS,
     REQUIRED_TASKS,
     assess_formal_readiness,
     build_formal_input_audit,
 )
-from fireworldbench import formal_readiness
 
 
 def _write(path: Path, value: Any) -> Path:

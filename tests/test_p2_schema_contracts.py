@@ -5,7 +5,6 @@ from pathlib import Path
 
 from fireworldbench.schema_validation import validate_prediction, validate_sample
 
-
 FIXTURES = Path(__file__).parent / "fixtures" / "p2_schema"
 
 

@@ -10,7 +10,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 authors = []
 dependencies = [
+  "fdsreader==1.11.7",
   "jsonschema>=4.22",
+  "numpy>=2.4,<3",
+  "pillow>=12,<13",
   "xlrd>=2.0",
 ]
 
@@ -40,6 +43,7 @@ src = ["src", "tests", "scripts"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E501"]
 
 [tool.mypy]
 python_version = "3.11"
@@ -48,7 +52,7 @@ packages = ["fireworld", "fireworldbench"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["jsonschema", "jsonschema.*"]
+module = ["fdsreader", "fdsreader.*", "jsonschema", "jsonschema.*", "PIL", "PIL.*"]
 ignore_missing_imports = true
 
 [tool.coverage.run]

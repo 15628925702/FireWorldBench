@@ -3,7 +3,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from fireworldbench.robustness import assess_robustness, build_robustness_manifest, write_robustness_decision
+from fireworldbench.robustness import (
+    assess_robustness,
+    build_robustness_manifest,
+    write_robustness_decision,
+)
 
 
 def test_robustness_is_blocked_without_main_run_and_preserves_labels() -> None:

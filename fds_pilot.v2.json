@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "status": "PILOT_EXECUTION_READY",
+  "independent_event_target": 20,
+  "simulation_duration_s": 90,
+  "device_output_interval_s": 1,
+  "region_slice_interval_s": 2,
+  "event_classes": {"fire": 14, "no_fire_normal": 2, "ventilation_disturbance": 2, "non_fire_disturbance": 2},
+  "versions": {
+    "fds": "FDS-6.11.1-0-gff928db-release",
+    "smokeview": "SMV-6.11.2-0-g27cbe5960-release",
+    "fdgen": "pilot-generator-0.1.0"
+  },
+  "mesh": {"cell_size_m": [0.5, 0.5, 0.5], "calibration_reference": "fwb_calibration_01", "status": "PILOT_ONLY"},
+  "boundary_conditions": {"walls": "adiabatic_no_slip", "openings": "pressure_open", "ambient_temperature_c": 20, "ambient_pressure_pa": 101325},
+  "outputs": {"structured_variables": ["temperature", "visibility", "co"], "device_interval_s": 1, "slice_interval_s": 2},
+  "expert_thresholds": {
+    "stage_boundary_buffer": "TBD_EXPERT",
+    "risk_thresholds": "TBD_EXPERT",
+    "trend_dead_band": "TBD_EXPERT",
+    "event_time_tie_tolerance": "TBD_EXPERT",
+    "counterfactual_same_tolerance": "TBD_EXPERT"
+  },
+  "resource_reference": {"calibration_wall_s": 198.4, "calibration_peak_rss_kb": 78416, "calibration_bytes": 2209033}
+}

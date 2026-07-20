@@ -3,7 +3,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from fireworldbench.preregister import NO_ACCESS_CONFIRMED, build_preregistration, validate_preregistration, write_preregistration
+from fireworldbench.preregister import (
+    NO_ACCESS_CONFIRMED,
+    build_preregistration,
+    validate_preregistration,
+    write_preregistration,
+)
 
 
 def test_preregistration_is_deterministic_and_test_sealed() -> None:

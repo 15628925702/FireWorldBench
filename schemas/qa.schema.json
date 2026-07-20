@@ -98,7 +98,7 @@
       "additionalProperties": false,
       "required": ["status", "ambiguity_reason", "shortcut_checks"],
       "properties": {
-        "status": {"enum": ["eligible", "ambiguous", "excluded"]},
+        "status": {"enum": ["eligible", "eligible_expert_review_deferred", "ambiguous", "excluded"]},
         "ambiguity_reason": {"type": ["string", "null"]},
         "shortcut_checks": {
           "type": "object",

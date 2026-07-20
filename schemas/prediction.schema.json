@@ -6,7 +6,9 @@
   "additionalProperties": false,
   "required": ["sample_id", "answer", "evidence", "uncertainty", "missing_information"],
   "properties": {
+    "schema_version": {"const": "2.0"},
     "sample_id": {"type": "string", "pattern": "^FWB-[A-Za-z0-9._-]+$"},
+    "task": {"enum": ["T1-A", "T1-B", "T1-C", "T2-A", "T2-B", "T2-C", "T3-A", "T3-B", "T3-C"]},
     "answer": {"type": "object", "minProperties": 1, "additionalProperties": true},
     "risk_level": {"type": ["string", "null"]},
     "dominant_mechanism": {"type": ["string", "null"]},
@@ -24,4 +26,3 @@
     "missing_information": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
   }
 }
-

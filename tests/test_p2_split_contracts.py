@@ -5,7 +5,6 @@ from pathlib import Path
 
 from fireworldbench import schema_validation  # noqa: F401
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 

@@ -149,10 +149,15 @@ def validate_qa_semantics(qa: dict[str, Any]) -> list[str]:
             errors.append("option IDs must be unique")
         if qa.get("answer", {}).get("choice") not in {"A", "B", "C", "D"}:
             errors.append("L1-2 requires answer.choice A/B/C/D")
-    if qa.get("quality", {}).get("status") == "eligible" and qa.get("quality", {}).get(
-        "ambiguity_reason"
-    ):
+    quality_status = qa.get("quality", {}).get("status")
+    ambiguity_reason = qa.get("quality", {}).get("ambiguity_reason")
+    if quality_status == "eligible" and ambiguity_reason:
         errors.append("eligible QA must not have an ambiguity_reason")
+    if quality_status == "eligible_expert_review_deferred":
+        if task_id != "L2-3":
+            errors.append("only L2-3 may defer independent expert review")
+        if ambiguity_reason != "independent_fire_engineering_review_deferred_by_user":
+            errors.append("expert-review-deferred QA requires the frozen deferred-review reason")
     return errors
 
 

@@ -2,7 +2,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from fireworldbench.pilot_freeze import NO_ACCESS_CONFIRMED, build_pilot_plan, validate_pilot_plan, write_pilot_plan
+from fireworldbench.pilot_freeze import (
+    NO_ACCESS_CONFIRMED,
+    build_pilot_plan,
+    validate_pilot_plan,
+    write_pilot_plan,
+)
 
 
 def test_pilot_plan_is_deterministic_and_test_sealed() -> None:

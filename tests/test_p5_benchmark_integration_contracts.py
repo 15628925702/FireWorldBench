@@ -3,7 +3,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from fireworldbench.benchmark_integration import REQUIRED_CHAIN, assess_integration, write_integration_decision
+from fireworldbench.benchmark_integration import (
+    REQUIRED_CHAIN,
+    assess_integration,
+    write_integration_decision,
+)
 
 
 def test_blocked_fdgen_produces_no_input_decision() -> None:

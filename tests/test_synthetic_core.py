@@ -1,5 +1,8 @@
-import json, subprocess, sys
+import json
+import subprocess
+import sys
 from pathlib import Path
+
 ROOT=Path(__file__).parents[1]
 def test_fixture_generation_and_pair_audit(tmp_path):
     cfg=ROOT/"configs/synthetic_core_v1.json"

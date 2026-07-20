@@ -2,6 +2,28 @@
 
 本路线图替代旧 P0-P7 执行链。旧阶段记录仅保留为历史证据，不构成当前冻结或完成状态。
 
+## 2026-07-20 execution update
+
+The A5 FDS core target has been completed as a separately accepted v3.3.1
+package: 180 strict-qualified Events and 4,039 QA. A6 external-domain work is
+active but source-specific: Immersed, PolyU and FURG have audited raw/candidate
+evidence; FURG is a substitute video track, not Fire360. DeepQuest is an
+in-progress image substitute download. Detectium is quarantined and several
+planned sources remain honest gaps. See `docs/DATASET_STATUS_2026-07-20.md`.
+
+Finalization must build accepted external sources as isolated packages and
+reports. They do not alter FDS Core, enter the FDS Overall leaderboard, or
+inherit target-source names.
+
+## 2026-07-20 finalization boundary
+
+The current finalization objective is a v2-compliant implementation and release
+framework, not a false claim that every planned external source is complete.
+`docs/DATASET_STATUS_2026-07-20.md` fixes the accepted FDS Core, external
+candidate, substitute, quarantine, and gap states. Continue A6-A9 work only as
+source-separated packages. External source acceptance is fail-closed; deferred
+license/contact confirmation is recorded as deferred, never passed.
+
 | 阶段 | 目标 | 必要输出 | 出口门禁 |
 |---|---|---|---|
 | A0 方案对齐 | 以核心 PDF 重置项目事实源 | 不可变决策、冲突审计、迁移边界 | 高层入口不再引用旧方案为权威 |
