@@ -15,7 +15,7 @@
     "case_id": {"type": "string", "pattern": "^FWC-[A-F0-9]{12}$"},
     "event_id": {"type": "string", "pattern": "^FWE-[A-F0-9]{12}$"},
     "event_group": {"type": "string", "pattern": "^FWG-[A-F0-9]{12}$"},
-    "source_domain": {"enum": ["fds", "immersed_tunnel", "polyu", "dfire", "fire360", "detectium"]},
+    "source_domain": {"enum": ["fds", "immersed_tunnel", "polyu", "furg_fire_substitute", "kaggle_video_supplement", "deepquest_fire_smoke", "dfire", "fire360", "detectium", "fire360_mirror"]},
     "split": {"enum": ["train", "dev", "test_iid", "test_ood_geometry", "test_ood_condition", "test_ood_view_sensor", "external_cfd", "experiment", "real_image_ood", "real_video_ood"]},
     "layer": {"enum": ["L1", "L2", "L3"]},
     "task_id": {"enum": ["L1-1", "L1-2", "L1-3", "L2-1", "L2-2", "L2-3", "L3-1", "L3-2", "L3-3"]},

@@ -14,7 +14,7 @@
     "event_id": {"type": "string", "pattern": "^FWE-[A-F0-9]{12}$"},
     "event_group": {"type": "string", "pattern": "^FWG-[A-F0-9]{12}$"},
     "source_domain": {
-      "enum": ["fds", "immersed_tunnel", "polyu", "dfire", "fire360", "detectium"]
+      "enum": ["fds", "immersed_tunnel", "polyu", "furg_fire_substitute", "kaggle_video_supplement", "deepquest_fire_smoke", "dfire", "fire360", "detectium", "fire360_mirror"]
     },
     "status": {"enum": ["candidate", "eligible", "ambiguous", "excluded", "failed"]},
     "geometry": {

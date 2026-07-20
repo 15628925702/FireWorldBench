@@ -12,6 +12,17 @@ class TaskContract:
     answer_fields: tuple[str, ...]
 
 
+@dataclass(frozen=True)
+class SourceContract:
+    """A source's factual state, not an aspirational coverage claim."""
+
+    report: str
+    state: str
+    tasks: frozenset[str]
+    tracks: frozenset[str]
+    formal_qa_allowed: bool
+
+
 TASKS: dict[str, TaskContract] = {
     "L1-1": TaskContract("L1", "accuracy", ("class",)),
     "L1-2": TaskContract("L1", "accuracy", ("choice",)),
@@ -28,23 +39,31 @@ TASKS: dict[str, TaskContract] = {
     "L3-3": TaskContract("L3", "accuracy", ("comparison",)),
 }
 
-SOURCE_TASKS: dict[str, frozenset[str]] = {
-    "fds": frozenset(TASKS),
-    "immersed_tunnel": frozenset({"L1-1", "L2-1", "L3-1", "L3-2", "L3-3"}),
-    "polyu": frozenset({"L2-3", "L3-1", "L3-3"}),
-    "dfire": frozenset({"L1-1"}),
-    "fire360": frozenset({"L1-3"}),
-    "detectium": frozenset(),
+SOURCES: dict[str, SourceContract] = {
+    "fds": SourceContract("main", "formal", frozenset(TASKS), frozenset({"S", "I", "V"}), True),
+    "immersed_tunnel": SourceContract("external_cfd", "candidate", frozenset({"L1-1", "L2-1", "L3-1", "L3-2", "L3-3"}), frozenset({"S"}), False),
+    "polyu": SourceContract("experiment", "candidate", frozenset({"L2-3", "L3-1", "L3-3"}), frozenset({"S"}), False),
+    "furg_fire_substitute": SourceContract("real_video_ood_substitute", "candidate_substitute", frozenset({"L1-3"}), frozenset({"I", "V"}), False),
+    "kaggle_video_supplement": SourceContract("real_video_ood_substitute", "candidate_substitute", frozenset(), frozenset({"I", "V"}), False),
+    "deepquest_fire_smoke": SourceContract("real_image_ood_substitute", "downloading_substitute", frozenset(), frozenset({"I"}), False),
+    "dfire": SourceContract("real_image_ood", "raw_sample_only", frozenset(), frozenset({"I"}), False),
+    "fire360": SourceContract("real_video_ood", "unavailable", frozenset(), frozenset({"V"}), False),
+    "detectium": SourceContract("external_ood", "quarantined", frozenset(), frozenset(), False),
+    "fire360_mirror": SourceContract("quarantine", "quarantined", frozenset(), frozenset(), False),
 }
 
-SOURCE_TRACKS: dict[str, frozenset[str]] = {
-    "fds": frozenset({"S", "I", "V"}),
-    "immersed_tunnel": frozenset({"S"}),
-    "polyu": frozenset({"S"}),
-    "dfire": frozenset({"I"}),
-    "fire360": frozenset({"V"}),
-    "detectium": frozenset({"I", "V"}),
-}
+SOURCE_TASKS = {source: contract.tasks for source, contract in SOURCES.items()}
+SOURCE_TRACKS = {source: contract.tracks for source, contract in SOURCES.items()}
+
+
+def source_eligibility(source: str, task_id: str, track: str) -> str:
+    """Return a stable eligibility disposition for a source/task/track triple."""
+    contract = SOURCES.get(source)
+    if contract is None:
+        return "unknown_source"
+    if task_id not in contract.tasks or track not in contract.tracks:
+        return "unsupported"
+    return "supported" if contract.formal_qa_allowed else contract.state
 
 MAIN_SPLITS = frozenset(
     {"train", "dev", "test_iid", "test_ood_geometry", "test_ood_condition", "test_ood_view_sensor"}

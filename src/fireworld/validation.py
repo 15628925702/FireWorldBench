@@ -10,7 +10,7 @@ from typing import Any
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from fireworld.contracts import SOURCE_TASKS, SOURCE_TRACKS, TASKS
+from fireworld.contracts import SOURCES, SOURCE_TASKS, SOURCE_TRACKS, TASKS, source_eligibility
 
 
 class DatasetValidationError(ValueError):
@@ -135,10 +135,20 @@ def validate_qa_semantics(qa: dict[str, Any]) -> list[str]:
         errors.append("source_domain must be a string")
         return errors
     source = source_value
+    source_contract = SOURCES.get(source)
+    if source_contract is None:
+        errors.append(f"unknown source_domain: {source}")
+        return errors
     if task_id not in SOURCE_TASKS.get(source, frozenset()):
         errors.append(f"source {source} is not eligible for task {task_id}")
     if track not in SOURCE_TRACKS.get(source, frozenset()):
         errors.append(f"source {source} is not eligible for track {track}")
+    disposition = source_eligibility(source, task_id, track)
+    if disposition not in {"supported", "unsupported"}:
+        errors.append(
+            f"source {source} is not formally accepted for QA "
+            f"(state={source_contract.state})"
+        )
 
     if task_id == "L1-2":
         options = qa.get("options") or []
