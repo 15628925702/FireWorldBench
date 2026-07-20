@@ -104,6 +104,18 @@ def test_component_accuracy_and_incomplete_overall() -> None:
     assert report["layer_scores"] == {"L2": 50.0}
     assert report["overall"] is None
 
+def test_release_verifier_checks_accepted_fds_core_when_available() -> None:
+    from fireworld.release_verify import verify_fds_core
+
+    release = Path("/root/autodl-tmp/FireWorldBench/2/release/fireworldbench_fds_core_v3_3_1")
+    if not release.is_dir():
+        return
+    result = verify_fds_core(release)
+    assert result["ok"]
+    assert result["events"] == 180
+    assert result["qa_total"] == 4039
+    assert result["files_checked"] > 8000
+
 def test_coverage_matrix_keeps_external_sources_out_of_formal_support() -> None:
     from fireworld.coverage import coverage_matrix
 
