@@ -105,6 +105,32 @@ def test_component_accuracy_and_incomplete_overall() -> None:
     assert report["overall"] is None
 
 
+def test_prediction_semantics_rejects_missing_fields_and_task_mismatch() -> None:
+    from fireworld.validation import validate_prediction_semantics
+
+    qa = load("minimal_qa.json")
+    prediction = {
+        "qa_id": qa["qa_id"],
+        "task_id": "L2-1",
+        "answer": {"choice": None, "fields": {"source_region": "R1"}},
+        "confidence": None,
+        "evidence": [],
+    }
+    assert validate_prediction_semantics(prediction, qa) == [
+        "L2-1 prediction missing answer fields: stage"
+    ]
+    prediction["task_id"] = "L2-2"
+    assert "prediction task_id does not match gold task_id" in validate_prediction_semantics(
+        prediction, qa
+    )
+
+
+def test_candidate_source_cannot_be_formal_qa() -> None:
+    qa = load("minimal_qa.json")
+    qa["source_domain"] = "immersed_tunnel"
+    errors = validate_qa_semantics(qa)
+    assert "source immersed_tunnel is not formally accepted for QA (state=candidate)" in errors
+
 def test_external_domain_is_never_averaged_into_main_scores() -> None:
     qa = load("minimal_qa.json")
     qa["source_domain"] = "immersed_tunnel"

@@ -171,6 +171,43 @@ def validate_qa_semantics(qa: dict[str, Any]) -> list[str]:
     return errors
 
 
+def validate_prediction_semantics(
+    prediction: dict[str, Any], gold: dict[str, Any] | None = None
+) -> list[str]:
+    """Validate task-specific prediction semantics and optional gold binding."""
+    task_id = prediction.get("task_id")
+    contract = TASKS.get(task_id) if isinstance(task_id, str) else None
+    if contract is None:
+        return [f"unknown task_id: {task_id!r}"]
+    errors: list[str] = []
+    if gold is not None:
+        if prediction.get("qa_id") != gold.get("qa_id"):
+            errors.append("prediction qa_id does not match bound gold QA")
+        if task_id != gold.get("task_id"):
+            errors.append("prediction task_id does not match gold task_id")
+    answer = prediction.get("answer", {})
+    if not isinstance(answer, dict):
+        return ["prediction answer must be an object"]
+    fields = answer.get("fields", {})
+    if not isinstance(fields, dict):
+        return ["prediction answer.fields must be an object"]
+    if task_id == "L1-2":
+        if answer.get("choice") not in {"A", "B", "C", "D"}:
+            errors.append("L1-2 predictions require answer.choice A/B/C/D")
+    else:
+        unexpected = sorted(set(fields) - set(contract.answer_fields))
+        if unexpected:
+            errors.append(
+                f"{task_id} prediction has unexpected fields: {', '.join(unexpected)}"
+            )
+        missing = [field for field in contract.answer_fields if field not in fields]
+        if missing:
+            errors.append(
+                f"{task_id} prediction missing answer fields: {', '.join(missing)}"
+            )
+    return errors
+
+
 def validate_event_groups(rows: Iterable[dict[str, Any]]) -> list[str]:
     assignments: dict[str, set[str]] = defaultdict(set)
     for row in rows:
