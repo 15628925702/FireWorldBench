@@ -79,11 +79,16 @@ def aggregate_scores(
     gold_rows: Iterable[dict[str, Any]],
     predictions: dict[str, dict[str, Any]],
     partition: str | None = None,
+    track: str | None = None,
 ) -> dict[str, Any]:
     rows = list(gold_rows)
     if partition in {"train", "dev"}:
         raise ValueError("train/dev are not valid leaderboard partitions")
     rows_have_split = any("split" in row for row in rows)
+    if track is not None:
+        if track not in {"S", "I", "V"}:
+            raise ValueError(f"unknown track: {track}")
+        rows = [row for row in rows if row.get("track") == track]
     main_rows = (
         [row for row in rows if row.get("split") == partition]
         if partition is not None
@@ -111,7 +116,8 @@ def aggregate_scores(
         "layer_scores": _layer_scores(task_scores),
         "overall": overall,
         "partition": partition or "main",
+        "track": track or "all",
         "missing_predictions": missing,
         "external": external_reports,
-        "breakdowns": _group_reports(rows, predictions),
+        "breakdowns": _group_reports(main_rows, predictions),
     }

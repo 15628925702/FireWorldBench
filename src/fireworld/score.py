@@ -14,6 +14,7 @@ def main() -> int:
     parser.add_argument("--predictions", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--partition", default="test_iid")
+    parser.add_argument("--track", choices=("S", "I", "V"))
     args = parser.parse_args()
     gold = read_records(args.gold)
     if not any("split" in row and row.get("split") == args.partition for row in gold):
@@ -41,7 +42,10 @@ def main() -> int:
     if len({row["qa_id"] for row in prediction_rows}) != len(prediction_rows):
         parser.error("duplicate prediction qa_id")
     predictions = {row["qa_id"]: row for row in prediction_rows}
-    write_json(aggregate_scores(gold, predictions, partition=args.partition), args.report)
+    report = aggregate_scores(gold, predictions, partition=args.partition, track=args.track)
+    if args.track and not report["task_scores"]:
+        parser.error(f"gold file has no rows for track: {args.track}")
+    write_json(report, args.report)
     return 0
 
 
