@@ -18,12 +18,21 @@ def _sha256(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 
-def _prompt(qa: dict[str, Any]) -> str:
+def _prompt(qa: dict[str, Any], asset_root: Path) -> str:
+    observation = json.loads(json.dumps(qa["observation"]))
+    structured = observation.get("structured")
+    if structured is not None:
+        ref = structured.get("ref")
+        asset = (asset_root / str(ref)).resolve()
+        root = asset_root.resolve()
+        if root not in asset.parents or not asset.is_file():
+            raise ValueError(f"unresolvable public structured ref: {ref}")
+        structured["content"] = json.loads(asset.read_text(encoding="utf-8"))
     public = {
         "task_id": qa["task_id"],
         "question": qa["question"],
         "options": qa["options"],
-        "observation": qa["observation"],
+        "observation": observation,
     }
     instruction = (
         "Answer this FireWorldBench item. Return JSON only with choice, fields, "
@@ -67,6 +76,7 @@ def run(
     key_env: str, seed: int, timeout_s: float, retries: int, allow_network: bool,
 ) -> dict[str, Any]:
     rows = [row for row in read_records(qa_path) if row.get("track") == track]
+    asset_root = qa_path.parent
     if not rows:
         raise ValueError(f"no {track}-track rows in {qa_path}")
     if any(row.get("split") in {"train", "dev"} for row in rows):
@@ -93,7 +103,7 @@ def run(
     for qa in rows:
         for attempt in range(retries + 1):
             try:
-                response = _invoke(base, model, key, _prompt(qa), timeout_s, seed)
+                response = _invoke(base, model, key, _prompt(qa, asset_root), timeout_s, seed)
                 prediction = _prediction(qa, response)
                 errors = validate_prediction_semantics(prediction, qa)
                 if errors:
