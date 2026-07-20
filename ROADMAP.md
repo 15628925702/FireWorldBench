@@ -53,3 +53,13 @@ license/contact confirmation is recorded as deferred, never passed.
 6. 简单 chance/rule baseline 可复现。
 7. 给出单事件 CPU 时间、峰值内存、原始/派生存储和标签稳定性报告。
 8. 阶段、风险、机制、dead-band 和并列容差中需要专家确认的项已批准或明确排除。
+
+## 2026-07-21 Finalization Update
+
+FDS Core v3.3.1 is the accepted, immutable main package: 180/180 strict Events
+and 4,039 QA. Current work is benchmark finalization, not data production.
+External formal Events/QA remain zero; candidates, substitutes, quarantine and
+gaps remain source-separated and never enter FDS Overall. The active hard gate is
+the model API authorization failure (HTTP 403) after an otherwise valid public
+S-track dry-run. Continue validators, baselines, reports, release evidence and
+acceptance documentation without changing frozen data.

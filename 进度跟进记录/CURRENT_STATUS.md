@@ -112,3 +112,14 @@ User-owned untracked files preserved untouched:
 - `详细设计规划/07_FireWorldBench_Benchmark_Design_v2_转写批注.md`
 - `详细设计规划/07_original_transcription.md`
 - `详细设计规划/08_FireWorldBench_ICLR2027_核心方案_v3.md`
+
+## 2026-07-21 Benchmark Finalization
+
+- FDS Core v3.3.1: 180/180 strict Events and 4,039 QA; 8,209 manifest hashes verified.
+- External formal/candidate/quarantine: 0 formal Events/QA; Immersed 192 candidates,
+  FURG 23 candidate groups, Detectium and wrong Fire360 mirror quarantined.
+- Current hard gate: authorized OpenAI-compatible model smoke run returned HTTP 403;
+  no model prediction or score is admitted.
+- Current engineering state: source eligibility, prediction binding, deterministic
+  breakdown scorer, coverage matrix, release verifier and public runner dry-run exist.
+- Next: complete baseline/report/evidence generators and resolve API authorization.
