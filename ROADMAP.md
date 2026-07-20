@@ -63,3 +63,16 @@ gaps remain source-separated and never enter FDS Overall. The active hard gate i
 the model API authorization failure (HTTP 403) after an otherwise valid public
 S-track dry-run. Continue validators, baselines, reports, release evidence and
 acceptance documentation without changing frozen data.
+
+## 2026-07-21 Runner and Reporting Update
+
+FDS Core v3.3.1 remains immutable and accepted: 180/180 strict Events and
+4,039 QA. External formal Events/QA remain zero; candidate, substitute and
+quarantine states are unchanged and excluded from FDS Overall. The fixed
+OpenAI-compatible runner model is `openai/gpt-4o-mini`; a proxy-backed API
+smoke test succeeded and an S-track full run is in progress. The active hard
+gate is now completion of that run followed by private deterministic scoring,
+not dataset work. Track-aware scoring, release verification, evidence matrix,
+CSV task tables and source/task/track coverage reporting write only to
+`artifacts/`; no LLM judge or unsupported calibration metric enters the main
+result.
