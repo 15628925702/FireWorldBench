@@ -104,6 +104,16 @@ def test_component_accuracy_and_incomplete_overall() -> None:
     assert report["layer_scores"] == {"L2": 50.0}
     assert report["overall"] is None
 
+def test_score_report_has_required_breakdowns() -> None:
+    qa = load("minimal_qa.json")
+    prediction = {"qa_id": qa["qa_id"], "fields": {"source_region": "R1", "stage": "growth"}}
+    report = aggregate_scores([qa], {str(qa["qa_id"]): prediction})
+    assert report["breakdowns"]["task_id"]["L2-1"]["n"] == 1
+    assert report["breakdowns"]["layer"]["L2"]["task_scores"] == {"L2-1": 100.0}
+    assert report["breakdowns"]["track"]["S"]["missing_predictions"] == 0
+    assert report["breakdowns"]["source_domain"]["fds"]["n"] == 1
+    assert report["breakdowns"]["split"]["train"]["n"] == 1
+
 
 def test_prediction_semantics_rejects_missing_fields_and_task_mismatch() -> None:
     from fireworld.validation import validate_prediction_semantics

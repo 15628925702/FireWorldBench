@@ -55,6 +55,26 @@ def _layer_scores(task_scores: dict[str, float]) -> dict[str, float]:
     return layer_scores
 
 
+def _group_reports(
+    rows: Iterable[dict[str, Any]], predictions: dict[str, dict[str, Any]]
+) -> dict[str, dict[str, Any]]:
+    """Return deterministic score summaries keyed by public QA dimensions."""
+    dimensions = ("task_id", "layer", "track", "source_domain", "split")
+    reports: dict[str, dict[str, Any]] = {}
+    materialized = list(rows)
+    for dimension in dimensions:
+        buckets: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        for row in materialized:
+            buckets[str(row.get(dimension, "unknown"))].append(row)
+        reports[dimension] = {}
+        for value, bucket in sorted(buckets.items()):
+            scores, missing = _aggregate_task_scores(bucket, predictions)
+            reports[dimension][value] = {
+                "n": len(bucket),
+                "task_scores": scores,
+                "missing_predictions": missing,
+            }
+    return reports
 def aggregate_scores(
     gold_rows: Iterable[dict[str, Any]],
     predictions: dict[str, dict[str, Any]],
@@ -93,4 +113,5 @@ def aggregate_scores(
         "partition": partition or "main",
         "missing_predictions": missing,
         "external": external_reports,
+        "breakdowns": _group_reports(rows, predictions),
     }
