@@ -26,7 +26,7 @@ class SourceContract:
 TASKS: dict[str, TaskContract] = {
     "L1-1": TaskContract("L1", "accuracy", ("class",)),
     "L1-2": TaskContract("L1", "accuracy", ("choice",)),
-    "L1-3": TaskContract("L1", "accuracy", ("consistency",)),
+    "L1-3": TaskContract("L1", "accuracy", ("consistency", "violation_type")),
     "L2-1": TaskContract("L2", "component_accuracy", ("source_region", "stage")),
     "L2-2": TaskContract("L2", "component_accuracy", ("risk_region", "risk_level")),
     "L2-3": TaskContract("L2", "accuracy", ("mechanism",)),

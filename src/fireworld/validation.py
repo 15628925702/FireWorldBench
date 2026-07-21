@@ -11,6 +11,7 @@ from typing import Any
 from jsonschema import Draft202012Validator, FormatChecker
 
 from fireworld.contracts import SOURCES, SOURCE_TASKS, SOURCE_TRACKS, TASKS, source_eligibility
+from fireworld.prediction_contracts import prediction_contract
 
 
 class DatasetValidationError(ValueError):
@@ -191,22 +192,38 @@ def validate_prediction_semantics(
     fields = answer.get("fields", {})
     if not isinstance(fields, dict):
         return ["prediction answer.fields must be an object"]
-    if task_id == "L1-2":
-        if answer.get("choice") not in {"A", "B", "C", "D"}:
-            errors.append("L1-2 predictions require answer.choice A/B/C/D")
-    else:
-        unexpected = sorted(set(fields) - set(contract.answer_fields))
-        if unexpected:
-            errors.append(
-                f"{task_id} prediction has unexpected fields: {', '.join(unexpected)}"
-            )
-        missing = [field for field in contract.answer_fields if field not in fields]
-        if missing:
-            errors.append(
-                f"{task_id} prediction missing answer fields: {', '.join(missing)}"
-            )
-    return errors
 
+    machine_contract = prediction_contract(task_id)
+    field_contracts = machine_contract["answer_fields"]
+    unexpected = sorted(set(fields) - set(field_contracts))
+    if unexpected:
+        errors.append(f"{task_id} prediction has unexpected fields: {', '.join(unexpected)}")
+    missing = [field for field in field_contracts if field not in fields]
+    if missing:
+        errors.append(f"{task_id} prediction missing answer fields: {', '.join(missing)}")
+    for field, allowed in field_contracts.items():
+        if field in fields and fields[field] not in allowed:
+            errors.append(f"{task_id} prediction has invalid {field}: {fields[field]!r}")
+
+    choice_allowed = machine_contract["choice"]
+    choice = answer.get("choice")
+    if choice_allowed is None:
+        if choice is not None:
+            errors.append(f"{task_id} prediction requires answer.choice=null")
+    elif choice not in choice_allowed:
+        errors.append(f"{task_id} prediction has invalid answer.choice: {choice!r}")
+    if machine_contract.get("choice_must_equal_fields_choice"):
+        if fields.get("choice") != choice:
+            errors.append(f"{task_id} prediction requires fields.choice == answer.choice")
+
+    if task_id == "L1-3":
+        consistency = fields.get("consistency")
+        violation = fields.get("violation_type")
+        if consistency == "consistent" and violation is not None:
+            errors.append("consistent L1-3 predictions require violation_type=null")
+        if consistency == "inconsistent" and violation is None:
+            errors.append("inconsistent L1-3 predictions require a violation_type")
+    return errors
 
 def validate_event_groups(rows: Iterable[dict[str, Any]]) -> list[str]:
     assignments: dict[str, set[str]] = defaultdict(set)

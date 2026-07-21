@@ -1,0 +1,183 @@
+{
+  "schema_version": "2.0.0",
+  "top_level_keys": [
+    "schema_version",
+    "qa_id",
+    "task_id",
+    "answer",
+    "confidence",
+    "evidence"
+  ],
+  "answer_keys": [
+    "choice",
+    "fields"
+  ],
+  "tasks": {
+    "L1-1": {
+      "answer_fields": {
+        "class": [
+          "fire",
+          "no_fire",
+          "ventilation_disturbance",
+          "sensor_fault"
+        ]
+      },
+      "choice": null
+    },
+    "L1-2": {
+      "answer_fields": {
+        "choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "choice_must_equal_fields_choice": true
+    },
+    "L1-3": {
+      "answer_fields": {
+        "consistency": [
+          "consistent",
+          "inconsistent"
+        ],
+        "violation_type": [
+          "reverse",
+          "jump",
+          "disappearance",
+          "direction_flip",
+          "sensor_conflict",
+          null
+        ]
+      },
+      "choice": null,
+      "conditional": {
+        "if": {
+          "field": "consistency",
+          "equals": "consistent"
+        },
+        "then": {
+          "violation_type": null
+        }
+      }
+    },
+    "L2-1": {
+      "answer_fields": {
+        "source_region": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8"
+        ],
+        "stage": [
+          "incipient",
+          "growth",
+          "developed",
+          "decay"
+        ]
+      },
+      "choice": null
+    },
+    "L2-2": {
+      "answer_fields": {
+        "risk_region": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8"
+        ],
+        "risk_level": [
+          "low",
+          "moderate",
+          "high",
+          "critical"
+        ]
+      },
+      "choice": null
+    },
+    "L2-3": {
+      "answer_fields": {
+        "mechanism": [
+          "buoyant_plume",
+          "ceiling_jet",
+          "smoke_layer",
+          "longitudinal_ventilation",
+          "backlayering",
+          "extraction_dominated"
+        ]
+      },
+      "choice": null
+    },
+    "L3-1": {
+      "answer_fields": {
+        "temperature_trend": [
+          "up",
+          "stable",
+          "down"
+        ],
+        "smoke_trend": [
+          "up",
+          "stable",
+          "down"
+        ],
+        "visibility_trend": [
+          "up",
+          "stable",
+          "down"
+        ]
+      },
+      "choice": null
+    },
+    "L3-2": {
+      "answer_fields": {
+        "first_high_risk_region": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R7",
+          "R8",
+          "none"
+        ]
+      },
+      "choice": null
+    },
+    "L3-3": {
+      "answer_fields": {
+        "comparison": [
+          "A",
+          "B",
+          "same"
+        ]
+      },
+      "choice": null
+    }
+  },
+  "model_response_keys": [
+    "choice",
+    "fields",
+    "confidence",
+    "evidence"
+  ],
+  "runner_injected_keys": [
+    "schema_version",
+    "qa_id",
+    "task_id"
+  ]
+}
