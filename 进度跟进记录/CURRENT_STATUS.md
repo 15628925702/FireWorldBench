@@ -150,3 +150,20 @@ this is not FDS Overall and must not be presented as such. No LLM judge was
 used. The active hard gate is independent I/V-track runner support and their
 separate protocol-qualified evaluation; no external source processing is
 authorized.
+## 2026-07-21 Multimodal Evaluation Update
+
+FDS Core v3.3.1 remains immutable and accepted: 180/180 strict Events and
+4,039 QA. External formal Events/QA remain zero; candidate, substitute,
+quarantine, and gap states are unchanged and remain outside FDS Overall.
+
+The previous S diagnostic run is superseded because its L1-2 candidate assets
+were not supplied to the model. The corrected public-asset S run uses
+structured_json_and_candidate_hydration_v1 and has 1,360/1,360 valid
+predictions, zero missing predictions, and deterministic FDS S-track macro
+57.50100292190619. This is a track result, not FDS Overall.
+
+The image adapter openai_image_url_data_v1 has completed the released I track:
+66/66 valid predictions, zero missing, with L1-3 score 68.93939393939394.
+Only L1-3 is published for I, so I Overall is null. The fixed model declares
+text/image/file inputs but no video input; V is explicitly unsupported and no
+frame-proxy result is reported. No LLM judge was used.
