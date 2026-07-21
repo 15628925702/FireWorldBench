@@ -14,6 +14,7 @@ def main() -> int:
     parser.add_argument("--qa", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--asset-root", type=Path)
+    parser.add_argument("--input-mode", choices=("direct", "firestate_card"), default="direct")
     parser.add_argument("--seed", type=int, default=20260720)
     parser.add_argument("--timeout-s", type=float, default=60.0)
     parser.add_argument("--max-retries", type=int, default=2)
@@ -21,7 +22,7 @@ def main() -> int:
     parser.add_argument("--api-key-env", default="OPENAI_API_KEY")
     parser.add_argument("--allow-network", action="store_true")
     args = parser.parse_args()
-    result = run(args.qa, args.output_dir, args.model, args.track, args.api_base, args.api_key_env, args.seed, args.timeout_s, args.max_retries, args.allow_network, args.asset_root)
+    result = run(args.qa, args.output_dir, args.model, args.track, args.api_base, args.api_key_env, args.seed, args.timeout_s, args.max_retries, args.allow_network, args.asset_root, args.input_mode)
     print(json.dumps(result, sort_keys=True))
     return 0
 

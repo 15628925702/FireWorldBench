@@ -13,6 +13,7 @@ from typing import Any
 from urllib import error, request
 
 from fireworld.cli_utils import write_json
+from fireworld.firestate_card import build_card
 from fireworld.prediction_contracts import (
     prediction_contract_sha256,
     prompt_contract,
@@ -72,7 +73,7 @@ def _hydrate_structured(
 
 
 def _prompt(
-    qa: dict[str, Any], asset_root: Path, correction: str | None = None
+    qa: dict[str, Any], asset_root: Path, correction: str | None = None, input_mode: str = "direct"
 ) -> str | list[dict[str, Any]]:
     track = qa["track"]
     if track == "V":
@@ -88,6 +89,8 @@ def _prompt(
             "options": options,
             "observation": observation,
         }
+        if input_mode == "firestate_card":
+            public["firestate_card"] = build_card(observation["structured"]["content"])
     elif track == "I":
         image_refs = qa["observation"].get("images")
         if not isinstance(image_refs, list) or not image_refs:
@@ -219,10 +222,14 @@ def _checkpoint(
 def run(
     qa_path: Path, output: Path, model: str, track: str, base: str,
     key_env: str, seed: int, timeout_s: float, retries: int, allow_network: bool,
-    asset_root: Path | None = None,
+    asset_root: Path | None = None, input_mode: str = "direct",
 ) -> dict[str, Any]:
     rows = [row for row in read_records(qa_path) if row.get("track") == track]
     asset_root = (asset_root or qa_path.parent).resolve()
+    if input_mode not in {"direct", "firestate_card"}:
+        raise ValueError(f"unknown input_mode: {input_mode}")
+    if input_mode == "firestate_card" and track != "S":
+        raise ValueError("firestate_card is currently S-track only")
     if track not in INPUT_ADAPTERS:
         raise ValueError(f"unknown track: {track}")
     if track == "V":
@@ -242,6 +249,7 @@ def run(
         "model": model,
         "track": track,
         "input_adapter": INPUT_ADAPTERS[track],
+        "input_mode": input_mode,
         "api_base": base,
         "seed": seed,
         "timeout_s": timeout_s,
@@ -268,7 +276,7 @@ def run(
         for attempt in range(retries + 1):
             try:
                 response = _invoke(
-                    base, model, key, _prompt(qa, asset_root, correction),
+                    base, model, key, _prompt(qa, asset_root, correction, input_mode),
                     timeout_s, seed, response_json_schema(qa["task_id"]),
                 )
                 raw.append({"qa_id": qa["qa_id"], "response": response, "attempt": attempt + 1})
