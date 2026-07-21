@@ -11,6 +11,7 @@ from typing import Any
 from urllib import request
 
 from fireworld.cli_utils import write_json
+from fireworld.contracts import TASKS
 from fireworld.validation import read_records, validate_prediction_semantics
 
 
@@ -18,7 +19,7 @@ def _sha256(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 
-def _prompt(qa: dict[str, Any], asset_root: Path) -> str:
+def _prompt(qa: dict[str, Any], asset_root: Path, correction: str | None = None) -> str:
     observation = json.loads(json.dumps(qa["observation"]))
     structured = observation.get("structured")
     if structured is not None:
@@ -28,6 +29,19 @@ def _prompt(qa: dict[str, Any], asset_root: Path) -> str:
         if root not in asset.parents or not asset.is_file():
             raise ValueError(f"unresolvable public structured ref: {ref}")
         structured["content"] = json.loads(asset.read_text(encoding="utf-8"))
+    contract = TASKS[qa["task_id"]]
+    schema_instruction = {
+        "task_id": qa["task_id"],
+        "required_answer_fields": list(contract.answer_fields),
+        "forbidden_extra_fields": True,
+        "choice_allowed": ["A", "B", "C", "D"] if qa["task_id"] == "L1-2" else None,
+        "output_shape": {
+            "choice": "A/B/C/D or null",
+            "fields": {name: "value" for name in contract.answer_fields},
+            "confidence": "number 0..1 or null",
+            "evidence": "array of strings",
+        },
+    }
     public = {
         "task_id": qa["task_id"],
         "question": qa["question"],
@@ -35,9 +49,18 @@ def _prompt(qa: dict[str, Any], asset_root: Path) -> str:
         "observation": observation,
     }
     instruction = (
-        "Answer this FireWorldBench item. Return JSON only with choice, fields, "
-        "confidence, and evidence. Do not use information outside the item.\n"
+        "Answer this FireWorldBench item. Return JSON only. "
+        "Use exactly the required answer fields below; do not add aliases, explanations, "
+        "or any other fields inside answer.fields. The top-level JSON keys must be exactly "
+        "schema_version, qa_id, task_id, answer, confidence, evidence. "
+        "For L1-2 put the selected option in answer.choice and also fields.choice.\n"
+        "REQUIRED OUTPUT CONTRACT:\n" + json.dumps(schema_instruction, sort_keys=True) + "\n"
     )
+    if correction:
+        instruction += (
+            "A previous response failed deterministic validation. Correct it exactly; "
+            "do not discuss the correction. Validator errors:\n" + correction + "\n"
+        )
     return instruction + json.dumps(public, ensure_ascii=False, sort_keys=True)
 
 
@@ -71,6 +94,8 @@ def _prediction(qa: dict[str, Any], response: dict[str, Any]) -> dict[str, Any]:
         "confidence": parsed.get("confidence"),
         "evidence": parsed.get("evidence", []),
     }
+
+
 def run(
     qa_path: Path, output: Path, model: str, track: str, base: str,
     key_env: str, seed: int, timeout_s: float, retries: int, allow_network: bool,
@@ -85,11 +110,12 @@ def run(
         raise ValueError("runner requires redacted public answers")
     output.mkdir(parents=True, exist_ok=True)
     manifest = {
-        "schema_version": "2.0.0", "runner_version": "0.1.0", "model": model,
+        "schema_version": "2.0.0", "runner_version": "0.2.0", "model": model,
         "track": track, "api_base": base, "seed": seed, "timeout_s": timeout_s,
         "max_retries": retries, "qa_count": len(rows), "qa_sha256": _sha256(json.dumps(rows, sort_keys=True)),
         "credential_env": key_env, "network_enabled": allow_network,
         "created_at": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "validation_repair_prompt": True,
     }
     write_json(manifest, output / "run_manifest.json")
     if not allow_network:
@@ -101,19 +127,22 @@ def run(
         raise ValueError(f"missing credential environment variable: {key_env}")
     predictions, raw, failures = [], [], []
     for qa in rows:
+        correction = None
         for attempt in range(retries + 1):
             try:
-                response = _invoke(base, model, key, _prompt(qa, asset_root), timeout_s, seed)
+                response = _invoke(base, model, key, _prompt(qa, asset_root, correction), timeout_s, seed)
                 prediction = _prediction(qa, response)
                 errors = validate_prediction_semantics(prediction, qa)
                 if errors:
-                    raise ValueError("; ".join(errors))
+                    correction = "; ".join(errors)
+                    raise ValueError(correction)
                 predictions.append(prediction)
-                raw.append({"qa_id": qa["qa_id"], "response": response})
+                raw.append({"qa_id": qa["qa_id"], "response": response, "attempt": attempt + 1})
                 break
             except Exception as exc:
+                correction = str(exc)
                 if attempt == retries:
-                    failures.append({"qa_id": qa["qa_id"], "attempts": attempt + 1, "error": str(exc)})
+                    failures.append({"qa_id": qa["qa_id"], "attempts": attempt + 1, "error": correction})
     write_json(predictions, output / "predictions.json")
     write_json(raw, output / "raw_responses.json")
     write_json(failures, output / "failures.json")
