@@ -76,3 +76,17 @@ not dataset work. Track-aware scoring, release verification, evidence matrix,
 CSV task tables and source/task/track coverage reporting write only to
 `artifacts/`; no LLM judge or unsupported calibration metric enters the main
 result.
+## 2026-07-21 S-Track Evaluation Update
+
+FDS Core v3.3.1 remains immutable and accepted: 180/180 strict Events and
+4,039 QA. External formal Events/QA remain zero; candidate, substitute,
+quarantine, and gap states are unchanged and remain outside FDS Overall.
+
+The fixed OpenAI-compatible model openai/gpt-4o-mini completed the FDS public
+S track after a nine-task structured-output preflight. All 1,360 predictions
+passed schema and semantic validation after retrying 14 transient proxy TLS
+failures. The private deterministic FDS S-track macro is 56.194247062475384;
+this is not FDS Overall and must not be presented as such. No LLM judge was
+used. The active hard gate is independent I/V-track runner support and their
+separate protocol-qualified evaluation; no external source processing is
+authorized.
