@@ -167,3 +167,16 @@ The image adapter openai_image_url_data_v1 has completed the released I track:
 Only L1-3 is published for I, so I Overall is null. The fixed model declares
 text/image/file inputs but no video input; V is explicitly unsupported and no
 frame-proxy result is reported. No LLM judge was used.
+## 2026-07-21 Strict Baseline Update
+
+Release-native strict baselines were regenerated from frozen public train/test
+inputs under the current prediction contract. No API model or dataset processing
+was used. On the FDS S track, seeded_chance is 21.03476689780523,
+train_majority is 32.50098405595995, and physical_rule is
+53.46437556768639; the compliant fixed-model S result is 57.50100292190619.
+All four are track-level nine-task macros, not FDS Overall.
+
+On I (L1-3 only), seeded_chance is 34.09090909090909, train_majority is 50.0,
+and the fixed model is 68.93939393939394. physical_rule is unsupported for I
+because it has no structured physical input. V remains unsupported for the
+fixed model. Result tables are generated under artifacts/results/fds_core_v3_3_1.
