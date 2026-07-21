@@ -6,6 +6,24 @@ source_session: 2026-07-17_V2方案对齐与第一阶段重构.md
 current_task: V2-A2-PILOT-PREP
 ---
 
+## 2026-07-21 fine-grained task and metric redesign
+
+User direction supersedes the old task/metric freeze for future experiments.
+All model experiments are paused. The active design is now
+`docs/FINE_GRAINED_TASK_METRIC_REDESIGN.md` and the rewritten
+`docs/TASK_PROTOCOL.md`.
+
+- FDS Core v3.3.1 remains immutable: 180/180 strict Events and 4,039 QA.
+- External formal Events/QA remain zero; candidate/substitute/quarantine/gap
+  states are unchanged and excluded from FDS Overall.
+- Existing gpt-4o-mini and strict baseline results are retained only as
+  `legacy_protocol_calibration_evidence`.
+- The redesign uses task-matched Macro-F1, horizon-macro Accuracy, Joint Exact
+  Match and Strict Triple Exact Match instead of one uniform Accuracy family.
+- A 30--50 representative-model median is a frozen development-challenge
+  calibration target, not a score-scaling rule and not a post-test tuning rule.
+- No code/schema/QA/model call is authorized until the new protocol is reviewed.
+
 ## 2026-07-20 v2 finalization handoff
 
 The active status is `FDS_CORE_FORMAL_EXTERNAL_OOD_PARTIAL_CANDIDATE`.

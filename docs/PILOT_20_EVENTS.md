@@ -1,5 +1,10 @@
 # 20 Fire Event Pilot Plan
 
+> Status: `LEGACY-PILOT-PLAN`. This plan does not authorize a new experiment
+> after the 2026-07-21 user-directed task/metric redesign. Future pilot work must
+> use `docs/FINE_GRAINED_TASK_METRIC_REDESIGN.md`, a vNext schema, a frozen
+> challenge subset and the new support/difficulty gates.
+
 状态：`PLANNED-NOT-GENERATED`。本文件不声称已生成任何 FDS event。
 
 ## 1. 目标

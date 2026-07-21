@@ -1,76 +1,54 @@
-# Nine-Task Protocol
+# FireWorldBench Fine-Grained Nine-Task Protocol
 
-版本：`2.0.0-dev`。固定定义来自核心 PDF；标为 `TBD-PILOT` 或 `TBD-EXPERT` 的数值不能在验证前擅自填写。
+状态：`USER-DIRECTED-REDESIGN-DRAFT`
+版本：`FWB-FINEGRAIN-v1`
+日期：`2026-07-21`
 
-## L1-1 Early Signal Attribution
+本文件取代旧九任务的现行实验资格。旧协议仅用于解释不可变 FDS Core v3.3.1 和历史结果，
+不得继续生成新的模型排名。详细设计、答案空间、指标和难度门禁见
+`docs/FINE_GRAINED_TASK_METRIC_REDESIGN.md`。
 
-- 输入：S 为 3/6/10/20 秒温度、soot、CO、风速窗口；I 为早期单帧或关键帧；V 为 4-8 秒片段。视觉轨只给视觉和时间。
-- 输出：`class` = `fire/no_fire/ventilation_disturbance/sensor_fault`，附 0-1 confidence。
-- 标签：FDS 无火基线、低 HRR、无火通风切换；传感器故障由版本化 drift/stuck/spike 注入规则生成。
-- 候选/负例：四类平衡；视觉负例匹配背景和亮度。D-Fire 仅映射 fire/smoke/none OOD，不伪造传感器故障或通风标签。
-- 主评分：Accuracy。补充 Macro-F1、ECE、Brier Score；按 3/6/10/20 秒分别报告。
+## Active tasks
 
-## L1-2 Next-State Selection
+| ID | Task | Required output | Primary metric |
+|---|---|---|---|
+| L1-1 | Multi-signal Early Event Attribution | event_class | Macro-F1 |
+| L1-2 | Causal Next-State Discrimination | choice | horizon-macro Accuracy |
+| L1-3 | Temporal Violation Localization and Typing | consistency, first_violation_bin, violation_type | Hierarchical Joint Exact Match |
+| L2-1 | Joint Source-Stage Recovery | source_region, stage | Joint Exact Match |
+| L2-2 | Hazard Region-Severity-Driver Recovery | risk_region, risk_level, risk_driver | Joint Exact Match |
+| L2-3 | Mechanism-Flow-Regime Diagnosis | mechanism, flow_direction, control_regime | Joint Exact Match |
+| L3-1 | Multi-Horizon Multivariable Forecasting | 3 horizons × 3 trends | macro of horizon-level Strict Triple Exact Match |
+| L3-2 | First Hazard-Crossing Forecast | region, time_bin, trigger_variable | Joint Exact Match |
+| L3-3 | Counterfactual Effect Decomposition | direction, magnitude_bin, earliest_affected_target | Joint Exact Match |
 
-- 输入：当前观测、预测间隔 `delta_t` 和四候选。S 为数值窗口 + 未来摘要；I 为 2-3 前序帧 + 4 候选帧；V 为当前短片 + 4 候选短片。
-- 输出：`choice` = A/B/C/D。
-- 标签：正例来自同一 event 的 `t+delta_t`。
-- 候选：同几何、视角、时间跨度；困难负例来自相近烟量但不同通风/火源，或同一 event 的过去/过远未来。禁止随机异背景。
-- 主评分：Accuracy；按 `delta_t` 和难度报告；chance = 25%。正确位置全局差异不超过 2%。
+## Track ceiling
 
-## L1-3 Temporal Coherence Verification
+- S/I/V 是三个独立评测套件，可以分别选择文本、图像/VL 和 direct-video 模型。同一模型不必
+  支持三轨；未参评轨道不计 missing，也不影响其已参加轨道的排名。
+- 不同轨道使用不同模型时，每轨分别冻结并记录 exact model ID、catalog metadata 和请求参数。
+- 模型只在同一轨道、同一任务矩阵、同一 subset 和同一协议版本内比较；禁止跨轨直接排名。
+- S：九任务可在 metadata、support 和可回答性门禁通过后发布。
+- I/V：L1-2、L1-3 可发布；L2-1、L2-3、L3-3 仅在视觉证据充分时 conditional。
+- L1-1、L2-2、L3-1、L3-2 的完整新答案空间包含普通 RGB 不可可靠观测的信息，I/V 为 unsupported。
+- 视觉专用简化任务必须使用新 subtrack/task ID，不得把温度、CO 或传感器状态从 RGB 补造。
+- V 必须是 direct-video input；帧转文字、抽帧描述或 I 轨代理均不构成 V 结果。
+- S 可在九任务通过门禁后报告 S Overall；I/V 只报告各自冻结任务集合的 suite macro，不生成
+  跨 S/I/V Overall。
 
-- 输入：S 时间表；I 为 2-4 张带时间戳帧；V 为 4-12 秒片段。
-- 输出：`consistency` = `consistent/inconsistent`；不一致时 `violation_type` = `reverse/jump/disappearance/direction_flip/sensor_conflict`。
-- 标签/负例：原始连续序列为正；交换相邻片段、局部倒放、同场景拼接、替换通道生成负例，比例固定 50%。
-- 主评分：Consistency Accuracy；补充 Violation-type Accuracy。Fire360 只做时间扰动 OOD，不给复杂物理标签。
+## Publication gates
 
-## L2-1 Source and Stage Recovery
+- 新 prediction contract/schema 必须版本化；现有 v2 contract 不足以承载新增字段。
+- 新 metadata 必须机器可读且冻结，不得从问题文本临时正则推断。
+- 每任务推荐至少 100 个计分 QA；每个分类至少 20 条并跨至少 3 个 event_group。
+- 不满足 support 的任务只报告诊断，状态为 `not_ranked_insufficient_support`。
+- missing/malformed/schema-invalid 在完整分母中计 0；不以 valid-only 分数作为排行榜分数。
+- S/I/V 必须真实使用对应输入适配器；V 不允许文本或抽帧代理冒充。
+- 外部来源独立报告，不进入 FDS Overall；禁止 LLM judge。
+- 正式模型实验保持暂停，直至 schema、validators、scorer、challenge subset 和基线验收完成。
 
-- 输入：当前窗口与统一 8 区域布局；S/I/V 均可。
-- 输出：`source_region` = R1..R8；`stage` = `incipient/growth/developed/decay`。
-- 标签：source 由场景配置；stage 由 HRR 曲线和变化率规则。阶段边界设置 `TBD-EXPERT` 缓冲区，边界样本进入 ambiguous。
-- 候选：结构化输出可不设 options；若用有限候选，必须覆盖合法 region/stage 且不改变评分。
-- 主评分：`(Source Accuracy + Stage Accuracy)/2`；补充 Joint Exact Match。
+## Difficulty calibration
 
-## L2-2 Current Risk Region Recovery
-
-- 输入：当前观测与 8 区域布局；S/I/V 均可。
-- 输出：`risk_region` = R1..R8；`risk_level` = `low/moderate/high/critical`。
-- 标签：FDS 区域温度、能见度、CO/soot 通过冻结规则聚合。最高两区差小于 `TBD-EXPERT` 时排除或进入 multi-risk 扩展集。
-- 外部限制：PolyUFire 只发布温度风险子轨；真实视觉不进入核心评分。
-- 主评分：`(Region Accuracy + Risk-level Accuracy)/2`；若发布 mask，补充 IoU。
-
-## L2-3 Dominant Mechanism Recognition
-
-- 输入：观测窗口与可见的通风/排烟条件或布局；S/I/V 均可。
-- 输出：`mechanism` = `buoyant_plume/ceiling_jet/smoke_layer/longitudinal_ventilation/backlayering/extraction_dominated`。
-- 标签：由火源高度、速度方向、烟层位置、临界速度关系和排烟流量确定性派生，只保留主导机制明确样本；至少 10% 由火灾工程背景人员复核。
-- 外部限制：PolyUFire 只验证 critical velocity、backlayering、sidewall extraction 等实际机制。
-- 主评分：Accuracy；补充 Macro-F1。
-
-## L3-1 Future Trend Prediction
-
-- 输入：当前窗口、目标区域、10/30/60 秒预测时长。S/V 为核心；I 仅用 2-4 张前序帧。
-- 输出：`temperature_trend/smoke_trend/visibility_trend`，各为 `up/stable/down`。
-- 标签：比较当前末段与未来末段的区域稳健统计，使用训练/pilot 冻结的 dead-band；未来缺失或边界样本删除。
-- 主评分：三个变量 Accuracy 的均值，同时报告各变量 Accuracy。
-
-## L3-2 Future Risk Region Prediction
-
-- 输入：当前观测、8 区域布局、预测窗口。S/V 为核心；I 仅在关键帧有足够动态信息时发布。
-- 输出：`first_high_risk_region` = R1..R8/none。
-- 标签：未来轨迹中各区首次超过高风险阈值的时间；最早区为标签。时间差小于 `TBD-EXPERT` 容差时进入 multi-region 扩展集。
-- 主评分：9 类 Accuracy；补充 Event-time MAE。
-
-## L3-3 Counterfactual Comparison
-
-- 输入：A/B 配对当前观测和唯一差异，问题指定比较量；S/I/V 均可。
-- 输出：`comparison` = `A/B/same`。
-- 标签：从同一基础 event 复制并只改变一个参数；几何、camera、随机种子、采样和其他条件相同。未来轨迹直接比较，差异小于 `TBD-PILOT` 阈值时排除。
-- 候选：A/B 顺序随机化并记录映射；不得通过描述长度或变量命名泄漏方向。
-- 主评分：Accuracy；补充 Counterfactual Consistency。
-
-## Task/Track Publication Gate
-
-任务表允许的轨道只定义上限。builder 必须逐 source/task/track 证明：输入包含足够区分信息、标签来自真实字段或可靠规则、负例可区分、样本通过 shortcut audit。任一条件失败则不发布该组合，并在 coverage report 中计为 unsupported，而不是补造标签。
+30--50 是冻结开发挑战集上代表模型群体的目标中位区间，不是人为缩放目标。若多个不同模型
+家族在某任务均超过 65，审计候选过易、泄漏和 shortcut；若专家低于 70，审计可回答性和
+标签质量。任何正式测试结果不得用于反向调题。

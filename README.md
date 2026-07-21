@@ -1,73 +1,33 @@
 # FireWorldBench
 
-FireWorldBench 是一个 simulation-grounded 火灾物理世界理解 benchmark，评估多模态基础模型能否从有限观测中依次完成动态感知、当前状态恢复和未来演化推理。
+FireWorldBench 是 simulation-grounded 火灾物理世界理解 benchmark，研究模型能否从 S/I/V
+有限观测中完成动态感知、状态恢复和未来演化推理。
 
 ## 当前状态
 
-项目正在按 `FireWorldBenchv2(1).pdf` 重构。该 PDF 是唯一核心设计来源。2026-07-17 之前的 T1/T2/T3 任务、旧 Schema、旧 P0-P7 冻结链、正式/准实验产物和 `src/fireworldbench/` 实现均为 `LEGACY-NONCOMPARABLE`，不能作为当前 benchmark 或论文结果。
+状态为 `PAUSED_FOR_FINE_GRAINED_TASK_METRIC_REDESIGN`。用户已要求停止使用旧九任务指标开展
+新实验。新的任务与指标草案位于：
 
-当前门禁是架构冻结与 20-event pilot 准备；尚未授权生成 180 个事件、进行正式训练或主实验。
+- `docs/FINE_GRAINED_TASK_METRIC_REDESIGN.md`
+- `docs/TASK_PROTOCOL.md`
+- `docs/EVALUATION_CARD.md`
 
-## 固定能力体系
+新协议保留九个 ID，但将任务升级为：多信号归因、因果下一状态、时序违规定位、联合
+source-stage、风险驱动恢复、机制-流向-控制域、多时距多变量预测、首次越阈预测和反事实
+效应分解。主指标改为 Macro-F1、分层 Accuracy 和 Joint/Strict Exact Match。
 
-```text
-L1 Dynamic Perception
-  L1-1 Early Signal Attribution
-  L1-2 Next-State Selection
-  L1-3 Temporal Coherence Verification
-        |
-L2 State Recovery
-  L2-1 Source and Stage Recovery
-  L2-2 Current Risk Region Recovery
-  L2-3 Dominant Mechanism Recognition
-        |
-L3 Evolution Reasoning
-  L3-1 Future Trend Prediction
-  L3-2 Future Risk Region Prediction
-  L3-3 Counterfactual Comparison
-```
+S/I/V 是三个独立评测套件，可分别使用文本模型、图像/VL 模型和 direct-video 模型；不要求
+同一个模型覆盖三轨，未参评轨道不扣分，也不生成跨轨总分。
 
-输入轨道为 `S` Structured、`I` Image、`V` Video。来源先标准化为 Fire Event，再构建任务 QA；不同来源不直接随机混合。
+## 不可变事实
 
-## 文档入口
+- FDS Core v3.3.1：180/180 strict Events、4,039 QA，只读。
+- 外部 formal Events/QA：0；所有 candidate/substitute/quarantine/gap 继续分离。
+- 旧 gpt-4o-mini 与 baseline 分数仅为旧协议难度证据。
+- 只有 `src/fireworld/` 是 active implementation；当前未授权修改代码或启动模型实验。
+- 不使用 LLM judge，不处理新数据集，不把外部数据并入 FDS Overall。
 
-| 文件 | 用途 |
-|---|---|
-| `PROJECT_CHARTER.md` | 当前研究边界和成功标准 |
-| `ROADMAP.md` | pilot-first 实施门禁 |
-| `docs/ARCHITECTURE_FREEZE.md` | 不可变架构、Schema、split、指标和 QC |
-| `docs/TASK_PROTOCOL.md` | 九任务逐项协议 |
-| `docs/SOURCE_ROLE_MATRIX.md` | 数据源准入与报告角色 |
-| `docs/CONFLICT_AUDIT_2026-07-17.md` | 旧项目冲突、保留与迁移清单 |
-| `schemas/fire_event.schema.json` | Fire Event 机器契约 |
-| `schemas/qa.schema.json` | QA 机器契约 |
-| `migration/README_SERVER_MIGRATION.md` | 服务器迁移、传输、重建和验收 |
-| `migration/SERVER_HANDOFF_PROMPT.md` | 新服务器接手项目的首轮提示词 |
+## 下一门禁
 
-## 新工程入口
-
-```powershell
-python -m fireworld.ingest --help
-python -m fireworld.generate_fds --help
-python -m fireworld.build_events --help
-python -m fireworld.build_tasks --help
-python -m fireworld.make_splits --help
-python -m fireworld.validate_dataset --help
-python -m fireworld.run_model --help
-python -m fireworld.score --help
-```
-
-新主线代码位于 `src/fireworld/`。旧 `fwb` CLI 保留用于历史产物审计，不代表新架构兼容。
-
-## 数据目录
-
-```text
-data/raw/      # 原始来源，只读
-data/events/   # 统一 Fire Events
-data/qa/       # 九任务 QA
-data/splits/   # event_group-first split 清单
-```
-
-论文和数据报告必须同时列出独立 Fire Event、QA、各任务、各轨道、各来源和各 split 数量。
-
-迁移服务器时只执行 `git clone` 不够：`data/raw/` 与 `artifacts/` 未被 Git 跟踪，核心 PDF 和参考文献也位于仓库外。应按迁移说明传输包含 `1.参考文献/`、`2.方案研究/`、`3.数据集/` 和 `5.项目实现/` 的整个工作区，并在服务器验证 `migration/transfer_manifest.json`。
+先版本化 QA/prediction schema 和新增 metadata，再实现 validators/scorer/tests，随后构建独立
+challenge candidate subset。只有难度、support、专家可回答性和基线门禁通过后才启动 pilot。

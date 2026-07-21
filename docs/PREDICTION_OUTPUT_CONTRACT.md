@@ -1,5 +1,11 @@
 # Prediction Output Contract v2
 
+> Status: `LEGACY-FOR-FDS-CORE-V3.3.1`. This contract remains valid only for
+> reproducing the immutable v3.3.1 results. It does not contain the new
+> fine-grained fields required by `FWB-FINEGRAIN-v1`. No new experiment may use
+> it as the active protocol. A versioned vNext contract is required before any
+> implementation or model call.
+
 The machine authority is configs/prediction_contract.v2.json. The runner records
 its SHA-256 in every run manifest. A run must fail closed if this file disagrees
 with src/fireworld/contracts.py.

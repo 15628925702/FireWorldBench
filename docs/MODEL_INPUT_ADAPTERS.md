@@ -1,5 +1,10 @@
 # Model Input Adapters
 
+Status: `LEGACY-ADAPTER-EVIDENCE-EXPERIMENTS-PAUSED`. The S/I behavior below is
+retained for reproducibility; the fixed-model experiment is no longer active.
+Any future adapter must be accepted under the fine-grained task protocol and a
+versioned schema. V still requires genuine direct-video input.
+
 The fixed evaluation model is openai/gpt-4o-mini. Its declared input modalities
 are text, image, and file; it does not declare video input.
 
